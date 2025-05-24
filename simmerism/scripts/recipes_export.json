@@ -36,10 +36,6 @@
     "image": "https://img.spoonacular.com/recipes/663462-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -108,10 +104,6 @@
     "image": "https://img.spoonacular.com/recipes/633548-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 1,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -180,10 +172,6 @@
     "image": "https://img.spoonacular.com/recipes/665348-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "dairy free"
@@ -279,10 +267,6 @@
     "image": "https://img.spoonacular.com/recipes/716369-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 1,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -366,10 +350,6 @@
     "image": "https://img.spoonacular.com/recipes/1005367-556x370.jpg",
     "readyInMinutes": 70,
     "servings": 9,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -441,10 +421,6 @@
     "image": "https://img.spoonacular.com/recipes/636199-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -546,10 +522,6 @@
     "image": "https://img.spoonacular.com/recipes/650650-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [],
     "intolerances": [],
     "dishTypes": [
@@ -666,10 +638,6 @@
     "image": "https://img.spoonacular.com/recipes/654379-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -778,10 +746,6 @@
     "image": "https://img.spoonacular.com/recipes/631755-556x370.",
     "readyInMinutes": 45,
     "servings": 24,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [],
     "intolerances": [],
     "dishTypes": [
@@ -871,10 +835,6 @@
     "image": "https://img.spoonacular.com/recipes/642395-556x370.jpg",
     "readyInMinutes": 60,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -965,10 +925,6 @@
     "image": "https://img.spoonacular.com/recipes/636300-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 30,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -1070,10 +1026,6 @@
     "image": "https://img.spoonacular.com/recipes/645541-556x370.jpg",
     "readyInMinutes": 180,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -1176,10 +1128,6 @@
     "image": "https://img.spoonacular.com/recipes/662917-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "dairy free"
@@ -1266,10 +1214,6 @@
     "image": "https://img.spoonacular.com/recipes/655335-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 60,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -1347,10 +1291,6 @@
     "image": "https://img.spoonacular.com/recipes/641650-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 16,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -1453,10 +1393,6 @@
     "image": "https://img.spoonacular.com/recipes/633692-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 9,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -1534,10 +1470,6 @@
     "image": "https://img.spoonacular.com/recipes/663680-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -1636,10 +1568,6 @@
     "image": "https://img.spoonacular.com/recipes/634320-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "dairy free"
@@ -1750,10 +1678,6 @@
     "image": "https://img.spoonacular.com/recipes/648852-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -1840,10 +1764,6 @@
     "image": "https://img.spoonacular.com/recipes/644554-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -1948,10 +1868,6 @@
     "image": "https://img.spoonacular.com/recipes/659927-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2038,10 +1954,6 @@
     "image": "https://img.spoonacular.com/recipes/659109-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2138,10 +2050,6 @@
     "image": "https://img.spoonacular.com/recipes/644571-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2234,10 +2142,6 @@
     "image": "https://img.spoonacular.com/recipes/729532-556x370.jpg",
     "readyInMinutes": 60,
     "servings": 8,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2336,10 +2240,6 @@
     "image": "https://img.spoonacular.com/recipes/1082038-556x370.jpg",
     "readyInMinutes": 15,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "lacto ovo vegetarian"
@@ -2410,10 +2310,6 @@
     "image": "https://img.spoonacular.com/recipes/642878-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2523,10 +2419,6 @@
     "image": "https://img.spoonacular.com/recipes/794352-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
@@ -2616,10 +2508,6 @@
     "image": "https://img.spoonacular.com/recipes/641066-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
-    "calories": {
-      "min": null,
-      "max": null
-    },
     "diets": [
       {
         "en": "gluten free"
