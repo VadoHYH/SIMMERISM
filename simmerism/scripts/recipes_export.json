@@ -1,281 +1,105 @@
 [
   {
-    "id": "09RSWGZcccIfCAMSUjwO",
+    "id": "0a1NbKNL0Bg0k4kdRsnG",
     "title": {
-      "en": "Toasted Marshmallow Ice Cream"
+      "en": "Black Bean Mango Stir Fry with Cilantro Lime Coconut Sauce"
     },
     "summary": {
-      "en": "If you want to add more <b>gluten free</b> recipes to your recipe box, Toasted Marshmallow Ice Cream might be a recipe you should try. This recipe serves 8 and costs 75 cents per serving. One serving contains <b>349 calories</b>, <b>5g of protein</b>, and <b>25g of fat</b>. It works well as a very affordable dessert for <b>Summer</b>. 69 people have tried and liked this recipe. Head to the store and pick up egg yolks, vanillan extract, heavy cream, and a few other things to make it today. It is brought to you by Foodista. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. With a spoonacular <b>score of 24%</b>, this dish is rather bad. <a href=\"https://spoonacular.com/recipes/toasted-marshmallow-ice-cream-591663\">Toasted Marshmallow Ice Cream</a>, <a href=\"https://spoonacular.com/recipes/toasted-marshmallow-swirl-ice-cream-494292\">Toasted Marshmallow Swirl Ice Cream</a>, and <a href=\"https://spoonacular.com/recipes/toasted-marshmallow-ice-cream-cake-349264\">Toasted Marshmallow Ice Cream Cake</a> are very similar to this recipe."
+      "en": "Need a dairy free hor d'oeuvre? Black Bean Mango Stir Fry with Cilantro Lime Coconut Sauce could be a great recipe to try. For $2.83 per serving, this recipe covers 16% of your daily requirements of vitamins and minerals. This recipe makes 8 servings with 359 calories, 10g of protein, and 8g of fat each. This recipe from Foodista has 3 fans. A mixture of garlic, sriracha sauce/red pepper flakes if desired, agave nectar, and a handful of other ingredients are all it takes to make this recipe so scrumptious. From preparation to the plate, this recipe takes about 45 minutes. With a spoonacular score of 53%, this dish is solid. Similar recipes include Beef Stir-fry With Black Bean Sauce, Stir-fry Broccoli With Black Bean Sauce, and Asparagus Stir-Fry With Black Bean Sauce."
     },
     "instructions": {
-      "en": "<ol><li>In a heavy bottomed saucepan, heat the milk, salt and 1/4 cup sugar over med-low heat until steaming but not boiling and the sugar is dissolved. Remove from heat. Add the vanilla bean paste and let stand for 1 hour.</li><li>Fill a large bowl with ice and water. Place a small bowl in the ice water and add the heavy cream. Top the small bowl with a wire strainer and set aside.</li><li>In a small bowl, whisk together the egg yolks and remaining 1/4 cup sugar until light in color and ribbons begin to form. Reheat the milk mixture over med-low heat and slowly add to the egg mixture whisking constantly so the eggs do not scramble. Return the milk/egg mixture to the pan and heat. Stir constantly with a heat-resistant spatula being sure to scrape the sides and bottom until it begins to thicken (it will coat the back of the spatula).</li><li>Strain the milk mixture into the cream, remove the strainer and stir to combine. Cover with plastic wrap and chill in the refrigerator for 2 hours or overnight.</li><li>Pour the mixture into the freezer can of an electric ice cream maker and freeze according to the manufacturer's instructions. When the mixture reaches soft serve consistency, add the toasted marshmallows one at a time and continue churning until combined. Use a spatula to push any marshmallows through that may stick to the churn. Transfer the ice cream to a freezer safe container and freeze.</li></ol>"
+      "en": [
+        "Directions: To make the sauce, blend the coconut milk, cilantro, lime juice, ginger, garlic, soy sauce and agave nectar in a blender until smooth; set aside. Prepare rice noodles according to instructions (they often vary). In a large, deep skillet or wok over medium-high, heat oil until shimmering. Add crab/shrimp oil and saut until cooked through and lightly browned, about 4 to 5 minutes. Add veggies and mango and saut until veggies are lightly tender, about 4 to 5 minutes longer. Stir in the stir fry sauce and noodles. Cook for another minute or until the noodles are hot. Sprinkle with additional sriraccha, salt and pepper and red pepper flakes as desired. Makes 8 servings."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "4 egg yolks"
-      },
-      {
-        "en": "1/2 cup granulated sugar, divided"
-      },
-      {
-        "en": "2 cups heavy cream"
-      },
-      {
-        "en": "1/8 teaspoon kosher salt"
-      },
-      {
-        "en": "14 toasted marshmallows"
-      },
-      {
-        "en": "1 tablespoon vanilla bean paste or vanilla extract"
-      },
-      {
-        "en": "1 1/4 cups whole milk"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/663462-556x370.jpg",
+    "ingredients": {
+      "en": [
+        {
+          "name": "peanut oil",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "snow pea pods",
+          "amount": "2 cups(196g)"
+        },
+        {
+          "name": "carrot",
+          "amount": "1 cup(128g)"
+        },
+        {
+          "name": "cucumber",
+          "amount": "1 cup(133g)"
+        },
+        {
+          "name": "cabbage",
+          "amount": "1 cup(89g)"
+        },
+        {
+          "name": "corn",
+          "amount": "2 cups(290g)"
+        },
+        {
+          "name": "black beans",
+          "amount": "2 cups(344g)"
+        },
+        {
+          "name": "mango",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "imitation crab meat/shrimp",
+          "amount": "2 cups(360ml)"
+        },
+        {
+          "name": "rice noodles",
+          "amount": "8 ounce(226.796g)"
+        },
+        {
+          "name": "sriracha sauce/red pepper flakes if desired",
+          "amount": "8 servings(8servings)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "8 servings(8servings)"
+        },
+        {
+          "name": "coconut milk",
+          "amount": "2 cups(400ml)"
+        },
+        {
+          "name": "cilantro",
+          "amount": "1 cup(16g)"
+        },
+        {
+          "name": "juice of lime",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "ginger root",
+          "amount": "2 inches(2inches)"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves(2cloves)"
+        },
+        {
+          "name": "agave nectar",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "3 tablespoons(3Tbsps)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/635070-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 8,
     "diets": [
       {
-        "en": "gluten free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "dessert"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "sauce pan"
-      },
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "plastic wrap"
-      },
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "sieve"
-      },
-      {
-        "en": "spatula"
-      },
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "ice cream machine"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/7TP3JMNK/toasted-marshmallow-ice-cream"
-  },
-  {
-    "id": "2GIBEDuly3hatm6Vqmcl",
-    "title": {
-      "en": "Baked Cinnamon Apple Wedges"
-    },
-    "summary": {
-      "en": "Need a <b>gluten free, dairy free, paleolithic, and lacto ovo vegetarian side dish</b>? Baked Cinnamon Apple Wedges could be a great recipe to try. One portion of this dish contains approximately <b>1g of protein</b>, <b>1g of fat</b>, and a total of <b>120 calories</b>. For <b>87 cents per serving</b>, this recipe <b>covers 4%</b> of your daily requirements of vitamins and minerals. This recipe serves 1. If you have nutmeg, maple syrup, cinnamon, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. 2 people were impressed by this recipe. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. Overall, this recipe earns a <b>not so amazing spoonacular score of 35%</b>. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/baked-cinnamon-apple-wedges-1369471\">Baked Cinnamon Apple Wedges</a>, <a href=\"https://spoonacular.com/recipes/apple-cinnamon-baked-oatmeal-622523\">Apple Cinnamon Baked Oatmeal</a>, and <a href=\"https://spoonacular.com/recipes/cinnamon-baked-apple-slices-1361101\">Cinnamon Baked Apple Slices</a>."
-    },
-    "instructions": {
-      "en": "Preheat oven to 180 degrees\nCut the apple into about 10-12 wedges and mix it with the rest of the ingredients.\nPlace the apple wedges in a small baking dish or on a baking tray  aim for a single layer.\nBake in the oven for 10 minutes. The apples should be golden brown and cooked all the way through.\nServe while warm."
-    },
-    "ingredients": [
-      {
-        "en": "1 apple"
-      },
-      {
-        "en": "1 tsp maple syrup"
-      },
-      {
-        "en": "1/2 tsp cinnamon"
-      },
-      {
-        "en": "1/4 tsp nutmeg"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/633548-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 1,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
         "en": "dairy free"
-      },
-      {
-        "en": "paleolithic"
-      },
-      {
-        "en": "lacto ovo vegetarian"
-      },
-      {
-        "en": "primal"
-      },
-      {
-        "en": "vegan"
       }
     ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "side dish"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "oven"
-      },
-      {
-        "en": "baking pan"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/XJ3WCV8B/baked-cinnamon-apple-wedges"
-  },
-  {
-    "id": "2GtU5JXSEzKSQY2XykfU",
-    "title": {
-      "en": "Wild Salmon Cakes"
-    },
-    "summary": {
-      "en": "Wild Salmon Cakes might be just the main course you are searching for. This dairy free and pescatarian recipe serves 4 and costs <b>$2.69 per serving</b>. One serving contains <b>209 calories</b>, <b>25g of protein</b>, and <b>9g of fat</b>. Head to the store and pick up panko, onion, egg, and a few other things to make it today. This recipe is liked by 4 foodies and cooks. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. It is brought to you by Foodista. Overall, this recipe earns a <b>solid spoonacular score of 77%</b>. Try <a href=\"https://spoonacular.com/recipes/wild-salmon-cakes-1632267\">Wild Salmon Cakes</a>, <a href=\"https://spoonacular.com/recipes/potato-and-wild-salmon-cakes-with-ginger-and-scallions-317330\">Potato-and-Wild-Salmon Cakes with Ginger and Scallions</a>, and <a href=\"https://spoonacular.com/recipes/potato-and-wild-salmon-cakes-with-ginger-and-scallions-702583\">Potato-and-Wild-Salmon Cakes with Ginger and Scallions</a> for similar recipes."
-    },
-    "instructions": {
-      "en": "Mince the salmon.\nIn a bowl, whip the egg; add the diced onion, capers and salmon until ingredients are incorporated\nAdd the panko bread crumbs until combined.\nForm into 4 patties and place on a hot grill for about 2-3 minutes on each side, or in a 350 degree oven for 15-20 minutes."
-    },
-    "ingredients": [
-      {
-        "en": "1 pound wild salmon fillet, boneless and skinless, minced"
-      },
-      {
-        "en": "1/4 red onion, diced"
-      },
-      {
-        "en": "1 teaspoon capers"
-      },
-      {
-        "en": "1 egg"
-      },
-      {
-        "en": "1/2 cup panko"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/665348-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 4,
-    "diets": [
-      {
-        "en": "dairy free"
-      },
-      {
-        "en": "pescatarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "grill"
-      },
-      {
-        "en": "oven"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/TQ7FYHL4/wild-salmon-cakes"
-  },
-  {
-    "id": "3ru3DURic8JYxKZvK1OW",
-    "title": {
-      "en": "Lemon Fish with Sweet Potatoes"
-    },
-    "summary": {
-      "en": "Lemon Fish with Sweet Potatoes might be just the hor d'oeuvre you are searching for. Watching your figure? This gluten free and pescatarian recipe has <b>761 calories</b>, <b>11g of protein</b>, and <b>44g of fat</b> per serving. This recipe serves 1. For <b>$3.13 per serving</b>, this recipe <b>covers 37%</b> of your daily requirements of vitamins and minerals. 3 people have tried and liked this recipe. Head to the store and pick up lemon, croaker fish, seasoning cube, and a few other things to make it today. It is brought to you by Afrolems. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. Overall, this recipe earns an <b>amazing spoonacular score of 82%</b>. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/roasted-fish-with-cumin-sweet-potatoes-2275\">Roasted Fish With Cumin Sweet Potatoes</a>, <a href=\"https://spoonacular.com/recipes/chile-baked-fish-with-sweet-potatoes-4075\">Chile- Baked Fish With Sweet Potatoes</a>, and <a href=\"https://spoonacular.com/recipes/fish-packets-with-potatoes-lemon-capers-697755\">Fish Packets with Potatoes, Lemon & Capers</a>."
-    },
-    "instructions": {
-      "en": "Wash and place your potatoes in a pot and bring to boil till soft. Peel, slice and set aside.Season your fish with pepper soup spice and set aside.Preheat your butter and vegetable oil and fry your onions and pepper on medium heat for one minute.Add your fish and squeeze your lemon over the fish and sprinkle the seasoning cube and allow to cook on low heat. When brown, flip over so it can brown on the other side.For your sauce, heat up your coconut milk, garlic, seasoning cube and parsley and allow to thicken a bit.Serve the fish and potato with the sauce drizzled over it and garnish with extra chili. "
-    },
-    "ingredients": [
-      {
-        "en": "1 tablespoon of melted butter"
-      },
-      {
-        "en": "1 Chili pepper"
-      },
-      {
-        "en": "Coconut Sauce"
-      },
-      {
-        "en": "1/2 cup of Coconut milk"
-      },
-      {
-        "en": "2 Croaker Fish Fillet"
-      },
-      {
-        "en": "1 garlic clove"
-      },
-      {
-        "en": "1 seasoning cube"
-      },
-      {
-        "en": "Half of a seasoning cube"
-      },
-      {
-        "en": "1/4 lemon slice"
-      },
-      {
-        "en": "1/2 bulb of Red Onion"
-      },
-      {
-        "en": "Sprinkle of Parsley"
-      },
-      {
-        "en": "1 tablespoon of pepper soup spice"
-      },
-      {
-        "en": "1 large Sweet Potato"
-      },
-      {
-        "en": "1 teaspoon of vegetable Oil"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/716369-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 1,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "pescatarian"
-      }
-    ],
-    "intolerances": [],
     "dishTypes": [
       {
         "en": "antipasti"
@@ -299,141 +123,306 @@
     "cuisines": [],
     "equipment": [
       {
-        "en": "pot"
-      }
-    ],
-    "sourceUrl": "https://www.afrolems.com/2016/02/08/lemon-fish-sweet-potatoes/"
-  },
-  {
-    "id": "5RXgEuFXCfRHOUdQlhGV",
-    "title": {
-      "en": "Shortbread Lemon Bars"
-    },
-    "summary": {
-      "en": "You can never have too many dessert recipes, so give Shortbread Lemon Bars a try. This lacto ovo vegetarian recipe serves 9 and costs <b>36 cents per serving</b>. One portion of this dish contains about <b>4g of protein</b>, <b>9g of fat</b>, and a total of <b>247 calories</b>. From preparation to the plate, this recipe takes around <b>1 hour and 10 minutes</b>. It is brought to you by Pick Fresh Foods. Plenty of people made this recipe, and 186 would say it hit the spot. Head to the store and pick up salt, butter, powdered sugar, and a few other things to make it today. Overall, this recipe earns a <b>rather bad spoonacular score of 20%</b>. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/strawberry-lemon-shortbread-bars-130364\">Strawberry Lemon Shortbread Bars</a>, <a href=\"https://spoonacular.com/recipes/luscious-lemon-shortbread-bars-365704\">Luscious Lemon Shortbread Bars</a>, and <a href=\"https://spoonacular.com/recipes/strawberry-lemon-shortbread-bars-171931\">Strawberry Lemon Shortbread Bars</a>."
-    },
-    "instructions": {
-      "en": "Preheat oven to 350.\nCoat a 8 inch square baking ban with no stick cooking spray or line with foil.\nCombine flour, confectioners sugar and salt in large mixing bowl.\nAdd butter and cut into flour with a fork or crumble with your fingers to combine until flour resembles coarse meal.\nPress mixture with fingers into even layer over the bottom of the pan.\nRefrigerate for 15 minutes, then bake about 20 minutes, or until golden brown.\nCombine sugar and flour for the filling in a medium mixing bowl. Whisk in the eggs.\nAdd lemon juice, milk, and salt; stir to combine.\nPour over baked crust. Sprinkle lemon zest over the filling.\nReturn to oven and bake 20 minutes, or until firmly set.\nCool on rack. Remove from pan and cut into 9 squares.\nDust with powdered sugar."
-    },
-    "ingredients": [
-      {
-        "en": "¼ cup all purpose flour"
-      },
-      {
-        "en": "¾ cup all purpose flour"
-      },
-      {
-        "en": "3 eggs"
-      },
-      {
-        "en": "½ cup fresh lemon juice"
-      },
-      {
-        "en": "2 tsp lemon zest, finely grated"
-      },
-      {
-        "en": "3 Tbsp 0% fat milk"
-      },
-      {
-        "en": "1/3 cup powdered sugar"
-      },
-      {
-        "en": "¼ tsp salt"
-      },
-      {
-        "en": "1 cup sugar"
-      },
-      {
-        "en": "6 tbsp unsalted butter, chilled, cubed"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/1005367-556x370.jpg",
-    "readyInMinutes": 70,
-    "servings": 9,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "dessert"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "oven"
-      },
-      {
-        "en": "aluminum foil"
-      },
-      {
-        "en": "mixing bowl"
+        "en": "blender"
       },
       {
         "en": "frying pan"
       },
       {
-        "en": "whisk"
+        "en": "wok"
       }
     ],
-    "sourceUrl": "https://pickfreshfoods.com/shortbread-lemon-bars/"
+    "sourceUrl": "https://www.foodista.com/recipe/N75MR226/black-bean-mango-stir-fry-with-cilantro-lime-coconut-sauce"
   },
   {
-    "id": "5w9omvO3VLKjeOm3SVDU",
+    "id": "2PNJbsHUrQzla65jF2N8",
     "title": {
-      "en": "Broccoli Oatmeal Breakfast Casserole"
+      "en": "Creamy Polenta with Egg, Arrabiata & Bacon"
     },
     "summary": {
-      "en": "Broccoli Oatmeal Breakfast Casserole is a main course that serves 4. One portion of this dish contains around <b>13g of protein</b>, <b>11g of fat</b>, and a total of <b>269 calories</b>. For <b>61 cents per serving</b>, this recipe <b>covers 20%</b> of your daily requirements of vitamins and minerals. It can be enjoyed any time, but it is especially good for <b>Christmas</b>. This recipe is liked by 2 foodies and cooks. A mixture of baking powder, broccoli florets, salt, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is a good option if you're following a <b>gluten free and lacto ovo vegetarian</b> diet. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. It is brought to you by Foodista. All things considered, we decided this recipe <b>deserves a spoonacular score of 59%</b>. This score is pretty good. Similar recipes are <a href=\"https://spoonacular.com/recipes/broccoli-oatmeal-breakfast-casserole-1381179\">Broccoli Oatmeal Breakfast Casserole</a>, <a href=\"https://spoonacular.com/recipes/broccoli-and-cheese-breakfast-casserole-521474\">Broccoli and Cheese Breakfast Casserole</a>, and <a href=\"https://spoonacular.com/recipes/broccoli-leek-breakfast-casserole-29457\">Broccoli & Leek Breakfast Casserole</a>."
+      "en": "If you have roughly 45 minutes to spend in the kitchen, Creamy Polenta with Egg, Arrabiata & Bacon might be an outstanding gluten free recipe to try. For $2.88 per serving, this recipe covers 18% of your daily requirements of vitamins and minerals. This recipe serves 4. One serving contains 667 calories, 24g of protein, and 48g of fat. This recipe from Foodista requires polenta, cream cheese, goat cheese, and parsley. 103 people have tried and liked this recipe. It works well as a main course. All things considered, we decided this recipe deserves a spoonacular score of 53%. This score is solid. Creamy Polenta with Bacon and Sage, Creamy Polenta with Bacon and Cranberries, and Poached Egg over Creamy Polenta are very similar to this recipe."
     },
     "instructions": {
-      "en": "<ol><li>Preheat the oven at 350 degree Fahrenheit. Prepare 8 inch square baking dish with cooking spray.</li><li>Grind the broccoli separately in a food processor and combine it with all the dry ingredients in a mixing bowl.</li><li>In another bowl combine all the wet ingredients.</li><li>Pour the wet ingredients into the dry ingredients and mix well.</li><li>Spoon the batter into the baking dish and put it in the oven.</li><li>Bake it for 25-30 minutes or until the fork comes out clean.</li><li>Cut into desired size and serve hot.</li></ol>"
+      "en": [
+        "Step 1: Preheat the oven to 425 degrees F.",
+        "Step 2: Bring 4 cups of water to a boil in a medium saucepan. Slowly whisk in the polenta, whisking continuously until there are no lumps and it begins to thicken slightly. Reduce the heat to medium-low and allow the polenta to simmer for 30 minutes, stirring occasionally to keep it from overcooking.",
+        "Step 3: When the polenta has thickened and become tender, stir in the goat cheese and cream cheese. Stir until the cheese are melted and fully incorporated into the polenta. Add salt and pepper to taste.",
+        "Step 4: Meanwhile, place the bacon on a parchment-lined baking sheet and place in the preheated oven on the middle rack. Roast for 15-18 minutes or until the bacon is golden and crisp. When it is done, remove it from the oven and place the bacon strips on a paper towel-lined plate. Set aside.",
+        "Step 5: In a small saucepan or in the microwave, heat the marinara sauce until just simmering. Keep warm until you are ready to assemble your bowls.",
+        "Step 6: In a large non-stick skillet, heat the 1 T olive oil over medium heat. If your pan is large enough, add the four eggs and allow them to cook until the whites are opaque but still a bit runny on the top. Put a lid over the pan and turn off the heat. Allow the eggs to continue cooking under the lid until the whites are set but the yolk is still runny. If your pan is small, fry the eggs in batches.",
+        "Step 7: To assemble the bowls, spoon even amounts of polenta in each bowl. Top with a spoonful of the arrabiata, 1 egg and 2 slices of bacon. Garnish with chopped thyme or parsley leaves. Serve immediately."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "2 tsp baking powder"
-      },
-      {
-        "en": "1 ½ cups broccoli florets"
-      },
-      {
-        "en": "½ tsp cayenne pepper"
-      },
-      {
-        "en": "4 large eggs"
-      },
-      {
-        "en": "3 tbsp. low fat milk"
-      },
-      {
-        "en": "2 cups dry quick oats"
-      },
-      {
-        "en": "1 tbsp. olive oil"
-      },
-      {
-        "en": "¾ tsp salt"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/636199-556x370.jpg",
+    "ingredients": {
+      "en": [
+        {
+          "name": "bacon",
+          "amount": "8 slices(8slice)"
+        },
+        {
+          "name": "cream cheese",
+          "amount": "2 oz(56.699g)"
+        },
+        {
+          "name": "eggs",
+          "amount": "4 (4)"
+        },
+        {
+          "name": "parsley",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "goat cheese",
+          "amount": "4 oz(113.398g)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "polenta",
+          "amount": "1 cup(159g)"
+        },
+        {
+          "name": "salt & pepper",
+          "amount": "4 servings(4servings)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/640676-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
     "diets": [
       {
         "en": "gluten free"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "whisk"
+      },
+      {
+        "en": "sauce pan"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "baking sheet"
+      },
+      {
+        "en": "paper towels"
+      },
+      {
+        "en": "microwave"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "bowl"
+      }
+    ],
+    "sourceUrl": "http://www.foodista.com/recipe/WPBY4PQQ/creamy-polenta-with-egg-arrabiata-bacon"
+  },
+  {
+    "id": "3u2KyLEecQTKPuX7xIS0",
+    "title": {
+      "en": "Edamame Hummus"
+    },
+    "summary": {
+      "en": "Need a gluten free, dairy free, lacto ovo vegetarian, and vegan hor d'oeuvre? Edamame Hummus could be an awesome recipe to try. This recipe serves 6. For 67 cents per serving, this recipe covers 6% of your daily requirements of vitamins and minerals. One serving contains 177 calories, 6g of protein, and 14g of fat. It is brought to you by Foodista. 4 people were glad they tried this recipe. This recipe is typical of middl eastern cuisine. If you have ground coriander, garlic, flat-leaf parsley, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes about 45 minutes. Overall, this recipe earns a solid spoonacular score of 56%. Edamame Hummus, Edamame Hummus, and Edamame Hummus are very similar to this recipe."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Boil the edamame in salted water for 4 to 5 minutes. Drain.",
+        "Step 2: In a food processor, puree the Edamame, tahini, water, lemon zest and juice, garlic, salt, cumin, coriander, and chili flakes (optional) until smooth.",
+        "Step 3: With the motor running, slowly drizzle in 2 tablespoons of olive oil and mix until absorbed.",
+        "Step 4: Transfer to a small bowl, stir in the parsley and drizzle with remaining oil. Serve, or refrigerate, covered, up to 3 days."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "chili flakes",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "edamame",
+          "amount": "8 oz(226.796g)"
+        },
+        {
+          "name": "flat-leaf parsley",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves(4cloves)"
+        },
+        {
+          "name": "ground coriander",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "ground cumin",
+          "amount": "0.5 teaspoon(0.5tsps)"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "0.75 teaspoon(0.75tsps)"
+        },
+        {
+          "name": "lemon",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "0.5 teaspoon(0.5tsps)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tablespoons(3Tbsps)"
+        },
+        {
+          "name": "tahini",
+          "amount": "0.25 cup(60ml)"
+        },
+        {
+          "name": "water",
+          "amount": "3 cups(709.764ml)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/642169-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "dairy free"
       },
       {
         "en": "lacto ovo vegetarian"
+      },
+      {
+        "en": "vegan"
       }
     ],
-    "intolerances": [],
     "dishTypes": [
       {
-        "en": "side dish"
+        "en": "antipasti"
       },
+      {
+        "en": "condiment"
+      },
+      {
+        "en": "starter"
+      },
+      {
+        "en": "snack"
+      },
+      {
+        "en": "appetizer"
+      },
+      {
+        "en": "dip"
+      },
+      {
+        "en": "antipasto"
+      },
+      {
+        "en": "hor d'oeuvre"
+      },
+      {
+        "en": "spread"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "Middle Eastern"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "food processor"
+      },
+      {
+        "en": "bowl"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/JP74GT52/edamame-hummus"
+  },
+  {
+    "id": "4YGs7CmP6dNvMNfvUyhc",
+    "title": {
+      "en": "Baked Eggs and Bacon Cream In Spinach Fettuccine Nests"
+    },
+    "summary": {
+      "en": "The recipe Baked Eggs and Bacon Cream In Spinach Fettuccine Nests can be made in about 45 minutes. For $1.66 per serving, this recipe covers 14% of your daily requirements of vitamins and minerals. One portion of this dish contains about 21g of protein, 51g of fat, and a total of 556 calories. This recipe serves 3. 4 people have made this recipe and would make it again. Head to the store and pick up bacon, heavy cream, scallions, and a few other things to make it today. It works well as an affordable main course. It is brought to you by Foodista. All things considered, we decided this recipe deserves a spoonacular score of 35%. This score is not so amazing. If you like this recipe, take a look at these similar recipes: Baked Eggs With Bacon And Spinach, Baked Eggs with Spinach Bacon and Avocado, and Fettuccine with Bacon and Eggs."
+    },
+    "instructions": {
+      "en": [
+        "I begin with my bacon (Ive never had bacon this fresh before, from an entirely organic source so close to home that my husband is literally feeding next seasons pork belly), which I chop and try out to nice crispy cubelets. Now the rest of the meal will take less than 25 minutes: 10 minutes to boil the pasta, make the sauce, and assemble the dish (and, if youre like me, some sub-urb biscuits), and 15 minutes to bake it (while you make a quick salad). So be ready. I melt my butter in my wok over high heat. I throw my pasta nests into the salted boiling water on the back burner. When my butter is melted and just begging to tan, I add my heavy cream and blend well. I bring this to a simmer for a moment. Then I add 3/4 of my cheese, which Ive shredded. (The rest I will thinly shave for a final garnish.) I blend this well, bringing it to a low simmer to thicken, until it forms a smooth sauce. I also add some salt and pepper. (Crushed red pepper flakes, nutmeg, paprika, maybe even a dash of curry powder would work nicely here, too.) Finally, I add 3/4 of my cooked bacon, and blend well with the sauce, until the flavors are beautifully infused. Its been 10 minutes, and my 11 minute pasta is just slightly undercooked (I know, cuz I bit off a snippet) perfect! Using tongs and a meshed spoon, I transfer my pasta to the waiting bacon cream, and toss well. I add a tablespoon, maybe, of the pasta water, too, just to keep the sauce wet enough to bake later. Using my tongs, I spin 1/2 of the pasta and sauce into each of two medium (10oz) ceramic ramekins, which Ive brushed down with melted butter. I sprinkle most of the rest of my bacon (reserving a few chunks for a final flourish) on top. The piece of resistance: a whole, cracked, raw egg, dropped into a wee basket I left in the middle of my pasta and sauce nests. I manage to keep the yolk whole only in one, but the other I rather hold together by virtue of a cleverly placed noodle and some dribbled sauce. I place these into a 350 oven to bake for 15 minutes, or until the whites have set, but the yolk is still glossy and runny. After coring the best bits out of a loaf of bread destined for nothing (since my husband purchased a fresher loaf of preferred pan this afternoon) with a properly sized wine-glass rim, I brushed each disk with melted butter, and layered them with some of my sprinkled cheese into 4 cups of a buttered muffin tin, and then I stuck them in my oven along with my pasta nests to brown. I consider these my sub-urb Wonderbread biscuits: quick, easy, and yummy, leaving fodder for crotons (or compost). I also threw together a quick salad of baby greens, sliced onion, strips of roasted red peppers, black olives, EVOO, and salt and pepper. Not that dinner needed these accoutrement my simmering, saucy noodle nests of runny yolk baked eggs, bac"
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "bacon",
+          "amount": "3 slices(3slice)"
+        },
+        {
+          "name": "butter",
+          "amount": "0.5 stick(0.5stick)"
+        },
+        {
+          "name": "parmigiano-reggiano",
+          "amount": "0.25 pound(113.398g)"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "0.5 cup(119ml)"
+        },
+        {
+          "name": "eggs",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "nests of spinach fettuccine",
+          "amount": "2 large(2large)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "3 servings(3servings)"
+        },
+        {
+          "name": "scallions",
+          "amount": "3 servings(3servings)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/633594-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 3,
+    "diets": [],
+    "dishTypes": [
       {
         "en": "lunch"
       },
@@ -459,72 +448,84 @@
     "cuisines": [],
     "equipment": [
       {
-        "en": "food processor"
-      },
-      {
-        "en": "baking pan"
-      },
-      {
-        "en": "mixing bowl"
-      },
-      {
         "en": "oven"
+      },
+      {
+        "en": "wok"
+      },
+      {
+        "en": "tongs"
+      },
+      {
+        "en": "ramekin"
+      },
+      {
+        "en": "muffin tray"
       }
     ],
-    "sourceUrl": "https://www.foodista.com/recipe/J33PTBPD/broccoli-oatmeal-breakfast-casserole"
+    "sourceUrl": "https://www.foodista.com/recipe/DWGPNSPQ/baked-eggs-and-bacon-cream-in-spinach-fettuccine-nests"
   },
   {
-    "id": "Cr8RDQyEGwXdoiFxLCW4",
+    "id": "GWKwbx2LA5P3vqSNteAk",
     "title": {
-      "en": "Make Ahead Quiche"
+      "en": "Barnaby's Caesar Salad"
     },
     "summary": {
-      "en": "Make Ahead Quiche might be a good recipe to expand your main course recipe box. One portion of this dish contains approximately <b>14g of protein</b>, <b>22g of fat</b>, and a total of <b>311 calories</b>. This recipe serves 8 and costs 92 cents per serving. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. It is a <b>very budget friendly</b> recipe for fans of Mediterranean food. This recipe is liked by 2 foodies and cooks. This recipe from Foodista requires eggs, ham, salt, and pepper. With a spoonacular <b>score of 26%</b>, this dish is not so tremendous. Similar recipes are <a href=\"https://spoonacular.com/recipes/make-ahead-quiche-1372315\">Make Ahead Quiche</a>, <a href=\"https://spoonacular.com/recipes/make-ahead-tomato-croissant-quiche-183484\">Make-Ahead Tomato-Croissant Quiche</a>, and <a href=\"https://spoonacular.com/recipes/crustless-quiche-to-make-ahead-and-freeze-1226503\">Crustless Quiche to Make Ahead and Freeze</a>."
+      "en": "If you want to add more pescatarian recipes to your recipe box, Barnaby's Caesar Salad might be a recipe you should try. This main course has 595 calories, 21g of protein, and 41g of fat per serving. For $2.38 per serving, this recipe covers 24% of your daily requirements of vitamins and minerals. This recipe serves 4. Only a few people really liked this American dish. A mixture of anchovy paste, parmigiano reggiano cheese, romaine lettuce, and a handful of other ingredients are all it takes to make this recipe so flavorful. 3 people found this recipe to be scrumptious and satisfying. It is brought to you by Foodista. From preparation to the plate, this recipe takes roughly 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 79%. This score is pretty good. If you like this recipe, you might also like recipes such as Grilled Caesar Salad with Light Caesar Salad Dressing, Chicken Caesar Salad with Garlic Croutons {and Light Caesar Dressing}, and Chicken Caesar Salad with Garlic Croutons {and Light Caesar Dressing}."
     },
     "instructions": {
-      "en": "In a medium bowl, toss the flour with the grated cheese.  Evenly spread the cheese over the bottom of the pie crust.  Top the cheese with the diced ham.  In a medium bowl, whisk together eggs, half and half, salt, pepper and dry mustard.  Stir in the green onions.  Pour the egg mixture over the ham and cheese.\nCover the unbaked quiche with plastic wrap, then with foil, sealing the edges well.  Place the prepared quiche in the freezer.  When ready to bake, preheat the oven to 400 degrees.  Do not thaw the quiche! Remove the foil and plastic wrap.  Place the foil around the edges of the crust to prevent burning.  Place the frozen quiche in the oven and bake for about 1 hour, or until the filling is set and the crust is golden brown.\nTo cook the quiche immediately (without freezing first), preheat the oven to 350 degrees and bake for 45 minutes to 1 hour."
+      "en": [
+        "Step 1: Combine lemon juice and anchovy paste in a blender.",
+        "Step 2: Start blender and drizzle olive into mixture until it thickens.",
+        "Step 3: Cut bread into 1 inch cubes and toast until brown. The trick here is to have it crispy on the outside and soft on the inside.",
+        "Step 4: Combine lettuce and bread cubes in a salad bowl and cover with Parmigiano Reggiano (Parmesan) cheese.",
+        "Step 5: Pour dressing over top and toss."
+      ]
     },
-    "ingredients": [
+    "ingredients": {
+      "en": [
+        {
+          "name": "anchovy paste",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "ciabatta",
+          "amount": "0.5 loaf(0.5loaf)"
+        },
+        {
+          "name": "juice of lemon",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "1 cup(216ml)"
+        },
+        {
+          "name": "parmigiano reggiano cheese",
+          "amount": "1.5 cups(150g)"
+        },
+        {
+          "name": "cracked pepper",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "romaine lettuce",
+          "amount": "1 large head(1large head)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/634345-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "diets": [
       {
-        "en": "1 (9 inch) unbaked pie crust"
-      },
-      {
-        "en": "1 cup shredded cheddar cheese"
-      },
-      {
-        "en": "1 cup shredded Monterrey Jack cheese"
-      },
-      {
-        "en": "1 tablespoon flour"
-      },
-      {
-        "en": "1/2 cup cooked ham, diced"
-      },
-      {
-        "en": "4 eggs"
-      },
-      {
-        "en": "1 cup half and half"
-      },
-      {
-        "en": "2 green onions, chopped"
-      },
-      {
-        "en": "1/4 teaspoon salt"
-      },
-      {
-        "en": "1/4 teaspoon ground dry mustard"
-      },
-      {
-        "en": "Dash of pepper"
+        "en": "pescatarian"
       }
     ],
-    "image": "https://img.spoonacular.com/recipes/650650-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 8,
-    "diets": [],
-    "intolerances": [],
     "dishTypes": [
+      {
+        "en": "side dish"
+      },
       {
         "en": "lunch"
       },
@@ -532,225 +533,13 @@
         "en": "main course"
       },
       {
-        "en": "morning meal"
-      },
-      {
-        "en": "brunch"
+        "en": "salad"
       },
       {
         "en": "main dish"
       },
       {
-        "en": "breakfast"
-      },
-      {
         "en": "dinner"
-      }
-    ],
-    "cuisines": [
-      {
-        "en": "Mediterranean"
-      },
-      {
-        "en": "French"
-      },
-      {
-        "en": "European"
-      }
-    ],
-    "equipment": [
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "plastic wrap"
-      },
-      {
-        "en": "aluminum foil"
-      },
-      {
-        "en": "oven"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/SLFFTBGD/make-ahead-quiche"
-  },
-  {
-    "id": "DzkJxyGZCv6Lvck3opqw",
-    "title": {
-      "en": "Palak-tofu (bean curd)"
-    },
-    "summary": {
-      "en": "If you want to add more <b>Indian</b> recipes to your recipe box, Palak-tofu (bean curd) might be a recipe you should try. For <b>$1.07 per serving</b>, you get a side dish that serves 6. One portion of this dish contains around <b>5g of protein</b>, <b>13g of fat</b>, and a total of <b>175 calories</b>. Head to the store and pick up ginger-garlic paste, chillies, oil, and a few other things to make it today. 2 people were impressed by this recipe. It is a good option if you're following a <b>gluten free</b> diet. It is brought to you by Foodista. From preparation to the plate, this recipe takes around <b>45 minutes</b>. Overall, this recipe earns a <b>rather bad spoonacular score of 16%</b>. Similar recipes are <a href=\"https://spoonacular.com/recipes/palak-tofu-bean-curd-1357357\">Palak-tofu (bean curd)</a>, <a href=\"https://spoonacular.com/recipes/mapo-tofu-bean-curd-143648\">Mapo Tofu (Bean Curd)</a>, and <a href=\"https://spoonacular.com/recipes/mapo-tofu-bean-curd-1357343\">Mapo Tofu (Bean Curd)</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>Heat 1tbsp oil  in a pan,add the onions,saute till brown,add ginger garlic paste,saute for a min,add green chillies, chopped tomatoes and saute well.</li><li>Add the washed uncut palak,saute for 5 mins till they wilt.</li><li>Take it out in a plate and allow to cool.grind to coarse paste in a blender.set aside.</li><li>Add 1 tbsp oil in the same pan and saute the tofu cubes,add little salt,turmeric and saute for 2 mins.take them out in a plate.</li><li>Add the coarse palak paste in the pan and salt according to the content along with coriander powder.let it cook on slow for 10 mins.</li><li>Add the sauteed tofu cubes,mix well.</li><li>Crush in the kasuri methi in the palm of your hands and mix in.Pour in the milk or cream,mix well and cover it on slow flame for 5 mins.drop in the butter (it gives an added creamyness)Finish it off with garam masala.</li><li>Serve hot with roti or paratha.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "2 tablespoons Butter-"
-      },
-      {
-        "en": "Coriander powder-"
-      },
-      {
-        "en": "1/2 teaspoon cumin seeds-"
-      },
-      {
-        "en": "Garam"
-      },
-      {
-        "en": "1 teaspoon Ginger-garlic paste-"
-      },
-      {
-        "en": "4 Green chillies-"
-      },
-      {
-        "en": "1 teaspoon Kasuri methi-"
-      },
-      {
-        "en": "1/2 cup Cream/ Milk-"
-      },
-      {
-        "en": "2 tablespoons Oil-"
-      },
-      {
-        "en": "1 Onions- medium cut into chunks"
-      },
-      {
-        "en": "2 Palak- cups,washed"
-      },
-      {
-        "en": "Salt to taste"
-      },
-      {
-        "en": "1/2 Tofu- a block,cut into small cubes"
-      },
-      {
-        "en": "1 Tomato- small chopped"
-      },
-      {
-        "en": "1/2 teaspoon Turmeric-"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/654379-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 6,
-    "diets": [
-      {
-        "en": "gluten free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "side dish"
-      }
-    ],
-    "cuisines": [
-      {
-        "en": "Indian"
-      },
-      {
-        "en": "Asian"
-      }
-    ],
-    "equipment": [
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "blender"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/BJJJDSJ6/palak-tofu-bean-curd"
-  },
-  {
-    "id": "EK4DS2mWLpjuAtBx5opb",
-    "title": {
-      "en": "Peppermint Hot Chocolate Cupcakes"
-    },
-    "summary": {
-      "en": "The recipe Peppermint Hot Chocolate Cupcakes could satisfy your American craving in approximately <b>45 minutes</b>. This recipe serves 24. This dessert has <b>349 calories</b>, <b>3g of protein</b>, and <b>13g of fat</b> per serving. For <b>59 cents per serving</b>, this recipe <b>covers 5%</b> of your daily requirements of vitamins and minerals. 42 people have tried and liked this recipe. A mixture of heavy cream, semisweet chocolate chips, vanillan extract, and a handful of other ingredients are all it takes to make this recipe so yummy. It is perfect for <b>Christmas</b>. It is brought to you by Foodista. All things considered, we decided this recipe <b>deserves a spoonacular score of 21%</b>. This score is not so excellent. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/peppermint-hot-chocolate-cupcakes-587172\">Peppermint Hot Chocolate Cupcakes</a>, <a href=\"https://spoonacular.com/recipes/peppermint-hot-chocolate-cupcakes-590842\">Peppermint Hot Chocolate Cupcakes</a>, and <a href=\"https://spoonacular.com/recipes/crockpot-peppermint-hot-chocolate-peppermint-mocha-recipe-55009\">Crockpot Peppermint Hot Chocolate/peppermint Mocha Recipe</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>Preheat the oven to 350 degrees F. Line a cupcake or muffin pan with 24 regular-size cupcake liners.</li><li>Combine the chocolate chips and hot coffee together, stirring occasionally until the chocolate is melted and the mixture is smooth. In a large bowl sift together the sugar, flour, cocoa powder, baking soda, baking powder and salt. In another bowl, beat the eggs with an electric mixer until thickened slightly. Slowly add the buttermilk, oil and vanilla. Add the melted chocolate mixture to the eggs, and combine completely. Add the sugar mixture and beat on medium speed until well combined.</li><li>Fill the prepared cupcake liners three-quarters full with the cupcake batter. Place in the oven and bake until a toothpick inserted in center comes out clean, 18 to 21 minutes. Cool the cupcakes completely.</li><li>While the cupcakes are baking, prepare the Chocolate Ganache and the Peppermint Marshmallow Buttercream Frosting (directions for both below). Put the frosting into a pastry bag fitted with a star tip.</li><li>To make the Chocolate Ganache, bring the heavy cream and butter to a simmer in a small saucepan. Turn off the heat and add in the chocolate. Stir the mixture until smooth. Set aside to cool.</li><li>To make the Peppermint Marshmallow Buttercream Frosting, whip together the butter and marshmallow cream, using an electric mixer fitted with a whisk attachment. Add the peppermint extract. Slowly add 2 cups of the powdered sugar and continue to mix on a slow speed. Add the milk and additional powdered sugar, up to 2 cups, until desired consistency is reached.</li><li>To assemble cupcakes:</li><li>Using an apple corer, remove the center of each cupcake. Fill each cupcake with a spoonful of the Chocolate Ganache. Using the frosting-filled pastry bag, frost the cupcakes and sprinkle with crushed peppermint candies.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "1/2 teaspoon baking powder"
-      },
-      {
-        "en": "1 1/3 teaspoon baking soda"
-      },
-      {
-        "en": "1 cup hot-brewed coffee"
-      },
-      {
-        "en": "1/2 cup butter, softened"
-      },
-      {
-        "en": "1 cup buttermilk"
-      },
-      {
-        "en": "2 eggs"
-      },
-      {
-        "en": "1 2/3 cups all-purpose flour"
-      },
-      {
-        "en": "1/2 cup heavy cream"
-      },
-      {
-        "en": "7 ounces marshmallow creme"
-      },
-      {
-        "en": "2 tablespoons milk"
-      },
-      {
-        "en": "1/4 cup crushed peppermint candies"
-      },
-      {
-        "en": "1 teaspoon peppermint extract"
-      },
-      {
-        "en": "4 cups powdered sugar"
-      },
-      {
-        "en": "1 teaspoon salt"
-      },
-      {
-        "en": "6 ounces semisweet chocolate"
-      },
-      {
-        "en": "2 ounces mini semisweet chocolate chips"
-      },
-      {
-        "en": "2 cups sugar"
-      },
-      {
-        "en": "1/2 tablespoon unsalted butter"
-      },
-      {
-        "en": "1 cup unsweetened cocoa powder"
-      },
-      {
-        "en": "1/2 teaspoon vanilla extract"
-      },
-      {
-        "en": "1/2 cup vegetable oil"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/631755-556x370.",
-    "readyInMinutes": 45,
-    "servings": 24,
-    "diets": [],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "dessert"
       }
     ],
     "cuisines": [
@@ -760,102 +549,165 @@
     ],
     "equipment": [
       {
-        "en": "muffin liners"
-      },
-      {
-        "en": "muffin tray"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "hand mixer"
+        "en": "blender"
       },
       {
         "en": "bowl"
-      },
-      {
-        "en": "toothpicks"
-      },
-      {
-        "en": "pastry bag"
-      },
-      {
-        "en": "sauce pan"
-      },
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "apple corer"
       }
     ],
-    "sourceUrl": "https://www.foodista.com/recipe/QHL47KFG/peppermint-hot-chocolate-cupcakes"
+    "sourceUrl": "https://www.foodista.com/recipe/222ZYXGD/barnabys-caesar-salad"
   },
   {
-    "id": "G1v0B63sbaQVcj8hr6o0",
+    "id": "LJFFxm5j0x30yrp0AQeB",
     "title": {
-      "en": "Enchilada Stuffed Spaghetti Squash"
+      "en": "Oreo Cake"
     },
     "summary": {
-      "en": "Enchilada Stuffed Spaghetti Squash requires roughly <b>1 hour</b> from start to finish. One portion of this dish contains roughly <b>54g of protein</b>, <b>31g of fat</b>, and a total of <b>754 calories</b>. This recipe serves 4 and costs $4.54 per serving. If you have corn, rotisserie chicken, cilantro, and a few other ingredients on hand, you can make it. It works well as a Mexican main course. 2 people have tried and liked this recipe. It is a good option if you're following a <b>gluten free</b> diet. It is brought to you by Foodista. Taking all factors into account, this recipe <b>earns a spoonacular score of 75%</b>, which is solid. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/enchilada-stuffed-spaghetti-squash-1371409\">Enchilada Stuffed Spaghetti Squash</a>, <a href=\"https://spoonacular.com/recipes/enchilada-stuffed-spaghetti-squash-1340461\">Enchilada Stuffed Spaghetti Squash</a>, and <a href=\"https://spoonacular.com/recipes/chicken-enchilada-stuffed-spaghetti-squash-247478\">Chicken Enchilada Stuffed Spaghetti Squash</a>."
+      "en": "Oreo Cake might be a good recipe to expand your dessert collection. For $2.39 per serving, this recipe covers 19% of your daily requirements of vitamins and minerals. One portion of this dish contains around 9g of protein, 39g of fat, and a total of 797 calories. This recipe serves 4. Only a few people made this recipe, and 5 would say it hit the spot. If you have butter, gal. vanillan ice cream, cool whip, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. From preparation to the plate, this recipe takes around 45 minutes. Overall, this recipe earns a solid spoonacular score of 44%. Users who liked this recipe also liked Oreo Mousse Filled Chocolate Trifecta Cake Using Cake Boss Mix, Oreo Mousse Filled Chocolate Trifecta Cake Using Cake Boss Mix, and Oreo Mousse Filled Chocolate Trifecta Cake Using Cake Boss Mix."
     },
     "instructions": {
-      "en": "<ol><li>If you don't have have your chicken already prepared or have leftovers, cook the chicken breasts and shred or dice.</li><li>Meanwhile, cook the spaghetti squash. Two methods to cook the squash: #1- Microwave by placing squash in a baking dish, cut size down and fill the dish with an inch of water. Microwave on high for about 8-12 minutes (rotating a few times) or until the outside is soft enough to be pierced with a fork. #2- Brush inner flesh with oil, season with salt and pepper and roast in a 400 F oven, cut side up in a baking dish until tender, about 30-40 min.</li><li>Mix together the chicken, enchilada sauce, beans, corn, olives, cilantro and cheese (save some of the cheese for topping).</li><li>Scrape the sides of the spaghetti squash so the \"noodles\" are tossed and more loose.</li><li>Divide the enchilada mixture between the squash boats and top with the extra cheese you saved.</li><li>Broil in the oven until the cheese is melted and golden brown, about 2-3 minutes. Garnish with cilantro and top with avocado slices (if using).</li></ol>"
+      "en": [
+        "Step 1: Crumble cookies and save 1/3 for topping. Mix butter and 2/3 cookie crumbs. Press into bottom of long cake pan. Layer 1/2 gallon of ice cream and 1/2 can of syrup. Layer Cool Whip. Add remaining cookie crumbs and chocolate syrup. Freeze overnight or at least 12 hours."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "2 avocados"
-      },
-      {
-        "en": "1/3 cup black olives"
-      },
-      {
-        "en": "15 oz can low-sodium black beans"
-      },
-      {
-        "en": "1/2 cup corn"
-      },
-      {
-        "en": "16 oz enchilada sauce"
-      },
-      {
-        "en": "1/4 cup fresh cilantro"
-      },
-      {
-        "en": "1 cup shredded reduced fat cheddar cheese"
-      },
-      {
-        "en": "2 cups cooked rotisserie chicken"
-      },
-      {
-        "en": "2 small spaghetti squash"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/642395-556x370.jpg",
-    "readyInMinutes": 60,
+    "ingredients": {
+      "en": [
+        {
+          "name": "butter",
+          "amount": "0.25 cup(56.75g)"
+        },
+        {
+          "name": "chocolate syrup",
+          "amount": "1 can(1can)"
+        },
+        {
+          "name": "cool whip",
+          "amount": "16 oz(453.592g)"
+        },
+        {
+          "name": "oreo cookies",
+          "amount": "1 package(1pkg)"
+        },
+        {
+          "name": "gal. vanilla ice cream",
+          "amount": "0.5 (0.5)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/654018-556x370.jpg",
+    "readyInMinutes": 45,
     "servings": 4,
-    "diets": [
+    "diets": [],
+    "dishTypes": [
       {
-        "en": "gluten free"
+        "en": "dessert"
       }
     ],
-    "intolerances": [],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "cake form"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/MQXQDZWD/oreo-cake"
+  },
+  {
+    "id": "OGqNSRnKHJesF5uZVUEH",
+    "title": {
+      "en": "Spicy Chicken with Salsa Verde"
+    },
+    "summary": {
+      "en": "Forget going out to eat or ordering takeout every time you crave Mexican food. Try making Spicy Chicken with Salsa Verde at home. This recipe makes 6 servings with 398 calories, 14g of protein, and 23g of fat each. For $1.81 per serving, this recipe covers 28% of your daily requirements of vitamins and minerals. Only a few people made this recipe, and 2 would say it hit the spot. From preparation to the plate, this recipe takes approximately 45 minutes. It is brought to you by Foodista. Head to the store and pick up jalapeño peppers, oregano, mint leaves, and a few other things to make it today. It works well as an affordable side dish. Taking all factors into account, this recipe earns a spoonacular score of 46%, which is solid. Try Spicy salsa verde chicken, Skillet Nachos with Spicy Salsa Verde Chicken, and Spicy Chicken Empanadas with Orange Salsa Verde for similar recipes."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Turn oven on to lowest setting and place your plates inside.",
+        "Step 2: Prepare your pre bought flour tortilla wraps by sprinkling each tortilla with a little water then stacking them together, wrap in tin foil and place in the oven alongside the plates.",
+        "Step 3: Prepare the chicken, cut chicken thighs into strips and mix with onion salt, chilli power, oregano, paprika and oil in a bowl and toss to coat. set aside.",
+        "Step 4: Salsa Verde: Place the chili, garlic, green onion, coriander, mint and vegetable oil in a food processor and pulse until combined. Set aside later for serving. Makes 1 cup (250ml).",
+        "Step 5: Guacamole: Scoop out flesh of 1 ripe Avocado, Chop and de-seed 1 red chilli and add to the Avocado, Squeeze in juice of 1/2 lime and mix to combine. Set aside later for serving",
+        "Step 6: Sour Cream: Turn out tub of sour cream into a serving bowl, sprinkle lightly over the top with course black pepper. set aside.",
+        "Step 7: Preheat a char-grill pan or barbecue over high heat. Char-grill or barbecue the chicken for 4-5 minutes each side or until cooked through.",
+        "Step 8: Chop 1 red bell pepper into lengthy strips and toss on the hot griddle for 1 min.",
+        "Step 9: Place the Chicken in a serving bowl, with pepper and bring the Salsa Verde, Guacamole and sour cream to the table along with hot plates and the tortilla wraps. Serve with extra fresh bowl of coriander leaves and lime wedges. .",
+        "Step 10: Serves 6"
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "avocado",
+          "amount": "1 medium(1medium)"
+        },
+        {
+          "name": "chicken thigh fillets",
+          "amount": "200 g(200g)"
+        },
+        {
+          "name": "chili powder",
+          "amount": "1 teaspoon(1tsp)"
+        },
+        {
+          "name": "flour tortilla wraps",
+          "amount": "1 package(1pkg)"
+        },
+        {
+          "name": "coriander leaves",
+          "amount": "0.25 cup(59.147g)"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves(2cloves)"
+        },
+        {
+          "name": "green onions",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "jalapeño peppers",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "limes",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "mint leaves",
+          "amount": "0.25 cup(11.25g)"
+        },
+        {
+          "name": "onion salt",
+          "amount": "1 teaspoon(1tsp)"
+        },
+        {
+          "name": "oregano",
+          "amount": "1 teaspoon(1tsp)"
+        },
+        {
+          "name": "paprika",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "chilli",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "cream",
+          "amount": "1 small tub(1small tub)"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1 Teaspoon(1tsp)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/661059-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "diets": [],
     "dishTypes": [
       {
         "en": "side dish"
-      },
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
       }
     ],
     "cuisines": [
@@ -865,903 +717,97 @@
     ],
     "equipment": [
       {
-        "en": "baking pan"
+        "en": "food processor"
       },
       {
-        "en": "microwave"
+        "en": "grill pan"
       },
       {
-        "en": "oven"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/C7DJP46H/enchilada-stuffed-spaghetti-squash"
-  },
-  {
-    "id": "HFBuHreB9kHjfDf9UKpp",
-    "title": {
-      "en": "Brown sugar & Spice Sugar cookie frogs"
-    },
-    "summary": {
-      "en": "Brown sugar & Spice Sugar cookie frogs takes roughly <b>45 minutes</b> from beginning to end. This recipe serves 30 and costs 12 cents per serving. This dessert has <b>129 calories</b>, <b>2g of protein</b>, and <b>6g of fat</b> per serving. 28 people have tried and liked this recipe. Head to the store and pick up unbleached, allspice, egg, and a few other things to make it today. It can be enjoyed any time, but it is especially good for <b>Christmas</b>. It is a good option if you're following a <b>lacto ovo vegetarian</b> diet. It is brought to you by Foodista. Overall, this recipe earns a <b>not so great spoonacular score of 10%</b>. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/brown-sugar-cinnamon-sugar-cookie-bars-249420\">Brown Sugar Cinnamon Sugar Cookie Bars</a>, <a href=\"https://spoonacular.com/recipes/rolling-stones-brown-sugar-cupcake-with-coconut-custard-filling-spiced-rum-frosting-and-cracked-brown-sugar-brittle-354217\">Rolling Stones Brown Sugar Cupcake with Coconut Custard Filling, Spiced Rum Frosting and Cracked Brown Sugar Brittle</a>, and <a href=\"https://spoonacular.com/recipes/brown-sugar-pound-cakes-with-brown-sugar-cream-cheese-frosting-538490\">Brown Sugar Pound Cakes with Brown Sugar Cream Cheese Frosting</a>."
-    },
-    "instructions": {
-      "en": "Whisk the flour, baking powder and spices, set aside.\nCream the sugar and butter. Add the egg and extracts and mix until well-blended.\nGradually add the flour mixture and beat just until combined, scraping down the bowl, especially the bottom. (The dough will be quite thick...you may need to knead in stray bits of flour from the bottom of the bowl by hand.)\nRoll on a floured surface and cut into shapes. Place on parchment lined baking sheets and bake for 9-12 minutes, depending on the size of your cutter. Let sit a few minutes on the sheet, then transfer to a cooling rack."
-    },
-    "ingredients": [
-      {
-        "en": "3 c unbleached, all-purpose flour"
+        "en": "frying pan"
       },
       {
-        "en": "2 tsp baking powder"
-      },
-      {
-        "en": "1/2 tsp cinnamon"
-      },
-      {
-        "en": "1/4 tsp ginger"
-      },
-      {
-        "en": "1/8 tsp nutmeg (freshly grated, if possible)"
-      },
-      {
-        "en": "1/8 tsp allspice"
-      },
-      {
-        "en": "1/2 c granulated sugar (I use sugar that I've stored vanilla beans in)"
-      },
-      {
-        "en": "1/2 c light brown sugar (packed)"
-      },
-      {
-        "en": "2 sticks butter"
-      },
-      {
-        "en": "1 egg"
-      },
-      {
-        "en": "1 tsp pure vanilla extract"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/636300-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 30,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "dessert"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "whisk"
+        "en": "grill"
       },
       {
         "en": "bowl"
-      },
-      {
-        "en": "baking sheet"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "wire rack"
       }
     ],
-    "sourceUrl": "https://www.foodista.com/recipe/883DLCS5/brown-sugar-spice-sugar-cookie-frogs"
+    "sourceUrl": "https://www.foodista.com/recipe/J2MM37RF/spicy-chicken-with-salsa-verde"
   },
   {
-    "id": "Hw6Py5Pj1kj5t6x4JZya",
+    "id": "PPpPCWs85EYeIBoEi7Qg",
     "title": {
-      "en": "Green Thai Curry with Beef"
+      "en": "Warm Duck Salad With Roasted Beetroot"
     },
     "summary": {
-      "en": "Green Thai Curry with Beef might be a good recipe to expand your main course recipe box. For <b>$5.87 per serving</b>, this recipe <b>covers 42%</b> of your daily requirements of vitamins and minerals. This recipe serves 4. Watching your figure? This gluten free and dairy free recipe has <b>659 calories</b>, <b>39g of protein</b>, and <b>46g of fat</b> per serving. If you have soy sauce, oil, flank steak, and a few other ingredients on hand, you can make it. It is an <b>expensive</b> recipe for fans of Asian food. 2 people have tried and liked this recipe. It is brought to you by Foodista. From preparation to the plate, this recipe takes around <b>3 hours</b>. With a spoonacular <b>score of 78%</b>, this dish is good. Similar recipes are <a href=\"https://spoonacular.com/recipes/thai-red-beef-curry-with-green-beans-1366063\">Thai Red Beef Curry with Green Beans</a>, <a href=\"https://spoonacular.com/recipes/thai-red-beef-curry-with-green-beans-838836\">Thai Red Beef Curry with Green Beans</a>, and <a href=\"https://spoonacular.com/recipes/homemade-thai-green-curry-paste-and-an-easy-thai-green-curry-909057\">Homemade Thai Green Curry Paste (And An Easy Thai Green Curry)</a>."
+      "en": "The recipe Warm Duck Salad With Roasted Beetroot can be made in around 45 minutes. This gluten free and primal recipe serves 4 and costs $5.81 per serving. This main course has 520 calories, 40g of protein, and 26g of fat per serving. Only a few people made this recipe, and 5 would say it hit the spot. Head to the store and pick up duck breast meat - skin left on, balsamic vinegar, arugula greens, and a few other things to make it today. It is brought to you by Foodista. Overall, this recipe earns a super spoonacular score of 88%. If you like this recipe, you might also like recipes such as Warm Duck Salad With Roasted Beetroot, Warm Duck Breast Salad With Spinach, Kalamatan Olives, Roasted P, and Shukhi – warm beetroot & mushroom salad."
     },
     "instructions": {
-      "en": "<ol><li>Prepare marinade.</li><li>Slice beef. Add beef and marinade to freezer bag. Marinate for 2-4 in the fridge. The longer the better.</li><li>Slice/chop all your veggies.</li><li>Prepare your curry paste.</li><li>Add oil to wok and heat.</li><li>Cook beef until done, approximately 10 minutes.</li><li>Remove from wok and set aside.</li><li>Add onions and cook for about 2 minutes.</li><li>Add carrots, peppers and mushrooms.</li><li>When almost done (to your preferred tenderness) add snap peas and bok choy. Cook about 2 minutes.</li><li>Remove veggies from wok and set aside.</li><li>Add curry paste to wok and heat through.</li><li>Add coconut milk and whisk until smooth.</li><li>Bring to a boil.</li><li>Add beef to the sauce.</li><li>Add veggies to the beef/sauce mixture.</li><li>Heat through.</li><li>Serve over your choice of noodles or riice.</li></ol>"
+      "en": [
+        "Pre-heat the oven to 200 deg Celsius (400 F). Start by roasting the beetroots. Clean the beets of all mud and trim the stems. Wrap each beet tightly in aluminum foil. Place the wrapped beets on a pan and in a 200 deg Celsius oven for 30 to 40mins. They are done when they are very tender. While the beets are cooking, use a peeler and peel an orange, taking note to get as much of zest and as little of pith (the white parts) as possible. Stack the strips of orange zest and cut into fine strips with a sharp knife. Set aside. Clean and dry the duck breasts. Score the skin of the duck. Make cuts into the fat layer and take care not to cut into the meat layer. Rub some salt into the skin side only of the duck. Add the duck breasts to a clean and COLD pan. Do not add any oil. Place the pan on the stove and turn the heat to medium. As the pan heats up, the fat from the duck will render off and the skin will brown beautifully. Always keep the heat to between medium to medium-high. Never use high heat as the skin will burn before the duck is cooked through. Once the skin is a gorgeous dark golden brown, flip the duck breasts to the other side and cook for a few more minutes till the other sides are also golden brown. Be careful not to overcook the duck. Set the cooked duck aside and leave to rest covered with foil. Duck, like beef must be rested. The resting time is half that of cooking time. If the duck was cooked for 6 mins, then it should be rested for at least 3 minutes. While the duck is resting, make the vinaigrette. Squeeze the juice of the zested orange into a bowl. About 5 to 6 tablespoons of juice. Add 2 tablespoons of extra virgin olive oil. Use the best quality one you have. Add 4 teaspoons of balsamic vinegar. Add salt and pepper to taste. Whisk the mixture well. Set aside. When the beets are done, remove them from the oven and let them cool for a few minutes so that they are easier to hold. Put on some disposable gloves (else get blood red stained fingers later). Open the foil-wrapped beets. Using the rough surface of each piece of foil, rub the beets with the foil to remove the skin. Cut the cooked beets into small pieces. Set aside in a bowl. Drizzle 2 tablespoons of vinaigrette into the beets. Add 2 teaspoons of honey. Toss well to coat the beets with the dressing. Slice the rested duck into thin slices. The meat should be a beautiful pink. Serve by layering the salad with greens, nuts and cheese of your choice, and the duck and beets. I like rocket greens with fresh basil or mint, mandarin orange segments, toasted almond flakes or pine nuts and some shaved parmesan cheese or some crumbed feta or goats cheese. Garnish with the orange zest. Trickle the vinaigrette over the salad. Best served immediately."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "4 oz baby bok choy (trimmed)"
-      },
-      {
-        "en": "1 can coconut milk"
-      },
-      {
-        "en": "2 large carrots (thinly sliced diagonal)"
-      },
-      {
-        "en": "2 tbsp. green curry powder"
-      },
-      {
-        "en": "2 tbsp. fish sauce"
-      },
-      {
-        "en": "20 oz. flank steak"
-      },
-      {
-        "en": "2 cloves of garlic (thinly sliced)"
-      },
-      {
-        "en": "1 tbsp. lemon juice"
-      },
-      {
-        "en": "1/2 tsp. ground lemongrass"
-      },
-      {
-        "en": "Oil for cooking in wok"
-      },
-      {
-        "en": "1 large onions (sliced)"
-      },
-      {
-        "en": "1 orange pepper (thinly sliced)"
-      },
-      {
-        "en": "7oz. oyster mushrooms (chopped)"
-      },
-      {
-        "en": "1 red pepper (thinly sliced)"
-      },
-      {
-        "en": "1 tbsp. rice wine vinegar"
-      },
-      {
-        "en": "4 oz. snap peas (thinly sliced diagonal)"
-      },
-      {
-        "en": "3 tbsp. soy sauce"
-      },
-      {
-        "en": "1 yellow pepper (thinly sliced)"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/645541-556x370.jpg",
-    "readyInMinutes": 180,
-    "servings": 4,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [
-      {
-        "en": "Thai"
-      },
-      {
-        "en": "Asian"
-      }
-    ],
-    "equipment": [
-      {
-        "en": "wok"
-      },
-      {
-        "en": "whisk"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/XLCRNHRG/green-thai-curry-with-beef"
-  },
-  {
-    "id": "LvVDQCUPKRBYj4QLPFHQ",
-    "title": {
-      "en": "Tasty Easy Meatloaf"
+    "ingredients": {
+      "en": [
+        {
+          "name": "duck breast meat - skin left on",
+          "amount": "500 g(500g)"
+        },
+        {
+          "name": "baby beets",
+          "amount": "300 g(300g)"
+        },
+        {
+          "name": "orange zest",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "honey",
+          "amount": "2 teaspoons(2tsps)"
+        },
+        {
+          "name": "salt",
+          "amount": "1 teaspoon(1tsp)"
+        },
+        {
+          "name": "arugula greens",
+          "amount": "3 cups(120g)"
+        },
+        {
+          "name": "pine nuts",
+          "amount": "4 tablespoons(4Tbsps)"
+        },
+        {
+          "name": "mandarin orange segents",
+          "amount": "1 can(1can)"
+        },
+        {
+          "name": "mint",
+          "amount": "1 Bunch(1Bunch)"
+        },
+        {
+          "name": "feta cheese",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "juice of orange",
+          "amount": "6 (6)"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "balsamic vinegar",
+          "amount": "4 teaspoons(4tsps)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "4 servings(4servings)"
+        }
+      ]
     },
-    "summary": {
-      "en": "Tasty Easy Meatloaf is a <b>dairy free</b> main course. This recipe serves 8 and costs $1.17 per serving. One portion of this dish contains roughly <b>18g of protein</b>, <b>20g of fat</b>, and a total of <b>334 calories</b>. Not a lot of people made this recipe, and 2 would say it hit the spot. This recipe from Foodista requires salt, worcestershire, pepper, and grain mustard. From preparation to the plate, this recipe takes around <b>45 minutes</b>. Overall, this recipe earns a <b>rather bad spoonacular score of 38%</b>. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/easy-tasty-fish-tomatoes-111655\">Easy & Tasty Fish & Tomatoes</a>, <a href=\"https://spoonacular.com/recipes/easy-and-tasty-baked-ziti-138765\">Easy and Tasty Baked Ziti</a>, and <a href=\"https://spoonacular.com/recipes/easy-and-tasty-pizza-sauce-546686\">Easy and Tasty Pizza Sauce</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>Mix beef, sausage, bread crumbs, onion, egg, salt, pepper, cumin, garlic powder,  cup tomato sauce. Do not over mix or your meatloaf will become chewy. Simply use your fingers and mush it together and only do this until it is just mixed.</li><li>Place in a shallow oven proof pan and form into a loaf. Stir together the remaining sauce, vinegar, sugar, mustard, water and Worcestershire</li><li>Pour the sauce over the meatloaf and bake x 1 hour until cooked through. While cooking, spoon the sauce over the top of the meatloaf about every 20 minutes.</li><li>Remove from the oven and spoon the sauce over the top a final time. Allow to rest for 10 minutes before serving.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "1 cup breadcrumbs"
-      },
-      {
-        "en": "3 Tbs brown sugar – packed"
-      },
-      {
-        "en": "½ lb bulk sausage"
-      },
-      {
-        "en": "2 8 oz cans tomato sauce - divided"
-      },
-      {
-        "en": "3 Tbs Cider vinegar"
-      },
-      {
-        "en": "½ tsp cumin"
-      },
-      {
-        "en": "1 egg beaten"
-      },
-      {
-        "en": "1 tsp garlic powder"
-      },
-      {
-        "en": "1 lb Ground Beef"
-      },
-      {
-        "en": "1 small onion – diced."
-      },
-      {
-        "en": "½ tsp pepper"
-      },
-      {
-        "en": "1 ½ tsp salt"
-      },
-      {
-        "en": "½ cup water"
-      },
-      {
-        "en": "2 Tbs good quality whole grain mustard"
-      },
-      {
-        "en": "2 Tbs Worcestershire"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/662917-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 8,
-    "diets": [
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "oven"
-      },
-      {
-        "en": "frying pan"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/RFC3GL4B/tasty-easy-meatloaf"
-  },
-  {
-    "id": "MEpmzYb4m3mtN46Gkdk6",
-    "title": {
-      "en": "Peanut Butter Sriracha Cookies"
-    },
-    "summary": {
-      "en": "Peanut Butter Sriracha Cookies is a <b>lacto ovo vegetarian</b> dessert. This recipe serves 60. One portion of this dish contains about <b>3g of protein</b>, <b>8g of fat</b>, and a total of <b>180 calories</b>. For <b>16 cents per serving</b>, this recipe <b>covers 3%</b> of your daily requirements of vitamins and minerals. 115 people were glad they tried this recipe. A mixture of flour, crunchy peanut butter, eggs, and a handful of other ingredients are all it takes to make this recipe so flavorful. From preparation to the plate, this recipe takes around <b>45 minutes</b>. It is brought to you by Foodista. With a spoonacular <b>score of 15%</b>, this dish is rather bad. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/healthy-peanut-butter-surprise-cookies-fudgy-brownie-cookies-with-a-peanut-butter-center-1400161\">Healthy Peanut Butter Surprise Cookies (Fudgy Brownie Cookies with a Peanut Butter Center!)</a>, <a href=\"https://spoonacular.com/recipes/healthy-peanut-butter-surprise-cookies-fudgy-brownie-cookies-with-a-peanut-butter-center-523094\">Healthy Peanut Butter Surprise Cookies (Fudgy Brownie Cookies with a Peanut Butter Center!)</a>, and <a href=\"https://spoonacular.com/recipes/peanut-butter-sriracha-popcorn-balls-617080\">Peanut Butter-Sriracha Popcorn Balls</a>."
-    },
-    "instructions": {
-      "en": "Cream together butter, peanut butter and sugars.\nSlowly add in sriracha, eggs and vanilla. Beat until combined.\nIn another bowl mix together flour, baking powder, baking soda and salt.\nGently mix flour into peanut butter mixture until well combined. Place batter into refrigerator for 1 hour to chill.\nPre-heat oven to 375 degrees.\nRoll dough into approx 1 sized balls or use a Medium sized cookie scoop/Size 40  1tbs portion. Dip the top of dough ball into granulated sugar and place onto cookie sheet.\nFlatten each ball with a fork, making a criss-cross pattern. Bake for 8-10 minutes or just until the cookies begin to brown. Do NOT over-bake!\nCool on wire racks and enjoy!"
-    },
-    "ingredients": [
-      {
-        "en": "1 cup Unsalted Butter (softened)"
-      },
-      {
-        "en": "1½ cups Crunchy Peanut Butter (or Sunbutter if allergic to peanuts)"
-      },
-      {
-        "en": "1 cup Sugar"
-      },
-      {
-        "en": "1 cup Brown Sugar (packed)"
-      },
-      {
-        "en": "¼ c Sriracha"
-      },
-      {
-        "en": "2 Eggs"
-      },
-      {
-        "en": "1 tsp Vanilla extract"
-      },
-      {
-        "en": "2¾ to 3 cups All-Purpose Flour (finished dough should be soft, but not sticky)"
-      },
-      {
-        "en": "1 teaspoon Baking Powder"
-      },
-      {
-        "en": "½ teaspoon Salt"
-      },
-      {
-        "en": "1½ teaspoons baking soda"
-      },
-      {
-        "en": "Granulated sugar for dipping dough balls into."
-      },
-      {
-        "en": "Optional: 1-2 cups Chocolate Chips to add to dough. OR Add a Hershey's Chocolate Kiss on top as done for Peanut Butter Blossoms. Doesn't change baking time."
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/655335-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 60,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "dessert"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "baking sheet"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/YGQH8YZV/peanut-butter-sriracha-cookies"
-  },
-  {
-    "id": "MdLOjJ8yMIDuvcVxhLxr",
-    "title": {
-      "en": "Dried Cherry-Almond Scones"
-    },
-    "summary": {
-      "en": "Dried Cherry-Almond Scones could be just the <b>lacto ovo vegetarian</b> recipe you've been looking for. This breakfast has <b>217 calories</b>, <b>6g of protein</b>, and <b>7g of fat</b> per serving. This recipe serves 16 and costs 50 cents per serving. 2 people have tried and liked this recipe. Head to the store and pick up salt, buttermik, eggs, and a few other things to make it today. Not a lot of people really liked this European dish. It is brought to you by Foodista. From preparation to the plate, this recipe takes about <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 29%</b>. This score is rather bad. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/dried-cherry-almond-scones-309746\">Dried Cherry Almond Scones</a>, <a href=\"https://spoonacular.com/recipes/dried-cherry-scones-124190\">Dried Cherry Scones</a>, and <a href=\"https://spoonacular.com/recipes/dried-cherry-lemon-scones-175781\">Dried Cherry-Lemon Scones</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>Preheat oven to 400 degree F.  Stir together flour, 1/4 cup sugar, and next 3 ingredients in a large bowl; cut int butter with a pastry blender or fork until crumbly.  Stir in cherries and almonds.</li><li>Whisk together buttermilk, 1 egg, and almond extract; add to flour mixture, stirring with a fork just until dry ingredients are moistened and mixture forms a shaggy dough.</li><li>Use floured hands to pat dough into a 1/2-inch thick, 10-x7-inch rectangle on a lightly floured surface; cut into 16 rectangles.  Place scone dough on a parchment paper-lined baking sheet.  Whisk together remaining egg and 1 teaspoon water.  Brush scones with egg wash; sprinkle with remaining 1/4 cup sugar.</li><li>Bake in preheated oven for 12 to 15 minutes or until golden.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "1/2 teaspoon almond extract"
-      },
-      {
-        "en": "1/2 cup chopped toasted almonds"
-      },
-      {
-        "en": "1 tablespoon baking powder"
-      },
-      {
-        "en": "1/2 teaspoon baking soda"
-      },
-      {
-        "en": "1 cup dried cherries"
-      },
-      {
-        "en": "2 large eggs"
-      },
-      {
-        "en": "500g Plain flour, sifted"
-      },
-      {
-        "en": "1/2 tsp Salt"
-      },
-      {
-        "en": "2 tbsp Sugar"
-      },
-      {
-        "en": "6 tablespoons unsalted butter, cut into pieces"
-      },
-      {
-        "en": "2/3 cup buttermik"
-      },
-      {
-        "en": "2/3 cup buttermik"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/641650-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 16,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "morning meal"
-      },
-      {
-        "en": "dessert"
-      },
-      {
-        "en": "brunch"
-      },
-      {
-        "en": "breakfast"
-      }
-    ],
-    "cuisines": [
-      {
-        "en": "English"
-      },
-      {
-        "en": "Scottish"
-      },
-      {
-        "en": "British"
-      },
-      {
-        "en": "European"
-      }
-    ],
-    "equipment": [
-      {
-        "en": "blender"
-      },
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "baking paper"
-      },
-      {
-        "en": "baking sheet"
-      }
-    ],
-    "sourceUrl": "http://www.foodista.com/recipe/5434SY2K/dried-cherry-almond-scones"
-  },
-  {
-    "id": "NTkbWN8Qp4SzFkONINvR",
-    "title": {
-      "en": "Baked Oatmeal with Dried Cranberries"
-    },
-    "summary": {
-      "en": "Baked Oatmeal with Dried Cranberries might be just the breakfast you are searching for. One portion of this dish contains approximately <b>5g of protein</b>, <b>4g of fat</b>, and a total of <b>194 calories</b>. This recipe serves 9. For <b>51 cents per serving</b>, this recipe <b>covers 9%</b> of your daily requirements of vitamins and minerals. 11 person found this recipe to be scrumptious and satisfying. It is a good option if you're following a <b>gluten free and dairy free</b> diet. It is perfect for <b>Christmas</b>. It is brought to you by Foodista. If you have flaxseeds, baking powder, oats, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. Taking all factors into account, this recipe <b>earns a spoonacular score of 53%</b>, which is good. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/baked-oatmeal-with-dried-cranberries-apricots-48700\">Baked Oatmeal with Dried Cranberries & Apricots</a>, <a href=\"https://spoonacular.com/recipes/overnight-oatmeal-with-almonds-and-dried-cranberries-55705\">Overnight Oatmeal With Almonds And Dried Cranberries</a>, and <a href=\"https://spoonacular.com/recipes/overnight-oatmeal-with-almonds-and-dried-cranberries-55826\">Overnight Oatmeal with Almonds and Dried Cranberries</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>1.Preheat oven to 350F</li><li>2.Mix dry ingredients until well combined.</li><li>3. Mix liquid ingredients separately.</li><li>4.Add the liquid ingredients to the dry mix.</li><li>5.Mix well.</li><li>5.Spray a pan with a non-stick spray - the smaller the pan, the thicker the bars will be.</li><li>6.Pour the mix into the pan.</li><li>7.Bake for 45 minutes.</li><li>8.Enjoy!</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "1 cup almond milk (I used original unsweetened)"
-      },
-      {
-        "en": "2 tsp baking powder"
-      },
-      {
-        "en": "2 very ripe bananas, mashed"
-      },
-      {
-        "en": "1 1/2 tsp cinnamon"
-      },
-      {
-        "en": "1 cup dried cranberries"
-      },
-      {
-        "en": "2 eggs"
-      },
-      {
-        "en": "1 tbsp flaxseeds"
-      },
-      {
-        "en": "3 cups dry oats (I used old fashioned oats)"
-      },
-      {
-        "en": "1/4 teaspoon Salt"
-      },
-      {
-        "en": "1 tsp vanilla extract"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/633692-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 9,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "morning meal"
-      },
-      {
-        "en": "brunch"
-      },
-      {
-        "en": "breakfast"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "oven"
-      },
-      {
-        "en": "frying pan"
-      }
-    ],
-    "sourceUrl": "http://www.foodista.com/recipe/VS5TY2X2/baked-oatmeal-with-dried-cranberries"
-  },
-  {
-    "id": "NxW9WXRsK7TM1ZCe2RUZ",
-    "title": {
-      "en": "Torta (Filipino Omelet)"
-    },
-    "summary": {
-      "en": "Torta (Filipino Omelet) takes roughly <b>45 minutes</b> from beginning to end. This recipe serves 8 and costs 53 cents per serving. One portion of this dish contains about <b>7g of protein</b>, <b>10g of fat</b>, and a total of <b>174 calories</b>. 3 people were impressed by this recipe. This recipe from Foodista requires vegetable oil, garlic cloves, onion, and cilantro. It is a good option if you're following a <b>gluten free, dairy free, and lacto ovo vegetarian</b> diet. It works well as a hor d'oeuvre. Taking all factors into account, this recipe <b>earns a spoonacular score of 33%</b>, which is not so awesome. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/torta-filipino-omelet-1432501\">Torta (Filipino Omelet)</a>, <a href=\"https://spoonacular.com/recipes/torta-filipino-omelet-1501675\">Torta (Filipino Omelet)</a>, and <a href=\"https://spoonacular.com/recipes/filipino-torta-meets-italian-frittata-568492\">Filipino Torta Meets Italian Frittata</a>."
-    },
-    "instructions": {
-      "en": "In a medium-heated large skillet, add a little oil and thoroughly cook the meat and potatoes along with soy sauce, garlic and onions. Set aside to cool.\nMeanwhile, in a mixing bowl, combine cooled meat mixture with the eggs, tomatoes, cilantro and scallions. Season with salt & pepper and whisk until evenly incorporated.\nIn the same skillet in medium heat, ladle just enough to form a thin pancake-size patty, one batch at a time. Cook both sides, flipping over after 2-3 minutes. Be careful not to over brown the eggs. Transfer to a plate, cut in wedges (for bite-size servings) and garnish with cilantro leaves, if you want."
-    },
-    "ingredients": [
-      {
-        "en": "1 pound Ground Beef, low fat (or Pork, Turkey, 1 Russet Potato, diced"
-      },
-      {
-        "en": "4 Garlic Cloves, minced"
-      },
-      {
-        "en": "1 Onion, finely diced"
-      },
-      {
-        "en": "1 can Diced Tomatoes, liquid drained"
-      },
-      {
-        "en": "6 Large Eggs"
-      },
-      {
-        "en": "1 Bunch Scallions, finely chopped"
-      },
-      {
-        "en": "1/4 cup Chopped Cilantro (optional)"
-      },
-      {
-        "en": "4 tablespoons vegetable Oil"
-      },
-      {
-        "en": "4 tablespoons Low-Sodium Soy Sauce"
-      },
-      {
-        "en": "Salt & Pepper"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/663680-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 8,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      },
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "antipasti"
-      },
-      {
-        "en": "starter"
-      },
-      {
-        "en": "morning meal"
-      },
-      {
-        "en": "snack"
-      },
-      {
-        "en": "brunch"
-      },
-      {
-        "en": "appetizer"
-      },
-      {
-        "en": "antipasto"
-      },
-      {
-        "en": "breakfast"
-      },
-      {
-        "en": "hor d'oeuvre"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "mixing bowl"
-      },
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "ladle"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/DFP52247/torta-filipino-omelet"
-  },
-  {
-    "id": "Q3I4seW2h19jLMmyxy8H",
-    "title": {
-      "en": "Barbecued Pulled Beef Sandwiches"
-    },
-    "summary": {
-      "en": "Barbecued Pulled Beef Sandwiches requires about <b>45 minutes</b> from start to finish. For <b>$2.71 per serving</b>, this recipe <b>covers 26%</b> of your daily requirements of vitamins and minerals. This recipe serves 6. Watching your figure? This dairy free recipe has <b>766 calories</b>, <b>37g of protein</b>, and <b>33g of fat</b> per serving. 5 people were glad they tried this recipe. It works well as a rather inexpensive main course. Head to the store and pick up bacon, hawaiian rolls, olive oil, and a few other things to make it today. It is brought to you by Foodista. All things considered, we decided this recipe <b>deserves a spoonacular score of 53%</b>. This score is pretty good. <a href=\"https://spoonacular.com/recipes/barbecued-beef-sandwiches-425271\">Barbecued Beef Sandwiches</a>, <a href=\"https://spoonacular.com/recipes/barbecued-beef-sandwiches-425278\">Barbecued Beef Sandwiches</a>, and <a href=\"https://spoonacular.com/recipes/barbecued-beef-sandwiches-425289\">Barbecued Beef Sandwiches</a> are very similar to this recipe."
-    },
-    "instructions": {
-      "en": "Preheat oven to 350 degrees. Line a rimmed cookie sheet with parchment paper. Lay bacon strips over parchment. Bake pan for 10-15 minutes, or until bacon is crispy. Remove from oven and let cool on pan. Reduce oven heat to 250 degrees and leave oven door open while you dress the beef.\nDrizzle olive oil over the bottom of a medium roasting pan. Place meat in roasting pan, and coast with sugar (you want kind of a thin crust). Season generously with salt and pepper and cover with onions. Tent pan with aluminum foil.\nRoast meat for 3 to 4-1/2 hours, or until beef is fork tender and can be pulled apart easily. Remove from oven, and set aside to cool slightly. Meanwhile, chop bacon into small-dice bits.\nWhen meat can be handled, shred apart and add barbecue sauce and bacon. Mix until evenly coated and bacon is distributed. Season with salt and pepper to taste, and add more barbecue sauce if you will. Serve hot on toasted buns or Hawaiian rolls."
-    },
-    "ingredients": [
-      {
-        "en": "6 strips bacon"
-      },
-      {
-        "en": "2 pounds beef chuck"
-      },
-      {
-        "en": "2 tablespoons olive oil"
-      },
-      {
-        "en": "1/2 cup brown sugar"
-      },
-      {
-        "en": "salt and pepper"
-      },
-      {
-        "en": "1 onion, chopped"
-      },
-      {
-        "en": "2 cups to 3 of barbecue sauce"
-      },
-      {
-        "en": "Hamburger buns or Hawaiian rolls"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/634320-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 6,
-    "diets": [
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "baking paper"
-      },
-      {
-        "en": "baking sheet"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "roasting pan"
-      },
-      {
-        "en": "aluminum foil"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/6PZJ82YX/barbecued-pulled-beef-sandwiches"
-  },
-  {
-    "id": "WTqDXgP9CHeJmW0uFrTl",
-    "title": {
-      "en": "Khachapuri"
-    },
-    "summary": {
-      "en": "Khachapuri is a <b>lacto ovo vegetarian</b> main course. One serving contains <b>686 calories</b>, <b>37g of protein</b>, and <b>55g of fat</b>. This recipe serves 8 and costs $2.4 per serving. This recipe from Foodista has 2 fans. From preparation to the plate, this recipe takes about <b>45 minutes</b>. A mixture of twist and ends together to make a rough knob. cover, parsley, swiss cheese 8 ounces cheddar 2 eggs, and a handful of other ingredients are all it takes to make this recipe so yummy. Taking all factors into account, this recipe <b>earns a spoonacular score of 49%</b>, which is good. Try <a href=\"https://spoonacular.com/recipes/khachapuri-446570\">Khachapuri</a>, <a href=\"https://spoonacular.com/recipes/buffalo-chicken-khachapuri-865645\">Buffalo Chicken Khachapuri</a>, and <a href=\"https://spoonacular.com/recipes/khachapuri-is-a-georgian-cheese-bread-572881\">Khachapuri Is a Georgian Cheese Bread</a> for similar recipes."
-    },
-    "instructions": {
-      "en": "Dissolve yeast and 1 tsp sugar in 1/4 cup water and let stand 5-10 minutes to proof until foamy. Add milk, 2 tbs sugar, butter, salt, and enough flour to make a soft dough. Place in greased bowl and turn to coat all sides. cover and let rise until double in bulk. shred cheeses, combine all filling ingredients and refrigerate. grease a 9\" springform pan very well. punch down dough, shape into a ball, and roll to a 20\" circle. Ease dough into pan (fold in half to lift and unfold in pan) letting excess hang over the edge. mound cheese filling onto dough in pan and bring dough up over the filling, folding to make 8-12 evenly-spaced pleats.\nTwist and pinch ends together to make a rough knob. Cover with a buttered 12\" square of waxed paper and let rise until double in bulk. Brush loaf with glaze of 1 egg white + 1 tbs water (or use margarine).\nBake 40-50 min. @ 375 or until deep golden brown. Remove bread from pan, place directly on oven rack, and bake for an additional 5 minutes to brown bottom crust. Cool on rack for 45 minutes before cutting into wedges."
-    },
-    "ingredients": [
-      {
-        "en": "1 package dry yeast"
-      },
-      {
-        "en": "1 teaspoon sugar"
-      },
-      {
-        "en": "1/4 cup water, warm (110 degrees)"
-      },
-      {
-        "en": "3/4 cup milk, room temp."
-      },
-      {
-        "en": "2 tablespoons sugar"
-      },
-      {
-        "en": "1/2 cup butter, melted"
-      },
-      {
-        "en": "1 teaspoon salt"
-      },
-      {
-        "en": "3 1/2 cups flour (all-purpose or bread 8 ounces muenster cheese 8 ounces Jarlsberg or Swiss cheese 8 ounces white cheddar 2 eggs, beaten slightly 2 tablespoons parsley, chopped 1/4 teaspoon pepper, white"
-      },
-      {
-        "en": "8 ounces muenster cheese"
-      },
-      {
-        "en": "8 ounces Jarlsberg or Swiss cheese"
-      },
-      {
-        "en": "8 ounces white cheddar"
-      },
-      {
-        "en": "2 eggs, beaten slightly"
-      },
-      {
-        "en": "2 tablespoons parsley, chopped"
-      },
-      {
-        "en": "1/4 teaspoon pepper, white"
-      },
-      {
-        "en": "1Dissolve yeast and 1 tsp sugar in 1/4 cup water and let stand 5-10 minutes to proof until foamy. Add milk, 2 Tbs sugar, butter, salt, and enough flour to make a soft dough. Place in greased bowl and turn to coat all sides. cover and let rise until double"
-      },
-      {
-        "en": "2Twist and pinch ends together to make a rough knob. Cover with a buttered 12\" square of waxed paper and let rise until double in bulk. Brush loaf with glaze of 1 egg white + 1 Tbs water (or use margarine)."
-      },
-      {
-        "en": "3Bake 40-50 min. @ 375 or until deep golden brown. Remove bread from pan, place directly on oven rack, and bake for an additional 5 minutes to brown bottom crust. Cool on rack for 45 minutes before cutting into wedges."
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/648852-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 8,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "springform pan"
-      },
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "oven"
-      },
-      {
-        "en": "frying pan"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/6KTLX5JQ/khachapuri"
-  },
-  {
-    "id": "XEAsSG8Hj7oJ8LBAAuj6",
-    "title": {
-      "en": "Ginger Beef Stir Fry"
-    },
-    "summary": {
-      "en": "Ginger Beef Stir Fry might be just the main course you are searching for. One portion of this dish contains roughly <b>32g of protein</b>, <b>12g of fat</b>, and a total of <b>416 calories</b>. This recipe serves 4. For <b>$3.77 per serving</b>, this recipe <b>covers 34%</b> of your daily requirements of vitamins and minerals. It is a good option if you're following a <b>gluten free and dairy free</b> diet. 3 people have tried and liked this recipe. It is brought to you by Foodista. From preparation to the plate, this recipe takes about <b>45 minutes</b>. If you have water chestnuts, bell pepper, top sirloin steak, and a few other ingredients on hand, you can make it. All things considered, we decided this recipe <b>deserves a spoonacular score of 87%</b>. This score is awesome. Try <a href=\"https://spoonacular.com/recipes/ginger-beef-stir-fry-110609\">Ginger Beef Stir-Fry</a>, <a href=\"https://spoonacular.com/recipes/ginger-beef-stir-fry-1343433\">Ginger Beef Stir Fry</a>, and <a href=\"https://spoonacular.com/recipes/ginger-beef-stir-fry-1523023\">Ginger Beef Stir Fry</a> for similar recipes."
-    },
-    "instructions": {
-      "en": "<ol><li>Thinly slice sirloin against grain in 1 inch wide strips. Cut each water chestnut in half. In a large skillet or wok, quickly brown sirloin in hot oil. Stir in chestnuts, carrots, onion, garlic and ginger until onion is soft. Stir in pepper and lettuce for one minute. Stir in marmalade and soy sauce. Cook, stirring about 2 minutes. Serve at once.</li><li>Makes 4 servings.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "1 can (8 oz.) water chestnuts, drained"
-      },
-      {
-        "en": "3 mediums Carrots, cut in 2 inch sticks"
-      },
-      {
-        "en": "6 ounces Fresh ginger root"
-      },
-      {
-        "en": "4 cloves garlic"
-      },
-      {
-        "en": "1 large Green bell pepper, chunked"
-      },
-      {
-        "en": "1 quart Salad lettuce"
-      },
-      {
-        "en": "1 medium Onion, sliced"
-      },
-      {
-        "en": "1/4 cup Orange marmalade"
-      },
-      {
-        "en": "1/4 cup plus 1 tablespoon soy sauce"
-      },
-      {
-        "en": "1 pound Top sirloin steak"
-      },
-      {
-        "en": "2 tablespoons Vegetable oil"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/644554-556x370.jpg",
+    "image": "https://img.spoonacular.com/recipes/664960-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
     "diets": [
@@ -1769,117 +815,9 @@
         "en": "gluten free"
       },
       {
-        "en": "dairy free"
+        "en": "primal"
       }
     ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "wok"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/F7LXNN6G/ginger-beef-stir-fry"
-  },
-  {
-    "id": "aOEt1HY9taVVSQX7gAOt",
-    "title": {
-      "en": "Shrimp and Avocado Salad"
-    },
-    "summary": {
-      "en": "Need a <b>gluten free, dairy free, and pescatarian main course</b>? Shrimp and Avocado Salad could be an awesome recipe to try. This recipe serves 4 and costs $11.57 per serving. One portion of this dish contains about <b>34g of protein</b>, <b>37g of fat</b>, and a total of <b>639 calories</b>. From preparation to the plate, this recipe takes about <b>45 minutes</b>. This recipe is liked by 8 foodies and cooks. This recipe from Foodista requires the shrimp, salt and pepper, garlic cloves, and the dressing. All things considered, we decided this recipe <b>deserves a spoonacular score of 86%</b>. This score is outstanding. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/shrimp-corn-california-avocado-pasta-salad-a-ca-avocado-trip-584558\">Shrimp, Corn & Californian Avocado Pasta Salad & a CAn Avocado Trip</a>, <a href=\"https://spoonacular.com/recipes/shrimp-corn-california-avocado-pasta-salad-a-ca-avocado-trip-1236119\">Shrimp, Corn & Californian Avocado Pasta Salad & a CAn Avocado Trip</a>, and <a href=\"https://spoonacular.com/recipes/shrimp-corn-california-avocado-pasta-salad-a-ca-avocado-trip-1219445\">Shrimp, Corn & Californian Avocado Pasta Salad & a CAn Avocado Trip</a>."
-    },
-    "instructions": {
-      "en": "1.Firstly, to cook the shrimp, heat the olive oil in a pan and once hot add the shrimp crushed garlic and chili flakes. It is important to get the oil nice and hot (not smoking, just before that point) your shrimp should sizzle when added to the pan. Check the back of the shrimp and when you see the colour change about half way up, turn them over. Do the same on the other side. This should only take a minute to two minutes maximum on both sides  otherwise you will get a rubbery result if you leave it too long. Squeeze over the lime juice  this too should bubble and reduce. Add a little salt and pepper, stir through, remove from the heat and set aside.\n2.Mix the dressing ingredients together, check for flavour, adjust if need be and set aside.\n3.Place all the salad ingredients in a bowl except the avocado and the salt and pepper. Prepare the avocado as you are about to serve otherwise it will turn brown. Once it is covered in the lime dressing, this will slow down the oxidization process and it wont go brown so easily.\n4.When you are ready to serve mix  of the avocado through the salad and add the dressing. Toss everything together. Taste to see if you need any salt and pepper. Place your shrimp on top of the salad with the rest of the avocado and sprinkle/pour any residue from the pan over your salad in which you cooked the shrimp. This is great flavour, so you dont want to lose it."
-    },
-    "ingredients": [
-      {
-        "en": "The Shrimp"
-      },
-      {
-        "en": "About 600gr of large tiger style shrimp (prawns/langoustine) peeled and cleaned"
-      },
-      {
-        "en": "2 x garlic cloves, crushed"
-      },
-      {
-        "en": "1 x tbsp olive oil"
-      },
-      {
-        "en": "Juice of 1 lime"
-      },
-      {
-        "en": "Salt and Pepper"
-      },
-      {
-        "en": "The Salad"
-      },
-      {
-        "en": "The leaves of 1 medium Cos lettuce finely shredded"
-      },
-      {
-        "en": "6/8 basil leaves chopped"
-      },
-      {
-        "en": "200gr sweet corn"
-      },
-      {
-        "en": "3 x spring onions (scallions) chopped finely"
-      },
-      {
-        "en": "600gr fresh pineapple cut into small cubes"
-      },
-      {
-        "en": "2 x avocados chopped into cubes"
-      },
-      {
-        "en": "Avocado"
-      },
-      {
-        "en": "The Dressing"
-      },
-      {
-        "en": "3 x tbsp olive oil"
-      },
-      {
-        "en": "3 x tbsp honey"
-      },
-      {
-        "en": "Juice and zest of 3 limes"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/659927-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 4,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      },
-      {
-        "en": "pescatarian"
-      }
-    ],
-    "intolerances": [],
     "dishTypes": [
       {
         "en": "side dish"
@@ -1903,57 +841,156 @@
     "cuisines": [],
     "equipment": [
       {
+        "en": "oven"
+      },
+      {
+        "en": "aluminum foil"
+      },
+      {
         "en": "frying pan"
       },
       {
+        "en": "peeler"
+      },
+      {
+        "en": "knife"
+      },
+      {
+        "en": "stove"
+      },
+      {
         "en": "bowl"
+      },
+      {
+        "en": "whisk"
       }
     ],
-    "sourceUrl": "https://www.foodista.com/recipe/ZTNWCWQP/shrimp-and-avocado-salad"
+    "sourceUrl": "https://www.foodista.com/recipe/KD7D3V7L/warm-duck-salad-with-roasted-beetroot"
   },
   {
-    "id": "cL0SWEDIooXovtHlejEg",
+    "id": "RCAfqcbEbOMKpS4Fm85B",
     "title": {
-      "en": "Salmon Quinoa Risotto"
+      "en": "Vietnamese Pancakes with Vegetables, Herbs and a Fragrant Dipping Sauce (Bánh Xèo)"
     },
     "summary": {
-      "en": "Salmon Quinoa Risotto might be just the main course you are searching for. One serving contains <b>437 calories</b>, <b>25g of protein</b>, and <b>20g of fat</b>. This recipe serves 4. For <b>$3.83 per serving</b>, this recipe <b>covers 43%</b> of your daily requirements of vitamins and minerals. Head to the store and pick up quinoa, poached salmon, olive oil, and a few other things to make it today. It is a good option if you're following a <b>gluten free, dairy free, and pescatarian</b> diet. It is a <b>rather expensive</b> recipe for fans of Mediterranean food. 3 people found this recipe to be yummy and satisfying. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. It is brought to you by Foodista. Overall, this recipe earns an <b>outstanding spoonacular score of 94%</b>. Similar recipes include <a href=\"https://spoonacular.com/recipes/salmon-quinoa-risotto-1360771\">Salmon Quinoa Risotto</a>, <a href=\"https://spoonacular.com/recipes/salmon-quinoa-risotto-1288579\">Salmon Quinoa Risotto</a>, and <a href=\"https://spoonacular.com/recipes/quinoa-risotto-with-salmon-and-kale-15276\">Quinoa Risotto With Salmon And Kale</a>."
+      "en": "Vietnamese Pancakes with Vegetables, Herbs and a Fragrant Dipping Sauce (Bánh Xèo) requires roughly 45 minutes from start to finish. One serving contains 390 calories, 8g of protein, and 22g of fat. This gluten free, dairy free, and lacto ovo vegetarian recipe serves 6 and costs $3.19 per serving. Head to the store and pick up chilies, rice vinegar, enoki mushrooms, and a few other things to make it today. 295 people found this recipe to be yummy and satisfying. It works well as a side dish. Plenty of people really liked this Vietnamese dish. It is brought to you by foodandspice.blogspot.com. Overall, this recipe earns an awesome spoonacular score of 94%. Similar recipes include Bánh xèo (Vietnamese Happy Pancakes), Banh Xeo (Bánh Xèo) – Savory Vietnamese Crêpe, and Banh Xeo (Vietnamese Crepes)."
     },
     "instructions": {
-      "en": "In a 4 quart saucepan, heat 2 tablespoons of olive oil over medium high heat.\nWhen oil is shimmering, add diced onion.\nSaute onion until transparent.  Add quinoa to onion mixture and stir, to toast quinoa, for 2 minutes.\nAdd 1 cup of vegetable stock to quinoa and onions.\nStir until stock is absorbed.  Once stock is absorbed, add 1 cup of stock.\nContinue stirring until stock is absorbed.\nAdd remaining stock in 1/2 cup intervals, stirring until all stock is absorbed.\nRemove from heat.\nWhile preparing the onion quinoa mixture, heat 1 tablespoon of oil in a saute pan with chopped garlic (over medium high heat).\nOnce garlic is sizzling, add chopped kale to the pan.\nTurn kale to coat with oil and garlic.\nTurn kale mixture until fragrant (approximately 2 minutes).  Remove kale mixture from heat.\nOnce quinoa is complete, add kale and salmon.\nStir to combine.\nAdd salt and pepper to taste."
+      "en": [
+        "Begin by preparing the pancake batter. Whisk together the rice flour, egg, sea salt, turmeric, cayenne and green chili. Gradually whisk in the coconut milk. The mixture should be a smooth, semi-thick batter that is of pouring consistency. Add a little water if necessary. Cover and set aside while you prepare the rest of the food.Now prepare the sauce. Whisk together all of the ingredients and set aside.For the filling, combine the carrot, radish, green onions, green chilies and snow peas. Put the herbs in another bowl and have your sprouts ready along with the mushrooms.Heat a teaspoon of oil over medium heat in a non-stick skillet. When hot, ladle 1/2 cup of batter into the pan and spread with the bottom of the ladle until you have a roughly 6 to 8 inch pancake. Fry for 6 to 8 minutes or until you have small holes forming and the bottom is crispy brown, then flip and fry for another few minutes on the other side. Transfer to a plate and keep warm in a 150 oven while you finish the rest of the pancakes you should finish with 4 to 6 pancakes.To serve, scatter a portion of the vegetables, herbs and mushrooms over one half of the pancake. Sprinkle some sauce over top and fold the pancake. Drizzle with more sauce and there you go."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "1 cup Quinoa"
-      },
-      {
-        "en": "1 medium Onion (diced)"
-      },
-      {
-        "en": "8 Leaves of Kale (stems removed and cut into ribbons)"
-      },
-      {
-        "en": "5 Garlic Cloves (finely chopped)"
-      },
-      {
-        "en": "3 tablespoons Olive Oil (divided)"
-      },
-      {
-        "en": "10 ounces Poached Salmon (flaked)*"
-      },
-      {
-        "en": "32 ounces Organic Vegetable Stock"
-      },
-      {
-        "en": "Salt"
-      },
-      {
-        "en": "Pepper"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/659109-556x370.jpg",
+    "ingredients": {
+      "en": [
+        {
+          "name": "brown rice flour",
+          "amount": "1.3333334 cups(210.667g)"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "0.5 tablespoon(0.5Tbsps)"
+        },
+        {
+          "name": "carrot",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "cayenne",
+          "amount": "1 pinch(1pinch)"
+        },
+        {
+          "name": "coconut milk",
+          "amount": "1.75 cups(395.5ml)"
+        },
+        {
+          "name": "daikon radish",
+          "amount": "1 medium(1medium)"
+        },
+        {
+          "name": "egg",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "enoki mushrooms",
+          "amount": "1 cup(65ml)"
+        },
+        {
+          "name": "basil leaves",
+          "amount": "0.6666667 cup(16g)"
+        },
+        {
+          "name": "ginger",
+          "amount": "1 inch(1inch)"
+        },
+        {
+          "name": "mint leaves",
+          "amount": "0.25 cup(11.25g)"
+        },
+        {
+          "name": "parsley",
+          "amount": "1 cup(60g)"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 clove(1clove)"
+        },
+        {
+          "name": "chili",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "chilies",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "green onions",
+          "amount": "4 (4)"
+        },
+        {
+          "name": "juice of lime",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "mung bean sprouts",
+          "amount": "1 cup(104ml)"
+        },
+        {
+          "name": "chilies",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "sea salt",
+          "amount": "0.5 teaspoon(0.5tsps)"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1.5 tablespoons(1.5Tbsps)"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "6 servings(6servings)"
+        },
+        {
+          "name": "snow peas",
+          "amount": "1.5 cups(147g)"
+        },
+        {
+          "name": "tamari sauce",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "turmeric",
+          "amount": "1 teaspoon(1tsp)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/716217-556x370.jpg",
     "readyInMinutes": 45,
-    "servings": 4,
+    "servings": 6,
     "diets": [
       {
         "en": "gluten free"
@@ -1962,14 +999,537 @@
         "en": "dairy free"
       },
       {
-        "en": "pescatarian"
+        "en": "lacto ovo vegetarian"
       }
     ],
-    "intolerances": [],
+    "dishTypes": [
+      {
+        "en": "side dish"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "Vietnamese"
+      },
+      {
+        "en": "Asian"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "whisk"
+      },
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "ladle"
+      },
+      {
+        "en": "oven"
+      }
+    ],
+    "sourceUrl": "https://www.foodandspice.com/2012/05/vietnamese-pancakes-with-vegetables.html"
+  },
+  {
+    "id": "SoPs2xVSuTwWbYhDc2L9",
+    "title": {
+      "en": "Spaghetti With Pesto Trapanese"
+    },
+    "summary": {
+      "en": "Spaghetti With Pesto Trapanese is a lacto ovo vegetarian recipe with 6 servings. For $1.46 per serving, this recipe covers 19% of your daily requirements of vitamins and minerals. One serving contains 433 calories, 14g of protein, and 15g of fat. Not a lot of people made this recipe, and 4 would say it hit the spot. Head to the store and pick up spaghetti, almonds, pine nuts, and a few other things to make it today. It works best as a main course, and is done in around 45 minutes. It is brought to you by Foodista. All things considered, we decided this recipe deserves a spoonacular score of 86%. This score is tremendous. Try Spaghetti with Pesto Trapanese, Pasta con il pesto alla Trapanese (Tomato and almond pesto), and Pasta con il pesto alla Trapanese (Tomato and almond pesto) for similar recipes."
+    },
+    "instructions": {
+      "en": [
+        "Place a large (this is key) pot of water to boil. Salt when it boils, not before. Meanwhile, make the pesto: In a mortar (or use a food processor with a blade) pound together the oil, almonds and pine-nuts. Add the garlic, 2 ice cubes and the rest of the ingredients, pounding quickly to make a paste.You want to leave a bit of a texture for crunch. Cook the pasta al dente, as per directions, drain and reserve some of the boiling water. Toss the pasta with the pesto, using some of the reserved water to make it creamier. Grate some fresh pecorino or ricotta salata (or both) over and serve hot with a leaf of basil to garnish."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "spaghetti",
+          "amount": "1 pound(453.592g)"
+        },
+        {
+          "name": "almonds",
+          "amount": "0.5 cup(71.5g)"
+        },
+        {
+          "name": "pine nuts",
+          "amount": "0.25 cup(33.75g)"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "0.5 cup(108ml)"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "3 (3)"
+        },
+        {
+          "name": "tomatoes",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "basil",
+          "amount": "2.5 cups(60g)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "6 servings(6servings)"
+        },
+        {
+          "name": "pecorino",
+          "amount": "6 servings(6servings)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/660835-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "diets": [
+      {
+        "en": "lacto ovo vegetarian"
+      }
+    ],
     "dishTypes": [
       {
         "en": "side dish"
       },
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "pot"
+      },
+      {
+        "en": "food processor"
+      },
+      {
+        "en": "mortar and pestle"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/VWV2WXBJ/spaghetti-with-pesto-trapanese"
+  },
+  {
+    "id": "WOyua5JrEEjKlMWkIbCx",
+    "title": {
+      "en": "Healthy Orange Chicken"
+    },
+    "summary": {
+      "en": "Healthy Orange Chicken is a main course that serves 2. Watching your figure? This gluten free and dairy free recipe has 526 calories, 54g of protein, and 9g of fat per serving. For $3.19 per serving, this recipe covers 30% of your daily requirements of vitamins and minerals. Head to the store and pick up salt and pepper, garlic, soy sauce, and a few other things to make it today. 3 people found this recipe to be tasty and satisfying. It is brought to you by Foodista. From preparation to the plate, this recipe takes roughly 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 68%. This score is solid. Similar recipes are Healthy Orange Chicken, Healthy Orange Chicken, and Healthy Orange Chicken."
+    },
+    "instructions": {
+      "en": [
+        "Cut the chicken breast into cubes. In a mixing bowl, marinate the chicken with orange juice, rice vinegar, rice wine, hot chili sauce, brown sugar, and minced garlic. Cover the chicken with plastic wrap and press down so the marinade will soak the chicken evenly. Refrigerate for 1 hour. While waiting for the chicken to marinate, prepare the vegetables. Chop the onion into square pieces. Chop green onions and separate the white and green parts. Zest the orange. In a saut pan, add vegetable oil and turn to high heat. Add in the chicken and saut for 1 minute. Toss the chicken and saut for another minute or until caramelized. Transfer the chicken to a dish. Continue to use high heat. Add the chopped onion to the pan and saut until soft. Add the chicken back to the pan, with the white parts of the green onion and orange zest. Cook for about 30 seconds. Add the liquid to the pan and let it simmer to 30 seconds. Add the remaining green onion to the pan and let the sauce continue to reduce and thicken. When the sauce is reduced to desired consistency, add salt and pepper to taste. The orange chicken is done. Serve over white rice."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "chicken breast",
+          "amount": "1 lb(453.592g)"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "orange juice",
+          "amount": "0.25 cup(62ml)"
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "0.25 cup(63.75ml)"
+        },
+        {
+          "name": "rice wine",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "2 Tbs(2Tbs)"
+        },
+        {
+          "name": "chili sauce",
+          "amount": "1 Tbs(1Tbs)"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves(2cloves)"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "1 Tbs(1Tbs)"
+        },
+        {
+          "name": "orange zest",
+          "amount": "2 Tbs(2Tbs)"
+        },
+        {
+          "name": "green onions",
+          "amount": "1 stalk(1stalk)"
+        },
+        {
+          "name": "water",
+          "amount": "0.25 cup(59.147ml)"
+        },
+        {
+          "name": "corn starch",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "2 servings(2servings)"
+        },
+        {
+          "name": "rice",
+          "amount": "2 servings(2servings)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/646499-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 2,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "dairy free"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "plastic wrap"
+      },
+      {
+        "en": "mixing bowl"
+      },
+      {
+        "en": "frying pan"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/TG73YMYD/healthy-orange-chicken"
+  },
+  {
+    "id": "aN08qhxQ0xxnuBoVGda9",
+    "title": {
+      "en": "Healthy Vegan Red Velvet Brownies"
+    },
+    "summary": {
+      "en": "Healthy Vegan Red Velvet Brownies is a dessert that serves 8. For 42 cents per serving, this recipe covers 8% of your daily requirements of vitamins and minerals. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has 181 calories, 5g of protein, and 5g of fat per serving. A mixture of baking soda, salt, ground flaxseed, and a handful of other ingredients are all it takes to make this recipe so tasty. 91 person found this recipe to be scrumptious and satisfying. A few people really liked this American dish. It is brought to you by Foodista. It is perfect for valentin day. From preparation to the plate, this recipe takes roughly 45 minutes. Taking all factors into account, this recipe earns a spoonacular score of 69%, which is good. Healthy Vegan Red Velvet Brownies, Healthy Red Velvet Quinoa Brownies, and Healthy Red Velvet Quinoa Brownies are very similar to this recipe."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Preheat oven to 350 F.",
+        "Step 2: Spray an 8x8 inch pan with cooking spray. Set aside.",
+        "Step 3: In a food processor, puree kidney beans and beets. Transfer to a large bowl.",
+        "Step 4: Add remaining ingredients and mix by hand until smooth and fully combined.",
+        "Step 5: Fold batter into the greased pan.",
+        "Step 6: Bake for 35-40 minutes, turning the pan halfway through.",
+        "Step 7: When the brownies are done, test them with a toothpick. You want some batter to cling to the toothpick. Do not over bake.",
+        "Step 8: Let cool completely. Refrigerate for one hour.",
+        "Step 9: Cut into squares or use cookie cutters to make heart shapes."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "almond extract",
+          "amount": "0.5 tsp(0.5tsps)"
+        },
+        {
+          "name": "apple sauce",
+          "amount": "4 tablespoons(4Tbsps)"
+        },
+        {
+          "name": "baking powder",
+          "amount": "0.75 tsp(0.75tsps)"
+        },
+        {
+          "name": "baking soda",
+          "amount": "0.125 tsp(0.125tsps)"
+        },
+        {
+          "name": "beets",
+          "amount": "0.5 cup(68g)"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "0.75 cup(165g)"
+        },
+        {
+          "name": "cocoa powder",
+          "amount": "0.5 cup(43g)"
+        },
+        {
+          "name": "ground flaxseed",
+          "amount": "0.5 cup(80g)"
+        },
+        {
+          "name": "kidney beans",
+          "amount": "1 cup(177g)"
+        },
+        {
+          "name": "salt",
+          "amount": "0.125 tsp(0.125tsps)"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "1 tsp(1tsp)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/646524-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 8,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "dairy free"
+      },
+      {
+        "en": "lacto ovo vegetarian"
+      },
+      {
+        "en": "vegan"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "dessert"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "American"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "food processor"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "toothpicks"
+      },
+      {
+        "en": "cookie cutter"
+      }
+    ],
+    "sourceUrl": "http://www.foodista.com/recipe/YGBD7J2L/healthy-vegan-red-velvet-brownies"
+  },
+  {
+    "id": "aexdAeIKAv70e7IUoMlP",
+    "title": {
+      "en": "Flank Steak with Mushroom Sauce"
+    },
+    "summary": {
+      "en": "Flank Steak with Mushroom Sauce is a gluten free, primal, and ketogenic recipe with 4 servings. One serving contains 215 calories, 15g of protein, and 16g of fat. For $1.71 per serving, this recipe covers 12% of your daily requirements of vitamins and minerals. This recipe from Foodista requires garlic, butter, olive oil, and shallot. It will be a hit at your valentin day event. A few people really liked this main course. 72 people found this recipe to be yummy and satisfying. From preparation to the plate, this recipe takes around 45 minutes. Overall, this recipe earns a solid spoonacular score of 53%. Try Flank Steak with Mushroom Sauce, Flank Steak with Mushroom Sauce, and Flank Steak with Creamy Mushroom Sauce for similar recipes."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Heat 1 tablespoon oil in a 10-inch skillet over medium heat. Add the beef and cook until well browned on both sides and until desired doneness, about 10 minutes for medium-rare. Remove the beef from the skillet.",
+        "Step 2: Heat 1 tablespoon butter and the remaining oil in the skillet. Add the mushrooms and cook for 5 minutes or until tender, stirring occasionally. Add the shallot, garlic and rosemary and cook and stir for 30 seconds. Stir in the concentrated broth, water and remaining butter and cook until the butter is melted.",
+        "Step 3: Cut the beef diagonally against the grain into thin slices. Serve the mushroom mixture with the beef."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "flavor concentrated beef broth",
+          "amount": "2 packets(2packets)"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "flank steak",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "rosemary leaves",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves(4cloves)"
+        },
+        {
+          "name": "mushrooms",
+          "amount": "3 cups(288ml)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "shallot",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "water",
+          "amount": "0.25 cup(59.147ml)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/631750-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "primal"
+      },
+      {
+        "en": "ketogenic"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "frying pan"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/F4D23G25/flank-steak-with-mushroom-sauce"
+  },
+  {
+    "id": "dGCSG5hjQUdTjLC4AOiC",
+    "title": {
+      "en": "Authentic Chicken Enchiladas"
+    },
+    "summary": {
+      "en": "Forget going out to eat or ordering takeout every time you crave Mexican food. Try making Authentic Chicken Enchiladas at home. This recipe makes 12 servings with 370 calories, 24g of protein, and 11g of fat each. For $1.29 per serving, this recipe covers 17% of your daily requirements of vitamins and minerals. A couple people made this recipe, and 54 would say it hit the spot. From preparation to the plate, this recipe takes approximately 45 minutes. If you have pickled jalapeno in a jar), olive oil, enchilada sauce, and a few other ingredients on hand, you can make it. It works well as a main course. It is brought to you by Foodista. It is a good option if you're following a gluten free diet. With a spoonacular score of 70%, this dish is good. Similar recipes are Authentic Chicken Enchiladas, Authentic Chicken Enchiladas, and Authentic Chicken Enchiladas."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Season your thawed chicken breasts with salt and pepper. Add a little bit of olive oil to your frying pan, add chicken, and cook through. Remove chicken from pan, then add diced onions to the pan. Turn heat to medium and let onions saute through. (You may need to add a little bit more oil to the pan.)",
+        "Step 2: Meanwhile, chop up your chicken (or shred) very finely. When the onions are soft and translucent, add chicken back to the pan. Season your onions and chicken with garlic, cumin, and chili powder. Finely chop up your jalapeno and add that and your green chilis to your chicken mixture. Stir in your cheese. Now you are ready to assemble.",
+        "Step 3: Heat up your olive oil in a small frying pan. Add your corn tortilla for about 20 seconds, flipping if the oil doesn't reach the top side. Doing this softens your tortilla so it won't break as you roll it. Do this with all your tortillas and drain on paper towels.",
+        "Step 4: Take 2 cookie sheets and spray with cooking spray. Lay out a tortilla and add about 2 TBSP of chicken mixture to the middle of your tortilla. Roll up. Fill the remaining tortillas in the same way and line them up next to each other on your cookie sheet, so they are very close to each other, but not touching. This should make two rows on each of your cookie sheets.",
+        "Step 5: If two pans are too much for your family, then at this point, take one pan and put it in your freezer. Once the enchiladas are frozen, remove them from the pan and stack them in a double lined ziploc freezer bag. When you want to make them, simply line them up again on a greased cookie sheet, let thaw for about an hour on the counter, then bake as instructed.)",
+        "Step 6: Now, bake your enchiladas in the oven, at 400 degrees, for about 20 minutes. They should be lightly browned. Remove them from the oven and spoon over about 2TBSP of your enchilada sauce over the top of each enchilada. Then sprinkle the tops with cheese. Put the enchiladas back in the oven for about 7 minutes. After that, it's time to eat!"
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "chicken breasts",
+          "amount": "4 (4)"
+        },
+        {
+          "name": "chili powder",
+          "amount": "0.5 teaspoon(0.5tsps)"
+        },
+        {
+          "name": "corn tortillas",
+          "amount": "45 small(45small)"
+        },
+        {
+          "name": "cumin",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "enchilada sauce",
+          "amount": "1 can(1can)"
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 teaspoon(1tsp)"
+        },
+        {
+          "name": "chilis",
+          "amount": "1 can(1can)"
+        },
+        {
+          "name": "pickled jalapeno in a jar)",
+          "amount": "0.5 (0.5)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tablespoons(3Tbsps)"
+        },
+        {
+          "name": "onion",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "12 servings(12servings)"
+        },
+        {
+          "name": "mexican cheese blend",
+          "amount": "1 cup(112g)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/633072-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 12,
+    "diets": [
+      {
+        "en": "gluten free"
+      }
+    ],
+    "dishTypes": [
       {
         "en": "lunch"
       },
@@ -1985,6 +1545,690 @@
     ],
     "cuisines": [
       {
+        "en": "Mexican"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "baking sheet"
+      },
+      {
+        "en": "paper towels"
+      },
+      {
+        "en": "oven"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/BXBVZXM8/authentic-chicken-enchiladas"
+  },
+  {
+    "id": "fZWt8w3ApVz56dehLGg2",
+    "title": {
+      "en": "Gluten Free Fruit Stuffed Turkey Breast with Hibiscus Sauce"
+    },
+    "summary": {
+      "en": "Gluten Free Fruit Stuffed Turkey Breast with Hibiscus Sauce might be a good recipe to expand your main course repertoire. One portion of this dish contains roughly 47g of protein, 11g of fat, and a total of 466 calories. This gluten free recipe serves 4 and costs $4.15 per serving. It is brought to you by Foodista. 8 people were glad they tried this recipe. Head to the store and pick up kosher salt, hibiscus petals, ground pepper, and a few other things to make it today. From preparation to the plate, this recipe takes roughly 45 minutes. Overall, this recipe earns a good spoonacular score of 78%. Similar recipes include Gluten-free Roast Turkey Breast And Avocado Cream On A Bed Of G, Porcini & Sage Roasted Turkey Breast – Low Carb & Gluten Free, and Rolled Stuffed Turkey Breast & Creamy Basil Sauce."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: For the Turkey:",
+        "Step 2: Method: Preheat oven to 350 degrees. Slit a pocket laterally in the turkey breast. Julienne the dried fruit and the spinach and mix in a bowl with the chopped shallot. Stuff the mixture into the turkey breast and season with salt and pepper, coat with the melted butter and wrap in sheet of foil. Heat a large skillet until it is very hot and place the turkey in the pan and allow to cook for about two minutes on each side or until it is golden brown on all sides (you will have to peek inside the foil to check). Place the pan in the oven and cook for 15 minutes then flip the breasts and cook for an additional 20 to 30 minutes or until a probe thermometer inserted into the middle of the breast reads 165 degrees. Remove the pan from the oven and place the pan on a cutting board and allow to rest for five minutes. Remove the turkey from the foil then carve into 1 inch thick medallions",
+        "Step 3: For the sauce:",
+        "Step 4: Method: In a non-reactive saucepan bring the vinegar and the sugar to a boil. Cook the mixture till the sugar begins to caramelize (Brown). Add the Stock to the mixture quickly so that the caramel does not burn then add the hibiscus flowers to the pan and bring to a low boil. Allow the mixture to reduce by then whisk in the cornstarch with the mixture still at a low boil. Season the sauce to taste with the salt then strain the sauce through a chinoix or fine sauce strainer.",
+        "Step 5: To serve: Place a 1 oz. pool of the sauce on a plate and fan the carved turkey over the sauce."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "butter",
+          "amount": "2 Tbs(2Tbs)"
+        },
+        {
+          "name": "cornstarch",
+          "amount": "1 Tbs(1Tbs)"
+        },
+        {
+          "name": "apricots",
+          "amount": "0.5 cup(65g)"
+        },
+        {
+          "name": "cranberries",
+          "amount": "0.5 cup(60.606g)"
+        },
+        {
+          "name": "pineapple",
+          "amount": "0.5 cup(80g)"
+        },
+        {
+          "name": "ground pepper",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "hibiscus petals",
+          "amount": "0.25 cup(59.147ml)"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "salt",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "shallot",
+          "amount": "1 Tbs(1Tbs)"
+        },
+        {
+          "name": "spinach leaves",
+          "amount": "2 cups(60g)"
+        },
+        {
+          "name": "sugar",
+          "amount": "2 tsp(2tsps)"
+        },
+        {
+          "name": "lobe turkey breast",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "turkey stock",
+          "amount": "2 cups(473.176ml)"
+        },
+        {
+          "name": "vinegar",
+          "amount": "3 Tbs(3Tbs)"
+        },
+        {
+          "name": "foil",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "foil",
+          "amount": "1 (1)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/644828-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "diets": [
+      {
+        "en": "gluten free"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "aluminum foil"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "kitchen thermometer"
+      },
+      {
+        "en": "cutting board"
+      },
+      {
+        "en": "sauce pan"
+      }
+    ],
+    "sourceUrl": "http://www.foodista.com/recipe/TG5HY8N2/gluten-free-fruit-stuffed-turkey-breast-with-hibiscus-sauce"
+  },
+  {
+    "id": "fa3mVtyPJNCVpKL7ZKCW",
+    "title": {
+      "en": "Grilled Eggplant and Heirloom Tomato Stacks With Basil and Tomato Coulis"
+    },
+    "summary": {
+      "en": "Grilled Eggplant and Heirloom Tomato Stacks With Basil and Tomato Coulis is a gluten free and primal side dish. One portion of this dish contains about 12g of protein, 17g of fat, and a total of 238 calories. This recipe serves 5. For $2.51 per serving, this recipe covers 13% of your daily requirements of vitamins and minerals. This recipe from Foodista has 8 fans. If you have garlic clove, tomato coulis, eggplant, and a few other ingredients on hand, you can make it. The Fourth Of July will be even more special with this recipe. From preparation to the plate, this recipe takes roughly 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 84%. This score is super. Grilled Eggplant and Heirloom Tomato Stacks With Basil and Tomato Coulis, Grilled Eggplant & Tomato Stacks, and Grilled Eggplant, Tomato and Feta Stacks are very similar to this recipe."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Prepare Tomato Coulis:",
+        "Step 2: Make shallow incisions with a paring knife around the tomato stems and scoop out the stems.",
+        "Step 3: Make a shallow X-incision in bottom of tomatoes.",
+        "Step 4: Bring a large saucepan of water to a rolling boil.",
+        "Step 5: Plunge tomatoes into water for 10 seconds.",
+        "Step 6: Remove and submerge tomatoes in bowl of ice water.",
+        "Step 7: Remove the cooled tomatoes from the water.",
+        "Step 8: Peel away skin.",
+        "Step 9: Remove seeds and coarsely chop tomatoes.",
+        "Step 10: Combine tomatoes, garlic and olive oil in bowl of food processor.",
+        "Step 11: Process until smooth.",
+        "Step 12: Add salt and pepper.",
+        "Step 13: Let Tomato Coulis stand at room temperature for one hour before serving.",
+        "Step 14: Prepare Eggplant:",
+        "Step 15: Preheat oven broiler or prepare grill.",
+        "Step 16: Lightly brush eggplant slices on both sides with olive oil.",
+        "Step 17: Sprinkle with salt and pepper.",
+        "Step 18: Arrange on baking tray and grill in oven, turning once, until golden brown, about 3 minutes per side.",
+        "Step 19: Or grill on barbecue, turning, until golden brown and cooked through.",
+        "Step 20: Arrange Stacks:",
+        "Step 21: Combine garlic and goat cheese in a small bowl.",
+        "Step 22: Add salt and freshly ground black pepper to taste.",
+        "Step 23: Arrange 1/2 of the eggplant slices on platter.",
+        "Step 24: Spoon 2 teaspoons goat cheese over.",
+        "Step 25: Top with 1 basil leaf.",
+        "Step 26: Place second eggplant slice on basil leaf.",
+        "Step 27: Top with one teaspoon goat cheese and basil leaf.",
+        "Step 28: Lightly drizzle 2-3 teaspoons Tomato Coulis over and around the eggplant stack.",
+        "Step 29: Garnish with one teaspoon grated Pecorino Romano cheese.",
+        "Step 30: Serve immediately."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "basil leaves",
+          "amount": "15 large(15large)"
+        },
+        {
+          "name": "pepper",
+          "amount": "5 servings(5servings)"
+        },
+        {
+          "name": "eggplant",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "garlic clove",
+          "amount": "1 small(1small)"
+        },
+        {
+          "name": "mild goat cheese",
+          "amount": "1 cup(227g)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tablespoons(2Tbsps)"
+        },
+        {
+          "name": "pecorino romano cheese",
+          "amount": "0.25 cup(25g)"
+        },
+        {
+          "name": "plum tomatoes",
+          "amount": "8 ounces(226.796g)"
+        },
+        {
+          "name": "salt",
+          "amount": "5 servings(5servings)"
+        },
+        {
+          "name": "tomato coulis",
+          "amount": "0.75 cup(111.75g)"
+        },
+        {
+          "name": "garden tomatoes",
+          "amount": "2 large(2large)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/645696-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 5,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "primal"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "side dish"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "sauce pan"
+      },
+      {
+        "en": "knife"
+      },
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "food processor"
+      },
+      {
+        "en": "broiler"
+      },
+      {
+        "en": "grill"
+      },
+      {
+        "en": "oven"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/WXQZBFHK/grilled-eggplant-and-heirloom-tomato-stacks-with-basil-and-tomato-coulis"
+  },
+  {
+    "id": "gbYicWgaK3OAI1FpfgSp",
+    "title": {
+      "en": "Frozen Mojito Pie"
+    },
+    "summary": {
+      "en": "Frozen Mojito Pie requires about 45 minutes from start to finish. For $1.41 per serving, you get a dessert that serves 8. One portion of this dish contains approximately 4g of protein, 20g of fat, and a total of 319 calories. Head to the store and pick up mint, whipped topping, sugar, and a few other things to make it today. It is brought to you by Foodista. 3 people were impressed by this recipe. Overall, this recipe earns a rather bad spoonacular score of 13%. If you like this recipe, take a look at these similar recipes: Frozen Mojito Pie, FROZEN MOJITO, and Frozen Strawberry Watermelon Mojito."
+    },
+    "instructions": {
+      "en": [
+        "In a medium sized bowl mix together the pretzel crumbs and the butter. Press the pretzels onto the bottom of an 8-inch springform pan, or a round pan lined with plastic wrap. Freeze the crust for at least one hour. In your mixers bowl, beat together the cream cheese, sugar, zest, juice, and mint. Mix until well blended. Whisk in the whipped topping. Spoon the filling over the crust. Freeze for at least 6 hours. Over night is best. Carefully remove the pie from the pan and top it with some crushed pretzels and thin slices of lime. Keep it frozen."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "pretzels",
+          "amount": "1 cup(80g)"
+        },
+        {
+          "name": "butter",
+          "amount": "5 tablespoons(5Tbsps)"
+        },
+        {
+          "name": "cream cheese",
+          "amount": "8 oz(226.796g)"
+        },
+        {
+          "name": "sugar",
+          "amount": "0.75 cup(150g)"
+        },
+        {
+          "name": "lime zest",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "juice from lime",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "mint",
+          "amount": "3 tablespoons(3Tbsps)"
+        },
+        {
+          "name": "whipped topping",
+          "amount": "2 cups(150ml)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/643916-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 8,
+    "diets": [],
+    "dishTypes": [
+      {
+        "en": "dessert"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "springform pan"
+      },
+      {
+        "en": "plastic wrap"
+      },
+      {
+        "en": "whisk"
+      },
+      {
+        "en": "frying pan"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/G245TF5X/frozen-mojito-pie"
+  },
+  {
+    "id": "gi6O2ycCDo6jDy1A4SlP",
+    "title": {
+      "en": "Luscious Lemon Bars"
+    },
+    "summary": {
+      "en": "You can never have too many dessert recipes, so give Luscious Lemon Bars a try. This recipe serves 6. One portion of this dish contains roughly 4g of protein, 18g of fat, and a total of 463 calories. For 53 cents per serving, this recipe covers 4% of your daily requirements of vitamins and minerals. 31 person have made this recipe and would make it again. If you have flour, butter, eggs, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. It is a good option if you're following a lacto ovo vegetarian diet. From preparation to the plate, this recipe takes about 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 16%. This score is rather bad. Similar recipes include Luscious Lemon Bars, Luscious Lemon Bars, and Luscious Lemon Bars."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: PREHEAT oven to 350F",
+        "Step 2: GREASE 9x13 inch rectangular cake pan",
+        "Step 3: COMBINE crust ingredients and press with fingertips into pan",
+        "Step 4: BAKE for 20 minutes",
+        "Step 5: FILLING: As crust is baking combine all remaining ingredients and whisk together until well combined.",
+        "Step 6: When crust is baked, remove from oven, fill with lemon filling; return to oven",
+        "Step 7: BAKE for an addition 23-25 minutes (don't let the top get overbrown - see pic above for what you are looking for!)",
+        "Step 8: REMOVE from oven and allow to cool for 1/2 hr on a wire rack.",
+        "Step 9: Tip: To remove from baking pan, cut the bars in half and remove each half with a large flexible spatula. Then finish cutting bars into squares",
+        "Step 10: DUST with sifted icing sugar and you are DONE.",
+        "Step 11: Last steps - VERY IMPORTANT: Put on a pot of tea and I will be there shortly ;)",
+        "Step 12: See recipe PLUS photos @ my blog: http://lemondropsfoodie.blogspot.com/2011/02/luscious-lemon-bars.html"
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "baking powder",
+          "amount": "0.5 teaspoon(0.5tsps)"
+        },
+        {
+          "name": "butter",
+          "amount": "4 ounces(113.398g)"
+        },
+        {
+          "name": "eggs",
+          "amount": "3 (3)"
+        },
+        {
+          "name": "flour",
+          "amount": "50 g(50g)"
+        },
+        {
+          "name": "juice of lemon",
+          "amount": "1 (1)"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 tablespoon(1Tbsp)"
+        },
+        {
+          "name": "powdered sugar",
+          "amount": "0.5 cup(60g)"
+        },
+        {
+          "name": "sugar",
+          "amount": "1.75 cups(350g)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/650479-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "diets": [
+      {
+        "en": "lacto ovo vegetarian"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "dessert"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "baking pan"
+      },
+      {
+        "en": "wire rack"
+      },
+      {
+        "en": "spatula"
+      },
+      {
+        "en": "whisk"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "pot"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/N6WG5MLX/luscious-lemon-bars"
+  },
+  {
+    "id": "l9AJSLh3JHEpdhPjtcON",
+    "title": {
+      "en": "Boeuf Bourgignon"
+    },
+    "summary": {
+      "en": "Boeuf Bourgignon takes around 45 minutes from beginning to end. For $8.41 per serving, you get a main course that serves 4. One portion of this dish contains approximately 76g of protein, 54g of fat, and a total of 980 calories. This recipe is liked by 2 foodies and cooks. If you have beef stock, flour, thyme, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. Overall, this recipe earns a solid spoonacular score of 78%. Boeuf Bourgignon, Slow Cooker Boeuf Bourgignon, and Slow Cooker Boeuf Bourgignon are very similar to this recipe."
+    },
+    "instructions": {
+      "en": [
+        "Preheat oven to 160 C (325 F). In a pan saut the mushrooms in butter till brown and soft. Keep aside. In a deep-bottomed pot/cesserole, saut the bacon in 1 tbsp oil over moderate heat for 2 to 3 minutes to brown lightly. Remove to a side dish with a slotted spoon. Reheat the pan until fat is almost smoking before you saut the beef. Saut the beef in the bacon fat in batches making sure not to crowd the pieces (the pieces need to brown on all sides, not sweat). Add the browned pieces of beef to the bacon. Lower the heat to medium. In the same fat, add the onions, shallots and carrots. Cook till the carrots soften. Add the cooked veggies to the beef and bacon. Pour out the sauting fat. Return beef to the casserole. Then sprinkle on the flour and toss to coat the beef lightly with the flour. Stir everything around till the flour is cooked and no white traces of it remain. Add the bacon and veggies and season with salt and pepper. Stir in the cognac and enough stock so that the meat is barely covered. Add the garlic, thyme, parsley, tomato paste and bay leaf. Bring to simmer on top of the stove. Cover the casserole and set it in the oven. Cook for 2 1/2 to 3 hours. About 1 hour into the cooking add the mushrooms and stir in the cocoa powder. Return to the oven. The stew is done when the meat is fork-soft."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "button mushrooms",
+          "amount": "1 pound(453.592g)"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tbsp(2Tbsps)"
+        },
+        {
+          "name": "un-smoked bacon",
+          "amount": "2 strips(2strips)"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "well-trimmed beef chuck",
+          "amount": "3 pounds(1.361kgs)"
+        },
+        {
+          "name": "onion",
+          "amount": "1 medium(1medium)"
+        },
+        {
+          "name": "shallots",
+          "amount": "2 medium(2medium)"
+        },
+        {
+          "name": "carrots",
+          "amount": "2 medium(2medium)"
+        },
+        {
+          "name": "salt and pepper",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "flour",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "cognac",
+          "amount": "1 cup(240ml)"
+        },
+        {
+          "name": "beef stock",
+          "amount": "3 cups(720ml)"
+        },
+        {
+          "name": "cocoa powder",
+          "amount": "2 tbsp(2Tbsps)"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 (2)"
+        },
+        {
+          "name": "thyme",
+          "amount": "2 teaspoons(2tsps)"
+        },
+        {
+          "name": "flat-leaf parsley leaves",
+          "amount": "0.25 cup(15g)"
+        },
+        {
+          "name": "tomato paste",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1 (1)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/635574-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "diets": [],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "oven"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "pot"
+      },
+      {
+        "en": "slotted spoon"
+      },
+      {
+        "en": "stove"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/CHYFGP78/boeuf-bourgignon"
+  },
+  {
+    "id": "pJ8OIPgbIeyWbq70WE6U",
+    "title": {
+      "en": "Eggplant Parmesan Roll-Ups"
+    },
+    "summary": {
+      "en": "Eggplant Parmesan Roll-Ups might be just the hor d'oeuvre you are searching for. This recipe serves 4. One serving contains 669 calories, 21g of protein, and 45g of fat. For $3.63 per serving, this recipe covers 25% of your daily requirements of vitamins and minerals. If you have olive oil, basil, garlic, and a few other ingredients on hand, you can make it. It is a pretty expensive recipe for fans of Mediterranean food. 2 people found this recipe to be yummy and satisfying. From preparation to the plate, this recipe takes approximately 45 minutes. It is brought to you by Foodista. All things considered, we decided this recipe deserves a spoonacular score of 78%. This score is pretty good. If you like this recipe, take a look at these similar recipes: Eggplant Roll-Ups, Grilled Eggplant Roll-Ups, and Eggplant and Mozzarella Roll-Ups."
+    },
+    "instructions": {
+      "en": [
+        "Preheat oven to 350F and put water for linguine on to boil. Heat 1 teaspoon oil in a 2-quart heavy saucepan over medium heat and add onion and green pepper. Cook until just tender. Add garlic and red pepper flakes and continue to cook another 30 seconds. Add tomatoes and 1/2 teaspoon salt and simmer, uncovered, stirring occasionally, until slightly thickened, 15 to 20 minutes. Grill eggplant while sauce cooks. Heat grill pan over high heat until hot. Peel skin from eggplant and discard. Cut eggplant long-ways into 8 (1/3-inch-thick) slices. Lightly rush both sides of slices with 2 teaspoons oil (total), then season with salt and pepper. Grill slices in batches, turning over once l, until golden brown and tender, about 4 minutes, then transfer to a tray. Stir together ricotta and 1/2 cup Parmesan, basil, pepper, and remaining salt. Divide cheese mixture among slices. Roll up each slice. Place rolls in a small casserole dish and bake until cheese starts to melt, about 10 minutes. Meanwhile, cook linguine to package directions. Serve rolls over linguine, topped with sauce and sprinkled with 1 tablespoon Parmesan each."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "olive oil",
+          "amount": "3 cups(648ml)"
+        },
+        {
+          "name": "bell pepper",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "brown mushrooms",
+          "amount": "8 ounces(226.796g)"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 clove(1clove)"
+        },
+        {
+          "name": "pepper flakes",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "canned tomatoes",
+          "amount": "14 teaspoons(14tsps)"
+        },
+        {
+          "name": "eggplant",
+          "amount": "1.25 lb(566.99g)"
+        },
+        {
+          "name": "ricotta",
+          "amount": "1 cup(248g)"
+        },
+        {
+          "name": "parmesan",
+          "amount": "0.5 cup(50g)"
+        },
+        {
+          "name": "basil",
+          "amount": "3 tablespoons(3Tbsps)"
+        },
+        {
+          "name": "pepper",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "linguine",
+          "amount": "6 ounces(170.097g)"
+        },
+        {
+          "name": "onion",
+          "amount": "0.5 cup(80g)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/642297-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "diets": [],
+    "dishTypes": [
+      {
+        "en": "antipasti"
+      },
+      {
+        "en": "starter"
+      },
+      {
+        "en": "snack"
+      },
+      {
+        "en": "appetizer"
+      },
+      {
+        "en": "antipasto"
+      },
+      {
+        "en": "hor d'oeuvre"
+      }
+    ],
+    "cuisines": [
+      {
         "en": "Mediterranean"
       },
       {
@@ -1996,318 +2240,76 @@
     ],
     "equipment": [
       {
-        "en": "sauce pan"
-      },
-      {
-        "en": "frying pan"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/KH5STR7N/salmon-quinoa-risotto"
-  },
-  {
-    "id": "dhcHyP8PNnh8Oni4SQMz",
-    "title": {
-      "en": "Ginger Chicken Stir-Fry"
-    },
-    "summary": {
-      "en": "Ginger Chicken Stir-Fry requires roughly <b>45 minutes</b> from start to finish. This main course has <b>320 calories</b>, <b>22g of protein</b>, and <b>9g of fat</b> per serving. This recipe serves 6 and costs $1.52 per serving. 2 people were impressed by this recipe. It is a good option if you're following a <b>gluten free and dairy free</b> diet. This recipe from Foodista requires broccoli/cauliflower/carrots, ground ginger, chicken broth, and cornstarch. Taking all factors into account, this recipe <b>earns a spoonacular score of 58%</b>, which is pretty good. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/ginger-chicken-stir-fry-110515\">Ginger Chicken Stir-fry</a>, <a href=\"https://spoonacular.com/recipes/ginger-chicken-stir-fry-1365259\">Ginger Chicken Stir-Fry</a>, and <a href=\"https://spoonacular.com/recipes/ginger-chicken-stir-fry-105193\">Ginger Chicken Stir-Fry</a>."
-    },
-    "instructions": {
-      "en": "<ol><li>In shallow baking dish, combine teriyaki sauce and water; add chicken pieces, coating well. Cover and refrigerate two hours. Drain marinade from chicken pieces. In large skillet or wok, heat oil; stir-fry chicken and onion until chicken is slightly browned. Stir in vegetables, ginger, and wine. Cover; simmer 4 to 5 minutes, or until vegetables are tender crisp. In small bowl, combine cornstarch and water until smooth.</li><li>Gradually add to skillet, stirring constantly, until thickened. Serve over hot rice.</li><li>*Or use 1 package (16 ounces) frozen vegetable mixture of your choice.</li><li>NOTE: Optional ingredients are omitted from the nutritional calculations.</li><li>When ingredient options appear in a recipe, the first ingredient choice is used for calculation.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "16 ounces Broccoli/cauliflower/carrots (frozen packaged mixture)*"
-      },
-      {
-        "en": "1 pound Chicken breasts (skinned and boned) cut into 1-½ inch pieces"
-      },
-      {
-        "en": "cup White wine OR chicken broth"
-      },
-      {
-        "en": "3 cups Hot cooked brown rice"
-      },
-      {
-        "en": "1 tablespoon Cornstarch"
-      },
-      {
-        "en": "2 teaspoon ground ginger"
-      },
-      {
-        "en": "1 medium Onion, cut into 8 wedges"
-      },
-      {
-        "en": "1/4 cup Teriyaki sauce"
-      },
-      {
-        "en": "3/4 cup canola or vegetable oil"
-      },
-      {
-        "en": "3 cups water"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/644571-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 6,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "baking pan"
-      },
-      {
-        "en": "frying pan"
-      },
-      {
-        "en": "bowl"
-      },
-      {
-        "en": "wok"
-      }
-    ],
-    "sourceUrl": "https://www.foodista.com/recipe/HVGBX52M/ginger-chicken-stir-fry"
-  },
-  {
-    "id": "nuccr2g9Zp1TaZOCEpeK",
-    "title": {
-      "en": "Gluten Free Almond Blueberry Coffee Cake"
-    },
-    "summary": {
-      "en": "You can never have too many breakfast recipes, so give Gluten Free Almond Blueberry Coffee Cake a try. Watching your figure? This gluten free and lacto ovo vegetarian recipe has <b>299 calories</b>, <b>6g of protein</b>, and <b>11g of fat</b> per serving. This recipe serves 8. For <b>68 cents per serving</b>, this recipe <b>covers 6%</b> of your daily requirements of vitamins and minerals. It is brought to you by Pink When. A couple people made this recipe, and 39 would say it hit the spot. Head to the store and pick up almonds, baking powder, milk, and a few other things to make it today. From preparation to the plate, this recipe takes approximately <b>1 hour</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 29%</b>. This score is rather bad. Try <a href=\"https://spoonacular.com/recipes/gluten-free-blueberry-coffee-cake-541568\">Gluten-free Blueberry Coffee Cake</a>, <a href=\"https://spoonacular.com/recipes/gluten-free-blueberry-coffee-cake-1726819\">Gluten-Free Blueberry Coffee Cake</a>, and <a href=\"https://spoonacular.com/recipes/gluten-free-almond-and-raspberry-coffee-cake-553169\">Gluten free almond and raspberry coffee cake</a> for similar recipes."
-    },
-    "instructions": {
-      "en": "<ol><li>Preheat your oven to 375 degrees F and spray a 9\" springform pan with a nonstick spray. Set aside.</li><li>In a large bowl, whisk together the egg, whole milk, vanilla yogurt and canola oil. Set aside.</li><li>In a separate medium bowl, whisk together 2 cups of the flour, granulated sugar, baking powder, xantham gum and fine sea salt.</li><li>Add the dry ingredients to the wet and mix to combine until just moistened. Do not overmix.</li><li>In a small bowl, combine 1 cup of the blueberries with the remaining 1 tablespoon flour. Fold the blueberries into the batter very gently until dispersed evenly. It is OK if they bleed just a little bit.</li><li>Pour the batter into the prepared pan and flatten and even out with a spatula. Top with the remaining blueberries.</li><li>In a small bowl toss the turbinado sugar and almonds together. Sprinkle on top of the cake. Transfer the cake to the oven ad bake for 30-35 minutes or until a toothpick comes out with just a few crumbs. Remove from heat and let cool in the pan for 15 minutes. Release the sides and transfer the cake to a wire rack to cool the rest of the way.</li><li>Enjoy immediately or cover with plastic wrap and eat within 2 days.</li></ol>"
-    },
-    "ingredients": [
-      {
-        "en": "3 tablespoons sliced almonds"
-      },
-      {
-        "en": "3 teaspoons baking powder (without wheat starch)"
-      },
-      {
-        "en": "1½ cup frozen blueberries"
-      },
-      {
-        "en": "¼ cup canola oil"
-      },
-      {
-        "en": "1 large egg"
-      },
-      {
-        "en": "2 cups gluten free all-purpose flour + 1 tablespoon"
-      },
-      {
-        "en": "½ cup granulated sugar"
-      },
-      {
-        "en": "½ teaspoon fine sea salt"
-      },
-      {
-        "en": "3 tablespoons raw turbinado sugar"
-      },
-      {
-        "en": "½ cup vanilla yogurt"
-      },
-      {
-        "en": "½ cup whole milk"
-      },
-      {
-        "en": "1 teaspoon xanthan gum"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/729532-556x370.jpg",
-    "readyInMinutes": 60,
-    "servings": 8,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "morning meal"
-      },
-      {
-        "en": "dessert"
-      },
-      {
-        "en": "brunch"
-      },
-      {
-        "en": "breakfast"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [
-      {
-        "en": "springform pan"
-      },
-      {
-        "en": "whisk"
-      },
-      {
-        "en": "bowl"
-      },
-      {
         "en": "oven"
       },
       {
-        "en": "spatula"
+        "en": "sauce pan"
       },
       {
-        "en": "frying pan"
+        "en": "grill"
       },
       {
-        "en": "toothpicks"
+        "en": "grill pan"
       },
       {
-        "en": "plastic wrap"
-      },
-      {
-        "en": "wire rack"
+        "en": "casserole dish"
       }
     ],
-    "sourceUrl": "https://www.pinkwhen.com/gluten-free-almond-blueberry-coffee-cake/"
+    "sourceUrl": "https://www.foodista.com/recipe/JWBD7XBC/eggplant-parmesan-roll-ups"
   },
   {
-    "id": "r7Wcf84nanQhrUFIYpoe",
+    "id": "pyDRKtQABixMOIF79xio",
     "title": {
-      "en": "Big Batch Smoothie Bowl"
+      "en": "Banana in brown sugar ice cream"
     },
     "summary": {
-      "en": "Big Batch Smoothie Bowl could be just the <b>lacto ovo vegetarian</b> recipe you've been looking for. This recipe makes 6 servings with <b>434 calories</b>, <b>22g of protein</b>, and <b>18g of fat</b> each. For <b>$1.74 per serving</b>, this recipe <b>covers 19%</b> of your daily requirements of vitamins and minerals. It works well as a reasonably priced main course. It is brought to you by spoonacular user <a href=\"/profile/coffeebean\">coffeebean</a>. From preparation to the plate, this recipe takes about <b>15 minutes</b>. Head to the store and pick up whey protein, pumpkin seeds, flaxseed, and a few other things to make it today. Similar recipes include <a href=\"https://spoonacular.com/recipes/big-batch-smoothie-bowl-1405579\">Big Batch Smoothie Bowl</a>, <a href=\"https://spoonacular.com/recipes/big-batch-smoothie-bowl-1375399\">Big Batch Smoothie Bowl</a>, and <a href=\"https://spoonacular.com/recipes/big-batch-brownies-246947\">Big Batch Brownies</a>."
+      "en": "You can never have too many hor d'oeuvre recipes, so give Bananan in brown sugar ice cream a try. One serving contains 343 calories, 3g of protein, and 17g of fat. For 98 cents per serving, this recipe covers 9% of your daily requirements of vitamins and minerals. This recipe serves 6. It is a good option if you're following a gluten free, dairy free, lacto ovo vegetarian, and fodmap friendly diet. A mixture of vanillan extract, lemon juice, full-fat cream, and a handful of other ingredients are all it takes to make this recipe so flavorful. 5 people were glad they tried this recipe. Summer will be even more special with this recipe. From preparation to the plate, this recipe takes around 45 minutes. It is brought to you by Foodista. Taking all factors into account, this recipe earns a spoonacular score of 42%, which is pretty good. Similar recipes are Banana-brown Sugar Ice Cream, Spiced Banana & Brown Sugar Ice Cream, and Brown Sugar Bananan Ice Cream with Brownie Chunks."
     },
     "instructions": {
-      "en": "<ol><li>Blend frozen berries, kefir, and protein powder. It is best to do this in advance so it's not too icy cold.</li><li>Portion out each serving and top with sliced bananas, pomegranate seeds, granola, ground nuts, and flax.</li><li>Enjoy!</li></ol>"
+      "en": [
+        "Step 1: In a wide skillet or saucepan, heat the brown sugar with one-quarter of the coconut milk or sour cream, stirring, until smooth and bubbly.",
+        "Step 2: Add the bananas and salt, and continue to cook for 5 minutes, stirring occasionally, until the bananas are soft and completely cooked through.",
+        "Step 3: Remove from heat and stir in the remaining coconut milk or sour cream, rum and vanilla. If it tastes too sweet, add a few drops of fresh lemon juice.",
+        "Step 4: Puree in a blender or food processor until completely smooth.",
+        "Step 5: Chill thoroughly for 1 hour or overnight, then pour into the ice cream maker and proceed according to the manufacturers instructions.",
+        "Step 6: Before serving, take it out for 5-10 minutes before serving, or longer, so it comes to the right scooping temperature",
+        "Step 7: Light note: if you use sour cream, when cooking the bananas, the mixture might curdle a bit. Nothing to worry, just proceed with the recipe and itll smooth out when blended.",
+        "Step 8: Easy suggestion: ice cream is best served in chilled glass or porcelain bowls. Scoop it with a hot, but dry, ice-cream spoon (soak it in boiling water, then wipe dry)."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "90 grams whey protein"
-      },
-      {
-        "en": "150 grams frozen strawberries"
-      },
-      {
-        "en": "150 grams frozen blueberries"
-      },
-      {
-        "en": "3 bananas"
-      },
-      {
-        "en": "1 pomegranate"
-      },
-      {
-        "en": "60 grams walnuts"
-      },
-      {
-        "en": "30 grams pumpkin seeds"
-      },
-      {
-        "en": "30 grams flaxseed"
-      },
-      {
-        "en": "180 grams granola"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/1082038-556x370.jpg",
-    "readyInMinutes": 15,
-    "servings": 6,
-    "diets": [
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "lunch"
-      },
-      {
-        "en": "main course"
-      },
-      {
-        "en": "main dish"
-      },
-      {
-        "en": "dinner"
-      }
-    ],
-    "cuisines": [],
-    "equipment": [],
-    "sourceUrl": "https://spoonacular.com/site-1552846959904"
-  },
-  {
-    "id": "twqpgGy6WIKHCGiCPoiD",
-    "title": {
-      "en": "Finger Lickin' Good Stewed Quince Dessert"
+    "ingredients": {
+      "en": [
+        {
+          "name": "bananas",
+          "amount": "600 g(600g)"
+        },
+        {
+          "name": "rum",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "full-fat cream",
+          "amount": "500 ml(500ml)"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "6 servings(6servings)"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "135 g(135g)"
+        },
+        {
+          "name": "big of sea salt",
+          "amount": "1 pinch(1pinch)"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "1 tablespoon(1Tbsp)"
+        }
+      ]
     },
-    "summary": {
-      "en": "Finger Lickin' Good Stewed Quince Dessert is a hor d'oeuvre that serves 6. For <b>$2.87 per serving</b>, this recipe <b>covers 5%</b> of your daily requirements of vitamins and minerals. One portion of this dish contains about <b>1g of protein</b>, <b>7g of fat</b>, and a total of <b>190 calories</b>. This recipe from Foodista has 3 fans. A mixture of quinces, unrefined oil, cinnamon, and a handful of other ingredients are all it takes to make this recipe so yummy. It is a good option if you're following a <b>gluten free, dairy free, lacto ovo vegetarian, and vegan</b> diet. From preparation to the plate, this recipe takes around <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 19%</b>. This score is rather bad. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/finger-lickin-good-shrimp-428519\">Finger-Lickin'-Good Shrimp</a>, <a href=\"https://spoonacular.com/recipes/finger-lickin-good-chicken-marinade-143838\">Finger Lickin' Good Chicken Marinade</a>, and <a href=\"https://spoonacular.com/recipes/finger-lickin-good-bbq-sauce-146789\">Finger Lickin Good BBQ Sauce</a>."
-    },
-    "instructions": {
-      "en": "Go to my blog for the full instructions: http://gourmandelle.com/finger-lickin-good-stewed-quince-dessert/"
-    },
-    "ingredients": [
-      {
-        "en": "3 quinces"
-      },
-      {
-        "en": "3 tbsp unrefined oil"
-      },
-      {
-        "en": "1 tbsp rice flour, mixed with 50 ml of water"
-      },
-      {
-        "en": "50g sucanat"
-      },
-      {
-        "en": "1/2 tbsp cinnamon"
-      },
-      {
-        "en": "1 tsp ground cloves"
-      },
-      {
-        "en": "3 tbsp raisins"
-      },
-      {
-        "en": "1/2 tsp vanilla extract"
-      },
-      {
-        "en": "1 tsp rum extract"
-      },
-      {
-        "en": "pinch of sea salt"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/642878-556x370.jpg",
+    "image": "https://img.spoonacular.com/recipes/634106-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 6,
     "diets": [
@@ -2319,18 +2321,17 @@
       },
       {
         "en": "lacto ovo vegetarian"
+      },
+      {
+        "en": "fodmap friendly"
       },
       {
         "en": "vegan"
       }
     ],
-    "intolerances": [],
     "dishTypes": [
       {
         "en": "antipasti"
-      },
-      {
-        "en": "soup"
       },
       {
         "en": "starter"
@@ -2349,94 +2350,15 @@
       }
     ],
     "cuisines": [],
-    "equipment": [],
-    "sourceUrl": "https://www.foodista.com/recipe/RKFS2WGC/finger-lickin-good-stewed-quince-dessert"
-  },
-  {
-    "id": "yoZhLyZoTOSiCMu7dDh7",
-    "title": {
-      "en": "Creamy Potato Salad with Cashew Dressing and Fresh Basil"
-    },
-    "summary": {
-      "en": "The recipe Creamy Potato Salad with Cashew Dressing and Fresh Basil can be made <b>in around 45 minutes</b>. One serving contains <b>292 calories</b>, <b>8g of protein</b>, and <b>17g of fat</b>. This gluten free and dairy free recipe serves 6 and costs <b>$1.81 per serving</b>. 18 people were impressed by this recipe. It can be enjoyed any time, but it is especially good for <b>The Fourth Of July</b>. Head to the store and pick up parsley, baby potatoes, mint leaves, and a few other things to make it today. A few people really liked this side dish. It is brought to you by foodandspice.blogspot.com. With a spoonacular <b>score of 86%</b>, this dish is excellent. Similar recipes include <a href=\"https://spoonacular.com/recipes/wedge-salad-with-creamy-cashew-dressing-1711069\">Wedge Salad with Creamy Cashew Dressing</a>, <a href=\"https://spoonacular.com/recipes/fresh-basil-salad-dressing-1628317\">Fresh Basil Salad Dressing</a>, and <a href=\"https://spoonacular.com/recipes/roasted-cauliflower-salad-with-creamy-cashew-dressing-926367\">Roasted Cauliflower Salad with Creamy Cashew Dressing</a>."
-    },
-    "instructions": {
-      "en": "Bring the potatoes to a boil in a large pot of water. Reduce the heat to medium and cook until they are fork tender  about 10 to 12 minutes. Do not overcook. Drain well and let cool for 10 minutes or longer before transferring to a large bowl along with the peas, basil leaves and olives if using.To make the dressing, combine all the ingredients in a small blender or food processor and pulse into smooth. If it is too thick, add a bit more olive oil or almond milk. Taste for seasoning and adjust nutritional yeast, salt and pepper to taste. Toss the potatoes with the dressing and serve."
-    },
-    "ingredients": [
-      {
-        "en": "3 to 4 tablespoons almond milk, or as needed"
-      },
-      {
-        "en": "1 1/2 lb (700 g) baby potatoes"
-      },
-      {
-        "en": "3/4 cup fresh basil leaves, roughly torn if large"
-      },
-      {
-        "en": "1 1/2 tablespoons fresh chives, chopped"
-      },
-      {
-        "en": "1 tablespoon fresh mint leaves, chopped"
-      },
-      {
-        "en": "2 tablespoons fresh parsley, trimmed and chopped"
-      },
-      {
-        "en": "1/2 cup fresh or frozen peas, blanched"
-      },
-      {
-        "en": "fresh ground black pepper to taste"
-      },
-      {
-        "en": "1 teaspoon Dijon honey mustard"
-      },
-      {
-        "en": "juice from 2 lemons (3 tablespoons)"
-      },
-      {
-        "en": "1/4 Kalamata olives, pitted and chopped (optional)"
-      },
-      {
-        "en": "3 to 4 tablespoons nutritional yeast, to taste"
-      },
-      {
-        "en": "1/4 cup olive oil"
-      },
-      {
-        "en": "3/4 cup raw cashews, soaked in warm water for 3 hours and drained"
-      },
-      {
-        "en": "1 teaspoon rice vinegar"
-      },
-      {
-        "en": "1 1/2 teaspoons sea salt, or to taste"
-      },
-      {
-        "en": "1 teaspoon Dijon grain mustard"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/794352-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 6,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "dairy free"
-      }
-    ],
-    "intolerances": [],
-    "dishTypes": [
-      {
-        "en": "side dish"
-      }
-    ],
-    "cuisines": [],
     "equipment": [
       {
-        "en": "pot"
+        "en": "sauce pan"
+      },
+      {
+        "en": "frying pan"
+      },
+      {
+        "en": "ice cream machine"
       },
       {
         "en": "food processor"
@@ -2448,64 +2370,50 @@
         "en": "bowl"
       }
     ],
-    "sourceUrl": "https://www.foodandspice.com/2016/07/creamy-potato-salad-with-cashew.html"
+    "sourceUrl": "https://www.foodista.com/recipe/P56TQ84Z/banana-in-brown-sugar-ice-cream"
   },
   {
-    "id": "zhsbk934lXYoiO2L6j59",
+    "id": "tdO5xa2kVFNJ5sk0pOpb",
     "title": {
-      "en": "Curried Chicken Roll-Ups"
+      "en": "Pumpkin soup with wine"
     },
     "summary": {
-      "en": "Curried Chicken Roll-Ups requires around <b>45 minutes</b> from start to finish. One portion of this dish contains about <b>13g of protein</b>, <b>6g of fat</b>, and a total of <b>180 calories</b>. For <b>$1.37 per serving</b>, you get a hor d'oeuvre that serves 4. This recipe is liked by 3 foodies and cooks. If you have chicken breast, curry paste, paprika, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. It is a good option if you're following a <b>gluten free and dairy free</b> diet. Taking all factors into account, this recipe <b>earns a spoonacular score of 48%</b>, which is pretty good. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/chicken-roll-ups-1300115\">Chicken Roll-ups</a>, <a href=\"https://spoonacular.com/recipes/chicken-roll-em-ups-for-two-419709\">Chicken Roll-em Ups for Two</a>, and <a href=\"https://spoonacular.com/recipes/chicken-roll-ups-67637\">Chicken Roll-ups</a>."
+      "en": "Pumpkin soup with wine might be a good recipe to expand your hor d'oeuvre collection. This recipe makes 4 servings with 461 calories, 3g of protein, and 28g of fat each. For $5.13 per serving, this recipe covers 4% of your daily requirements of vitamins and minerals. 14 people have made this recipe and would make it again. A mixture of sage leaves, red wine, vegetable stock from 1 cube, and a handful of other ingredients are all it takes to make this recipe so yummy. Autumn will be even more special with this recipe. It is a good option if you're following a gluten free and lacto ovo vegetarian diet. It is brought to you by Foodista. From preparation to the plate, this recipe takes around 45 minutes. With a spoonacular score of 13%, this dish is rather bad. Users who liked this recipe also liked Red Wine Braised Venison over Pumpkin Risotto, Ginger and Wine Poached Pears with Pumpkin Whipped Cream, and Pumpkin Ravioli In A Parmesan Fondue With A Red Wine Reduction."
     },
     "instructions": {
-      "en": "Place all ingredients (except tortillas, lettuce, and cream cheese) into a bowl. Stir well, until everything is nicely mixed and the larger chicken pieces have pulled apart.\nLightly toast or warm your tortillas on the stove top.\nScoop out a quarter of your chicken salad mixture and evenly spread it over the top of the tortilla.\nSprinkle a quarter of your lettuce over the chicken salad.\nNow gently, and tightly, roll up your tortilla.\nUse a good serrated knife to gently slice the roll into 4 or 6 pieces."
+      "en": [
+        "Cut the pumpkin into large chunks, and place on a parchment or foil-lined baking sheet. Drizzle with oil and roast at 200C until fork-tender and golden. In a blender mash the roasted pumpkin until smooth. Transfer into a soup pot. Add cream, sour cream, wine and vegetable stock, stir and combine. Bring the soup to a boil, then immediately remove from the flame. Sprinkle with chopped fresh sage leaves serve with croutons."
+      ]
     },
-    "ingredients": [
-      {
-        "en": "10 ounce can chopped chicken breast, drained"
-      },
-      {
-        "en": "1/2 medium cucumber, diced"
-      },
-      {
-        "en": "1/4 red bell pepper, diced"
-      },
-      {
-        "en": "1 celery stalk, diced"
-      },
-      {
-        "en": "1 green onion, sliced"
-      },
-      {
-        "en": "3 tablespoons light mayonnaise or Vegenaise"
-      },
-      {
-        "en": "1 teaspoon lime juice"
-      },
-      {
-        "en": "1 teaspoon red curry paste"
-      },
-      {
-        "en": "1/2 teaspoon garlic powder"
-      },
-      {
-        "en": "1/2 teaspoon paprika"
-      },
-      {
-        "en": "Dash of chili powder"
-      },
-      {
-        "en": "Salt and pepper, to taste"
-      },
-      {
-        "en": "4 whole grain tortillas"
-      },
-      {
-        "en": "1 cup lettuce, chopped"
-      }
-    ],
-    "image": "https://img.spoonacular.com/recipes/641066-556x370.jpg",
+    "ingredients": {
+      "en": [
+        {
+          "name": "muscat pumpkin",
+          "amount": "750 g(750g)"
+        },
+        {
+          "name": "cream",
+          "amount": "200 g(200g)"
+        },
+        {
+          "name": "cream",
+          "amount": "200 g(200g)"
+        },
+        {
+          "name": "vegetable stock from 1 cube",
+          "amount": "500 ml(500ml)"
+        },
+        {
+          "name": "sage leaves",
+          "amount": "4 servings(4servings)"
+        },
+        {
+          "name": "red wine",
+          "amount": "150 ml(150ml)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/657384-556x370.jpg",
     "readyInMinutes": 45,
     "servings": 4,
     "diets": [
@@ -2513,11 +2421,13 @@
         "en": "gluten free"
       },
       {
-        "en": "dairy free"
+        "en": "lacto ovo vegetarian"
       }
     ],
-    "intolerances": [],
     "dishTypes": [
+      {
+        "en": "soup"
+      },
       {
         "en": "antipasti"
       },
@@ -2540,15 +2450,228 @@
     "cuisines": [],
     "equipment": [
       {
+        "en": "baking sheet"
+      },
+      {
+        "en": "aluminum foil"
+      },
+      {
+        "en": "blender"
+      },
+      {
+        "en": "pot"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/ZTMMHNGC/pumpkin-soup-with-wine"
+  },
+  {
+    "id": "wNI52eh4v6GLMWOpxVsH",
+    "title": {
+      "en": "Asian Chickpea Lettuce Wraps"
+    },
+    "summary": {
+      "en": "The recipe Asian Chickpea Lettuce Wraps could satisfy your Asian craving in approximately 45 minutes. Watching your figure? This gluten free and dairy free recipe has 52 calories, 1g of protein, and 3g of fat per serving. For 30 cents per serving, you get a hor d'oeuvre that serves 6. If you have basil, rice vinegar, hoison sauce, and a few other ingredients on hand, you can make it. 15 people have tried and liked this recipe. It is brought to you by Foodista. All things considered, we decided this recipe deserves a spoonacular score of 66%. This score is solid. Similar recipes are Asian Chickpea Lettuce Wraps, Asian Lettuce Wraps, and Asian Lettuce Wraps."
+    },
+    "instructions": {
+      "en": [
+        "Drain and rinse both cans of chickpeas. Place chickpeas in a food processor and puree in 5-10 second increments. You do not want to turn the chickpeas into a mash, you simply want to grind them into pieces. Add 1 tbsp of olive oil to a pan and heat. Add the chickpeas and let cook over medium heat for 3-4 minutes, continuously stirring so as not to burn. Add remaining ingredients, except basil, and stir. Cook over low heat for 10 minutes, stirring occassionally. If using basil leaves, add them and cook for 1-2 minutes, stirring the basil in and allowing it to wilt. Wash lettuce leaves and pat dry. Spoon a healthy serving of chickpea mixture onto lettuce wraps and serve immediately. Drizzle with sirachi sauce if desired."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "chickpeas",
+          "amount": "2 oz(56.699g)"
+        },
+        {
+          "name": "chili sauce",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "hoison sauce",
+          "amount": "2 tbsp(2Tbsps)"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "olive oil",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "2 tbsp(2Tbsps)"
+        },
+        {
+          "name": "sugar",
+          "amount": "0.5 tbsp(0.5Tbsps)"
+        },
+        {
+          "name": "pepper flakes",
+          "amount": "1 tsp(1tsp)"
+        },
+        {
+          "name": "sirachi sauce",
+          "amount": "1 tbsp(1Tbsp)"
+        },
+        {
+          "name": "basil",
+          "amount": "0.5 cup(12g)"
+        },
+        {
+          "name": "romaine leaves",
+          "amount": "6 (6)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/632819-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "diets": [
+      {
+        "en": "gluten free"
+      },
+      {
+        "en": "dairy free"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "antipasti"
+      },
+      {
+        "en": "starter"
+      },
+      {
+        "en": "snack"
+      },
+      {
+        "en": "appetizer"
+      },
+      {
+        "en": "antipasto"
+      },
+      {
+        "en": "hor d'oeuvre"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "Asian"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "food processor"
+      },
+      {
+        "en": "frying pan"
+      }
+    ],
+    "sourceUrl": "https://www.foodista.com/recipe/88WZSMJ6/asian-chickpea-lettuce-wraps"
+  },
+  {
+    "id": "yMMKPi2W2mbErwqZsj1m",
+    "title": {
+      "en": "Chocolate Wafers"
+    },
+    "summary": {
+      "en": "Chocolate Wafers might be a good recipe to expand your dessert recipe box. For 5 cents per serving, this recipe covers 1% of your daily requirements of vitamins and minerals. This recipe makes 40 servings with 30 calories, 1g of protein, and 1g of fat each. 10 people have tried and liked this recipe. If you have ap flour, baking soda, cocoa powder, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. From preparation to the plate, this recipe takes approximately 45 minutes. Overall, this recipe earns an improvable spoonacular score of 8%. Chocolate Mint Wafers, Chocolate Caramel Wafers, and Chocolate Peppermint Wafers are very similar to this recipe."
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Combine the flour, cocoa, baking soda, and salt in a small bowl and mix together thoroughly with a whisk or fork. Set aside.",
+        "Step 2: Beat the butter and margarine with an electric mixer for a few seconds just until blended.",
+        "Step 3: Add the granulated sugar, brown sugar, and vanilla and beat at high speed for about 1 minute.",
+        "Step 4: Beat in the egg white.",
+        "Step 5: Add the flour mixture and mix on low speed, just until incorporated.",
+        "Step 6: Gather the dough together with your hands and form it into a 9- to 10-inch log.",
+        "Step 7: Wrap the log in wax paper or foil. Fold or twist the ends of the paper without pinching or flattening the log",
+        "Step 8: Refrigerate for at least 45 minutes, or until needed.",
+        "Step 9: Preheat the oven to 350F. Position racks in the upper and lower thirds of the oven.",
+        "Step 10: Use a sharp knife to cut the dough log into slices a scant 1/4\" thick.",
+        "Step 11: Place 1 inch apart on cookie sheets and bake for 12 - 14 minutes, or until the cookies puff and crackle on top, then begin to settle down slightly.",
+        "Step 12: Rotate baking sheets from top to bottom and front to back about halfway through the baking time to ensure even baking.",
+        "Step 13: Slide the parchment or foil onto cooling racks and cool the cookies completely before storing or stacking."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "ap flour",
+          "amount": "1 cup(125g)"
+        },
+        {
+          "name": "baking soda",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "0.5 cup(110g)"
+        },
+        {
+          "name": "egg white",
+          "amount": "1 large(1large)"
+        },
+        {
+          "name": "margarine",
+          "amount": "3 teaspoons(3tsps)"
+        },
+        {
+          "name": "salt",
+          "amount": "0.25 teaspoon(0.25tsps)"
+        },
+        {
+          "name": "butter",
+          "amount": "3 teaspoons(3tsps)"
+        },
+        {
+          "name": "cocoa powder",
+          "amount": "0.5 cup(43g)"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "1 teaspoon(1tsp)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/639234-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 40,
+    "diets": [],
+    "dishTypes": [
+      {
+        "en": "dessert"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "hand mixer"
+      },
+      {
+        "en": "whisk"
+      },
+      {
         "en": "bowl"
       },
       {
-        "en": "stove"
+        "en": "wax paper"
       },
       {
-        "en": "serrated knife"
+        "en": "aluminum foil"
+      },
+      {
+        "en": "knife"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "baking sheet"
       }
     ],
-    "sourceUrl": "https://www.foodista.com/recipe/3M5MRTD8/curried-chicken-roll-ups"
+    "sourceUrl": "https://www.foodista.com/recipe/PFD62V3L/chocolate-wafers"
   }
 ]

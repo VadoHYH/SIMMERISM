@@ -1,8 +1,12 @@
+"use client"
+
 import Link from "next/link"
 import RecipeCard from "@/components/recipeCard"
 import { ArrowRight, Edit } from "lucide-react"
+import { useRecipes } from "@/hooks/useRecipes"
 
 export default function Home() {
+  const { recipes, loading } = useRecipes()
   return (
     <div className="bg-[#f9f5f1]">
       <section className="bg-[#FB7659] py-12">
@@ -117,18 +121,20 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Array(4)
-              .fill(0)
-              .map((_, i) => (
-                <Link href={`/recipe/${i}`} key={i}>
-                  <RecipeCard
-                    id={`recipe-${i}`}
-                    title="干貝蜜汁排骨"
-                    imageUrl="/placeholder.svg?height=300&width=300"
-                  />
-                </Link>
-              ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+            {recipes.slice(0, 4).map(recipe => (
+              <RecipeCard
+                key={recipe.id}
+                id={recipe.id}
+                title={recipe.title}
+                image={recipe.image}
+                liked={recipe.liked}
+                readyInMinutes={recipe.readyInMinutes}
+                dishTypes={recipe.dishTypes}
+                diets={recipe.diets}
+                onLike={(id) => console.log(`點了收藏：${id}`)}
+              />
+            ))}
           </div>
         </div>
       </section>

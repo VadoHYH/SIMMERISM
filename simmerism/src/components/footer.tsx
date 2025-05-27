@@ -7,7 +7,7 @@ export default function Footer() {
           <span className="text-[#ff6347]">ISM</span>
         </div>
         <div className="mt-4">
-          <p className="text-sm">© 2025 CASSETTE MUSIC LLC</p>
+          <p className="text-sm">© 2025 Simmerism. All rights reserved.</p>
         </div>
       </div>
     </footer>

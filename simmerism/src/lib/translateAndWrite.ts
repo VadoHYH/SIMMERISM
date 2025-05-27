@@ -33,12 +33,20 @@ interface MultiLangString {
   zh?: string;
 }
 
+interface IngredientObject {
+  name: MultiLangString;
+  amount: MultiLangString;
+}
+
 interface Recipe {
   id: string;
   title: MultiLangString;
   summary: MultiLangString;
-  ingredients?: MultiLangString[];
-  instructions?: MultiLangString;
+  ingredients?: {
+    en: IngredientObject[];
+    zh?: IngredientObject[];
+  };
+  instructions: MultiLangString;
   dishTypes?: MultiLangString[];
   cuisines?: MultiLangString[];
   equipment?: MultiLangString[];
@@ -97,7 +105,7 @@ function cleanForFirestore(obj: any): any {
 function cleanRecipeData(recipe: any): Recipe {
   // 清理函數：將各種格式統一為 MultiLangString
   const cleanMultiLangArray = (arr: any[]): MultiLangString[] => {
-    if (!arr) return [];
+    if (!Array.isArray(arr)) return [];
     
     const uniqueItems = Array.from(new Set(
       arr.map((item: any) => {
@@ -117,7 +125,14 @@ function cleanRecipeData(recipe: any): Recipe {
   const cleanCuisines = cleanMultiLangArray(recipe.cuisines || []);
   
   // 清理其他陣列欄位
-  const cleanIngredients = cleanMultiLangArray(recipe.ingredients || []);
+  const cleanIngredients = Array.isArray(recipe.ingredients?.en)
+  ? {
+      en: recipe.ingredients.en.map((item: any) => ({
+        name: { en: item.name || '' },
+        amount: { en: item.amount || '' },
+      })),
+    }
+  : { en: [] };
   const cleanDishTypes = cleanMultiLangArray(recipe.dishTypes || []);
   const cleanDiets = cleanMultiLangArray(recipe.diets || []);
   const cleanIntolerances = cleanMultiLangArray(recipe.intolerances || []);
@@ -133,10 +148,14 @@ function cleanRecipeData(recipe: any): Recipe {
     ...(recipe.summary?.zh && { zh: recipe.summary.zh })
   };
 
-  const cleanInstructions: MultiLangString | undefined = recipe.instructions ? {
-    en: recipe.instructions?.en || recipe.instructions || '',
-    ...(recipe.instructions?.zh && { zh: recipe.instructions.zh })
-  } : undefined;
+  const cleanInstructions: MultiLangString = {
+    en: Array.isArray(recipe.instructions?.en)
+      ? recipe.instructions.en.join('\n')
+      : typeof recipe.instructions === 'string'
+      ? recipe.instructions
+      : recipe.instructions?.en || '',
+    zh: recipe.instructions?.zh
+  };
 
   return {
     id: String(recipe.id),
@@ -168,10 +187,10 @@ export async function translateAndWriteRecipes(recipes: any[]) {
   const translatedResults = [];
 
   for (const rawRecipe of recipes) {
-    if (existingIds.has(rawRecipe.id.toString())) {
-      console.log(`略過重複 ID: ${rawRecipe.id}`);
-      continue;
-    }
+    // if (existingIds.has(rawRecipe.id.toString())) {
+    //   console.log(`略過重複 ID: ${rawRecipe.id}`);
+    //   continue;
+    // }
 
     // 先清理資料
     const recipe = cleanRecipeData(rawRecipe);
@@ -179,22 +198,26 @@ export async function translateAndWriteRecipes(recipes: any[]) {
     const errors = validateRecipeData(recipe);
     if (errors.length > 0) {
       console.warn(`⚠️ ID ${recipe.id} 發現異常欄位：\n`, errors.join('\n'));
+      console.log('🚀 instructions:', recipe.instructions);
       continue;
     }
 
     try {
-      const [title_zh, summary_zh] = await Promise.all([
+      const [title_zh, summary_zh, instructions_zh] = await Promise.all([
         chromeTranslate(recipe.title.en),
         chromeTranslate(recipe.summary.en),
+        chromeTranslate(recipe.instructions.en),
       ]);
 
-      const ingredients_zh = await Promise.all(
-        (recipe.ingredients || []).map((item) => chromeTranslate(item.en))
-      );
+      
 
-      const instructions_zh = recipe.instructions
-        ? await chromeTranslate(recipe.instructions.en)
-        : undefined;
+      const ingredientNames_zh = await Promise.all(
+        (recipe.ingredients?.en || []).map((item) => chromeTranslate(item.name.en))
+      );
+      
+      const ingredientAmounts_zh = await Promise.all(
+        (recipe.ingredients?.en || []).map((item) => chromeTranslate(item.amount.en))
+      );
 
       const dishTypes_zh = await Promise.all(
         (recipe.dishTypes || []).map((item) => chromeTranslate(item.en))
@@ -220,25 +243,38 @@ export async function translateAndWriteRecipes(recipes: any[]) {
       const translatedRecipe: any = {
         title: { en: recipe.title.en, zh: title_zh },
         summary: { en: recipe.summary.en, zh: summary_zh },
+        instructions: { en: recipe.instructions.en, zh: instructions_zh },
         translated: true,
         createdAt: new Date().toISOString(),
         favoriteCount: 0,
       };
 
       // 只有當欄位存在且不為空時才加入
-      if (recipe.ingredients && recipe.ingredients.length > 0) {
-        translatedRecipe.ingredients = recipe.ingredients.map((item, idx) => ({
-          en: item.en,
-          zh: ingredients_zh[idx],
-        }));
-      }
-
-      if (recipe.instructions) {
-        translatedRecipe.instructions = { 
-          en: recipe.instructions.en, 
-          zh: instructions_zh 
+      if (recipe.ingredients?.en && recipe.ingredients.en.length > 0) {
+        translatedRecipe.ingredients = {
+          en: recipe.ingredients.en,
+          zh: recipe.ingredients.en.map((item, idx) => ({
+            name: { en: item.name.en, zh: ingredientNames_zh[idx] },
+            amount: { en: item.amount.en, zh: ingredientAmounts_zh[idx] },
+          })),
         };
       }
+
+      
+      translatedRecipe.title = {
+        en: recipe.title.en,
+        zh: title_zh || recipe.title.en,
+      };
+      
+      translatedRecipe.summary = {
+        en: recipe.summary.en,
+        zh: summary_zh || recipe.summary.en,
+      };
+      
+      translatedRecipe.instructions = {
+        en: recipe.instructions?.en || "",
+        zh: instructions_zh || recipe.instructions?.en || "",
+      };
 
       if (recipe.dishTypes && recipe.dishTypes.length > 0) {
         translatedRecipe.dishTypes = recipe.dishTypes.map((item, idx) => ({
@@ -293,8 +329,8 @@ export async function translateAndWriteRecipes(recipes: any[]) {
       const cleanedRecipe = cleanForFirestore(translatedRecipe);
 
       console.log(`正在寫入 ID: ${recipe.id}`);
-      console.log('資料預覽:', JSON.stringify(cleanedRecipe, null, 2).substring(0, 500) + '...');
-      
+      // console.log('資料預覽:', JSON.stringify(cleanedRecipe, null, 2).substring(0, 500) + '...');
+      console.log('🚀 instructions:', translatedRecipe.instructions);
       await setDoc(doc(recipeCollection, recipe.id.toString()), cleanedRecipe);
       console.log(`✅ 寫入成功 ID: ${recipe.id}`);
       translatedResults.push(cleanedRecipe);
@@ -355,13 +391,14 @@ function validateRecipeData(recipe: Recipe): string[] {
 
   checkMultiLangField('title', recipe.title);
   checkMultiLangField('summary', recipe.summary);
+  checkMultiLangField('instructions', recipe.instructions)
   
-  // 檢查可選欄位
-  if (recipe.instructions) {
-    checkMultiLangField('instructions', recipe.instructions);
-  }
+  // // 檢查可選欄位
+  // if (recipe.instructions) {
+  //   checkMultiLangField('instructions', recipe.instructions);
+  // }
 
-  checkMultiLangArray('ingredients', recipe.ingredients);
+  
   checkMultiLangArray('dishTypes', recipe.dishTypes);
   checkMultiLangArray('cuisines', recipe.cuisines);
   checkMultiLangArray('equipment', recipe.equipment);

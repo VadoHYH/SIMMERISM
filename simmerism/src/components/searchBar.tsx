@@ -9,20 +9,22 @@ type SearchBarProps = {
 
 export default function SearchBar({ value, onChange, onSearch }: SearchBarProps) {
   return (
-    <div className="relative w-full max-w-xl">
-      <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-        <Search className="text-gray-400" />
+    <div className="flex w-full max-w-xl">
+      <div className="relative flex-grow">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+          <Search className="text-gray-400" />
+        </div>
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="搜尋食譜..."
+          className="w-full border border-gray-300 py-3 pl-10 pr-4 rounded-l"
+        />
       </div>
-      <input
-        type="text"
-        placeholder="搜尋食譜..."
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full border border-gray-300 py-3 pl-10 pr-4 rounded-l"
-      />
       <button
-        className="absolute right-0 top-0 bottom-0 bg-blue-600 text-white px-6 rounded-r"
         onClick={onSearch}
+        className="bg-[#1E49CF] text-white px-6 rounded-r neo-button"
       >
         搜尋
       </button>

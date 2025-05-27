@@ -20,28 +20,44 @@ const app = initializeApp(FIREBASE_CONFIG);
 const db = getFirestore(app);
 
 // 🧪 取得食譜資料（一次 1~50 筆）
-async function fetchRecipes(count = 10) {
+async function fetchRecipes(count = 23) {
   const url = `https://api.spoonacular.com/recipes/random?number=${count}&apiKey=${SPOONACULAR_API_KEY}`;
   const res = await axios.get(url);
   return res.data.recipes;
+}
+
+// ➕ 輔助：清除 HTML 標籤
+function stripHtml(html) {
+  return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+// ➕ 輔助：將 HTML <li> 拆成列點
+function parseInstructions(html) {
+  const matches = html.match(/<li>(.*?)<\/li>/g);
+  if (!matches) return [];
+  return matches.map((li, idx) => `Step ${idx + 1}: ${stripHtml(li)}`);
 }
 
 // 🏗️ 格式化資料，取出中英文結構
 function formatRecipe(recipe) {
   return {
     title: { en: recipe.title },
-    summary: { en: recipe.summary },
-    instructions: { en: recipe.instructions },
-    ingredients: recipe.extendedIngredients.map(i => ({ en: i.original })),
+    summary: { en: stripHtml(recipe.summary) },
+    instructions: { 
+      en: parseInstructions(recipe.instructions).length > 0 
+        ? parseInstructions(recipe.instructions)
+        : [stripHtml(recipe.instructions)] // 如果沒 <li> 就用整段清乾淨
+    },
+    ingredients: {
+      en: recipe.extendedIngredients.map(i => ({
+        name: i.name,
+        amount: `${i.amount} ${i.unit}${i.measures?.metric?.amount ? `(${i.measures.metric.amount}${i.measures.metric.unitShort})` : ''}`
+      }))
+    },
     image: recipe.image,
     readyInMinutes: recipe.readyInMinutes,
     servings: recipe.servings,
-    calories: {
-      min: recipe.nutrition?.nutrients?.find(n => n.name === 'Calories')?.amount || null,
-      max: null // 可選擇補最大值計算
-    },
     diets: recipe.diets.map(d => ({ en: d })),
-    intolerances: [], // Spoonacular 回傳中不一定有，可另加
     dishTypes: recipe.dishTypes.map(t => ({ en: t })),
     cuisines: recipe.cuisines.map(c => ({ en: c })),
     equipment: extractEquipment(recipe.analyzedInstructions),
@@ -64,7 +80,7 @@ function extractEquipment(instructions) {
 // 🚀 主程式（含更多錯誤偵錯資訊）
 async function run() {
   try {
-    const recipes = await fetchRecipes(10); // ⬅️ 可改抓多筆
+    const recipes = await fetchRecipes(23); // ⬅️ 可改抓多筆
     console.log(`🔍 共取得 ${recipes.length} 筆食譜`);
 
     for (let i = 0; i < recipes.length; i++) {
