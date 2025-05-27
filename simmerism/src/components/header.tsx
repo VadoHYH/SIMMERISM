@@ -2,9 +2,27 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import LoginModal from "./LoginModal"
+import RegisterModal from "./RegisterModal"
+import ForgetPasswordModal from "./ForgetPasswordModal" 
+import { useState } from "react"
 
 export default function Header() {
   const pathname = usePathname()
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false)
+  const [isForgotPasswordOpen, setIsForgotPasswordOpen] = useState(false)
+
+  const switchToRegister = () => {
+    setIsLoginOpen(false)
+    setIsRegisterOpen(true)
+    
+  }
+
+  const onSwitchToLogin = () => {
+    setIsLoginOpen(true)
+    setIsRegisterOpen(false)
+  }
 
   return (
     <header className="flex w-full border-2 border-black">
@@ -64,9 +82,38 @@ export default function Header() {
         </Link>
       </nav>
       <div className="flex items-center justify-center p-4 bg-[#231f20] text-white min-w-[100px]">
-        <Link href="/login" className="font-bold">
+        <button onClick={() => setIsLoginOpen(true)} className="font-bold">
           Sign UP !
-        </Link>
+        </button>
+
+        {/* 彈跳視窗登入表單 */}
+        <LoginModal
+          isOpen={isLoginOpen}
+          onClose={() => setIsLoginOpen(false)}
+          onSwitchToRegister={switchToRegister}
+          onSwitchToForgotPassword={() => {
+            setIsLoginOpen(false)
+            setIsForgotPasswordOpen(true)
+          }}
+        />
+
+        <RegisterModal
+          isOpen={isRegisterOpen}
+          onClose={() => setIsRegisterOpen(false)}
+          onSwitchToLogin={() => {
+            setIsRegisterOpen(false)
+          setIsLoginOpen(true)
+          }}
+        />
+
+        <ForgetPasswordModal
+          isOpen={isForgotPasswordOpen}
+          onClose={() => setIsForgotPasswordOpen(false)}
+          onSwitchToLogin={() => {
+            setIsForgotPasswordOpen(false)
+            setIsLoginOpen(true)
+          }}
+        />
       </div>
     </header>
   )

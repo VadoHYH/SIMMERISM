@@ -113,7 +113,7 @@ export default function RecipePage({ params }: { params: { id: string } }) {
           <div className="border-2 border-black rounded p-4 ">
             <div className="flex justify-between items-center mb-4 ">
               <h2 className="font-bold text-xl">食材</h2>
-              <button className="p-2 bg-[#F7CEFA] border-2 border-black  neo-button">
+              {/* <button className="p-2 bg-[#F7CEFA] border-2 border-black  neo-button">
                 <svg
                   width="25"
                   height="25"
@@ -126,7 +126,7 @@ export default function RecipePage({ params }: { params: { id: string } }) {
                     fill="black"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
             <div className="space-y-2">
               {recipe.ingredients.map((item, index) => (
@@ -142,7 +142,7 @@ export default function RecipePage({ params }: { params: { id: string } }) {
           <div className="border-2 border-black rounded p-4">
             <div className="flex justify-between items-center mb-4">
               <h2 className="font-bold text-xl">步驟</h2>
-              <button className="p-2 bg-[#F7CEFA] border-2 border-black  neo-button">
+              {/* <button className="p-2 bg-[#F7CEFA] border-2 border-black  neo-button">
                 <svg
                   width="25"
                   height="25"
@@ -155,7 +155,7 @@ export default function RecipePage({ params }: { params: { id: string } }) {
                     fill="black"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
             <ol className="list-decimal list-inside space-y-2">
               {steps.map((step, idx) => (
