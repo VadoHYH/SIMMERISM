@@ -1,6 +1,7 @@
 // src/lib/firebase.ts - 更強健的 Firebase 配置
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth"
 
 // 在非 Next.js 環境中手動載入環境變數
 if (typeof window === 'undefined' && !process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
@@ -59,3 +60,8 @@ try {
 
 export const db = getFirestore(app);
 console.log('✅ Firestore 初始化成功');
+
+const auth = getAuth(app)
+const googleProvider = new GoogleAuthProvider()
+export { auth }
+export { googleProvider }

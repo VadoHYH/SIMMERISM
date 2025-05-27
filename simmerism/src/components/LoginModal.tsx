@@ -2,8 +2,9 @@
 "use client"
 
 import { Dialog } from "@headlessui/react"
-import Link from "next/link"
 import { useState } from "react"
+import { auth, googleProvider } from "@/lib/firebase"
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth"
 
 export default function LoginModal({
   isOpen,
@@ -19,11 +20,28 @@ export default function LoginModal({
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Login attempt with:", { email, password })
-    // 這邊可以加上 Firebase 登入、API call 等
-    onClose() // 成功登入後關閉 modal
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password)
+        console.log("登入成功 ✅", userCredential.user)
+        onClose() // 成功登入後關閉 modal
+    } catch (error: any) {
+    console.error("登入失敗 ❌", error.message)
+    alert("登入失敗，請檢查帳號密碼！")
+    }
+  }
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider)
+      const user = result.user
+      console.log("Google 登入成功 ✅", user)
+      // 這邊可以觸發登入狀態更新 or 關閉 modal
+    } catch (error: any) {
+      console.error("Google 登入失敗 ❌", error.message)
+      alert("Google 登入失敗，請稍後再試")
+    }
   }
 
   return (
@@ -36,47 +54,53 @@ export default function LoginModal({
         <h1 className="text-2xl font-bold text-center mb-6">登入帳號</h1>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="email" className="block mb-2">
-              電子信箱
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-
-          <div className="mb-6">
-            <div className="flex justify-between mb-2">
-                <label htmlFor="password">密碼</label>
-                <button
-                    type="button"
-                    onClick={onSwitchToForgotPassword}
-                    className="text-sm text-blue-500 hover:underline"
-                >
-                    忘記密碼？
-                </button>
+            <div className="mb-4">
+                <label htmlFor="email" className="block mb-2">
+                電子信箱
+                </label>
+                <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+                />
             </div>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
 
-          <button
-            type="submit"
-            className="w-full bg-[#ffc278] py-2 rounded font-medium hover:bg-[#ffb058] transition-colors"
-          >
-            登入
-          </button>
+            <div className="mb-6">
+                <div className="flex justify-between mb-2">
+                    <label htmlFor="password">密碼</label>
+                    <button
+                        type="button"
+                        onClick={onSwitchToForgotPassword}
+                        className="text-sm text-[#ff6347] hover:underline"
+                    >
+                        忘記密碼？
+                    </button>
+                </div>
+                <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+                />
+            </div>
+
+            <button
+                type="submit"
+                className="w-full bg-[#ffc278] py-2 rounded font-medium hover:bg-[#ffb058] transition-colors"
+            >
+                登入
+            </button>
+            <button
+                onClick={handleGoogleLogin}
+                className="w-full bg-white border border-gray-300 text-black py-2 rounded mt-4 hover:bg-gray-100"
+                >
+                以 Google 登入
+            </button>
         </form>
 
         <div className="mt-4 text-center">

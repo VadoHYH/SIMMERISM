@@ -3,6 +3,9 @@
 
 import { Dialog } from "@headlessui/react"
 import { useState } from "react"
+import { auth } from "@/lib/firebase"
+import { createUserWithEmailAndPassword } from "firebase/auth"
+import { updateProfile } from "firebase/auth"
 
 export default function RegisterModal({
   isOpen,
@@ -18,17 +21,32 @@ export default function RegisterModal({
   const [name, setName] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (password !== confirmPassword) {
       alert("密碼不一致")
       return
     }
-    console.log("Register with:", { email, password })
-    // 這邊可以加上 Firebase 登入、API call 等
-    onClose() // 成功登入後關閉 modal
-  }
 
+    console.log("Register with:", { email, password })
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+      await updateProfile(userCredential.user, {
+        displayName: name,
+      })
+      console.log("註冊成功 ✅", userCredential.user)
+      onClose()
+    } catch (error: any) {
+      console.error("註冊失敗 ❌", error.message)
+      alert("註冊失敗，請檢查信箱是否已被使用！")
+      if (error.code === "auth/email-already-in-use") {
+        alert("此電子信箱已被註冊，請改用其他信箱！")
+      } else {
+        alert("註冊失敗，請稍後再試。")
+      }
+    }
+  }
+  
   return (
     <Dialog open={isOpen} onClose={onClose} className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
@@ -87,8 +105,8 @@ export default function RegisterModal({
             </label>
             <input
                 type="password"
-                id="password"
-                value={password}
+                id="confirmPassword"
+                value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className="w-full p-2 border border-gray-300 rounded"
                 required

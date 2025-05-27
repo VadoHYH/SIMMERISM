@@ -83,7 +83,7 @@ export default function Header() {
       </nav>
       <div className="flex items-center justify-center p-4 bg-[#231f20] text-white min-w-[100px]">
         <button onClick={() => setIsLoginOpen(true)} className="font-bold">
-          Sign UP !
+          Sign In !
         </button>
 
         {/* 彈跳視窗登入表單 */}

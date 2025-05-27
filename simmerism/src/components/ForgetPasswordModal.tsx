@@ -3,6 +3,8 @@
 
 import { Dialog } from "@headlessui/react"
 import { useState } from "react"
+import { auth } from "@/lib/firebase"
+import { sendPasswordResetEmail } from "firebase/auth"
 
 export default function FogotPasswordModal({
   isOpen,
@@ -16,12 +18,17 @@ export default function FogotPasswordModal({
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Password reset requested for:", email)
-    setIsSubmitted(true)
-    // 這邊可以加上 Firebase 登入、API call 等
-    onClose() // 成功登入後關閉 modal
+    try {
+      const userCredential = await sendPasswordResetEmail(auth, email)
+      console.log("重設密碼信已發送 ✅")
+      setIsSubmitted(true)
+      setTimeout(() => onClose(), 3000)
+    } catch (error: any) {
+      console.error("登入失敗 ❌", error.message)
+      alert("發送失敗，請確認信箱是否正確或稍後再試")
+    }
   }
 
   return (
