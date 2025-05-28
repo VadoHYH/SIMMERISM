@@ -3,8 +3,10 @@
 import { ArrowRight, ChevronLeft, ChevronRight, Edit, Heart, Users, Star, Timer} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
+import { useFavorite } from "@/hooks/useFavorite"
+import { useParams } from "next/navigation"
 
 export default function RecipePage({ params }: { params: { id: string } }) {
   const [liked, setLiked] = useState(false)
@@ -15,7 +17,18 @@ export default function RecipePage({ params }: { params: { id: string } }) {
   const dishTypesWithSource = recipe?.dishTypes || []
   const dietsWithSource = recipe?.diets || []
   const combined = [...dishTypesWithSource, ...dietsWithSource]
+  const { favorites, toggleFavorite } = useFavorite()
+
+  const isFavorited = favorites.includes(recipeId.toString())
   
+  useEffect(() => {
+    setLiked(favorites.includes(recipeId.toString()))
+  }, [favorites, recipeId])
+
+  const handleLike = () => {
+    toggleFavorite(recipeId)
+    setLiked((prev) => !prev)
+  }
 
   const uniquetags = Array.from(
     new Map(combined.map(item => [item.zh, item])).values()
@@ -96,11 +109,11 @@ export default function RecipePage({ params }: { params: { id: string } }) {
 
             <div className="flex gap-4">
               <button
-                className={`flex items-center gap-2 px-4 py-2 border  ${liked ? " " : "bg-[#5a9a8e]  border-black text-white neo-button"}`}
-                onClick={() => setLiked(!liked)}
+                className={`flex items-center gap-2 px-4 py-2 border  ${liked ? "bg-[#5a9a8e]  border-black text-black " : "bg-[#5a9a8e]  border-black text-white neo-button"}`}
+                onClick={() => toggleFavorite(recipe)}
               >
-                <Heart className={liked ? "fill-white" : ""} size={20} />
-                收藏
+                <Heart className={isFavorited ? "fill-black" : ""} size={20} />
+                {liked ? "已收藏" : "收藏"}
               </button>
               <button className="flex items-center gap-2 px-4 py-2 bg-[#ffc278] border border-black neo-button">
                 加入行程

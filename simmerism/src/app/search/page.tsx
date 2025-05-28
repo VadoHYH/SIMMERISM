@@ -5,12 +5,14 @@ import SearchBar from "@/components/searchBar"
 import Link from "next/link"
 import { useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
+import { useFavorite } from "@/hooks/useFavorite"
 
 export default function SearchPage() {
   const [keyword, setKeyword] = useState("") // 使用者輸入框內容
   const [searchKeyword, setSearchKeyword] = useState("") // 按搜尋後才更新的值
   const [filterCategory, setFilterCategory] = useState("全部")
   const { recipes } = useRecipes()
+  const { favorites, toggleFavorite } = useFavorite()
 
   const handleSearch = () => {
     console.log("搜尋關鍵字：", keyword)
@@ -96,11 +98,11 @@ export default function SearchPage() {
                 id={recipe.id}
                 title={recipe.title}
                 image={recipe.image}
-                liked={recipe.liked}
+                liked={favorites.includes(recipe.id.toString())}
                 readyInMinutes={recipe.readyInMinutes}
                 dishTypes={recipe.dishTypes}
                 diets={recipe.diets}
-                onLike={(id) => console.log(`點了收藏：${id}`)}
+                onLike={() => toggleFavorite(recipe)}
               />
             </Link>
           ))}

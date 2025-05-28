@@ -1,4 +1,4 @@
-// components/FogotPasswordModal.tsx
+// components/ForgotPasswordModal.tsx
 "use client"
 
 import { Dialog } from "@headlessui/react"

@@ -41,6 +41,10 @@ export default function RegisterModal({
       alert("註冊失敗，請檢查信箱是否已被使用！")
       if (error.code === "auth/email-already-in-use") {
         alert("此電子信箱已被註冊，請改用其他信箱！")
+      } else if (error.code === "auth/weak-password") {
+        alert("密碼太簡單，請至少輸入六個字元！")
+      } else if (error.code === "auth/invalid-email") {
+        alert("電子信箱格式錯誤！")
       } else {
         alert("註冊失敗，請稍後再試。")
       }

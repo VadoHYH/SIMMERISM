@@ -5,6 +5,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ChatButton from "@/components/chatButton"
+import { AuthProvider } from '@/context/AuthContext'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <ChatButton />
-        </div>
+        <AuthProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <ChatButton />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   )

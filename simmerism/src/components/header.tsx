@@ -5,13 +5,23 @@ import { usePathname } from "next/navigation"
 import LoginModal from "./LoginModal"
 import RegisterModal from "./RegisterModal"
 import ForgetPasswordModal from "./ForgetPasswordModal" 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { onAuthStateChanged, signOut, User } from "firebase/auth"
+import { auth } from "@/lib/firebase" 
 
 export default function Header() {
   const pathname = usePathname()
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [isRegisterOpen, setIsRegisterOpen] = useState(false)
   const [isForgotPasswordOpen, setIsForgotPasswordOpen] = useState(false)
+  const [user, setUser] = useState<User | null>(null)
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser)
+    })
+    return () => unsubscribe()
+  }, [])
 
   const switchToRegister = () => {
     setIsLoginOpen(false)
@@ -22,6 +32,14 @@ export default function Header() {
   const onSwitchToLogin = () => {
     setIsLoginOpen(true)
     setIsRegisterOpen(false)
+  }
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+    } catch (error) {
+      console.error("登出失敗", error)
+    }
   }
 
   return (
@@ -82,9 +100,15 @@ export default function Header() {
         </Link>
       </nav>
       <div className="flex items-center justify-center p-4 bg-[#231f20] text-white min-w-[100px]">
-        <button onClick={() => setIsLoginOpen(true)} className="font-bold">
-          Sign In !
-        </button>
+        {user ? (
+            <button onClick={handleSignOut} className="font-bold text-[#ff6347]">
+              Sign out
+            </button>
+          ) : (
+            <button onClick={() => setIsLoginOpen(true)} className="font-bold">
+              Sign In !
+            </button>
+        )}
 
         {/* 彈跳視窗登入表單 */}
         <LoginModal
