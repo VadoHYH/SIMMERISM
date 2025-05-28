@@ -1,23 +1,33 @@
+//app/recipe[id]/page.tsx
 "use client"
 
 import { ArrowRight, ChevronLeft, ChevronRight, Edit, Heart, Users, Star, Timer} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import AddToScheduleModal from "@/components/AddToScheduleModal";
 import { useEffect, useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
+import { useSchedule } from "@/hooks/useSchedule"
 import { useParams } from "next/navigation"
 
-export default function RecipePage({ params }: { params: { id: string } }) {
+type ScheduleData = {
+  date: Date;
+  meal: string;
+};
+
+export default function RecipePage() {
   const [liked, setLiked] = useState(false)
   const { recipes, loading } = useRecipes()
-  // const params = useParams()
-  const recipeId = params.id
+  const params = useParams()
+  const recipeId = params.id as string
   const recipe = recipes.find((r) => r.id === recipeId)
   const dishTypesWithSource = recipe?.dishTypes || []
   const dietsWithSource = recipe?.diets || []
   const combined = [...dishTypesWithSource, ...dietsWithSource]
   const { favorites, toggleFavorite } = useFavorite()
+  const [isModalOpen, setModalOpen] = useState(false);
+  const { addSchedule } = useSchedule()
 
   const isFavorited = favorites.includes(recipeId.toString())
   
@@ -54,6 +64,15 @@ export default function RecipePage({ params }: { params: { id: string } }) {
   // 正則表達式：抓出「步驟1：...」「步驟2：...」的每個區段
   const steps = rawInstructions.match(/步驟\d+[：:\.][^步驟]+/g) || [];
 
+  const handleAddSchedule = ({ date, meal }: { date: Date; meal: string }) => {
+    const formattedDate = date.toISOString().split('T')[0] // "2025-05-29"
+    addSchedule({
+      recipeId: recipeId, // 從頁面取得的 id
+      date: formattedDate,
+      mealType: meal as 'breakfast' | 'lunch' | 'dinner',
+    })
+  };
+    
   return (
     <div className="bg-[#f9f5f1] min-h-screen py-8">
       <div className="container mx-auto px-4">
@@ -115,9 +134,17 @@ export default function RecipePage({ params }: { params: { id: string } }) {
                 <Heart className={isFavorited ? "fill-black" : ""} size={20} />
                 {liked ? "已收藏" : "收藏"}
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 bg-[#ffc278] border border-black neo-button">
+              <button
+                className="flex items-center gap-2 px-4 py-2 bg-[#ffc278] border border-black neo-button"
+                onClick={() => setModalOpen(true)}  // ⭐ 關鍵在這裡
+              >
                 加入行程
               </button>
+              <AddToScheduleModal
+                  isOpen={isModalOpen}
+                  onClose={() => setModalOpen(false)}
+                  onSave={handleAddSchedule}
+                />
             </div>
           </div>
         </div>

@@ -67,12 +67,12 @@ export default function Header() {
           收藏
         </Link>
         <Link
-          href="/menu"
+          href="/schedule"
           className={`border-r border-black p-4 text-center transition-colors flex-1 ${
-            pathname === "/menu" ? "bg-[#5a9a8e] text-white" : "hover:bg-[#5a9a8e] hover:text-white"
+            pathname === "/schedule" ? "bg-[#5a9a8e] text-white" : "hover:bg-[#5a9a8e] hover:text-white"
           }`}
         >
-          菜單
+          行程
         </Link>
         <Link
           href="/food-diary"
