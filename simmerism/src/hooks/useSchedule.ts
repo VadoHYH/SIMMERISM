@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { db } from '@/lib/firebase'
 import { collection, addDoc, query, where, getDocs, Timestamp } from 'firebase/firestore'
 import { useAuth } from '@/context/AuthContext'
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc, getDoc } from 'firebase/firestore';
 
 export type ScheduleItem = {
   id: string
@@ -17,6 +17,11 @@ export type ScheduleItem = {
   hasDiary: boolean
   createdAt: string
   reviewId? :string
+  recipe?: {
+    title: { zh: string; en: string }
+    readyInMinutes: number
+    image: string
+  }
 }
 
 export const useSchedule = () => {
@@ -33,12 +38,26 @@ export const useSchedule = () => {
       const q = query(collection(db, 'schedules'), where('userId', '==', user.uid))
       const querySnapshot = await getDocs(q)
 
-      const data: ScheduleItem[] = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...(doc.data() as Omit<ScheduleItem, 'id'>),
-      }))
+      const schedules: ScheduleItem[] = [];
 
-      setSchedule(data)
+      for (const docSnap of querySnapshot.docs) {
+        const data = docSnap.data() as Omit<ScheduleItem, 'id'>;
+        const recipeRef = doc(db, 'recipes', data.recipeId);
+        const recipeSnap = await getDoc(recipeRef);
+        const recipeData = recipeSnap.exists() ? recipeSnap.data() : null;
+  
+        schedules.push({
+          id: docSnap.id,
+          ...data,
+          recipe: recipeData ? {
+            title: recipeData.title,
+            readyInMinutes: recipeData.readyInMinutes,
+            image: recipeData.image
+          } : undefined
+        });
+      }
+
+      setSchedule(schedules);
     } catch (error) {
       console.error('讀取行程失敗：', error)
     } finally {
