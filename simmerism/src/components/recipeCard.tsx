@@ -29,8 +29,8 @@ export default function RecipeCard({
   ]
 
   return (
-    <div className="border-2 border-black rounded overflow-hidden">
-      <div className="bg-gray-200 aspect-square relative">
+    <div className="border-2 border-black rounded overflow-hidden  hover:neo-card">
+      <div className="bg-gray-200 aspect-square relative ">
         <Image src={image || "/placeholder.svg"} alt={title.zh} fill className="object-cover" />
       </div>
       <div className="bg-[#ffc278] p-2">

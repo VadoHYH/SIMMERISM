@@ -21,6 +21,7 @@ export type ScheduleItem = {
     title: { zh: string; en: string }
     readyInMinutes: number
     image: string
+     
   }
 }
 
@@ -52,7 +53,7 @@ export const useSchedule = () => {
           recipe: recipeData ? {
             title: recipeData.title,
             readyInMinutes: recipeData.readyInMinutes,
-            image: recipeData.image
+            image: recipeData.image,
           } : undefined
         });
       }

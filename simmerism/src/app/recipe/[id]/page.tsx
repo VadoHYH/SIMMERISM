@@ -74,7 +74,7 @@ export default function RecipePage() {
   };
     
   return (
-    <div className="bg-[#f9f5f1] min-h-screen py-8">
+    <div className="bg-[#f9f5f1] min-h-screen min-w-1000 py-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="relative bg-gray-200 aspect-square rounded border-2 border-black">

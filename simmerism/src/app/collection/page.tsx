@@ -43,6 +43,9 @@ export default function CollectionPage() {
                 title={recipe.title}
                 image={recipe.image}
                 liked={favorites.includes(recipe.id.toString())}
+                readyInMinutes={recipe.readyInMinutes}
+                dishTypes={recipe.dishTypes}
+                diets={recipe.diets}
                 onLike={() => toggleFavorite(recipe)}
               />
             </Link>

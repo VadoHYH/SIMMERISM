@@ -22,7 +22,11 @@ export const useFavorite = () => {
       await setDoc(recipeRef, {
         id: recipe.id,
         title: recipe.title,
-        image: recipe.image
+        image: recipe.image,
+        readyInMinutes:recipe.readyInMinutes,
+        dishTypes:recipe.dishTypes,
+        diets:recipe.diets,
+        liked:recipe.liked
       })
       setFavorites([...favorites, recipe.id.toString()])
     }
