@@ -10,12 +10,12 @@ export default function ShoppingPage() {
 
         <div className="space-y-8">
           {/* 本周需採購清單 */}
-          <div className="border-2 border-black rounded p-6">
+          <div className="bg-white border-2 border-black rounded p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold">本周需採購清單</h2>
-              <button className="p-2 border border-purple-500 rounded">
+              {/* <button className="p-2 border border-purple-500 rounded">
                 <Edit size={16} className="text-purple-500" />
-              </button>
+              </button> */}
             </div>
 
             <div className="space-y-4">
@@ -27,10 +27,7 @@ export default function ShoppingPage() {
                       <input type="checkbox" className="mr-4 h-5 w-5" />
                       <span className="flex-1">胡椒粉</span>
                       <span className="text-sm text-gray-600 mr-2">0.2 罐(40公克)</span>
-                      <button className="bg-[#ff6347] text-white p-1">
-                        <span className="sr-only">刪除</span>
-                        <span>刪</span>
-                      </button>
+                      <button className="bg-[#ff6347] text-black p-1 mr-2 neo-button"><Trash2 size={20}></Trash2></button>
                     </div>
                   </div>
                 ))}
@@ -42,11 +39,11 @@ export default function ShoppingPage() {
                 <span>0 / 6</span>
               </div>
               <div className="flex gap-2">
-                <button className="flex items-center">
+                <button className="bg-[#f9f5f1] border border-black px-4 py-1 neo-button flex items-center">
                   <Trash2 size={16} className="mr-1" />
                   <span>刪除清單</span>
                 </button>
-                <button className="bg-[#ffc278] border border-black px-4 py-1">
+                <button className="bg-[#ffc278] border border-black px-4 py-1 neo-button">
                   <span>標記全部完成</span>
                 </button>
               </div>
@@ -54,12 +51,12 @@ export default function ShoppingPage() {
           </div>
 
           {/* 上周需採購清單 */}
-          <div className="border-2 border-black rounded p-6">
+          <div className="bg-white border-2 border-black rounded p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold">上周需採購清單</h2>
-              <button className="p-2 border border-purple-500 rounded">
+              {/* <button className="p-2 border border-purple-500 rounded">
                 <Edit size={16} className="text-purple-500" />
-              </button>
+              </button> */}
             </div>
 
             <div className="space-y-4">
@@ -71,10 +68,7 @@ export default function ShoppingPage() {
                       <input type="checkbox" className="mr-4 h-5 w-5" />
                       <span className="flex-1">胡椒粉</span>
                       <span className="text-sm text-gray-600 mr-2">0.2 罐(40公克)</span>
-                      <button className="bg-[#ff6347] text-white p-1">
-                        <span className="sr-only">刪除</span>
-                        <span>刪</span>
-                      </button>
+                      <button className="bg-[#ff6347] text-black p-1 mr-2 neo-button"><Trash2 size={20}></Trash2></button>
                     </div>
                   </div>
                 ))}
@@ -86,11 +80,11 @@ export default function ShoppingPage() {
                 <span>0 / 6</span>
               </div>
               <div className="flex gap-2">
-                <button className="flex items-center">
+                <button className="bg-[#f9f5f1] border border-black px-4 py-1 neo-button flex items-center">
                   <Trash2 size={16} className="mr-1" />
                   <span>刪除清單</span>
                 </button>
-                <button className="bg-[#ffc278] border border-black px-4 py-1">
+                <button className="bg-[#ffc278] border border-black px-4 py-1 neo-button">
                   <span>標記全部完成</span>
                 </button>
               </div>

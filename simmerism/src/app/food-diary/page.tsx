@@ -8,7 +8,7 @@ export default function FoodDiaryPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8">我的食記</h1>
 
-        <div className="bg-white border border-gray-200 rounded p-4 mb-8">
+        <div className="bg-white border border-black rounded p-4 mb-8">
           <div className="flex items-center">
             <Filter size={18} className="mr-2" />
             <span className="font-bold mr-4">篩選：</span>
@@ -35,14 +35,14 @@ export default function FoodDiaryPage() {
           {Array(2)
             .fill(0)
             .map((_, i) => (
-              <div key={i} className="border-2 border-gray-200 rounded p-6">
+              <div key={i} className="bg-white border-2 border-black rounded p-6">
                 <div className="flex justify-between mb-2">
                   <div className="flex items-baseline">
                     <span className="text-3xl font-bold">20</span>
                     <span className="text-sm ml-2">週一</span>
                     <span className="ml-2">{i === 0 ? "早" : "午"}</span>
                   </div>
-                  <button className="border border-gray-300 rounded p-1">
+                  <button className="bg-[#F9F4EF] border border-black rounded p-1 neo-button">
                     <Eye size={16} />
                   </button>
                 </div>
@@ -71,8 +71,8 @@ export default function FoodDiaryPage() {
                 </div>
 
                 <div className="flex justify-end gap-2">
-                  <button className="bg-purple-200 border border-purple-500 px-4 py-1 text-purple-700">編輯</button>
-                  <button className="bg-[#5a9a8e] text-white px-4 py-1">查看詳情</button>
+                  <button className="bg-[#F7CEFA]  border border-black px-4 py-1 text-black neo-button">編輯</button>
+                  <button className="bg-[#5a9a8e] text-white px-4 py-1 neo-button">查看詳情</button>
                 </div>
               </div>
             ))}
