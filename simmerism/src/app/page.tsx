@@ -1,3 +1,4 @@
+//首頁
 "use client"
 
 import Link from "next/link"
@@ -5,10 +6,41 @@ import RecipeCard from "@/components/recipeCard"
 import { ArrowRight, Edit } from "lucide-react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
+import { useShoppingList } from "@/hooks/useShoppingList"
+import { useSchedule } from "@/hooks/useSchedule"
+import { useState, useEffect, useMemo } from "react"
+import { format, addDays } from 'date-fns'
+import dayjs from 'dayjs'
 
 export default function Home() {
   const { recipes, loading } = useRecipes()
   const { favorites, toggleFavorite } = useFavorite()
+  const { schedule } = useSchedule()
+
+  // 設定採購清單的日期範圍（本周）
+  const today = new Date()
+  const oneWeekLater = addDays(today, 6)
+  const formattedStart = format(today, 'yyyy-MM-dd')
+  const formattedEnd = format(oneWeekLater, 'yyyy-MM-dd')
+
+  // 獲取採購清單數據
+  const { shoppingList } = useShoppingList({
+    schedule,
+    startDate: formattedStart,
+    endDate: formattedEnd,
+  })
+
+  // 計算今日各餐的行程數量
+  const todayScheduleCounts = useMemo(() => {
+    const today = dayjs().format('YYYY-MM-DD')
+    const todaySchedules = schedule.filter(s => s.date === today)
+    
+    return {
+      breakfast: todaySchedules.filter(s => s.mealType === 'breakfast').length,
+      lunch: todaySchedules.filter(s => s.mealType === 'lunch').length,
+      dinner: todaySchedules.filter(s => s.mealType === 'dinner').length,
+    }
+  }, [schedule])
   return (
     <div className="bg-[#f9f5f1]">
       <section className="bg-[#FB7659] py-12">
@@ -40,10 +72,15 @@ export default function Home() {
             </div>
 
             {/* div2~4：早中晚 */}
-            {["早", "午", "晚"].map((label, i) => (
-              <div
+            {[
+              { label: "早", count: todayScheduleCounts.breakfast, index: 0 },
+              { label: "午", count: todayScheduleCounts.lunch, index: 1 },
+              { label: "晚", count: todayScheduleCounts.dinner, index: 2 }
+            ].map(({ label, count, index }) => (
+              <Link 
+                href="/schedule" 
                 key={label}
-                className={`col-start-${i + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-button`}
+                className={`col-start-${index + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-button cursor-pointer`}
               >
                 {/* 左上角 17 角星標籤 */}
                 <div className="absolute top-2 left-2 w-10 h-10">
@@ -64,12 +101,12 @@ export default function Home() {
 
                 {/* 中央數字 */}
                 <div className="h-full flex justify-center items-center">
-                  <div className="text-5xl font-bold">{[0, 3, 5][i]}</div>
+                  <div className="text-5xl font-bold">{count}</div>
                 </div>
 
                 {/* 右下角「道」 */}
                 <div className="absolute bottom-2 right-2 text-xl text-black">道</div>
-              </div>
+              </Link>
             ))}
 
 
@@ -77,24 +114,36 @@ export default function Home() {
             <div className="col-start-4 col-span-2 row-start-1 row-span-7 bg-white p-4 rounded border-2 border-black">
               <h2 className="font-bold mb-4">本周需採購清單</h2>
               <div className="space-y-2 h-[350px] overflow-y-auto">
-                {[
-                  { name: "胡椒粉", amount: "0.2 罐(40公克)" },
-                  { name: "高筋麵", amount: "1.5 罐(150公克)" },
-                  { name: "小黃瓜", amount: "0.8 罐(150公克)" },
-                  { name: "小黃瓜", amount: "0.8 罐(150公克)" },
-                  { name: "小黃瓜", amount: "0.8 罐(150公克)" },
-                  { name: "小黃瓜", amount: "0.8 罐(150公克)" },
-                  { name: "小黃瓜", amount: "0.8 罐(150公克)" },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <input type="checkbox" className="mr-2" />
-                    <span className="flex-1">{item.name}</span>
-                    <span className="text-sm text-gray-600">{item.amount}</span>
+                {shoppingList.length > 0 ? (
+                  shoppingList.slice(0, 10).map((item, index) => (
+                    <div key={item.key || index} className="flex items-center">
+                      <input type="checkbox" className="mr-2" />
+                      <span className="flex-1">{item.name}</span>
+                      <span className="text-sm text-gray-600">
+                        {item.totalAmount} {item.unit}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-gray-500 text-center py-8">
+                    目前沒有採購項目
+                    <br />
+                    <Link href="/schedule" className="text-[#519181] underline text-sm">
+                      先去安排餐點行程吧！
+                    </Link>
                   </div>
-                ))}
+                )}
+                
+                {/* 如果項目超過10個，顯示省略提示 */}
+                {shoppingList.length > 10 && (
+                  <div className="text-center text-gray-500 text-sm py-2">
+                    ... 還有 {shoppingList.length - 10} 項
+                  </div>
+                )}
               </div>
               <div className="flex justify-end mt-4">
-                  <button className="p-2 bg-[#F7CEFA] border-2 border-black  neo-button">
+                <Link href="/shopping">
+                  <button className="p-2 bg-[#F7CEFA] border-2 border-black neo-button">
                     <svg
                       width="25"
                       height="25"
@@ -108,6 +157,7 @@ export default function Home() {
                       />
                     </svg>
                   </button>
+                </Link>
               </div>
             </div>
           </div>
