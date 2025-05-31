@@ -80,12 +80,12 @@ export default function ShoppingPage() {
                     <span className="text-sm text-gray-600 mr-2">
                       {item.totalAmount} {item.unit}
                     </span>
-                    <button
+                    {/* <button
                       className="bg-[#ff6347] text-black p-1 mr-2 neo-button"
                       onClick={() => removeItem(item.key)}
                     >
                       <Trash2 size={20} />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
