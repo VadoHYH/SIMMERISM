@@ -106,13 +106,13 @@ export default function ShoppingPage() {
                 </span>
               </div>
               <div className="flex gap-2">
-                <button
+                {/* <button
                   className="bg-[#f9f5f1] border border-black px-4 py-1 neo-button flex items-center"
                   onClick={removeAll}
                 >
                   <Trash2 size={16} className="mr-1" />
                   <span>刪除清單</span>
-                </button>
+                </button> */}
                 <button
                   className="bg-[#ffc278] border border-black px-4 py-1 neo-button"
                   onClick={completeAll}
