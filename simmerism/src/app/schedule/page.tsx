@@ -12,7 +12,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 export default function SchedulePage() {
   const router = useRouter();
-  const { schedule, fetchSchedule, updateSchedule, loading } = useSchedule();
+  const { schedule, fetchSchedule, updateSchedule, deleteSchedule, loading } = useSchedule();
   const [localLoading, setLoading] = useState(true);
   
   const formatDate = (date: dayjs.Dayjs) => date.format('YYYY年M月D日');
@@ -50,6 +50,24 @@ export default function SchedulePage() {
       router.push(`/reviews/create?scheduleId=${schedule.id}`);
     } else {
       router.push(`/reviews/${schedule.reviewId}`);
+    }
+  };
+
+  const handleDeleteSchedule = async (schedule: ScheduleItem) => {
+    if (!schedule.id) {
+      console.error('Schedule ID 為 undefined，無法刪除');
+      return;
+    }
+    
+    // 可以加入確認對話框
+    if (window.confirm(`確定要刪除「${schedule.recipe?.title?.zh || '未知食譜'}」的行程嗎？`)) {
+      try {
+        await deleteSchedule(schedule.id);
+        // 刪除成功後會自動重新載入資料（如果 useSchedule hook 有設定的話）
+      } catch (error) {
+        console.error('刪除行程失敗:', error);
+        alert('刪除行程失敗，請稍後再試');
+      }
     }
   };
 
@@ -107,6 +125,7 @@ export default function SchedulePage() {
                 key={schedule.id}
                 schedule={schedule}
                 onClickStatus={handleScheduleClick}
+                onDelete={handleDeleteSchedule}
               />
             ))}
           </div>
@@ -134,6 +153,7 @@ export default function SchedulePage() {
                 key={schedule.id}
                 schedule={schedule}
                 onClickStatus={handleScheduleClick}
+                onDelete={handleDeleteSchedule}
               />
             ))}
           </div>
@@ -161,6 +181,7 @@ export default function SchedulePage() {
                 key={schedule.id}
                 schedule={schedule}
                 onClickStatus={handleScheduleClick}
+                onDelete={handleDeleteSchedule}
               />
             ))}
           </div>

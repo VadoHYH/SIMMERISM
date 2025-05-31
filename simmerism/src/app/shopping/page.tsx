@@ -34,6 +34,8 @@ export default function ShoppingPage() {
     endDate: formattedEnd,
   })
 
+  console.log('📅 schedule in ShoppingPage:', schedule)
+  console.log('📅 formattedStart, formattedEnd:', formattedStart, formattedEnd)
   return (
     <div className="min-h-screen bg-[#f9f5f1] py-8">
       <div className="container mx-auto px-4">
