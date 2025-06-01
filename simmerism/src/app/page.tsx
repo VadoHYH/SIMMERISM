@@ -24,7 +24,7 @@ export default function Home() {
   const formattedEnd = format(oneWeekLater, 'yyyy-MM-dd')
 
   // 獲取採購清單數據
-  const { shoppingList } = useShoppingList({
+  const { shoppingList, isChecked, toggleItem  } = useShoppingList({
     schedule,
     startDate: formattedStart,
     endDate: formattedEnd,
@@ -116,11 +116,29 @@ export default function Home() {
               <div className="space-y-2 h-[350px] overflow-y-auto">
                 {shoppingList.length > 0 ? (
                   shoppingList.slice(0, 10).map((item, index) => (
-                    <div key={item.key || index} className="flex items-center">
-                      <input type="checkbox" className="mr-2" />
-                      <span className="flex-1">{item.name}</span>
-                      <span className="text-sm text-gray-600">
-                        {item.totalAmount} {item.unit}
+                    <div key={item.key || index} className="flex items-center group hover:bg-gray-50 p-1 rounded">
+                      <input 
+                        type="checkbox" 
+                        className="mr-2 cursor-pointer" 
+                        checked={isChecked(item.key)}
+                        onChange={() => toggleItem(item.key)}
+                      />
+                      <span 
+                        className={`flex-1 cursor-pointer transition-all ${
+                          isChecked(item.key) 
+                            ? 'line-through text-gray-400' 
+                            : 'text-black'
+                        }`}
+                        onClick={() => toggleItem(item.key)}
+                      >
+                        {item.name}
+                      </span>
+                      <span className={`text-sm transition-all ${
+                        isChecked(item.key) 
+                          ? 'text-gray-400 line-through' 
+                          : 'text-gray-600'
+                      }`}>
+                        {item.totalAmount} {item.unit.replace(/[\d.()（）]/g, '').trim() || '份'}
                       </span>
                     </div>
                   ))

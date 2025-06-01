@@ -70,15 +70,28 @@ export default function ShoppingPage() {
             <div className="space-y-4">
               {shoppingList.map((item) => (
                 <div key={item.key} className="border-b border-gray-200 pb-4">
-                  <div className="flex items-center">
+                  <div className="flex items-center group hover:bg-gray-50 p-2 rounded">
                     <input
                       type="checkbox"
-                      className="mr-4 h-5 w-5"
+                      className="mr-4 h-5 w-5 cursor-pointer"
                       checked={isChecked(item.key)}
                       onChange={() => toggleItem(item.key)}
                     />
-                    <span className="flex-1">{item.name}</span>
-                    <span className="text-sm text-gray-600 mr-2">
+                    <span 
+                      className={`flex-1 cursor-pointer transition-all ${
+                        isChecked(item.key) 
+                          ? 'line-through text-gray-400' 
+                          : 'text-black'
+                      }`}
+                      onClick={() => toggleItem(item.key)}
+                    >
+                      {item.name}
+                    </span>
+                    <span className={`text-sm mr-2 transition-all ${
+                      isChecked(item.key) 
+                        ? 'text-gray-400 line-through' 
+                        : 'text-gray-600'
+                    }`}>
                       {item.totalAmount} {item.unit}
                     </span>
                     {/* <button
@@ -107,18 +120,18 @@ export default function ShoppingPage() {
                 </span>
               </div>
               <div className="flex gap-2">
-                {/* <button
+                <button
                   className="bg-[#f9f5f1] border border-black px-4 py-1 neo-button flex items-center"
                   onClick={removeAll}
                 >
                   <Trash2 size={16} className="mr-1" />
-                  <span>刪除清單</span>
-                </button> */}
+                  <span>清除全部</span>
+                </button>
                 <button
                   className="bg-[#ffc278] border border-black px-4 py-1 neo-button"
                   onClick={completeAll}
                 >
-                  <span>標記全部完成</span>
+                  <span>全部完成</span>
                 </button>
               </div>
             </div>
