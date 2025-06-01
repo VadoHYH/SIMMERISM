@@ -227,7 +227,7 @@ export default function RecipePage() {
           </div>
         </div>
       </div>
-      <section className="bg-[#FB7659] py-12">
+      {/* <section className="bg-[#FB7659] py-12">
         <div className="container mx-auto px-4">
           <h2 className="font-bold text-xl mb-6">他人食記</h2>
 
@@ -274,7 +274,7 @@ export default function RecipePage() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
     </div>
   )
 }

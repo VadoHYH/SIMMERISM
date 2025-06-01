@@ -74,14 +74,14 @@ export default function Header() {
         >
           行程
         </Link>
-        <Link
+        {/* <Link
           href="/food-diary"
           className={`border-r border-black p-4 text-center transition-colors flex-1 ${
             pathname === "/food-diary" ? "bg-[#5a9a8e] text-white" : "hover:bg-[#5a9a8e] hover:text-white"
           }`}
         >
           食記
-        </Link>
+        </Link> */}
         <Link
           href="/shopping"
           className={`border-r border-black p-4 text-center transition-colors flex-1 ${
