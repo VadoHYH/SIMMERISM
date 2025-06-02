@@ -90,14 +90,14 @@ export default function Header() {
         >
           採購
         </Link>
-        {/* <Link
+        <Link
           href="/questions"
           className={`border-r border-black p-4 text-center transition-colors flex-1 ${
             pathname === "/questions" ? "bg-[#5a9a8e] text-white" : "hover:bg-[#5a9a8e] hover:text-white"
           }`}
         >
           問問廚娘
-        </Link> */}
+        </Link>
       </nav>
       <div className="flex items-center justify-center p-4 bg-[#231f20] text-white min-w-[100px]">
         {user ? (
