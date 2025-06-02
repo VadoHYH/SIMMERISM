@@ -103,7 +103,7 @@ export default function SchedulePage() {
 
         <div className="space-y-8">
           {/* 早餐 */}
-          <div className="border-2 border-black rounded p-6 ">
+          <div className="border-2 border-black rounded p-6 bg-white">
             <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
@@ -131,7 +131,7 @@ export default function SchedulePage() {
           </div>
 
           {/* 中餐 */}
-          <div className="border-2 border-black rounded p-6">
+          <div className="border-2 border-black rounded p-6 bg-white">
           <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
@@ -159,7 +159,7 @@ export default function SchedulePage() {
           </div>
 
           {/* 晚餐 */}
-          <div className="border-2 border-black rounded p-6">
+          <div className="border-2 border-black rounded p-6 bg-white">
           <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
