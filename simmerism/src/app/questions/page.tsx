@@ -74,7 +74,7 @@ export default function QuestionsPage() {
           <div className="relative inline-block">
             <div className="absolute top-2 left-2 bg-black rounded px-6 py-3"></div>
             <div className="relative bg-[#1E49CF] text-white px-6 py-3 rounded border-2 border-black font-bold text-2xl">
-              問問廚娘 AI 助手
+              廚娘 AI 助手
             </div>
           </div>
         </div>

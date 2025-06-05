@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Simmerism",
-  description: "美味食譜分享平台",
+  description: "美味食譜查詢平台",
 }
 
 export default function RootLayout({
