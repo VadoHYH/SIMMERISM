@@ -42,12 +42,12 @@ if (missingFields.length > 0) {
   throw new Error(`Firebase 配置不完整，缺失: ${missingFields.join(', ')}`);
 }
 
-console.log('✅ Firebase 配置檢查通過:', {
-  apiKey: firebaseConfig.apiKey ? '***已設定***' : '未設定',
-  projectId: firebaseConfig.projectId,
-  authDomain: firebaseConfig.authDomain,
-  appId: firebaseConfig.appId ? '***已設定***' : '未設定',
-});
+// console.log('✅ Firebase 配置檢查通過:', {
+//   apiKey: firebaseConfig.apiKey ? '***已設定***' : '未設定',
+//   projectId: firebaseConfig.projectId,
+//   authDomain: firebaseConfig.authDomain,
+//   appId: firebaseConfig.appId ? '***已設定***' : '未設定',
+// });
 
 let app;
 try {
