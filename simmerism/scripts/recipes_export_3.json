@@ -1388,6 +1388,180 @@
     "sourceUrl": "https://www.foodista.com/recipe/222ZYXGD/barnabys-caesar-salad"
   },
   {
+    "id": "JRlN5cSL0VmBnybMIRno",
+    "title": {
+      "en": "Green Beans With Roasted Walnuts and Sweet Cranberries",
+      "zh": "綠豆配烤核桃和甜蔓越莓"
+    },
+    "summary": {
+      "en": [
+        "Green Beans With Roasted Walnuts and Sweet Cranberries could be just the gluten free, dairy free, paleolithic, and primal recipe you've been looking for.",
+        "One serving contains 88 calories, 5g of protein, and 4g of fat.",
+        "For 54 cents per serving, this recipe covers 7% of your daily requirements of vitamins and minerals.",
+        "This recipe serves 8.",
+        "3 people have tried and liked this recipe.",
+        "Christmas will be even more special with this recipe.",
+        "Head to the store and pick up kosher salt and pepper, roasted, olive oil, and a few other things to make it today.",
+        "Only a few people really liked this side dish.",
+        "From preparation to the plate, this recipe takes about 45 minutes.",
+        "It is brought to you by Foodista.",
+        "Overall, this recipe earns an excellent spoonacular score of 88%.",
+        "Similar recipes are Roasted Green Beans with Cranberries and Walnuts, Roasted Green Beans With Cranberries And Walnuts, and Sautéed Green Beans With Cranberries & Walnuts."
+      ],
+      "zh": [
+        "Green Beans With Roasted Walnuts and Sweet Cranberries could be just the gluten free, dairy free, paleolithic, and primal recipe you've been looking for.",
+        "One serving contains 88 calories, 5g of protein, and 4g of fat.",
+        "For 54 cents per serving, this recipe covers 7% of your daily requirements of vitamins and minerals.",
+        "This recipe serves 8.",
+        "3 people have tried and liked this recipe.",
+        "Christmas will be even more special with this recipe.",
+        "Head to the store and pick up kosher salt and pepper, roasted, olive oil, and a few other things to make it today.",
+        "Only a few people really liked this side dish.",
+        "From preparation to the plate, this recipe takes about 45 minutes.",
+        "It is brought to you by Foodista.",
+        "Overall, this recipe earns an excellent spoonacular score of 88%.",
+        "Similar recipes are Roasted Green Beans with Cranberries and Walnuts, Roasted Green Beans With Cranberries And Walnuts, and Sautéed Green Beans With Cranberries & Walnuts."
+      ]
+    },
+    "instructions": {
+      "en": "Step 1: Bring a large pot of water to a boil.\nStep 2: Add 1 tablespoon salt and the green beans and Cook until tender, 4 to 6 minutes.\nStep 3: Meanwhile, in a large bowl, combine the oil, nuts, and cranberries.\nStep 4: Drain the green beans and transfer them to the bowl.\nStep 5: Add 1/2 teaspoon salt and 1/4 teaspoon pepper and toss to coat.\nStep 6: Serve warm or at room temperature.",
+      "zh": "步驟1：將一大鍋水煮沸。步驟2：加1湯匙鹽和綠豆，然後煮至4至6分鐘。步驟3：與此同時，在一個大碗中，將油，堅果和蔓越莓組合在一起。步驟4：將綠豆排幹，然後將其轉移到碗中。在室溫下。"
+    },
+    "translated": true,
+    "createdAt": "2025-06-06T05:19:40.914Z",
+    "favoriteCount": 0,
+    "ingredients": {
+      "en": [
+        {
+          "name": {
+            "en": "kosher salt and pepper"
+          },
+          "amount": {
+            "en": "8 servings (8servings)"
+          }
+        },
+        {
+          "name": {
+            "en": "green beans"
+          },
+          "amount": {
+            "en": "1.5 pounds (680.389g)"
+          }
+        },
+        {
+          "name": {
+            "en": "olive oil"
+          },
+          "amount": {
+            "en": "2 tablespoons (2Tbsps)"
+          }
+        },
+        {
+          "name": {
+            "en": "roasted"
+          },
+          "amount": {
+            "en": "0.5 cup (118.294g)"
+          }
+        },
+        {
+          "name": {
+            "en": "cranberries"
+          },
+          "amount": {
+            "en": "0.25 cup (30.303g)"
+          }
+        }
+      ],
+      "zh": [
+        {
+          "name": {
+            "en": "kosher salt and pepper",
+            "zh": "猶太鹽和胡椒粉"
+          },
+          "amount": {
+            "en": "8 servings (8servings)",
+            "zh": "8份（8份）"
+          }
+        },
+        {
+          "name": {
+            "en": "green beans",
+            "zh": "綠豆"
+          },
+          "amount": {
+            "en": "1.5 pounds (680.389g)",
+            "zh": "1.5磅（680.389G）"
+          }
+        },
+        {
+          "name": {
+            "en": "olive oil",
+            "zh": "橄欖油"
+          },
+          "amount": {
+            "en": "2 tablespoons (2Tbsps)",
+            "zh": "2湯匙（2TBSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "roasted",
+            "zh": "烤"
+          },
+          "amount": {
+            "en": "0.5 cup (118.294g)",
+            "zh": "0.5杯（118.294G）"
+          }
+        },
+        {
+          "name": {
+            "en": "cranberries",
+            "zh": "蔓越莓"
+          },
+          "amount": {
+            "en": "0.25 cup (30.303g)",
+            "zh": "0.25杯（30.303克）"
+          }
+        }
+      ]
+    },
+    "dishTypes": [
+      {
+        "en": "side dish",
+        "zh": "小菜"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "pot",
+        "zh": "鍋"
+      },
+      {
+        "en": "bowl",
+        "zh": "碗"
+      }
+    ],
+    "diets": [
+      {
+        "en": "gluten free",
+        "zh": "不含麩質"
+      },
+      {
+        "en": "dairy free",
+        "zh": "免費乳製品"
+      },
+      {
+        "en": "paleolithic",
+        "zh": "舊石器時代"
+      },
+      {
+        "en": "primal",
+        "zh": "原始"
+      }
+    ]
+  },
+  {
     "id": "LJFFxm5j0x30yrp0AQeB",
     "title": {
       "en": "Oreo Cake",
@@ -2216,6 +2390,434 @@
     "readyInMinutes": 45,
     "servings": 4,
     "sourceUrl": "https://www.foodista.com/recipe/KD7D3V7L/warm-duck-salad-with-roasted-beetroot"
+  },
+  {
+    "id": "PVd9wnjZZr00CTIjBxLj",
+    "title": {
+      "en": "How to Make the Best Chicken Jambalaya",
+      "zh": "如何製作最好的雞肉Jambalaya"
+    },
+    "summary": {
+      "en": [
+        "You can never have too many Cajun recipes, so give How to Make the Best Chicken Jambalayan a try.",
+        "This main course has 450 calories, 26g of protein, and 21g of fat per serving.",
+        "This recipe serves 8.",
+        "For $1.86 per serving, this recipe covers 20% of your daily requirements of vitamins and minerals.",
+        "This recipe from Pink When requires ▢ butter, ▢ tomatoes, ▢ tomato sauce, and ▢ onion.",
+        "It is a good option if you're following a gluten free diet.",
+        "Plenty of people made this recipe, and 2169 would say it hit the spot.",
+        "From preparation to the plate, this recipe takes around 55 minutes.",
+        "All things considered, we decided this recipe deserves a spoonacular score of 76%.",
+        "This score is good.",
+        "If you like this recipe, take a look at these similar recipes: How to Make the Best Chicken Jambalaya, Chicken Jambalaya, and Chicken Jambalayan II."
+      ],
+      "zh": [
+        "You can never have too many Cajun recipes, so give How to Make the Best Chicken Jambalayan a try.",
+        "This main course has 450 calories, 26g of protein, and 21g of fat per serving.",
+        "This recipe serves 8.",
+        "For $1.86 per serving, this recipe covers 20% of your daily requirements of vitamins and minerals.",
+        "This recipe from Pink When requires ▢ butter, ▢ tomatoes, ▢ tomato sauce, and ▢ onion.",
+        "It is a good option if you're following a gluten free diet.",
+        "Plenty of people made this recipe, and 2169 would say it hit the spot.",
+        "From preparation to the plate, this recipe takes around 55 minutes.",
+        "All things considered, we decided this recipe deserves a spoonacular score of 76%.",
+        "This score is good.",
+        "If you like this recipe, take a look at these similar recipes: How to Make the Best Chicken Jambalaya, Chicken Jambalaya, and Chicken Jambalayan II."
+      ]
+    },
+    "instructions": {
+      "en": "Step 1: Instructions Combine the creole seasoning ingredients in a small bowl and set aside.\nStep 2: Melt butter in a large dutch oven over medium-high heat.\nStep 3: Add the sausage until it starts to brown, about 3 minutes.\nStep 4: Add the chicken and continue to cook until brown, about 3-5 minutes.\nStep 5: Stir frequently.\nStep 6: Turn the stove top down to medium heat.\nStep 7: Preheat your oven to 350 degrees.\nStep 8: Stir in the seasoning mix of cajun spices and 1/2 of the chopped onion, celery, green bell pepper, and garlic.\nStep 9: Cook until vegetables get tender, about 3-5 minutes.\nStep 10: Stir frequently and scrape the bottom of the pot frequently.\nStep 11: Stir in the tomato sauce and cook for about one minute.\nStep 12: Stir in the remaining onion, celery, bell pepper, garlic, and the diced tomatoes then remove from heat.\nStep 13: Stir in the rice and chicken stock, mix the ingredients well.\nStep 14: Bake uncovered in the oven at 350 degrees for one hour or until the rice is tender but still has a little crunch.\nStep 15: Remove from the oven, add the bay leaves and stir well.\nStep 16: Allow the dish to cool for five minutes before serving.\nStep 17: OPTIONAL: Top with green onions before serving.",
+      "zh": "步驟1：說明將克里奧爾調味成分結合在一個小碗中，放在一旁。步驟2：在大型荷蘭烤箱中融化黃油，在中高溫下加熱。步驟3：加入香腸，直到開始變成棕色，大約3分鐘。步驟4：加入雞肉，繼續煮雞肉，然後繼續煮至3-5分鐘，大約3-5分鐘。學位8：加入Cajun香料的調味料和1/2切碎的洋蔥，芹菜，綠色的胡椒粉和大蒜。 9：煮至9：煮至蔬菜變軟，大約3-5分鐘，經常攪拌，經常攪拌並經常刮擦鍋底。切成丁的西紅柿，然後從熱量上移開。步驟13：攪拌米飯和雞肉湯，將成分充分混合。步驟14：在烤箱中以350度的溫度在烤箱中發現一個小時，或直到米飯變軟但仍然有點緊縮但仍有點緊縮。從烤箱中移開。"
+    },
+    "translated": true,
+    "createdAt": "2025-06-08T15:49:57.038Z",
+    "favoriteCount": 0,
+    "ingredients": {
+      "en": [
+        {
+          "name": {
+            "en": "▢ butter"
+          },
+          "amount": {
+            "en": "2 tbsp (2Tbsps)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ sausage"
+          },
+          "amount": {
+            "en": "1 lb (453.592g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ chicken breasts"
+          },
+          "amount": {
+            "en": "1 lb (453.592g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ onion"
+          },
+          "amount": {
+            "en": "1 cup (160g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ celery"
+          },
+          "amount": {
+            "en": "1 cup (101g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ bell pepper"
+          },
+          "amount": {
+            "en": "0.5 cup (74.5g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ garlic"
+          },
+          "amount": {
+            "en": "1 tbsp (1Tbsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ tomato sauce"
+          },
+          "amount": {
+            "en": "1 cup (245ml)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ tomatoes"
+          },
+          "amount": {
+            "en": "14.5 oz (411.068g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ chicken stock"
+          },
+          "amount": {
+            "en": "2.5 cups (600ml)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ rice"
+          },
+          "amount": {
+            "en": "1.5 cups (277.5g)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ 2 bay"
+          },
+          "amount": {
+            "en": "1 leaves (1leaf)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ ground pepper"
+          },
+          "amount": {
+            "en": "2 tsp (2tsps)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ salt"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ pepper"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ thyme"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ pepper flakes"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ sage"
+          },
+          "amount": {
+            "en": "0.5 tsp (0.5tsps)"
+          }
+        }
+      ],
+      "zh": [
+        {
+          "name": {
+            "en": "▢ butter",
+            "zh": "▢黃油"
+          },
+          "amount": {
+            "en": "2 tbsp (2Tbsps)",
+            "zh": "2湯匙（2TBSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ sausage",
+            "zh": "▢香腸"
+          },
+          "amount": {
+            "en": "1 lb (453.592g)",
+            "zh": "1磅（453.592G）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ chicken breasts",
+            "zh": "▢雞胸肉"
+          },
+          "amount": {
+            "en": "1 lb (453.592g)",
+            "zh": "1磅（453.592G）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ onion",
+            "zh": "▢洋蔥"
+          },
+          "amount": {
+            "en": "1 cup (160g)",
+            "zh": "1杯（160克）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ celery",
+            "zh": "▢芹菜"
+          },
+          "amount": {
+            "en": "1 cup (101g)",
+            "zh": "1杯（101克）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ bell pepper",
+            "zh": "bell辣椒"
+          },
+          "amount": {
+            "en": "0.5 cup (74.5g)",
+            "zh": "0.5杯（74.5克）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ garlic",
+            "zh": "▢大蒜"
+          },
+          "amount": {
+            "en": "1 tbsp (1Tbsp)",
+            "zh": "1湯匙（1TBSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ tomato sauce",
+            "zh": "▢番茄醬"
+          },
+          "amount": {
+            "en": "1 cup (245ml)",
+            "zh": "1杯（245毫升）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ tomatoes",
+            "zh": "▢西紅柿"
+          },
+          "amount": {
+            "en": "14.5 oz (411.068g)",
+            "zh": "14.5盎司（411.068G）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ chicken stock",
+            "zh": "▢雞肉湯"
+          },
+          "amount": {
+            "en": "2.5 cups (600ml)",
+            "zh": "2.5杯（600毫升）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ rice",
+            "zh": "▢大米"
+          },
+          "amount": {
+            "en": "1.5 cups (277.5g)",
+            "zh": "1.5杯（277.5g）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ 2 bay",
+            "zh": "▢2海灣"
+          },
+          "amount": {
+            "en": "1 leaves (1leaf)",
+            "zh": "1片葉子（1葉）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ ground pepper",
+            "zh": "▢磨胡椒"
+          },
+          "amount": {
+            "en": "2 tsp (2tsps)",
+            "zh": "2 TSP（2TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ salt",
+            "zh": "▢鹽"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ pepper",
+            "zh": "▢胡椒"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ thyme",
+            "zh": "▢百里香"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ pepper flakes",
+            "zh": "▢胡椒粉"
+          },
+          "amount": {
+            "en": "1 tsp (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "▢ sage",
+            "zh": "sage"
+          },
+          "amount": {
+            "en": "0.5 tsp (0.5tsps)",
+            "zh": "0.5茶匙（0.5TSP）"
+          }
+        }
+      ]
+    },
+    "dishTypes": [
+      {
+        "en": "lunch",
+        "zh": "午餐"
+      },
+      {
+        "en": "main course",
+        "zh": "主菜"
+      },
+      {
+        "en": "main dish",
+        "zh": "主菜"
+      },
+      {
+        "en": "dinner",
+        "zh": "晚餐"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "Cajun",
+        "zh": "Cajun"
+      },
+      {
+        "en": "Creole",
+        "zh": "克里奧爾"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "bowl",
+        "zh": "碗"
+      },
+      {
+        "en": "dutch oven",
+        "zh": "荷蘭烤箱"
+      },
+      {
+        "en": "stove",
+        "zh": "火爐"
+      },
+      {
+        "en": "oven",
+        "zh": "烤箱"
+      },
+      {
+        "en": "pot",
+        "zh": "鍋"
+      }
+    ],
+    "diets": [
+      {
+        "en": "gluten free",
+        "zh": "不含麩質"
+      }
+    ]
   },
   {
     "id": "RCAfqcbEbOMKpS4Fm85B",
@@ -4800,6 +5402,164 @@
     "sourceUrl": "https://www.foodista.com/recipe/WXQZBFHK/grilled-eggplant-and-heirloom-tomato-stacks-with-basil-and-tomato-coulis"
   },
   {
+    "id": "gXDRZgPMEyLJqKpk8B5l",
+    "title": {
+      "en": "Chocolate, Pb and Banana Oats",
+      "zh": "巧克力，PB和香蕉燕麥"
+    },
+    "summary": {
+      "en": "Chocolate, Pb and Bananan Oats might be just the side dish you are searching for.\nOne serving contains 215 calories, 9g of protein, and 4g of fat.\nFor 43 cents per serving, this recipe covers 12% of your daily requirements of vitamins and minerals.\nThis recipe serves 2.\n3 people were glad they tried this recipe.\nHead to the store and pick up skim milk, brown sugar, peanut butter, and a few other things to make it today.\nIt is a good option if you're following a gluten free and lacto ovo vegetarian diet.\nFrom preparation to the plate, this recipe takes roughly 45 minutes.\nIt is brought to you by Foodista.\nWith a spoonacular score of 79%, this dish is good.\nTry Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes.",
+      "zh": "巧克力，PB和Bananan燕麥可能只是您正在尋找的配菜。一份食用包含215卡路里，9克蛋白質和4克脂肪。每份食譜以43美分的含量，涵蓋了您每天對維生素和礦物質的日常需求的12％，這些食譜為2.3個人而興奮不已。 today.It is a good option if you're following a gluten free and lacto ovo vegetarian diet.From preparation to the plate, this recipe takes roughly 45 minutes.It is brought to you by Foodista.With a spoonacular score of 79%, this dish is good.Try Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes."
+    },
+    "instructions": {
+      "en": "Step 1: In a medium saucepan combine milk and oats. Bring to a boil.\nStep 2: Stir in cocoa powder, peanut butter, banana and brown sugar. Cook for 5 minutes stirring constantly.\nStep 3: Serve immediately.",
+      "zh": [
+        "步驟1：在中型鍋中混合牛奶和燕麥。燒開。",
+        "步驟2：加入可可粉，花生醬，香蕉和紅糖。煮5分鐘不斷攪拌。",
+        "步驟3：立即服務。"
+      ]
+    },
+    "translated": true,
+    "createdAt": "2025-06-08T15:43:15.074Z",
+    "favoriteCount": 0,
+    "ingredients": {
+      "en": [
+        {
+          "name": {
+            "en": "banana"
+          },
+          "amount": {
+            "en": "1  (1)"
+          }
+        },
+        {
+          "name": {
+            "en": "brown sugar"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)"
+          }
+        },
+        {
+          "name": {
+            "en": "cocoa powder"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)"
+          }
+        },
+        {
+          "name": {
+            "en": "old fashioned oats"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)"
+          }
+        },
+        {
+          "name": {
+            "en": "peanut butter"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)"
+          }
+        },
+        {
+          "name": {
+            "en": "skim milk"
+          },
+          "amount": {
+            "en": "1 cup (245ml)"
+          }
+        }
+      ],
+      "zh": [
+        {
+          "name": {
+            "en": "banana",
+            "zh": "香蕉"
+          },
+          "amount": {
+            "en": "1  (1)",
+            "zh": "1（1）"
+          }
+        },
+        {
+          "name": {
+            "en": "brown sugar",
+            "zh": "紅糖"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)",
+            "zh": "2茶匙（2TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "cocoa powder",
+            "zh": "可可粉"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)",
+            "zh": "4茶匙（4TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "old fashioned oats",
+            "zh": "老式燕麥"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)",
+            "zh": "0.5杯（40.541g）"
+          }
+        },
+        {
+          "name": {
+            "en": "peanut butter",
+            "zh": "花生醬"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "skim milk",
+            "zh": "脫脂牛奶"
+          },
+          "amount": {
+            "en": "1 cup (245ml)",
+            "zh": "1杯（245毫升）"
+          }
+        }
+      ]
+    },
+    "dishTypes": [
+      {
+        "en": "side dish",
+        "zh": "小菜"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "sauce pan",
+        "zh": "鍋醬"
+      }
+    ],
+    "diets": [
+      {
+        "en": "gluten free",
+        "zh": "不含麩質"
+      },
+      {
+        "en": "lacto ovo vegetarian",
+        "zh": "素食卵乳"
+      }
+    ]
+  },
+  {
     "id": "gbYicWgaK3OAI1FpfgSp",
     "title": {
       "en": "Frozen Mojito Pie",
@@ -5208,6 +5968,121 @@
     "readyInMinutes": 45,
     "servings": 6,
     "sourceUrl": "https://www.foodista.com/recipe/N6WG5MLX/luscious-lemon-bars"
+  },
+  {
+    "id": "j3LBY9zxxvHOJlbrwtlc",
+    "title": {
+      "en": "Pink Lemonade Crinkle Cookies"
+    },
+    "summary": {
+      "en": [
+        "Pink Lemonade Crinkle Cookies might be a good recipe to expand your dessert recipe box.",
+        "This recipe serves 5.",
+        "For 54 cents per serving, this recipe covers 7% of your daily requirements of vitamins and minerals.",
+        "One portion of this dish contains about 5g of protein, 29g of fat, and a total of 658 calories.",
+        "If you have baking powder, pink lemonade kool-aid, butter, and a few other ingredients on hand, you can make it.",
+        "3229 people were glad they tried this recipe.",
+        "It is brought to you by Pink When.",
+        "It is a good option if you're following a lacto ovo vegetarian diet.",
+        "From preparation to the plate, this recipe takes roughly 45 minutes.",
+        "All things considered, we decided this recipe deserves a spoonacular score of 32%.",
+        "This score is not so amazing.",
+        "Try Homemade Pink Lemonade Cookies, Frosted Pink Lemonade Cookies, and Sour Patch Pink Lemonade Cookies for similar recipes."
+      ]
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Prepare a cookie sheet by greasing with non-stick cooking spray.",
+        "Step 2: Preheat oven to 350.",
+        "Step 3: Cream butter and sugar together in your mixer, scraping the sides of your bowl.",
+        "Step 4: Add your egg and mix well.",
+        "Step 5: Mix in baking powder, baking soda, Kool-Aid and cornstarch.",
+        "Step 6: Once its well mixed (the Kool-Aid will be mixed once it turns your dough pink), add a drop of pink food coloring, if more color is desired.",
+        "Step 7: Next, start adding your flour a half cup at a time until its all added.Roll the dough into walnut-sized balls and roll in the powder sugar, giving them a light coating.",
+        "Step 8: Place 2 apart on a room-temp baking sheet (let your sheet cool in between batches if you are reusing the same one).Bake in the oven 9-10 minutes, they wont brown too much, so watch them closely.",
+        "Step 9: Over-baking will make them hard and crunchy!I hope you enjoy these!",
+        "Step 10: I will be baking another batch soon, we have a neighborhood barbecue coming up and I know these will be perfect!Want more Whistle and Ivy?",
+        "Step 11: Subscribe here!",
+        "Step 12: And dont forget to follow on Instagram and Pinterest.You may also like these Avocado Mint Chocolate Sugar Cookies or this Honey Kool-Aid TaffyUntil next time,JOIN 500,000 SUBSCRIBERS!Join over 500,000 others who follow PinkWhen on Social Media, the PinkWhen blog, and email.",
+        "Step 13: Sign up to receive exclusive bonuses like this FREE Simple Fit Dinners Ebook.Don't wait!",
+        "Step 14: You won't want to miss a thing.Success!",
+        "Step 15: Now check your email to confirm your subscription and download your FREE ebook.There was an error submitting your subscription.",
+        "Step 16: Please try again.First NameEmail AddressSubscribePowered by ConvertKit"
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "baking powder",
+          "amount": "0.25 tsp (0.25tsps)"
+        },
+        {
+          "name": "baking soda",
+          "amount": "0.25 tsp (0.25tsps)"
+        },
+        {
+          "name": "butter",
+          "amount": "0.75 C (0.75cups)"
+        },
+        {
+          "name": "cornstarch",
+          "amount": "0.5 C (0.5cups)"
+        },
+        {
+          "name": "egg",
+          "amount": "1  (1)"
+        },
+        {
+          "name": "flour",
+          "amount": "1.5 C (1.5cups)"
+        },
+        {
+          "name": "pink food coloring",
+          "amount": "1 drop (1drop)"
+        },
+        {
+          "name": "pink lemonade kool-aid",
+          "amount": "0.5 tsp (0.5tsps)"
+        },
+        {
+          "name": "powdered sugar",
+          "amount": "0.25 C (0.25cups)"
+        },
+        {
+          "name": "sugar",
+          "amount": "1.25 C (1.25cups)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/715541-556x370.jpg",
+    "readyInMinutes": 45,
+    "servings": 5,
+    "diets": [
+      {
+        "en": "lacto ovo vegetarian"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "dessert"
+      }
+    ],
+    "cuisines": [],
+    "equipment": [
+      {
+        "en": "baking sheet"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "blender"
+      },
+      {
+        "en": "bowl"
+      }
+    ],
+    "sourceUrl": "https://www.pinkwhen.com/pink-lemonade-crinkle-cookies/"
   },
   {
     "id": "l9AJSLh3JHEpdhPjtcON",

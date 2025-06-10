@@ -13,7 +13,7 @@ export interface Ingredient {
 export interface Recipe {
   id: string
   title: { zh: string; en: string }
-  summary: { en: string; zh: string }
+  summary: { en: string[]; zh: string[]}
   image: string
   ingredients: Ingredient[]
   instructions: { en: string; zh: string }
@@ -67,3 +67,6 @@ export function useRecipes() {
 
   return { recipes, loading }
 }
+
+
+

@@ -59,10 +59,18 @@ export default function RecipePage() {
     // TODO: 根據 keyword 篩選資料或導向搜尋頁面
   };
 
-  const rawInstructions = recipe.instructions.zh || "";
-
   // 正則表達式：抓出「步驟1：...」「步驟2：...」的每個區段
-  const steps = rawInstructions.match(/步驟\d+[：:\.][^步驟]+/g) || [];
+  let steps: string[] = [];
+  if (typeof recipe.instructions.zh === "string") {
+    // 原本你舊資料的情況 → 用正則拆
+    steps = recipe.instructions.zh.match(/步驟\d+[：:\.][^步驟]+/g) || [];
+  } else if (Array.isArray(recipe.instructions.zh)) {
+    // 新資料如果直接是陣列 → 直接用
+    steps = recipe.instructions.zh;
+  } else {
+    // 其他情況 → 不顯示步驟
+    steps = [];
+  }
 
   const handleAddSchedule = ({ date, meal }: { date: Date; meal: string }) => {
     const formattedDate = date.toISOString().split('T')[0] // "2025-05-29"
@@ -94,10 +102,20 @@ export default function RecipePage() {
 
           <div>
             <h1 className="text-3xl font-bold mb-4">{recipe.title.zh}</h1>
-            <p
+            {/* <p
               className="mb-6"
               dangerouslySetInnerHTML={{ __html: recipe.summary.zh }}
-            />
+            /> */}
+
+            {recipe.summary.zh && Array.isArray(recipe.summary.zh) && (
+              <div className="mb-6 space-y-2">
+                {recipe.summary.zh
+                  .filter((sentence) => sentence.trim() !== "")
+                  .map((sentence, index) => (
+                    <p key={index}>{sentence}</p>
+                  ))}
+              </div>
+            )}
 
             <div className="flex gap-4 mb-4">
               <div className="flex items-center gap-2 neo-button">

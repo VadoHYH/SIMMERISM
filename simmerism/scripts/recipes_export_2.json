@@ -2392,6 +2392,172 @@
     "sourceUrl": "https://www.foodista.com/recipe/KD7D3V7L/warm-duck-salad-with-roasted-beetroot"
   },
   {
+    "id": "PVd9wnjZZr00CTIjBxLj",
+    "title": {
+      "en": "How to Make the Best Chicken Jambalaya"
+    },
+    "summary": {
+      "en": [
+        "You can never have too many Cajun recipes, so give How to Make the Best Chicken Jambalayan a try.",
+        "This main course has 450 calories, 26g of protein, and 21g of fat per serving.",
+        "This recipe serves 8.",
+        "For $1.86 per serving, this recipe covers 20% of your daily requirements of vitamins and minerals.",
+        "This recipe from Pink When requires ▢ butter, ▢ tomatoes, ▢ tomato sauce, and ▢ onion.",
+        "It is a good option if you're following a gluten free diet.",
+        "Plenty of people made this recipe, and 2169 would say it hit the spot.",
+        "From preparation to the plate, this recipe takes around 55 minutes.",
+        "All things considered, we decided this recipe deserves a spoonacular score of 76%.",
+        "This score is good.",
+        "If you like this recipe, take a look at these similar recipes: How to Make the Best Chicken Jambalaya, Chicken Jambalaya, and Chicken Jambalayan II."
+      ]
+    },
+    "instructions": {
+      "en": [
+        "Step 1: Instructions Combine the creole seasoning ingredients in a small bowl and set aside.",
+        "Step 2: Melt butter in a large dutch oven over medium-high heat.",
+        "Step 3: Add the sausage until it starts to brown, about 3 minutes.",
+        "Step 4: Add the chicken and continue to cook until brown, about 3-5 minutes.",
+        "Step 5: Stir frequently.",
+        "Step 6: Turn the stove top down to medium heat.",
+        "Step 7: Preheat your oven to 350 degrees.",
+        "Step 8: Stir in the seasoning mix of cajun spices and 1/2 of the chopped onion, celery, green bell pepper, and garlic.",
+        "Step 9: Cook until vegetables get tender, about 3-5 minutes.",
+        "Step 10: Stir frequently and scrape the bottom of the pot frequently.",
+        "Step 11: Stir in the tomato sauce and cook for about one minute.",
+        "Step 12: Stir in the remaining onion, celery, bell pepper, garlic, and the diced tomatoes then remove from heat.",
+        "Step 13: Stir in the rice and chicken stock, mix the ingredients well.",
+        "Step 14: Bake uncovered in the oven at 350 degrees for one hour or until the rice is tender but still has a little crunch.",
+        "Step 15: Remove from the oven, add the bay leaves and stir well.",
+        "Step 16: Allow the dish to cool for five minutes before serving.",
+        "Step 17: OPTIONAL: Top with green onions before serving."
+      ]
+    },
+    "ingredients": {
+      "en": [
+        {
+          "name": "▢ butter",
+          "amount": "2 tbsp (2Tbsps)"
+        },
+        {
+          "name": "▢ sausage",
+          "amount": "1 lb (453.592g)"
+        },
+        {
+          "name": "▢ chicken breasts",
+          "amount": "1 lb (453.592g)"
+        },
+        {
+          "name": "▢ onion",
+          "amount": "1 cup (160g)"
+        },
+        {
+          "name": "▢ celery",
+          "amount": "1 cup (101g)"
+        },
+        {
+          "name": "▢ bell pepper",
+          "amount": "0.5 cup (74.5g)"
+        },
+        {
+          "name": "▢ garlic",
+          "amount": "1 tbsp (1Tbsp)"
+        },
+        {
+          "name": "▢ tomato sauce",
+          "amount": "1 cup (245ml)"
+        },
+        {
+          "name": "▢ tomatoes",
+          "amount": "14.5 oz (411.068g)"
+        },
+        {
+          "name": "▢ chicken stock",
+          "amount": "2.5 cups (600ml)"
+        },
+        {
+          "name": "▢ rice",
+          "amount": "1.5 cups (277.5g)"
+        },
+        {
+          "name": "▢ 2 bay",
+          "amount": "1 leaves (1leaf)"
+        },
+        {
+          "name": "▢ ground pepper",
+          "amount": "2 tsp (2tsps)"
+        },
+        {
+          "name": "▢ salt",
+          "amount": "1 tsp (1tsp)"
+        },
+        {
+          "name": "▢ pepper",
+          "amount": "1 tsp (1tsp)"
+        },
+        {
+          "name": "▢ thyme",
+          "amount": "1 tsp (1tsp)"
+        },
+        {
+          "name": "▢ pepper flakes",
+          "amount": "1 tsp (1tsp)"
+        },
+        {
+          "name": "▢ sage",
+          "amount": "0.5 tsp (0.5tsps)"
+        }
+      ]
+    },
+    "image": "https://img.spoonacular.com/recipes/715545-556x370.jpg",
+    "readyInMinutes": 55,
+    "servings": 8,
+    "diets": [
+      {
+        "en": "gluten free"
+      }
+    ],
+    "dishTypes": [
+      {
+        "en": "lunch"
+      },
+      {
+        "en": "main course"
+      },
+      {
+        "en": "main dish"
+      },
+      {
+        "en": "dinner"
+      }
+    ],
+    "cuisines": [
+      {
+        "en": "Cajun"
+      },
+      {
+        "en": "Creole"
+      }
+    ],
+    "equipment": [
+      {
+        "en": "bowl"
+      },
+      {
+        "en": "dutch oven"
+      },
+      {
+        "en": "stove"
+      },
+      {
+        "en": "oven"
+      },
+      {
+        "en": "pot"
+      }
+    ],
+    "sourceUrl": "https://www.pinkwhen.com/chicken-and-sausage-jambalaya/"
+  },
+  {
     "id": "RCAfqcbEbOMKpS4Fm85B",
     "title": {
       "en": "Vietnamese Pancakes with Vegetables, Herbs and a Fragrant Dipping Sauce (Bánh Xèo)",
@@ -4976,81 +5142,160 @@
   {
     "id": "gXDRZgPMEyLJqKpk8B5l",
     "title": {
-      "en": "Chocolate, Pb and Banana Oats"
+      "en": "Chocolate, Pb and Banana Oats",
+      "zh": "巧克力，PB和香蕉燕麥"
     },
     "summary": {
-      "en": [
-        "Chocolate, Pb and Bananan Oats might be just the side dish you are searching for.",
-        "One serving contains 215 calories, 9g of protein, and 4g of fat.",
-        "For 43 cents per serving, this recipe covers 12% of your daily requirements of vitamins and minerals.",
-        "This recipe serves 2.",
-        "3 people were glad they tried this recipe.",
-        "Head to the store and pick up skim milk, brown sugar, peanut butter, and a few other things to make it today.",
-        "It is a good option if you're following a gluten free and lacto ovo vegetarian diet.",
-        "From preparation to the plate, this recipe takes roughly 45 minutes.",
-        "It is brought to you by Foodista.",
-        "With a spoonacular score of 79%, this dish is good.",
-        "Try Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes."
-      ]
+      "en": "Chocolate, Pb and Bananan Oats might be just the side dish you are searching for.\nOne serving contains 215 calories, 9g of protein, and 4g of fat.\nFor 43 cents per serving, this recipe covers 12% of your daily requirements of vitamins and minerals.\nThis recipe serves 2.\n3 people were glad they tried this recipe.\nHead to the store and pick up skim milk, brown sugar, peanut butter, and a few other things to make it today.\nIt is a good option if you're following a gluten free and lacto ovo vegetarian diet.\nFrom preparation to the plate, this recipe takes roughly 45 minutes.\nIt is brought to you by Foodista.\nWith a spoonacular score of 79%, this dish is good.\nTry Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes.",
+      "zh": "巧克力，PB和Bananan燕麥可能只是您正在尋找的配菜。一份食用包含215卡路里，9克蛋白質和4克脂肪。每份食譜以43美分的含量，涵蓋了您每天對維生素和礦物質的日常需求的12％，這些食譜為2.3個人而興奮不已。 today.It is a good option if you're following a gluten free and lacto ovo vegetarian diet.From preparation to the plate, this recipe takes roughly 45 minutes.It is brought to you by Foodista.With a spoonacular score of 79%, this dish is good.Try Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes."
     },
     "instructions": {
-      "en": [
-        "Step 1: In a medium saucepan combine milk and oats. Bring to a boil.",
-        "Step 2: Stir in cocoa powder, peanut butter, banana and brown sugar. Cook for 5 minutes stirring constantly.",
-        "Step 3: Serve immediately."
+      "en": "Step 1: In a medium saucepan combine milk and oats. Bring to a boil.\nStep 2: Stir in cocoa powder, peanut butter, banana and brown sugar. Cook for 5 minutes stirring constantly.\nStep 3: Serve immediately.",
+      "zh": [
+        "步驟1：在中型鍋中混合牛奶和燕麥。燒開。",
+        "步驟2：加入可可粉，花生醬，香蕉和紅糖。煮5分鐘不斷攪拌。",
+        "步驟3：立即服務。"
       ]
     },
+    "translated": true,
+    "createdAt": "2025-06-08T15:43:15.074Z",
+    "favoriteCount": 0,
     "ingredients": {
       "en": [
         {
-          "name": "banana",
-          "amount": "1  (1)"
+          "name": {
+            "en": "banana"
+          },
+          "amount": {
+            "en": "1  (1)"
+          }
         },
         {
-          "name": "brown sugar",
-          "amount": "2 teaspoons (2tsps)"
+          "name": {
+            "en": "brown sugar"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)"
+          }
         },
         {
-          "name": "cocoa powder",
-          "amount": "4 teaspoons (4tsps)"
+          "name": {
+            "en": "cocoa powder"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)"
+          }
         },
         {
-          "name": "old fashioned oats",
-          "amount": "0.5 cup (40.541g)"
+          "name": {
+            "en": "old fashioned oats"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)"
+          }
         },
         {
-          "name": "peanut butter",
-          "amount": "1 teaspoon (1tsp)"
+          "name": {
+            "en": "peanut butter"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)"
+          }
         },
         {
-          "name": "skim milk",
-          "amount": "1 cup (245ml)"
+          "name": {
+            "en": "skim milk"
+          },
+          "amount": {
+            "en": "1 cup (245ml)"
+          }
+        }
+      ],
+      "zh": [
+        {
+          "name": {
+            "en": "banana",
+            "zh": "香蕉"
+          },
+          "amount": {
+            "en": "1  (1)",
+            "zh": "1（1）"
+          }
+        },
+        {
+          "name": {
+            "en": "brown sugar",
+            "zh": "紅糖"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)",
+            "zh": "2茶匙（2TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "cocoa powder",
+            "zh": "可可粉"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)",
+            "zh": "4茶匙（4TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "old fashioned oats",
+            "zh": "老式燕麥"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)",
+            "zh": "0.5杯（40.541g）"
+          }
+        },
+        {
+          "name": {
+            "en": "peanut butter",
+            "zh": "花生醬"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "skim milk",
+            "zh": "脫脂牛奶"
+          },
+          "amount": {
+            "en": "1 cup (245ml)",
+            "zh": "1杯（245毫升）"
+          }
         }
       ]
     },
-    "image": "https://img.spoonacular.com/recipes/639249-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 2,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
     "dishTypes": [
       {
-        "en": "side dish"
+        "en": "side dish",
+        "zh": "小菜"
       }
     ],
-    "cuisines": [],
     "equipment": [
       {
-        "en": "sauce pan"
+        "en": "sauce pan",
+        "zh": "鍋醬"
       }
     ],
-    "sourceUrl": "http://www.foodista.com/recipe/DK3ZNB3L/chocolate-pb-and-banana-oats"
+    "diets": [
+      {
+        "en": "gluten free",
+        "zh": "不含麩質"
+      },
+      {
+        "en": "lacto ovo vegetarian",
+        "zh": "素食卵乳"
+      }
+    ]
   },
   {
     "id": "gbYicWgaK3OAI1FpfgSp",

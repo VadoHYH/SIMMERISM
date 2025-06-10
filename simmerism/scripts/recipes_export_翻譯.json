@@ -4976,81 +4976,160 @@
   {
     "id": "gXDRZgPMEyLJqKpk8B5l",
     "title": {
-      "en": "Chocolate, Pb and Banana Oats"
+      "en": "Chocolate, Pb and Banana Oats",
+      "zh": "巧克力，PB和香蕉燕麥"
     },
     "summary": {
-      "en": [
-        "Chocolate, Pb and Bananan Oats might be just the side dish you are searching for.",
-        "One serving contains 215 calories, 9g of protein, and 4g of fat.",
-        "For 43 cents per serving, this recipe covers 12% of your daily requirements of vitamins and minerals.",
-        "This recipe serves 2.",
-        "3 people were glad they tried this recipe.",
-        "Head to the store and pick up skim milk, brown sugar, peanut butter, and a few other things to make it today.",
-        "It is a good option if you're following a gluten free and lacto ovo vegetarian diet.",
-        "From preparation to the plate, this recipe takes roughly 45 minutes.",
-        "It is brought to you by Foodista.",
-        "With a spoonacular score of 79%, this dish is good.",
-        "Try Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes."
-      ]
+      "en": "Chocolate, Pb and Bananan Oats might be just the side dish you are searching for.\nOne serving contains 215 calories, 9g of protein, and 4g of fat.\nFor 43 cents per serving, this recipe covers 12% of your daily requirements of vitamins and minerals.\nThis recipe serves 2.\n3 people were glad they tried this recipe.\nHead to the store and pick up skim milk, brown sugar, peanut butter, and a few other things to make it today.\nIt is a good option if you're following a gluten free and lacto ovo vegetarian diet.\nFrom preparation to the plate, this recipe takes roughly 45 minutes.\nIt is brought to you by Foodista.\nWith a spoonacular score of 79%, this dish is good.\nTry Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes.",
+      "zh": "巧克力，PB和Bananan燕麥可能只是您正在尋找的配菜。一份食用包含215卡路里，9克蛋白質和4克脂肪。每份食譜以43美分的含量，涵蓋了您每天對維生素和礦物質的日常需求的12％，這些食譜為2.3個人而興奮不已。 today.It is a good option if you're following a gluten free and lacto ovo vegetarian diet.From preparation to the plate, this recipe takes roughly 45 minutes.It is brought to you by Foodista.With a spoonacular score of 79%, this dish is good.Try Chocolate, Pb and Bananan Oats, Chocolate, Pb and Bananan Oats, and Bananan Oats Chocolate Chip Cookies for similar recipes."
     },
     "instructions": {
-      "en": [
-        "Step 1: In a medium saucepan combine milk and oats. Bring to a boil.",
-        "Step 2: Stir in cocoa powder, peanut butter, banana and brown sugar. Cook for 5 minutes stirring constantly.",
-        "Step 3: Serve immediately."
+      "en": "Step 1: In a medium saucepan combine milk and oats. Bring to a boil.\nStep 2: Stir in cocoa powder, peanut butter, banana and brown sugar. Cook for 5 minutes stirring constantly.\nStep 3: Serve immediately.",
+      "zh": [
+        "步驟1：在中型鍋中混合牛奶和燕麥。燒開。",
+        "步驟2：加入可可粉，花生醬，香蕉和紅糖。煮5分鐘不斷攪拌。",
+        "步驟3：立即服務。"
       ]
     },
+    "translated": true,
+    "createdAt": "2025-06-08T15:43:15.074Z",
+    "favoriteCount": 0,
     "ingredients": {
       "en": [
         {
-          "name": "banana",
-          "amount": "1  (1)"
+          "name": {
+            "en": "banana"
+          },
+          "amount": {
+            "en": "1  (1)"
+          }
         },
         {
-          "name": "brown sugar",
-          "amount": "2 teaspoons (2tsps)"
+          "name": {
+            "en": "brown sugar"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)"
+          }
         },
         {
-          "name": "cocoa powder",
-          "amount": "4 teaspoons (4tsps)"
+          "name": {
+            "en": "cocoa powder"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)"
+          }
         },
         {
-          "name": "old fashioned oats",
-          "amount": "0.5 cup (40.541g)"
+          "name": {
+            "en": "old fashioned oats"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)"
+          }
         },
         {
-          "name": "peanut butter",
-          "amount": "1 teaspoon (1tsp)"
+          "name": {
+            "en": "peanut butter"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)"
+          }
         },
         {
-          "name": "skim milk",
-          "amount": "1 cup (245ml)"
+          "name": {
+            "en": "skim milk"
+          },
+          "amount": {
+            "en": "1 cup (245ml)"
+          }
+        }
+      ],
+      "zh": [
+        {
+          "name": {
+            "en": "banana",
+            "zh": "香蕉"
+          },
+          "amount": {
+            "en": "1  (1)",
+            "zh": "1（1）"
+          }
+        },
+        {
+          "name": {
+            "en": "brown sugar",
+            "zh": "紅糖"
+          },
+          "amount": {
+            "en": "2 teaspoons (2tsps)",
+            "zh": "2茶匙（2TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "cocoa powder",
+            "zh": "可可粉"
+          },
+          "amount": {
+            "en": "4 teaspoons (4tsps)",
+            "zh": "4茶匙（4TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "old fashioned oats",
+            "zh": "老式燕麥"
+          },
+          "amount": {
+            "en": "0.5 cup (40.541g)",
+            "zh": "0.5杯（40.541g）"
+          }
+        },
+        {
+          "name": {
+            "en": "peanut butter",
+            "zh": "花生醬"
+          },
+          "amount": {
+            "en": "1 teaspoon (1tsp)",
+            "zh": "1茶匙（1TSP）"
+          }
+        },
+        {
+          "name": {
+            "en": "skim milk",
+            "zh": "脫脂牛奶"
+          },
+          "amount": {
+            "en": "1 cup (245ml)",
+            "zh": "1杯（245毫升）"
+          }
         }
       ]
     },
-    "image": "https://img.spoonacular.com/recipes/639249-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 2,
-    "diets": [
-      {
-        "en": "gluten free"
-      },
-      {
-        "en": "lacto ovo vegetarian"
-      }
-    ],
     "dishTypes": [
       {
-        "en": "side dish"
+        "en": "side dish",
+        "zh": "小菜"
       }
     ],
-    "cuisines": [],
     "equipment": [
       {
-        "en": "sauce pan"
+        "en": "sauce pan",
+        "zh": "鍋醬"
       }
     ],
-    "sourceUrl": "http://www.foodista.com/recipe/DK3ZNB3L/chocolate-pb-and-banana-oats"
+    "diets": [
+      {
+        "en": "gluten free",
+        "zh": "不含麩質"
+      },
+      {
+        "en": "lacto ovo vegetarian",
+        "zh": "素食卵乳"
+      }
+    ]
   },
   {
     "id": "gbYicWgaK3OAI1FpfgSp",
