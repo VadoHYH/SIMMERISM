@@ -4,12 +4,15 @@ import { Search } from "lucide-react"
 type SearchBarProps = {
   value: string
   onChange: (value: string) => void
-  onSearch: () => void
+  onSearch: (e: React.FormEvent<HTMLFormElement>) => void
 }
 
 export default function SearchBar({ value, onChange, onSearch }: SearchBarProps) {
   return (
-    <div className="flex w-full max-w-xl">
+    <form
+      onSubmit={onSearch}
+      className="flex w-full max-w-xl"
+    >
       <div className="relative flex-grow">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3">
           <Search className="text-gray-400" />
@@ -23,11 +26,11 @@ export default function SearchBar({ value, onChange, onSearch }: SearchBarProps)
         />
       </div>
       <button
-        onClick={onSearch}
+        type="submit"
         className="bg-[#1E49CF] text-white px-6 rounded-r neo-button"
       >
         搜尋
       </button>
-    </div>
+    </form>
   )
 }

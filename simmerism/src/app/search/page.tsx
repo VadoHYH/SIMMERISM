@@ -2,61 +2,140 @@
 "use client"
 import RecipeCard from "@/components/recipeCard"
 import SearchBar from "@/components/searchBar"
+import FilterModal, { type FilterOptions } from "@/components/FilterModal"
 import Link from "next/link"
+import { Search, Filter, X } from "lucide-react"
 import { useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
 
 export default function SearchPage() {
-  const [keyword, setKeyword] = useState("") // 使用者輸入框內容
-  const [searchKeyword, setSearchKeyword] = useState("") // 按搜尋後才更新的值
+  const [keyword, setKeyword] = useState("")
+  const [searchKeyword, setSearchKeyword] = useState("")
   const [filterCategory, setFilterCategory] = useState("全部")
-  const { recipes } = useRecipes()
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
   const { favorites, toggleFavorite } = useFavorite()
 
-  const handleSearch = () => {
-    console.log("搜尋關鍵字：", keyword)
-    setSearchKeyword(keyword) // 這裡才觸發真正搜尋
+  const [selectedFilters, setSelectedFilters] = useState<FilterOptions>({
+    ingredients: [],
+    tools: [],
+    time: null,
+    servings: null,
+    tags: [],
+  })
+
+  const { recipes } = useRecipes()
+
+  const filterCount =
+    selectedFilters.ingredients.length +
+    selectedFilters.tools.length +
+    (selectedFilters.time ? 1 : 0) +
+    (selectedFilters.servings ? 1 : 0) +
+    selectedFilters.tags.length
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setSearchKeyword(keyword)
+  }
+
+  const handleFilterApply = (filters: FilterOptions) => {
+    setSelectedFilters(filters)
+  }
+
+  const removeFilter = (type: keyof FilterOptions, value: string | number | null) => {
+    setSelectedFilters((prev) => {
+      if (type === "time" || type === "servings") {
+        return { ...prev, [type]: null }
+      } else if (Array.isArray(prev[type])) {
+        return {
+          ...prev,
+          [type]: (prev[type] as string[]).filter((item) => item !== value),
+        }
+      }
+      return prev
+    })
+  }
+
+  const clearAllFilters = () => {
+    setSelectedFilters({
+      ingredients: [],
+      tools: [],
+      time: null,
+      servings: null,
+      tags: [],
+    })
   }
 
   const categoryMap: Record<string, string> = {
     全部: "",
-    主菜: "main course",
-    甜點: "dessert",
-    湯品: "soup",
-    小菜: "appetizer",
+    主菜: "主菜",
+    甜點: "甜點",
+    湯品: "湯品",
+    小菜: "小菜",
   }
 
-  const filteredRecipes = recipes.filter((recipe) => {
+  const filteredRecipes = recipes.filter((recipe: any) => {
     const lowerSearch = searchKeyword.toLowerCase()
   
-    // 容錯處理 dishTypes 與 diets 中的 zh
-    const allDishTypesZh = recipe.dishTypes?.map(type =>
-      typeof type === "string" ? type : type.zh
-    ).join(" ") || ""
+    const safeIncludes = (val: any) =>
+      typeof val === "string" && val.toLowerCase().includes(lowerSearch)
   
-    const allDietsZh = recipe.diets?.map(diet =>
-      typeof diet === "string" ? diet : diet.zh
-    ).join(" ") || ""
+    const allDishTypesZh = recipe.dishTypes?.map(type => type.zh).join(" ") || ""
+    const allDietsZh = recipe.diets?.map(diet => diet.zh).join(" ") || ""
+    const allEquipmentsZh = recipe.equipment?.map(e => e.zh).join(" ") || ""
+    const allIngredientsZh = recipe.ingredients?.map(i => i.name.zh).join(" ") || ""
   
-    // 關鍵字搜尋條件
+    const timeStr = recipe.readyInMinutes?.toString() || ""
+    const servingsStr = recipe.servings?.toString() || ""
+  
     const keywordMatch =
       !searchKeyword ||
-      recipe.title?.zh?.toLowerCase().includes(lowerSearch) ||
-      allDishTypesZh.toLowerCase().includes(lowerSearch) ||
-      allDietsZh.toLowerCase().includes(lowerSearch)
+      safeIncludes(recipe.title?.zh) ||
+      safeIncludes(allDishTypesZh) ||
+      safeIncludes(allDietsZh) ||
+      safeIncludes(allEquipmentsZh) ||
+      safeIncludes(allIngredientsZh) ||
+      safeIncludes(timeStr) ||
+      safeIncludes(servingsStr)
   
-    // 分類比對
     const categoryKey = categoryMap[filterCategory]
     const categoryMatch =
       filterCategory === "全部" ||
-      recipe.dishTypes?.some((type) =>
-        typeof type === "object" && type.en === categoryKey
+      (recipe.dishTypes || []).some(type => type.zh.includes(categoryKey))
+  
+    const ingredientMatch =
+      selectedFilters.ingredients.length === 0 ||
+      selectedFilters.ingredients.every((ing) =>
+        recipe.ingredients?.some((rIng) =>
+          rIng.name.zh.includes(ing)
+        )
       )
   
-    return keywordMatch && categoryMatch
+    const toolMatch =
+      selectedFilters.tools.length === 0 ||
+      selectedFilters.tools.every((tool) =>
+        recipe.equipment?.some((e) =>
+          e.zh.includes(tool)
+        )
+      )
+  
+    const servingsMatch =
+      !selectedFilters.servings ||
+      Number(recipe.servings) === Number(selectedFilters.servings)
+  
+    const timeMatch =
+      !selectedFilters.time ||
+      Number(recipe.readyInMinutes) <= Number(selectedFilters.time)
+  
+    const allTagsZh = [...(recipe.dishTypes || []), ...(recipe.diets || [])].map(tag => tag.zh)
+    const tagMatch =
+      selectedFilters.tags.length === 0 ||
+      selectedFilters.tags.every((tag) => allTagsZh.includes(tag))
+  
+    return keywordMatch && categoryMatch && ingredientMatch && toolMatch && servingsMatch && timeMatch && tagMatch
   })
-
+  
+  
   const categories = ["全部", "主菜", "甜點", "湯品", "小菜"]
 
   return (
@@ -75,20 +154,107 @@ export default function SearchPage() {
               }`}
               onClick={() => {
                 setFilterCategory(category)
-
-                if (category === "全部") {
-                  setKeyword("")
-                  setSearchKeyword("")
-                }
+                setSearchKeyword(keyword)  // 這樣能結合分類+搜尋
               }}
             >
               {category}
             </button>
           ))}
-          <button className="border border-gray-800 rounded px-4 py-1 bg-white ml-auto neo-button">
+          <button
+            className={`border border-gray-800 rounded px-4 py-1 flex items-center gap-1 ml-auto neo-button ${
+              filterCount > 0 ? "bg-[#5a9a8e] text-white" : "bg-white"
+            }`}
+            onClick={() => setIsFilterOpen(true)}
+          >
+            <Filter size={16} />
             更多篩選
+            {filterCount > 0 && <span className="ml-1">({filterCount})</span>}
           </button>
         </div>
+
+        {/* 已應用的篩選條件標籤 */}
+        {filterCount > 0 && (
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="text-sm font-medium">已選擇:</span>
+              {selectedFilters.ingredients.map((ingredient) => (
+                <div
+                  key={`ingredient-${ingredient}`}
+                  className="bg-[#5a9a8e] text-white text-sm px-2 py-1 rounded-full flex items-center"
+                >
+                  <span>食材: {ingredient}</span>
+                  <button
+                    onClick={() => removeFilter("ingredients", ingredient)}
+                    className="ml-1 p-0.5 hover:bg-[#4a8a7e] rounded-full"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              ))}
+              {selectedFilters.tools.map((tool) => (
+                <div
+                  key={`tool-${tool}`}
+                  className="bg-[#5a9a8e] text-white text-sm px-2 py-1 rounded-full flex items-center"
+                >
+                  <span>器具: {tool}</span>
+                  <button
+                    onClick={() => removeFilter("tools", tool)}
+                    className="ml-1 p-0.5 hover:bg-[#4a8a7e] rounded-full"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              ))}
+              {selectedFilters.time && (
+                <div className="bg-[#5a9a8e] text-white text-sm px-2 py-1 rounded-full flex items-center">
+                  <span>時間: {selectedFilters.time}分鐘內</span>
+                  <button
+                    onClick={() => removeFilter("time", selectedFilters.time)}
+                    className="ml-1 p-0.5 hover:bg-[#4a8a7e] rounded-full"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              )}
+              {selectedFilters.servings && (
+                <div className="bg-[#5a9a8e] text-white text-sm px-2 py-1 rounded-full flex items-center">
+                  <span>人數: {selectedFilters.servings}人</span>
+                  <button
+                    onClick={() => removeFilter("servings", selectedFilters.servings)}
+                    className="ml-1 p-0.5 hover:bg-[#4a8a7e] rounded-full"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              )}
+              {selectedFilters.tags.map((tag) => (
+                <div
+                  key={`tag-${tag}`}
+                  className="bg-[#5a9a8e] text-white text-sm px-2 py-1 rounded-full flex items-center"
+                >
+                  <span>標籤: {tag}</span>
+                  <button
+                    onClick={() => removeFilter("tags", tag)}
+                    className="ml-1 p-0.5 hover:bg-[#4a8a7e] rounded-full"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              ))}
+              <button onClick={clearAllFilters} className="text-sm text-gray-600 underline hover:text-gray-800">
+                清除全部
+              </button>
+            </div>
+          </div>
+        )}
+  
+        <FilterModal
+          isOpen={isFilterOpen}
+          onClose={() => setIsFilterOpen(false)}
+          onApply={handleFilterApply}
+          initialFilters={selectedFilters}
+          recipes={recipes}
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredRecipes.map((recipe) => (
