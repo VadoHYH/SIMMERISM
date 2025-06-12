@@ -1,5 +1,6 @@
 // components/SearchBar.tsx
-import { Search } from "lucide-react"
+import { Search, X } from "lucide-react"
+
 
 type SearchBarProps = {
   value: string
@@ -17,6 +18,18 @@ export default function SearchBar({ value, onChange, onSearch }: SearchBarProps)
         <div className="absolute inset-y-0 left-0 flex items-center pl-3">
           <Search className="text-gray-400" />
         </div>
+        
+        {/* Clear Button */}
+        {value && (
+          <button
+            type="button"
+            onClick={() => onChange("")}
+            className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-black"
+          >
+            <X size={18} />
+          </button>
+        )}
+
         <input
           type="text"
           value={value}

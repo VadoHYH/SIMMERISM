@@ -3,8 +3,9 @@
 import RecipeCard from "@/components/recipeCard"
 import SearchBar from "@/components/searchBar"
 import FilterModal, { type FilterOptions } from "@/components/FilterModal"
+import Pagination from "@/components/pagination"
 import Link from "next/link"
-import { Search, Filter, X } from "lucide-react"
+import {  Filter, X } from "lucide-react"
 import { useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
@@ -15,7 +16,9 @@ export default function SearchPage() {
   const [filterCategory, setFilterCategory] = useState("全部")
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const { favorites, toggleFavorite } = useFavorite()
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 12
+  
   const [selectedFilters, setSelectedFilters] = useState<FilterOptions>({
     ingredients: [],
     tools: [],
@@ -36,10 +39,18 @@ export default function SearchPage() {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setSearchKeyword(keyword)
+    setCurrentPage(1)
   }
 
   const handleFilterApply = (filters: FilterOptions) => {
     setSelectedFilters(filters)
+    setCurrentPage(1)
+  }
+
+  const setFilterCategoryAndSearch = (category: string) => {
+    setFilterCategory(category)
+    setSearchKeyword(keyword)
+    setCurrentPage(1)
   }
 
   const removeFilter = (type: keyof FilterOptions, value: string | number | null) => {
@@ -80,10 +91,10 @@ export default function SearchPage() {
     const safeIncludes = (val: any) =>
       typeof val === "string" && val.toLowerCase().includes(lowerSearch)
   
-    const allDishTypesZh = recipe.dishTypes?.map(type => type.zh).join(" ") || ""
-    const allDietsZh = recipe.diets?.map(diet => diet.zh).join(" ") || ""
-    const allEquipmentsZh = recipe.equipment?.map(e => e.zh).join(" ") || ""
-    const allIngredientsZh = recipe.ingredients?.map(i => i.name.zh).join(" ") || ""
+    const allDishTypesZh = recipe.dishTypes?.map((type: { zh: string }) => type.zh).join(" ") || ""
+    const allDietsZh = recipe.diets?.map((diet: { zh: string }) => diet.zh).join(" ") || ""
+    const allEquipmentsZh = recipe.equipment?.map((e: { zh: string }) => e.zh).join(" ") || ""
+    const allIngredientsZh = recipe.ingredients?.map((i: { name: { zh: string } }) => i.name.zh).join(" ") || ""
   
     const timeStr = recipe.readyInMinutes?.toString() || ""
     const servingsStr = recipe.servings?.toString() || ""
@@ -101,12 +112,12 @@ export default function SearchPage() {
     const categoryKey = categoryMap[filterCategory]
     const categoryMatch =
       filterCategory === "全部" ||
-      (recipe.dishTypes || []).some(type => type.zh.includes(categoryKey))
+      (recipe.dishTypes || []).some((type: { zh: string }) => type.zh.includes(categoryKey))
   
     const ingredientMatch =
       selectedFilters.ingredients.length === 0 ||
       selectedFilters.ingredients.every((ing) =>
-        recipe.ingredients?.some((rIng) =>
+        recipe.ingredients?.some((rIng: { name: { zh: string } }) =>
           rIng.name.zh.includes(ing)
         )
       )
@@ -114,7 +125,7 @@ export default function SearchPage() {
     const toolMatch =
       selectedFilters.tools.length === 0 ||
       selectedFilters.tools.every((tool) =>
-        recipe.equipment?.some((e) =>
+        recipe.equipment?.some((e: { zh: string }) =>
           e.zh.includes(tool)
         )
       )
@@ -134,6 +145,12 @@ export default function SearchPage() {
   
     return keywordMatch && categoryMatch && ingredientMatch && toolMatch && servingsMatch && timeMatch && tagMatch
   })
+  const totalPages = Math.ceil(filteredRecipes.length / itemsPerPage)
+
+  const paginatedRecipes = filteredRecipes.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  )
   
   
   const categories = ["全部", "主菜", "甜點", "湯品", "小菜"]
@@ -257,7 +274,7 @@ export default function SearchPage() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredRecipes.map((recipe) => (
+          {paginatedRecipes.map((recipe) => (
             <Link href={`/recipe/${recipe.id}`} key={recipe.id}>
               <RecipeCard
                 key={recipe.id}
@@ -272,6 +289,14 @@ export default function SearchPage() {
               />
             </Link>
           ))}
+        </div>
+        {/* 分頁按鈕 */}
+        <div className="mt-10 flex justify-center">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
         </div>
       </div>
     </div>
