@@ -98,7 +98,7 @@ export default function RecipeCard({
                 e.stopPropagation()
                 setShowAllTags(false)
               }}
-              className="text-xs border border-black rounded px-1 bg-white hover:bg-black hover:text-white"
+              className="text-xs border border-black rounded px-1 bg-[#519181] text-white hover:bg-[#417366]"
             >
               收起
             </button>
