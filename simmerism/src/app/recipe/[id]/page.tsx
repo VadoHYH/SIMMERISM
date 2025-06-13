@@ -92,12 +92,12 @@ export default function RecipePage() {
             fill
             className="object-cover rounded-xl shadow-md"
           />
-            <button className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1">
+            {/* <button className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1">
               <ChevronLeft size={24} />
             </button>
             <button className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1">
               <ChevronRight size={24} />
-            </button>
+            </button> */}
           </div>
 
           <div>
@@ -226,9 +226,9 @@ export default function RecipePage() {
         <div className="mt-8 border-2 border-black rounded p-4">
           <h2 className="font-bold text-xl mb-4">所需器具</h2>
           <div className="relative">
-            <button className="absolute left-0 top-1/2 transform -translate-y-1/2">
+            {/* <button className="absolute left-0 top-1/2 transform -translate-y-1/2">
               <ChevronLeft size={24} />
-            </button>
+            </button> */}
             <div className="flex justify-between px-8 overflow-x-auto no-scrollbar gap-4">
               {recipe.equipment.map((item, index) => (
                 <div key={index} className="text-center min-w-[100px]">
@@ -239,9 +239,9 @@ export default function RecipePage() {
                 </div>
               ))}
             </div>
-            <button className="absolute right-0 top-1/2 transform -translate-y-1/2">
+            {/* <button className="absolute right-0 top-1/2 transform -translate-y-1/2">
               <ChevronRight size={24} />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

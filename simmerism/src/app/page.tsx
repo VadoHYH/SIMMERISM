@@ -192,20 +192,18 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {recipes.slice(0, 4).map(recipe => (
-              <Link href={`/recipe/${recipe.id}`} key={recipe.id}>
-                  <RecipeCard
-                  key={recipe.id}
-                  id={recipe.id}
-                  title={recipe.title}
-                  image={recipe.image}
-                  liked={favorites.includes(recipe.id.toString())}
-                  readyInMinutes={recipe.readyInMinutes}
-                  dishTypes={recipe.dishTypes}
-                  diets={recipe.diets}
-                  onLike={() => toggleFavorite(recipe)}
-                />
-              </Link> 
+            {recipes.slice(0, 4).map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                id={recipe.id}
+                title={recipe.title}
+                image={recipe.image}
+                liked={favorites.includes(recipe.id.toString())}
+                readyInMinutes={recipe.readyInMinutes}
+                dishTypes={recipe.dishTypes}
+                diets={recipe.diets}
+                onLike={() => toggleFavorite(recipe)}
+              />
             ))}
           </div>
         </div>

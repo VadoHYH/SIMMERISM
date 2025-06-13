@@ -275,19 +275,17 @@ export default function SearchPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {paginatedRecipes.map((recipe) => (
-            <Link href={`/recipe/${recipe.id}`} key={recipe.id}>
-              <RecipeCard
-                key={recipe.id}
-                id={recipe.id}
-                title={recipe.title}
-                image={recipe.image}
-                liked={favorites.includes(recipe.id.toString())}
-                readyInMinutes={recipe.readyInMinutes}
-                dishTypes={recipe.dishTypes}
-                diets={recipe.diets}
-                onLike={() => toggleFavorite(recipe)}
-              />
-            </Link>
+            <RecipeCard
+              key={recipe.id}
+              id={recipe.id}
+              title={recipe.title}
+              image={recipe.image}
+              liked={favorites.includes(recipe.id.toString())}
+              readyInMinutes={recipe.readyInMinutes}
+              dishTypes={recipe.dishTypes}
+              diets={recipe.diets}
+              onLike={() => toggleFavorite(recipe)}
+            />
           ))}
         </div>
         {/* 分頁按鈕 */}
