@@ -7,8 +7,7 @@ import dayjs from 'dayjs'
 import { useSchedule, ScheduleItem} from '@/hooks/useSchedule';
 import ScheduleCard from '@/components/ScheduleCard';
 import { useRouter } from 'next/navigation';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from '@/components/DatePicker' 
 
 export default function SchedulePage() {
   const router = useRouter();
@@ -36,7 +35,30 @@ export default function SchedulePage() {
   
   if (localLoading) return <p>Loading...</p>;
 
-  if (schedule.length === 0) return <p>還未安排任何行程</p>;
+  if (schedule.length === 0) {
+    return (
+      <div className="min-h-screen bg-[#f9f5f1] flex items-center justify-center">
+        <div className="bg-white border-2 border-black rounded-lg p-8 max-w-md text-center space-y-6">
+          <h2 className="text-2xl font-bold">目前尚未安排任何行程</h2>
+          <p className="text-gray-600">可以開始探索食譜並加入喜歡的餐點到行程中喔！</p>
+          <div className="flex justify-center gap-4">
+            <button
+              className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold rounded-lg hover:bg-[#ffb452] neo-button"
+              onClick={() => router.push('/search')}
+            >
+              去探索食譜
+            </button>
+            <button
+              className="bg-white border-2 border-black px-4 py-2 font-bold rounded-lg hover:bg-gray-100 neo-button"
+              onClick={() => router.push('/collection')}
+            >
+              查看收藏清單
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const handleScheduleClick = async (schedule: ScheduleItem) => {
     if (!schedule.id) {
@@ -44,11 +66,18 @@ export default function SchedulePage() {
       return;
     }
     
-    if (!schedule.isDone) {
-      await updateSchedule(schedule.id, { isDone: true });
-    } else if (schedule.isDone && !schedule.reviewId) {
-      router.push(`/reviews/create?scheduleId=${schedule.id}`);
+    // if (!schedule.isDone) {
+    //   await updateSchedule(schedule.id, { isDone: true });
+    // } else if (schedule.isDone && !schedule.reviewId) {
+    //   router.push(`/reviews/create?scheduleId=${schedule.id}`);
+    // } else {
+    //   router.push(`/reviews/${schedule.reviewId}`);
+    // }
+
+    if (!schedule.reviewId) {
+      await updateSchedule(schedule.id, { isDone: !schedule.isDone });
     } else {
+      // 已經有食記的情況，就導向該頁
       router.push(`/reviews/${schedule.reviewId}`);
     }
   };
@@ -87,7 +116,11 @@ export default function SchedulePage() {
           <div className="bg-[#ffc278] border-2 border-black px-6 py-2 font-bold neo-button">
             <DatePicker
               selected={currentDate.toDate()}
-              onChange={(date) => setCurrentDate(dayjs(date))}
+              onChange={(date: Date | null) => {
+                if (date) {
+                  setCurrentDate(dayjs(date))
+                }
+              }}
               dateFormat="yyyy/MM/dd"
               className="text-center border border-black rounded px-2 py-1 font-bold bg-white"
             />
@@ -120,14 +153,26 @@ export default function SchedulePage() {
               </div>
             </div>
 
-            {breakfastSchedules.map(schedule => (
-              <ScheduleCard
-                key={schedule.id}
-                schedule={schedule}
-                onClickStatus={handleScheduleClick}
-                onDelete={handleDeleteSchedule}
-              />
-            ))}
+            {breakfastSchedules.length === 0 ? (
+              <div className="text-gray-600 p-4 border border-dashed border-gray-300 rounded-lg text-center">
+                🍞 早餐還沒安排呢～  
+                <button
+                  className="ml-2 text-[#519181] underline hover:text-[#3e6f63]"
+                  onClick={() => router.push('/search')}
+                >
+                  去探索食譜
+                </button>
+              </div>
+            ) : (
+              breakfastSchedules.map((schedule) => (
+                <ScheduleCard
+                  key={schedule.id}
+                  schedule={schedule}
+                  onClickStatus={handleScheduleClick}
+                  onDelete={handleDeleteSchedule}
+                />
+              ))
+            )}
           </div>
 
           {/* 中餐 */}
@@ -148,14 +193,26 @@ export default function SchedulePage() {
               </div>
             </div>
 
-            {lunchSchedules.map(schedule => (
-              <ScheduleCard
-                key={schedule.id}
-                schedule={schedule}
-                onClickStatus={handleScheduleClick}
-                onDelete={handleDeleteSchedule}
-              />
-            ))}
+            {lunchSchedules.length === 0 ? (
+              <div className="text-gray-600 p-4 border border-dashed border-gray-300 rounded-lg text-center">
+                🍛 午餐還沒安排呢～
+                <button
+                  className="ml-2 text-[#519181] underline hover:text-[#3e6f63]"
+                  onClick={() => router.push('/search')}
+                >
+                  去探索食譜
+                </button>
+              </div>
+            ) : (
+              lunchSchedules.map((schedule) => (
+                <ScheduleCard
+                  key={schedule.id}
+                  schedule={schedule}
+                  onClickStatus={handleScheduleClick}
+                  onDelete={handleDeleteSchedule}
+                />
+              ))
+            )}
           </div>
 
           {/* 晚餐 */}
@@ -176,14 +233,26 @@ export default function SchedulePage() {
               </div>
             </div>
 
-            {dinnerSchedules.map(schedule => (
-              <ScheduleCard
-                key={schedule.id}
-                schedule={schedule}
-                onClickStatus={handleScheduleClick}
-                onDelete={handleDeleteSchedule}
-              />
-            ))}
+            {dinnerSchedules.length === 0 ? (
+              <div className="text-gray-600 p-4 border border-dashed border-gray-300 rounded-lg text-center">
+                🍲 晚餐還沒安排呢～
+                <button
+                  className="ml-2 text-[#519181] underline hover:text-[#3e6f63]"
+                  onClick={() => router.push('/search')}
+                >
+                  去探索食譜
+                </button>
+              </div>
+            ) : (
+              dinnerSchedules.map((schedule) => (
+                <ScheduleCard
+                  key={schedule.id}
+                  schedule={schedule}
+                  onClickStatus={handleScheduleClick}
+                  onDelete={handleDeleteSchedule}
+                />
+              ))
+            )}
           </div>
         </div>
       </div>

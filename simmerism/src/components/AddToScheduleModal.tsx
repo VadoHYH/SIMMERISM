@@ -1,7 +1,6 @@
 // components/AddToScheduleModal.tsx
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from '@/components/DatePicker' 
 
 type Props = {
   isOpen: boolean;
@@ -31,12 +30,13 @@ const AddToScheduleModal = ({ isOpen, onClose, onSave }: Props) => {
         <h2 className="text-xl font-semibold mb-4">加入行程</h2>
 
         <label className="block mb-2 text-gray-700">選擇日期</label>
+        <div className="w-full border border-gray-300 p-2 rounded mb-4 bg-white">
         <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          className="w-full border border-gray-300 p-2 rounded mb-4"
+          selected={selectedDate ?? undefined} // 把 null 轉為 undefined
+          onChange={(date: Date | null) => setSelectedDate(date)}
           dateFormat="yyyy/MM/dd"
         />
+        </div>
 
         <label className="block mb-2 text-gray-700">選擇餐別</label>
         <div className="flex justify-between mb-4">

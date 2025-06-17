@@ -2,12 +2,14 @@
 'use client'
 
 import { Edit, Trash2 } from 'lucide-react'
+import Link from "next/link"
 import { useState } from 'react'
 import { useShoppingList } from '@/hooks/useShoppingList'
 import { useSchedule } from '@/hooks/useSchedule' // 假設這裡提供行程資料
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+import DatePicker from '@/components/DatePicker' 
 import { format, addDays } from 'date-fns'
+
+
 
 export default function ShoppingPage() {
   const today = new Date()
@@ -35,8 +37,6 @@ export default function ShoppingPage() {
     endDate: formattedEnd,
   })
 
-  console.log('📅 schedule in ShoppingPage:', schedule)
-  console.log('📅 formattedStart, formattedEnd:', formattedStart, formattedEnd)
   return (
     <div className="min-h-screen bg-[#f9f5f1] py-8">
       <div className="container mx-auto px-4">
@@ -59,9 +59,9 @@ export default function ShoppingPage() {
                   selectsRange
                   startDate={startDate}
                   endDate={endDate}
-                  onChange={(dates) => {
-                    setDateRange(dates as [Date | null, Date | null])
-                  }}
+                  onChange={(dates: [Date | null, Date | null]) => {
+                    setDateRange(dates)
+                  }}  
                   isClearable={true}
                 />
               </div>
@@ -87,24 +87,43 @@ export default function ShoppingPage() {
                     >
                       {item.name}
                     </span>
-                    <span className={`text-sm mr-2 transition-all ${
+                    <span className={`text-sm min-w-[60px] text-right transition-all ${
                       isChecked(item.key) 
                         ? 'text-gray-400 line-through' 
                         : 'text-gray-600'
                     }`}>
-                      {item.totalAmount} {item.unit}
+                      {item.totalAmount} {item.unit.replace(/[\d.()（）]/g, '').trim() || '份'}
                     </span>
-                    {/* <button
-                      className="bg-[#ff6347] text-black p-1 mr-2 neo-button"
-                      onClick={() => removeItem(item.key)}
-                    >
-                      <Trash2 size={20} />
-                    </button> */}
                   </div>
                 </div>
               ))}
               {shoppingList.length === 0 && (
-                <div className="text-gray-500">目前尚無採購項目。</div>
+                <div className="bg-white border border-dashed border-gray-400 rounded-lg p-6 text-center space-y-4">
+                  <p className="text-lg">🛒 目前沒有需要採購的項目</p>
+                  {schedule.length === 0 ? (
+                    <>
+                      <p className="text-gray-600">你還沒有安排任何行程喔</p>
+                      <button
+                        className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold rounded-lg hover:bg-[#ffb452] neo-button"
+                        onClick={() => window.location.href = '/schedule'}
+                      >
+                        去安排本週菜單
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-gray-600">
+                        目前所選日期範圍內的行程沒有需要採購的項目～
+                      </p>
+                      <button
+                        className="bg-[#519181] text-white border-2 border-black px-4 py-2 font-bold rounded-lg hover:bg-[#5a9a8e] neo-button"
+                        onClick={() => setDateRange([today, oneWeekLater])}
+                      >
+                        重設為本週日期
+                      </button>
+                    </>
+                  )}
+                </div>
               )}
             </div>
 

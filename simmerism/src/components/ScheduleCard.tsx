@@ -10,20 +10,32 @@ type ScheduleCardProps = {
 };
 
 export default function ScheduleCard({ schedule, onClickStatus, onDelete }: ScheduleCardProps) {
+    // const getStatusButton = () => {
+    //   if (!schedule.isDone) {
+    //     return <button onClick={() => onClickStatus(schedule)} className="bg-[#ffc278] text-black p-1 neo-button">完成料理</button>;
+    //   }
+    //   if (schedule.isDone && !schedule.reviewId) {
+    //     return <button onClick={() => onClickStatus(schedule)} className="bg-[#F7CEFA] border border-black p-1 neo-button">撰寫食記</button>;
+    //   }
+    //   return (
+    //     <button onClick={() => onClickStatus(schedule)} className="bg-[#5a9a8e] border border-black p-1 neo-button">
+    //       查看食記
+    //     </button>
+    //   );
+    // };
+    
     const getStatusButton = () => {
-      if (!schedule.isDone) {
-        return <button onClick={() => onClickStatus(schedule)} className="bg-[#ffc278] text-black p-1 neo-button">完成料理</button>;
-      }
-      if (schedule.isDone && !schedule.reviewId) {
-        return <button onClick={() => onClickStatus(schedule)} className="bg-[#F7CEFA] border border-black p-1 neo-button">撰寫食記</button>;
-      }
       return (
-        <button onClick={() => onClickStatus(schedule)} className="bg-[#5a9a8e] border border-black p-1 neo-button">
-          查看食記
+        <button
+          onClick={() => onClickStatus(schedule)}
+          className={`p-1 neo-button border border-black ${
+            schedule.isDone ? 'bg-[#5a9a8e] text-white' : 'bg-[#ffc278] text-black'
+          }`}
+        >
+          {schedule.isDone ? '取消完成' : '完成料理'}
         </button>
       );
     };
-    
   
     return (
       <div className="flex items-center border-b border-gray-200 py-3">

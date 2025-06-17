@@ -80,7 +80,7 @@ export default function Home() {
               <Link 
                 href="/schedule" 
                 key={label}
-                className={`col-start-${index + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-button cursor-pointer`}
+                className={`col-start-${index + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-card cursor-pointer`}
               >
                 {/* 左上角 17 角星標籤 */}
                 <div className="absolute top-2 left-2 w-10 h-10">
@@ -146,7 +146,7 @@ export default function Home() {
                   <div className="text-gray-500 text-center py-8">
                     目前沒有採購項目
                     <br />
-                    <Link href="/schedule" className="text-[#519181] underline text-sm">
+                    <Link href="/search" className="text-[#519181] underline text-sm">
                       先去安排餐點行程吧！
                     </Link>
                   </div>
