@@ -219,7 +219,7 @@ export default function QuestionsPage() {
                   <button
                     type="submit"
                     disabled={isLoading || !userInput.trim()}
-                    className={`relative px-6 py-3 border-2 border-black rounded font-bold transition-colors flex items-center gap-2 h-12 z-10 ${
+                    className={`relative px-6 py-3 border-2 border-black rounded font-bold transition-colors flex items-center gap-2 h-12 z-10 neo-button ${
                       isLoading || !userInput.trim()
                         ? "bg-gray-400 text-gray-600 cursor-not-allowed"
                         : "bg-[#FB7659] text-white hover:bg-[#e55a40]"
@@ -251,7 +251,7 @@ export default function QuestionsPage() {
                 <div className="absolute top-1 left-1 w-full h-full bg-black rounded"></div>
                 <button
                   onClick={() => setUserInput(question)}
-                  className="relative w-full p-3 bg-white border-2 border-black rounded text-left font-medium hover:bg-[#f0f0f0] transition-colors z-10"
+                  className="relative w-full p-3 bg-white border-2 border-black rounded text-left font-medium hover:bg-[#f0f0f0] transition-colors z-10 neo-button"
                 >
                   {question}
                 </button>
