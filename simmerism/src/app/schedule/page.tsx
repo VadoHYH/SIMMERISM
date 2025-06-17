@@ -122,7 +122,6 @@ export default function SchedulePage() {
                 }
               }}
               dateFormat="yyyy/MM/dd"
-              className="text-center border border-black rounded px-2 py-1 font-bold bg-white"
             />
           </div>
 
