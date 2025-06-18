@@ -1,4 +1,4 @@
-// components/LoginModal.tsx
+// components/RegisterModal.tsx
 "use client"
 
 import { Dialog } from "@headlessui/react"
@@ -6,6 +6,7 @@ import { useState } from "react"
 import { auth } from "@/lib/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { updateProfile } from "firebase/auth"
+
 
 export default function RegisterModal({
   isOpen,

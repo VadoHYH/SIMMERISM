@@ -2,6 +2,7 @@
 "use client"
 
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 import RecipeCard from "@/components/recipeCard"
 import { ArrowRight, Edit } from "lucide-react"
 import { useRecipes } from "@/hooks/useRecipes"
@@ -9,6 +10,7 @@ import { useFavorite } from "@/hooks/useFavorite"
 import { useShoppingList } from "@/hooks/useShoppingList"
 import { useSchedule } from "@/hooks/useSchedule"
 import { useState, useEffect, useMemo } from "react"
+import { useRequireLogin } from "@/hooks/useRequireLogin";
 import { format, addDays } from 'date-fns'
 import dayjs from 'dayjs'
 
@@ -16,6 +18,8 @@ export default function Home() {
   const { recipes, loading } = useRecipes()
   const { favorites, toggleFavorite } = useFavorite()
   const { schedule } = useSchedule()
+  const requireLogin = useRequireLogin();
+  const router = useRouter();
 
   // 設定採購清單的日期範圍（本周）
   const today = new Date()
@@ -77,9 +81,9 @@ export default function Home() {
               { label: "午", count: todayScheduleCounts.lunch, index: 1 },
               { label: "晚", count: todayScheduleCounts.dinner, index: 2 }
             ].map(({ label, count, index }) => (
-              <Link 
-                href="/schedule" 
+              <div 
                 key={label}
+                onClick={() => requireLogin(() => router.push("/schedule"))}
                 className={`col-start-${index + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-card cursor-pointer`}
               >
                 {/* 左上角 17 角星標籤 */}
@@ -106,7 +110,7 @@ export default function Home() {
 
                 {/* 右下角「道」 */}
                 <div className="absolute bottom-2 right-2 text-xl text-black">道</div>
-              </Link>
+              </div>
             ))}
 
 
@@ -146,9 +150,12 @@ export default function Home() {
                   <div className="text-gray-500 text-center py-8">
                     目前沒有採購項目
                     <br />
-                    <Link href="/search" className="text-[#519181] underline text-sm">
+                    <div  
+                      onClick={() => requireLogin(() => router.push("/schedule"))}
+                      className="text-[#519181] underline text-sm"
+                    >
                       先去安排餐點行程吧！
-                    </Link>
+                    </div>
                   </div>
                 )}
                 
@@ -160,22 +167,23 @@ export default function Home() {
                 )}
               </div>
               <div className="flex justify-end mt-4">
-                <Link href="/shopping">
-                  <button className="p-2 bg-[#F7CEFA] border-2 border-black neo-button">
-                    <svg
-                      width="25"
-                      height="25"
-                      viewBox="0 0 25 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7.18695 16.8145L17.3289 6.67254L15.9149 5.25854L5.77295 15.4005V16.8145H7.18695ZM8.01595 18.8145H3.77295V14.5715L15.2079 3.13654C15.3955 2.94907 15.6498 2.84375 15.9149 2.84375C16.1801 2.84375 16.4344 2.94907 16.6219 3.13654L19.4509 5.96554C19.6384 6.15306 19.7437 6.40737 19.7437 6.67254C19.7437 6.9377 19.6384 7.19201 19.4509 7.37954L8.01595 18.8145ZM3.77295 20.8145H21.7729V22.8145H3.77295V20.8145Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </button>
-                </Link>
+                <button 
+                  onClick={() => requireLogin(() => router.push("/shopping"))}
+                  className="p-2 bg-[#F7CEFA] border-2 border-black neo-button"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.18695 16.8145L17.3289 6.67254L15.9149 5.25854L5.77295 15.4005V16.8145H7.18695ZM8.01595 18.8145H3.77295V14.5715L15.2079 3.13654C15.3955 2.94907 15.6498 2.84375 15.9149 2.84375C16.1801 2.84375 16.4344 2.94907 16.6219 3.13654L19.4509 5.96554C19.6384 6.15306 19.7437 6.40737 19.7437 6.67254C19.7437 6.9377 19.6384 7.19201 19.4509 7.37954L8.01595 18.8145ZM3.77295 20.8145H21.7729V22.8145H3.77295V20.8145Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
