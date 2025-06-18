@@ -4,12 +4,12 @@ import RecipeCard from "@/components/recipeCard"
 import { useEffect, useState } from "react"
 import { db } from "@/lib/firebase"
 import { doc, getDoc } from "firebase/firestore"
-import { useAuth } from "@/context/AuthContext"
+import { useAuthStore } from '@/stores/useAuthStore'
 import Link from "next/link"
 
 
 export default function CollectionPage() {
-  const { user } = useAuth()
+  const user = useAuthStore((state) => state.user)
   const { favorites, toggleFavorite } = useFavorite()
   const [favoriteRecipes, setFavoriteRecipes] = useState<any[]>([])
   
