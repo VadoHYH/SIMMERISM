@@ -102,7 +102,7 @@ export default function RecipeCard({
             >
               收起
             </button>
-          )}
+          )} 
         </div>
       </div>
     </div>

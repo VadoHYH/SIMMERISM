@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react'
 import { db } from '@/lib/firebase'
 import { collection, addDoc, query, where, getDocs, Timestamp } from 'firebase/firestore'
-import { useAuth } from '@/context/AuthContext'
+import { useAuthStore } from '@/stores/useAuthStore'
 import { doc, updateDoc, getDoc, deleteDoc } from 'firebase/firestore';
 
 export type Ingredient = {
@@ -34,7 +34,7 @@ export type ScheduleItem = {
 }
 
 export const useSchedule = () => {
-  const { user } = useAuth()
+  const user = useAuthStore((state) => state.user)
   const [schedule, setSchedule] = useState<ScheduleItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 

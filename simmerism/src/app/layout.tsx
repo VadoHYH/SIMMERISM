@@ -5,7 +5,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ChatButton from "@/components/chatButton"
-import { AuthProvider } from '@/context/AuthContext'
+import AuthProvider from '@/app/AuthProvider'
 import { LoginModalProvider } from "@/context/LoginModalContext"
 
 const inter = Inter({ subsets: ["latin"] })

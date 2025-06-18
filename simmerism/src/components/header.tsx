@@ -5,22 +5,18 @@ import { useState, useEffect } from "react"
 import { onAuthStateChanged, signOut, User } from "firebase/auth"
 import { auth } from "@/lib/firebase"
 import { useLoginModal } from "@/context/LoginModalContext"
-import NavItem from "@/components/NavItem" // 這是你剛寫好的 component
+import NavItem from "@/components/NavItem" 
+import { useAuthStore } from "@/stores/useAuthStore"
 
 export default function Header() {
-  const [user, setUser] = useState<User | null>(null)
+  const user = useAuthStore((state) => state.user) // 直接取 user
+  const logout = useAuthStore((state) => state.logout)
   const { openModal } = useLoginModal()
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser)
-    })
-    return () => unsubscribe()
-  }, [])
 
   const handleSignOut = async () => {
     try {
       await signOut(auth)
+      logout() // 立即清除狀態
     } catch (error) {
       console.error("登出失敗", error)
     }

@@ -1,11 +1,11 @@
 // hooks/useRequireLogin.ts
 "use client"
 
-import { useAuth } from "@/context/AuthContext"
+import { useAuthStore } from '@/stores/useAuthStore'
 import { useLoginModal } from "@/context/LoginModalContext"
 
 export const useRequireLogin = () => {
-  const { user } = useAuth()
+  const user = useAuthStore((state) => state.user)
   const { openModal } = useLoginModal()
 
   return (callback: () => void) => {

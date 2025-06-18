@@ -3,10 +3,10 @@
 import { doc, setDoc, deleteDoc, getDocs, collection } from "firebase/firestore"
 import { db } from "@/lib/firebase"
 import { useState, useEffect } from "react"
-import { useAuth } from "@/context/AuthContext" // 你有用 auth context 的話
+import { useAuthStore } from '@/stores/useAuthStore' // 你有用 auth context 的話
 
 export const useFavorite = () => {
-  const { user } = useAuth()
+  const user = useAuthStore((state) => state.user)
   const [favorites, setFavorites] = useState<string[]>([])
 
   const toggleFavorite = async (recipe: any) => {
