@@ -3,9 +3,18 @@
 
 import { useState, useEffect } from 'react'
 import { db } from '@/lib/firebase'
-import { collection, addDoc, query, where, getDocs, Timestamp } from 'firebase/firestore'
+import {
+  collection,
+  addDoc,
+  query,
+  where,
+  getDocs,
+  getDoc,
+  doc,
+  updateDoc,
+  deleteDoc,
+} from 'firebase/firestore'
 import { useAuthStore } from '@/stores/useAuthStore'
-import { doc, updateDoc, getDoc, deleteDoc } from 'firebase/firestore';
 
 export type Ingredient = {
   name: { en: string; zh: string }
@@ -14,14 +23,14 @@ export type Ingredient = {
 
 export type ScheduleItem = {
   id: string
-  userId: string 
+  userId: string
   recipeId: string
-  date: string // e.g., "2025-05-29"
+  date: string
   mealType: 'breakfast' | 'lunch' | 'dinner'
   isDone: boolean
   hasDiary: boolean
   createdAt: string
-  reviewId? :string
+  reviewId?: string
   recipe?: {
     title: { zh: string; en: string }
     readyInMinutes: number
@@ -38,7 +47,7 @@ export const useSchedule = () => {
   const [schedule, setSchedule] = useState<ScheduleItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 
-  // 取得行程資料
+  // ✅ 取得行程資料（不再另外查 recipe）
   const fetchSchedule = async () => {
     if (!user) return
     setLoading(true)
@@ -47,29 +56,13 @@ export const useSchedule = () => {
       const q = query(collection(db, 'schedules'), where('userId', '==', user.uid))
       const querySnapshot = await getDocs(q)
 
-      const schedules: ScheduleItem[] = [];
-
-      for (const docSnap of querySnapshot.docs) {
-        const data = docSnap.data() as Omit<ScheduleItem, 'id'>;
-        const recipeRef = doc(db, 'recipes', data.recipeId);
-        const recipeSnap = await getDoc(recipeRef);
-        const recipeData = recipeSnap.exists() ? recipeSnap.data() : null;
-  
-        schedules.push({
-          id: docSnap.id,
-          ...data,
-          recipe: recipeData ? {
-            title: recipeData.title,
-            readyInMinutes: recipeData.readyInMinutes,
-            image: recipeData.image,
-            ingredients: recipeData.ingredients || { en: [], zh: [] }
-          } : undefined
-        });
-      }
+      const schedules: ScheduleItem[] = querySnapshot.docs.map((docSnap) => ({
+        id: docSnap.id,
+        ...(docSnap.data() as Omit<ScheduleItem, 'id'>),
+      }))
 
       console.log('🔍 fetchSchedule 完成，共取得', schedules.length, '筆行程資料')
-      console.log('📋 行程資料詳情:', schedules)
-      setSchedule(schedules);
+      setSchedule(schedules)
     } catch (error) {
       console.error('讀取行程失敗：', error)
     } finally {
@@ -77,7 +70,7 @@ export const useSchedule = () => {
     }
   }
 
-  // 新增一筆行程
+  // ✅ 新增一筆行程（將 recipe 資料寫入 schedule）
   const addSchedule = async ({
     recipeId,
     date,
@@ -87,26 +80,34 @@ export const useSchedule = () => {
     date: string
     mealType: 'breakfast' | 'lunch' | 'dinner'
   }) => {
-    if (!user) {
-      console.log("user", user)
-      return
-    }
-
-    const newItem: Omit<ScheduleItem, 'id'> = {
-      recipeId,
-      date,
-      mealType,
-      isDone: false,
-      hasDiary: false,
-      createdAt: new Date().toISOString(),
-      userId: user.uid,
-      reviewId:"",
-    }
+    if (!user) return
 
     try {
-      const docRef = await addDoc(collection(db, 'schedules'), newItem)
-      
-      // 新增後重新獲取完整資料（包含食譜資料）
+      const recipeRef = doc(db, 'recipes', recipeId)
+      const recipeSnap = await getDoc(recipeRef)
+
+      if (!recipeSnap.exists()) throw new Error('❌ 找不到該食譜')
+
+      const recipeData = recipeSnap.data()
+
+      const newItem: Omit<ScheduleItem, 'id'> = {
+        userId: user.uid,
+        recipeId,
+        date,
+        mealType,
+        isDone: false,
+        hasDiary: false,
+        createdAt: new Date().toISOString(),
+        reviewId: '',
+        recipe: {
+          title: recipeData.title,
+          readyInMinutes: recipeData.readyInMinutes,
+          image: recipeData.image,
+          ingredients: recipeData.ingredients || { en: [], zh: [] },
+        },
+      }
+
+      await addDoc(collection(db, 'schedules'), newItem)
       await fetchSchedule()
     } catch (error) {
       console.error('新增行程失敗：', error)
@@ -117,42 +118,36 @@ export const useSchedule = () => {
     id: string,
     updatedFields: Partial<Omit<ScheduleItem, 'id' | 'userId' | 'createdAt'>>
   ) => {
-    if (!user) return;
-  
+    if (!user) return
+
     try {
-      const scheduleRef = doc(db, 'schedules', id);
-      await updateDoc(scheduleRef, updatedFields);
-  
-      // 本地 state 也更新
+      const scheduleRef = doc(db, 'schedules', id)
+      await updateDoc(scheduleRef, updatedFields)
+
       setSchedule((prev) =>
-        prev.map((item) =>
-          item.id === id ? { ...item, ...updatedFields } : item
-        )
-      );
+        prev.map((item) => (item.id === id ? { ...item, ...updatedFields } : item))
+      )
     } catch (error) {
-      console.error('更新行程失敗：', error);
+      console.error('更新行程失敗：', error)
     }
-  };
+  }
 
-  // 刪除行程
   const deleteSchedule = async (id: string) => {
-    if (!user) return;
-  
-    try {
-      const scheduleRef = doc(db, 'schedules', id);
-      await deleteDoc(scheduleRef);
-  
-      // 本地 state 也更新，移除被刪除的項目
-      setSchedule((prev) => prev.filter((item) => item.id !== id));
-      
-      console.log('🗑️ 成功刪除行程:', id);
-    } catch (error) {
-      console.error('刪除行程失敗：', error);
-      throw error; // 重新拋出錯誤，讓調用方可以處理
-    }
-  };
+    if (!user) return
 
-  // 在用戶登入時自動獲取行程資料
+    try {
+      const scheduleRef = doc(db, 'schedules', id)
+      await deleteDoc(scheduleRef)
+
+      setSchedule((prev) => prev.filter((item) => item.id !== id))
+
+      console.log('🗑️ 成功刪除行程:', id)
+    } catch (error) {
+      console.error('刪除行程失敗：', error)
+      throw error
+    }
+  }
+
   useEffect(() => {
     if (user) {
       console.log('👤 用戶已登入，開始獲取行程資料...')
@@ -169,6 +164,6 @@ export const useSchedule = () => {
     addSchedule,
     fetchSchedule,
     updateSchedule,
-    deleteSchedule
+    deleteSchedule,
   }
 }

@@ -8,11 +8,13 @@ import { useSchedule, ScheduleItem} from '@/hooks/useSchedule';
 import ScheduleCard from '@/components/ScheduleCard';
 import { useRouter } from 'next/navigation';
 import DatePicker from '@/components/DatePicker' 
+import { useAuthStore } from "@/stores/useAuthStore"
 
 export default function SchedulePage() {
   const router = useRouter();
-  const { schedule, fetchSchedule, updateSchedule, deleteSchedule, loading } = useSchedule();
-  const [localLoading, setLoading] = useState(true);
+  const { schedule, updateSchedule, deleteSchedule, loading } = useSchedule();
+  const user = useAuthStore((state) => state.user)
+  const loadingAuth = useAuthStore(state => state.loading)
   
   const formatDate = (date: dayjs.Dayjs) => date.format('YYYY年M月D日');
   const [currentDate, setCurrentDate] = useState(dayjs());
@@ -26,16 +28,20 @@ export default function SchedulePage() {
   const dinnerSchedules = filteredSchedules.filter(s => s.mealType === 'dinner');
 
   useEffect(() => {
-    const loadData = async () => {
-      await fetchSchedule();
-      setLoading(false); // ✅ 記得設定 loading 為 false
-    };
-    loadData();
-  }, [fetchSchedule]);
+    if (!loadingAuth && !user) {
+      router.push("/")
+    }
+  }, [user, loadingAuth, router])
   
-  if (localLoading) return <p>Loading...</p>;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-xl text-gray-600">
+        ⏳ 資料載入中...
+      </div>
+    )
+  }
 
-  if (schedule.length === 0) {
+  if (!loading &&schedule.length === 0) {
     return (
       <div className="min-h-screen bg-[#f9f5f1] flex items-center justify-center">
         <div className="bg-white border-2 border-black rounded-lg p-8 max-w-md text-center space-y-6">

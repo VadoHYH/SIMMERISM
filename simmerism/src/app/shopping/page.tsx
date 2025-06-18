@@ -1,17 +1,19 @@
 //app/shopping/page.tsx
 'use client'
 
-import { Edit, Trash2 } from 'lucide-react'
-import Link from "next/link"
-import { useState } from 'react'
+import { Trash2 } from 'lucide-react'
+import { useEffect,useState } from 'react'
 import { useShoppingList } from '@/hooks/useShoppingList'
 import { useSchedule } from '@/hooks/useSchedule' // 假設這裡提供行程資料
 import DatePicker from '@/components/DatePicker' 
 import { format, addDays } from 'date-fns'
-
-
+import { useAuthStore } from "@/stores/useAuthStore"
+import { useRouter } from "next/navigation";
 
 export default function ShoppingPage() {
+  const user = useAuthStore((state) => state.user)
+  const loadingAuth = useAuthStore(state => state.loading)
+  const router = useRouter();
   const today = new Date()
   const oneWeekLater = addDays(today, 6)
 
@@ -36,6 +38,12 @@ export default function ShoppingPage() {
     startDate: formattedStart,
     endDate: formattedEnd,
   })
+
+  useEffect(() => {
+    if (!loadingAuth && !user) {
+      router.push("/")
+    }
+  }, [user, loadingAuth, router])
 
   return (
     <div className="min-h-screen bg-[#f9f5f1] py-8">
