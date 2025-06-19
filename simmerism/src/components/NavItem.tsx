@@ -1,5 +1,7 @@
+//components/NavItem.tsx
 import { usePathname, useRouter } from "next/navigation"
 import { useRequireLogin } from "@/hooks/useRequireLogin"
+import { useTransitionStore } from "@/hooks/useTransitionStore"
 
 interface NavItemProps {
   path: string
@@ -11,12 +13,20 @@ export default function NavItem({ path, label, requireAuth = false }: NavItemPro
   const pathname = usePathname()
   const router = useRouter()
   const requireLogin = useRequireLogin()
+  const { startTransition } = useTransitionStore()
 
   const handleClick = () => {
+    const go = () => {
+      startTransition()
+      setTimeout(() => {
+        router.push(path)
+      }, 300) // 建議和動畫長度對齊
+    }
+
     if (requireAuth) {
-      requireLogin(() => router.push(path))
+      requireLogin(go)
     } else {
-      router.push(path)
+      go()
     }
   }
 

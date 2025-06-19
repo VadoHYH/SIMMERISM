@@ -1,17 +1,21 @@
 "use client"
 
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 import { onAuthStateChanged, signOut, User } from "firebase/auth"
 import { auth } from "@/lib/firebase"
 import { useLoginModal } from "@/context/LoginModalContext"
 import NavItem from "@/components/NavItem" 
 import { useAuthStore } from "@/stores/useAuthStore"
+import { useTransitionStore } from "@/hooks/useTransitionStore"
 
 export default function Header() {
+  const router = useRouter()
   const user = useAuthStore((state) => state.user) // 直接取 user
   const logout = useAuthStore((state) => state.logout)
   const { openModal } = useLoginModal()
+  const { startTransition } = useTransitionStore()
 
   const handleSignOut = async () => {
     try {
@@ -22,12 +26,17 @@ export default function Header() {
     }
   }
 
+  const handleGoHome = () => {
+    startTransition(() => router.push("/")) // ✅ 觸發動畫再跳頁
+  }
+
+
   return (
     <header className="flex w-full border-2 border-black">
       <div className="flex items-center justify-center border-r border-black p-4 min-w-[100px] bg-[#F9F4EF]">
-        <Link href="/" className="font-bold text-lg whitespace-nowrap">
+        <button onClick={handleGoHome} className="font-bold text-lg whitespace-nowrap">
           Simmer<span className="text-[#FB7659]">ism</span>
-        </Link>
+        </button>
       </div>
       <nav className="flex flex-1">
         <NavItem path="/search" label="查詢" />

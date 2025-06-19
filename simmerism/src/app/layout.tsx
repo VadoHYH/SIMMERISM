@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import ChatButton from "@/components/chatButton"
 import AuthProvider from '@/app/AuthProvider'
 import { LoginModalProvider } from "@/context/LoginModalContext"
+import PageTransitionLoading from "@/components/PageTransitionLoading"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthProvider>
           <LoginModalProvider>
+          <PageTransitionLoading />
             <div className="flex flex-col min-h-screen">
               <Header />
               <main className="flex-grow">{children}</main>

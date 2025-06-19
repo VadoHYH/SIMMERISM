@@ -52,14 +52,14 @@ if (missingFields.length > 0) {
 let app;
 try {
   app = initializeApp(firebaseConfig);
-  console.log('✅ Firebase 應用初始化成功');
+  // console.log('✅ Firebase 應用初始化成功');
 } catch (error) {
   console.error('❌ Firebase 應用初始化失敗:', error);
   throw error;
 }
 
 export const db = getFirestore(app);
-console.log('✅ Firestore 初始化成功');
+// console.log('✅ Firestore 初始化成功');
 
 const auth = getAuth(app)
 const googleProvider = new GoogleAuthProvider()

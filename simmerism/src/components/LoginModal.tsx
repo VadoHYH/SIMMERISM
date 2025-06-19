@@ -4,7 +4,7 @@
 import { Dialog } from "@headlessui/react"
 import { useState } from "react"
 import { auth, googleProvider } from "@/lib/firebase"
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth"
+import { signInWithEmailAndPassword, signInWithPopup,setPersistence ,browserLocalPersistence, inMemoryPersistence } from "firebase/auth"
 
 export default function LoginModal({
   isOpen,
@@ -19,30 +19,36 @@ export default function LoginModal({
 }) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [rememberMe, setRememberMe] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password)
-        console.log("登入成功 ✅", userCredential.user)
-        onClose() // 成功登入後關閉 modal
+      // ✅ 根據是否記住來設定持久化方式
+      await setPersistence(auth, rememberMe ? browserLocalPersistence : inMemoryPersistence)
+  
+      const userCredential = await signInWithEmailAndPassword(auth, email, password)
+      console.log("登入成功 ✅", userCredential.user)
+      onClose()
     } catch (error: any) {
-    console.error("登入失敗 ❌", error.message)
-    alert("登入失敗，請檢查帳號密碼！")
+      console.error("登入失敗 ❌", error.message)
+      alert("登入失敗，請檢查帳號密碼！")
     }
   }
 
   const handleGoogleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, googleProvider)
-      const user = result.user
-      console.log("Google 登入成功 ✅", user)
-      // 這邊可以觸發登入狀態更新 or 關閉 modal
+      await setPersistence(auth, rememberMe ? browserLocalPersistence : inMemoryPersistence); // 新增這行
+  
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      console.log("Google 登入成功 ✅", user);
+      onClose();
     } catch (error: any) {
-      console.error("Google 登入失敗 ❌", error.message)
-      alert("Google 登入失敗，請稍後再試")
+      console.error("Google 登入失敗 ❌", error.message);
+      alert("Google 登入失敗，請稍後再試");
     }
-  }
+  };
 
   return (
     <Dialog open={isOpen} onClose={onClose} className="fixed inset-0 z-50 flex items-center justify-center">
@@ -87,6 +93,16 @@ export default function LoginModal({
                 className="w-full p-2 border border-gray-300 rounded"
                 required
                 />
+            </div>
+            <div className="mb-4 flex items-center">
+              <input
+                type="checkbox"
+                id="rememberMe"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="mr-2"
+              />
+              <label htmlFor="rememberMe" className="text-sm text-gray-700">記住我（保持登入）</label>
             </div>
 
             <button
