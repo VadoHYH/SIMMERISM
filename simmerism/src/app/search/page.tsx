@@ -9,10 +9,8 @@ import {  Filter, X } from "lucide-react"
 import { useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
-import { useNavigateWithTransition } from "@/hooks/useNavigateWithTransition";
 
 export default function SearchPage() {
-  const navigateWithTransition = useNavigateWithTransition();
   const [keyword, setKeyword] = useState("")
   const [searchKeyword, setSearchKeyword] = useState("")
   const [filterCategory, setFilterCategory] = useState("全部")
@@ -287,7 +285,6 @@ export default function SearchPage() {
               dishTypes={recipe.dishTypes}
               diets={recipe.diets}
               onLike={() => toggleFavorite(recipe)}
-              onClick={() => navigateWithTransition(`/recipe/${recipe.id}`)}
             />
           ))}
         </div>

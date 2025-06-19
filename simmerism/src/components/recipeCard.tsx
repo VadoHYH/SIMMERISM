@@ -13,7 +13,6 @@ interface RecipeCardProps {
   diets?: { zh: string; en: string }[]
   readyInMinutes?: string
   onLike?: (id: string) => void
-  onClick?: () => void 
 }
 
 export default function RecipeCard({
@@ -25,7 +24,6 @@ export default function RecipeCard({
   diets = [],
   readyInMinutes,
   onLike,
-  onClick,
 }: RecipeCardProps) {
   const router = useRouter()
   const [showAllTags, setShowAllTags] = useState(false)
@@ -42,7 +40,7 @@ export default function RecipeCard({
   return (
     <div
       className="flex flex-col h-fit border-2 border-black rounded overflow-hidden hover:neo-card transition-all cursor-pointer"
-      onClick={onClick}
+      onClick={() => router.push(`/recipe/${id}`)}
     >
       {/* Image */}
       <div className="bg-gray-200 relative w-full aspect-[4/3]">

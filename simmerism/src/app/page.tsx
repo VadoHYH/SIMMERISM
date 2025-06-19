@@ -9,8 +9,6 @@ import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
 import { useShoppingList } from "@/hooks/useShoppingList"
 import { useSchedule } from "@/hooks/useSchedule"
-import { useTransitionStore } from "@/hooks/useTransitionStore"
-import { useNavigateWithTransition } from "@/hooks/useNavigateWithTransition";
 import { useState, useEffect, useMemo } from "react"
 import { useRequireLogin } from "@/hooks/useRequireLogin";
 import { format, addDays } from 'date-fns'
@@ -21,7 +19,7 @@ export default function Home() {
   const { favorites, toggleFavorite } = useFavorite()
   const { schedule } = useSchedule()
   const requireLogin = useRequireLogin();
-  const navigateWithTransition = useNavigateWithTransition();
+  const router = useRouter();
 
   // 設定採購清單的日期範圍（本周）
   const today = new Date()
@@ -68,12 +66,12 @@ export default function Home() {
               </div>
               {/* 下半：右下角按鈕 */}
               <div className="flex justify-end mt-8">
-                <button
-                  onClick={() => navigateWithTransition("/search")}
+                <Link
+                  href="/search"
                   className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold transition-colors neo-button"
                 >
                   開始探索食譜 <ArrowRight className="inline ml-2" size={18} />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -85,7 +83,7 @@ export default function Home() {
             ].map(({ label, count, index }) => (
               <div 
                 key={label}
-                onClick={() => requireLogin(() => navigateWithTransition("/schedule"))}
+                onClick={() => requireLogin(() => router.push("/schedule"))}
                 className={`col-start-${index + 1} row-start-6 row-span-2 bg-white p-2 rounded border-2 border-black relative hover:neo-card cursor-pointer`}
               >
                 {/* 左上角 17 角星標籤 */}
@@ -153,7 +151,7 @@ export default function Home() {
                     目前沒有採購項目
                     <br />
                     <div  
-                      onClick={() => requireLogin(() => navigateWithTransition("/schedule"))}
+                      onClick={() => requireLogin(() => router.push("/schedule"))}
                       className="text-[#519181] underline text-sm"
                     >
                       先去安排餐點行程吧！
@@ -170,7 +168,7 @@ export default function Home() {
               </div>
               <div className="flex justify-end mt-4">
                 <button 
-                  onClick={() => requireLogin(() => navigateWithTransition("/shopping"))}
+                  onClick={() => requireLogin(() => router.push("/shopping"))}
                   className="p-2 bg-[#F7CEFA] border-2 border-black neo-button"
                 >
                   <svg
@@ -196,12 +194,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold">精選食譜</h2>
-            <button
-              onClick={() => navigateWithTransition("/search")}
-              className="bg-[#519181] text-white px-4 py-1 flex items-center border-2 border-black neo-button"
-            >
+            <Link href="/search" className="bg-[#519181] text-white px-4 py-1 flex items-center border-2 border-black neo-button">
               查看更多 <ArrowRight className="ml-1" size={16} />
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
@@ -216,7 +211,6 @@ export default function Home() {
                 dishTypes={recipe.dishTypes}
                 diets={recipe.diets}
                 onLike={() => toggleFavorite(recipe)}
-                onClick={() => navigateWithTransition(`/recipe/${recipe.id}`)} 
               />
             ))}
           </div>
