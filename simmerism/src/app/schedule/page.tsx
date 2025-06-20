@@ -113,10 +113,11 @@ export default function SchedulePage() {
 
         <div className="flex justify-between items-center mb-8">
           <button 
-            className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold flex items-center neo-button"
+            className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold flex items-center justify-center gap-1 neo-button"
             onClick={() => setCurrentDate(prev => prev.subtract(1, 'day'))}
           >
-            <ChevronLeft size={18} className="mr-1" /> 前一天
+            <ChevronLeft size={18} />
+            <span className="hidden sm:inline">前一天</span>
           </button>
 
           <div className="bg-[#ffc278] border-2 border-black px-6 py-2 font-bold neo-button">
@@ -132,17 +133,18 @@ export default function SchedulePage() {
           </div>
 
           <button 
-            className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold flex items-center neo-button"
+            className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold flex items-center justify-center gap-1 neo-button"
             onClick={() => setCurrentDate(prev => prev.add(1, 'day'))}
           >
-            後一天 <ChevronRight size={18} className="ml-1" />
+            <span className="hidden sm:inline">後一天</span>
+            <ChevronRight size={18} />
           </button>
         </div>
 
         <div className="space-y-8">
           {/* 早餐 */}
           <div className="border-2 border-black rounded p-6 bg-white">
-            <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
                 xmlns="http://www.w3.org/2000/svg"

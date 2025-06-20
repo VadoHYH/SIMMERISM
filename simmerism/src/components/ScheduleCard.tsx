@@ -28,7 +28,7 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
       return (
         <button
           onClick={() => onClickStatus(schedule)}
-          className={`p-1 neo-button border border-black ${
+          className={`p-1 sm:p-2 lg:px-4 neo-button border border-black text-sm sm:text-base ${
             schedule.isDone ? 'bg-[#5a9a8e] text-white' : 'bg-[#ffc278] text-black'
           }`}
         >
@@ -38,23 +38,35 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
     };
   
     return (
-      <div className="flex items-center border-b border-gray-200 py-3">
-        <div className="w-12 h-12 bg-gray-200 mr-4 aspect-square relative">
-        <Image
+      <div className="flex items-center border-b border-gray-200 py-3 sm:py-4 lg:py-6">
+        {/* 食譜圖片 */}
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-200 mr-3 sm:mr-4 aspect-square relative">
+          <Image
             src={schedule.recipe?.image || "/placeholder.svg"}
             alt={schedule.recipe?.title?.zh || "食譜圖片"}
             fill
             className="object-cover rounded"
           />
         </div>
-        <div className="flex-1">
-          <span>{schedule.recipe?.title?.zh || '未知食譜'}</span>
-          <span className="text-sm text-gray-500 ml-4">
+
+        {/* 食譜資訊 */}
+        <div className="flex-1 text-sm sm:text-base lg:text-lg leading-snug">
+          <div className="font-semibold truncate">{schedule.recipe?.title?.zh || '未知食譜'}</div>
+          <div className="text-gray-500">
             {schedule.recipe?.readyInMinutes ? `${schedule.recipe.readyInMinutes} 分鐘` : '時間未知'}
-          </span>
+          </div>
         </div>
-        <button onClick={() => onDelete?.(schedule)} className="bg-[#ff6347] text-black p-1 mr-2 neo-button"><Trash2 size={20}></Trash2></button>
-        {getStatusButton()}
+
+        {/* 操作按鈕 */}
+        <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4">
+          <button
+            onClick={() => onDelete?.(schedule)}
+            className="bg-[#ff6347] text-black p-1 sm:p-2 lg:px-3 neo-button border border-black"
+          >
+            <Trash2 size={20} />
+          </button>
+          {getStatusButton()}
+        </div>
       </div>
     );
 }

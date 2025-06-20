@@ -1,7 +1,9 @@
+//components/DatePicker.tsx
 "use client"
 
 import { useState, useRef, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Calendar, X } from "lucide-react"
+import { createPortal } from "react-dom"
 
 interface CustomDatePickerProps {
   // 單日選擇模式
@@ -61,24 +63,78 @@ export default function CustomDatePicker({
 
   // 範圍選擇的臨時狀態
   const [tempStartDate, setTempStartDate] = useState<Date | null>(null)
-
+  
+  // 用於定位的參考元素
   const containerRef = useRef<HTMLDivElement>(null)
+  const [position, setPosition] = useState({ top: 0, left: 0 })
 
   const months = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
   const weekDays = ["日", "一", "二", "三", "四", "五", "六"]
+
+  // 計算 modal 位置
+  useEffect(() => {
+    if (isOpen && containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      const scrollY = window.scrollY
+      const scrollX = window.scrollX
+      
+      const modalWidth = 320
+      const modalHeight = 400
+      const padding = 10 // 邊界 padding
+      
+      // 計算 modal 的理想位置
+      let top = rect.bottom + scrollY + 8 // 8px 間距
+      let left = rect.left + scrollX + rect.width / 2 - modalWidth / 2
+      
+      // 水平邊界檢查 - 確保不會超出視窗左右邊界
+      const maxLeft = window.innerWidth - modalWidth - padding
+      const minLeft = padding
+      
+      if (left < minLeft) {
+        left = minLeft
+      } else if (left > maxLeft) {
+        left = maxLeft
+      }
+      
+      // 垂直邊界檢查 - 如果下方空間不足，顯示在上方
+      const spaceBelow = window.innerHeight - (rect.bottom - scrollY)
+      const spaceAbove = rect.top - scrollY
+      
+      if (spaceBelow < modalHeight + padding && spaceAbove > modalHeight + padding) {
+        // 上方空間足够，顯示在上方
+        top = rect.top + scrollY - modalHeight - 8
+      } else if (spaceBelow < modalHeight + padding) {
+        // 上下都空間不足，置中顯示
+        top = scrollY + (window.innerHeight - modalHeight) / 2
+        // 確保不會超出頂部
+        if (top < scrollY + padding) {
+          top = scrollY + padding
+        }
+      }
+      
+      setPosition({ top, left })
+    }
+  }, [isOpen])
 
   // Close calendar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        // 檢查點擊的是否是 portal 內的元素
+        const portalElement = document.getElementById('datepicker-portal')
+        if (portalElement && portalElement.contains(event.target as Node)) {
+          return // 點擊在 portal 內，不關閉
+        }
         setIsOpen(false)
         setTempStartDate(null)
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [])
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isOpen])
 
   // 檢查某個日期是否有資料
   const hasData = (day: number) => {
@@ -220,7 +276,7 @@ export default function CustomDatePicker({
   const firstDay = getFirstDayOfMonth(currentMonth, currentYear)
 
   // Create calendar grid
-  const calendarDays = []
+  const calendarDays: (number | null)[] = []
 
   // Empty cells for days before the first day of the month
   for (let i = 0; i < firstDay; i++) {
@@ -232,15 +288,124 @@ export default function CustomDatePicker({
     calendarDays.push(day)
   }
 
+  // Calendar Modal 組件
+  const CalendarModal = () => (
+    <div 
+      id="datepicker-portal"
+      className="fixed"
+      style={{ 
+        top: position.top, 
+        left: position.left,
+        zIndex: 9999
+      }}
+    >
+      <div className="relative">
+        {/* Shadow */}
+        <div className="absolute top-2 left-2 w-full h-full bg-black rounded"></div>
+
+        {/* Calendar Container */}
+        <div className="relative bg-[#ffc278] border-2 border-black rounded p-4 w-80">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4">
+            <button
+              onClick={handlePrevMonth}
+              className="w-8 h-8 bg-white border-2 border-black rounded flex items-center justify-center hover:translate-x-1 hover:translate-y-1 transition-transform"
+            >
+              <ChevronLeft size={16} className="text-black" />
+            </button>
+
+            <div className="text-black font-bold text-lg">
+              {months[currentMonth]} {currentYear}
+            </div>
+
+            <button
+              onClick={handleNextMonth}
+              className="w-8 h-8 bg-white border-2 border-black rounded flex items-center justify-center hover:translate-x-1 hover:translate-y-1 transition-transform"
+            >
+              <ChevronRight size={16} className="text-black" />
+            </button>
+          </div>
+
+          {/* Week Days Header */}
+          <div className="grid grid-cols-7 gap-1 mb-2">
+            {weekDays.map((day) => (
+              <div
+                key={day}
+                className="h-8 bg-[#519181] border-2 border-black rounded flex items-center justify-center"
+              >
+                <span className="font-bold text-sm text-white">{day}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Calendar Grid */}
+          <div className="grid grid-cols-7 gap-1">
+            {calendarDays.map((day, index) => (
+              <div key={index} className="h-10">
+                {day !== null ? (
+                  <button
+                    onClick={() => handleDateClick(day)}
+                    className={`w-full h-full border-2 border-black rounded flex items-center justify-center font-bold text-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 relative ${
+                      isRangeStart(day) || isRangeEnd(day)
+                        ? "bg-[#519181] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                        : isSelectedDate(day)
+                          ? "bg-[#519181] bg-opacity-50 text-white"
+                          : isToday(day)
+                            ? "bg-[#ff7a5a] text-white"
+                            : "bg-white text-black hover:bg-gray-100"
+                    }`}
+                  >
+                    <span
+                      className={hasData(day) ? "font-extrabold" : ""}
+                      style={{
+                        color: hasData(day) && !isSelectedDate(day) && !isToday(day) ? hasDataColor : undefined,
+                      }}
+                    >
+                      {day}
+                    </span>
+                    {/* 有資料的日期添加小圓點指示器 */}
+                    {hasData(day) && (
+                      <div
+                        className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: hasDataColor }}
+                      ></div>
+                    )}
+                  </button>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Range Selection Hint */}
+          {selectsRange && tempStartDate && !endDate && (
+            <div className="mt-3 text-center text-sm text-black bg-white bg-opacity-50 rounded p-2">
+              請選擇結束日期
+            </div>
+          )}
+
+          {/* 有資料日期的說明 */}
+          {hasDataDates.length > 0 && (
+            <div className="mt-3 text-center text-xs text-black bg-white bg-opacity-50 rounded p-2 flex items-center justify-center gap-2">
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: hasDataColor }}></div>
+              <span>有安排的日期</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      {/* Date Input Button - 移除邊框和陰影，因為外層容器已經有了 */}
+      {/* Date Input Button */}
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-center cursor-pointer flex items-center justify-center gap-2 font-bold"
       >
-        <span>{formatDateRange()}</span>
-        <div className="flex items-center gap-1">
+        <span className="truncate">{formatDateRange()}</span>
+        <div className="flex items-center gap-1 flex-shrink-0">
           {isClearable && (startDate || currentSelectedDate) && (
             <button
               onClick={(e) => {
@@ -256,105 +421,10 @@ export default function CustomDatePicker({
         </div>
       </div>
 
-      {/* Calendar Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50">
-          <div className="relative">
-            {/* Shadow */}
-            <div className="absolute top-2 left-2 w-full h-full bg-black rounded"></div>
-
-            {/* Calendar Container */}
-            <div className="relative bg-[#ffc278] border-2 border-black rounded p-4 w-80">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <button
-                  onClick={handlePrevMonth}
-                  className="w-8 h-8 bg-white border-2 border-black rounded flex items-center justify-center hover:translate-x-1 hover:translate-y-1 transition-transform"
-                >
-                  <ChevronLeft size={16} className="text-black" />
-                </button>
-
-                <div className="text-black font-bold text-lg">
-                  {months[currentMonth]} {currentYear}
-                </div>
-
-                <button
-                  onClick={handleNextMonth}
-                  className="w-8 h-8 bg-white border-2 border-black rounded flex items-center justify-center hover:translate-x-1 hover:translate-y-1 transition-transform"
-                >
-                  <ChevronRight size={16} className="text-black" />
-                </button>
-              </div>
-
-              {/* Week Days Header */}
-              <div className="grid grid-cols-7 gap-1 mb-2">
-                {weekDays.map((day) => (
-                  <div
-                    key={day}
-                    className="h-8 bg-[#519181] border-2 border-black rounded flex items-center justify-center"
-                  >
-                    <span className="font-bold text-sm text-white">{day}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Calendar Grid */}
-              <div className="grid grid-cols-7 gap-1">
-                {calendarDays.map((day, index) => (
-                  <div key={index} className="h-10">
-                    {day ? (
-                      <button
-                        onClick={() => handleDateClick(day)}
-                        className={`w-full h-full border-2 border-black rounded flex items-center justify-center font-bold text-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 relative ${
-                          isRangeStart(day) || isRangeEnd(day)
-                            ? "bg-[#519181] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                            : isSelectedDate(day)
-                              ? "bg-[#519181] bg-opacity-50 text-white"
-                              : isToday(day)
-                                ? "bg-[#ff7a5a] text-white"
-                                : "bg-white text-black hover:bg-gray-100"
-                        }`}
-                      >
-                        <span
-                          className={hasData(day) ? "font-extrabold" : ""}
-                          style={{
-                            color: hasData(day) && !isSelectedDate(day) && !isToday(day) ? hasDataColor : undefined,
-                          }}
-                        >
-                          {day}
-                        </span>
-                        {/* 有資料的日期添加小圓點指示器 */}
-                        {hasData(day) && (
-                          <div
-                            className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full"
-                            style={{ backgroundColor: hasDataColor }}
-                          ></div>
-                        )}
-                      </button>
-                    ) : (
-                      <div></div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Range Selection Hint */}
-              {selectsRange && tempStartDate && !endDate && (
-                <div className="mt-3 text-center text-sm text-black bg-white bg-opacity-50 rounded p-2">
-                  請選擇結束日期
-                </div>
-              )}
-
-              {/* 有資料日期的說明 */}
-              {hasDataDates.length > 0 && (
-                <div className="mt-3 text-center text-xs text-black bg-white bg-opacity-50 rounded p-2 flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: hasDataColor }}></div>
-                  <span>有安排的日期</span>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+      {/* Calendar Modal - 使用 Portal 渲染到 document.body */}
+      {isOpen && typeof window !== 'undefined' && createPortal(
+        <CalendarModal />,
+        document.body
       )}
     </div>
   )

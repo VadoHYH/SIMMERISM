@@ -1,7 +1,6 @@
-//components/recipeCard.tsx
 import { Heart } from "lucide-react"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 interface RecipeCardProps {
@@ -27,22 +26,36 @@ export default function RecipeCard({
 }: RecipeCardProps) {
   const router = useRouter()
   const [showAllTags, setShowAllTags] = useState(false)
-  const MAX_VISIBLE_TAGS = 4
+  const [maxVisibleTags, setMaxVisibleTags] = useState(5)
 
   const tags = [
-    ...(dishTypes ? dishTypes.map((type) => type.zh) : []),
-    ...(diets ? diets.map((diet) => diet.zh) : []),
+    ...dishTypes.map((type) => type.zh),
+    ...diets.map((diet) => diet.zh),
   ]
 
-  const displayedTags = showAllTags ? tags : tags.slice(0, MAX_VISIBLE_TAGS)
-  const hiddenTagCount = tags.length - MAX_VISIBLE_TAGS
+  // 設定 maxVisibleTags 根據螢幕寬度
+  useEffect(() => {
+    const updateVisibleTags = () => {
+      const width = window.innerWidth
+      if (width < 640) setMaxVisibleTags(1)
+      else if (width < 1024) setMaxVisibleTags(3)
+      else setMaxVisibleTags(5)
+    }
+
+    updateVisibleTags()
+    window.addEventListener("resize", updateVisibleTags)
+    return () => window.removeEventListener("resize", updateVisibleTags)
+  }, [])
+
+  const displayedTags = showAllTags ? tags : tags.slice(0, maxVisibleTags)
+  const hiddenTagCount = tags.length - maxVisibleTags
 
   return (
     <div
       className="flex flex-col h-fit border-2 border-black rounded overflow-hidden hover:neo-card transition-all cursor-pointer"
       onClick={() => router.push(`/recipe/${id}`)}
     >
-      {/* Image */}
+      {/* 圖片 */}
       <div className="bg-gray-200 relative w-full aspect-[4/3]">
         <Image
           src={image || "/placeholder.svg"}
@@ -52,11 +65,16 @@ export default function RecipeCard({
         />
       </div>
 
-      {/* Content */}
+      {/* 內容 */}
       <div className="bg-[#ffc278] p-2 flex flex-col gap-2 flex-grow">
-        <div className="flex justify-between items-start">
-          <h3 className="font-bold">{title.zh}</h3>
-
+        {/* 標題與收藏 */}
+        <div className="flex justify-between items-start gap-2">
+          <h3
+            className="font-bold text-sm sm:text-base lg:text-lg truncate"
+            title={title.zh}
+          >
+            {title.zh}
+          </h3>
           <button
             onClick={(e) => {
               e.stopPropagation()
@@ -69,8 +87,10 @@ export default function RecipeCard({
           </button>
         </div>
 
+        {/* 時間 */}
         <p className="text-xs">{readyInMinutes} 分鐘</p>
 
+        {/* 標籤 */}
         <div className="flex flex-wrap gap-1">
           {displayedTags.map((tag, index) => (
             <span
@@ -92,7 +112,6 @@ export default function RecipeCard({
               +{hiddenTagCount} 更多
             </button>
           )}
-
           {showAllTags && hiddenTagCount > 0 && (
             <button
               onClick={(e) => {
@@ -103,7 +122,7 @@ export default function RecipeCard({
             >
               收起
             </button>
-          )} 
+          )}
         </div>
       </div>
     </div>
