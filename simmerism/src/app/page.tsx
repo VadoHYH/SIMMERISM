@@ -120,7 +120,7 @@ export default function Home() {
             </div>
 
             {/* div2~4：早中晚 */}
-            <div className="flex flex-row justify-between gap-4 order-3 lg:col-span-3 lg:col-start-1 lg:row-start-6 lg:row-span-2">
+            <div className="flex flex-row justify-between gap-2 lg:gap-4 order-3 lg:col-span-3 lg:col-start-1 lg:row-start-6 lg:row-span-2">
               {[{ label: "早", count: todayScheduleCounts.breakfast },
                 { label: "午", count: todayScheduleCounts.lunch },
                 { label: "晚", count: todayScheduleCounts.dinner }
@@ -128,20 +128,20 @@ export default function Home() {
                 <div
                   key={label}
                   onClick={() => requireLogin(() => router.push("/schedule"))}
-                  className="flex-1 bg-white p-2 rounded border-2 border-black relative hover:neo-card cursor-pointer"
+                  className="flex-1 bg-white p-1 lg:p-2 rounded border-2 border-black relative hover:neo-card cursor-pointer min-h-[80px] lg:min-h-0"
                 >
-                  <div className="absolute top-1.5 left-2 w-10 h-10">
+                  <div className="absolute top-1 left-1 w-8 h-8 lg:top-2 lg:left-2 lg:w-10 lg:h-10">
                     <svg viewBox="0 0 218 217" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                       <path d="M109 0L124.022 28.642L148.375 7.36053L152.036 39.4948L182.433 28.448L174.238 59.7346L206.573 60.4145L187.629 86.6281L217.535 98.9427L190.401 116.543L213.839 138.829L182.18 145.439L195.984 174.687L164.075 169.414L166.381 201.674L138.532 185.23L129.029 216.144L109 190.75L88.9713 216.144L79.4685 185.23L51.6189 201.674L53.9254 169.414L22.0161 174.687L35.8204 145.439L4.161 138.829L27.5987 116.543L0.464973 98.9427L30.3708 86.6281L11.4272 60.4145L43.7621 59.7346L35.5672 28.448L65.9642 39.4948L69.6247 7.36053L93.9785 28.642L109 0Z" fill="#519181" />
                     </svg>
-                    <div className="absolute inset-0 flex items-center justify-center text-white text-sm font-bold">
+                    <div className="absolute inset-0 flex items-center justify-center text-white text-xs lg:text-sm font-bold">
                       {label}
                     </div>
                   </div>
                   <div className="h-full flex justify-center items-center">
-                    <div className="text-3xl md:text-5xl font-bold">{count}</div>
+                    <div className="text-2xl lg:text-5xl font-bold">{count}</div>
                   </div>
-                  <div className="absolute bottom-1.5 right-2 text-3xl md:text-xl text-black font-bold md:font-normal">道</div>
+                  <div className="absolute bottom-1 right-1 lg:bottom-2 lg:right-2 text-2xl lg:text-xl text-black font-bold lg:font-normal">道</div>
                 </div>
               ))}
             </div>

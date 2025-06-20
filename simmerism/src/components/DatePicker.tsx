@@ -235,7 +235,7 @@ export default function CustomDatePicker({
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       {/* Date Input Button - 移除邊框和陰影，因為外層容器已經有了 */}
-      <button
+      <div
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-center cursor-pointer flex items-center justify-center gap-2 font-bold"
       >
@@ -254,7 +254,7 @@ export default function CustomDatePicker({
           )}
           <Calendar size={16} />
         </div>
-      </button>
+      </div>
 
       {/* Calendar Dropdown */}
       {isOpen && (

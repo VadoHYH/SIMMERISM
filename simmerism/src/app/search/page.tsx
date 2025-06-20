@@ -158,36 +158,54 @@ export default function SearchPage() {
   return (
     <div className="bg-[#f9f5f1] min-h-screen py-8">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center mb-8">
-          <SearchBar value={keyword} onChange={setKeyword} onSearch={handleSearch} />
+        {/* 搜尋 + 分類 + 篩選區塊（響應式） */}
+        <div className="mb-8">
+          {/* 大尺寸：搜尋列置中 */}
+          <div className="hidden sm:flex justify-center mb-4">
+            <SearchBar value={keyword} onChange={setKeyword} onSearch={handleSearch} />
+          </div>
+
+          {/* 小尺寸：搜尋列置中且保持橫向 */}
+          <div className="sm:hidden mb-4 px-2">
+            <SearchBar value={keyword} onChange={setKeyword} onSearch={handleSearch} />
+          </div>
+
+          {/* 分類與篩選按鈕：響應式排列 */}
+          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-2">
+            {/* 分類按鈕們：小尺寸橫向滑動，大尺寸自動換行 */}
+            <div className="flex overflow-x-auto sm:overflow-visible gap-2 flex-nowrap sm:flex-wrap">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className={`border border-gray-800 rounded px-4 py-1 whitespace-nowrap neo-button bg-white ${
+                    filterCategory === category ? "bg-gray-200" : ""
+                  }`}
+                  onClick={() => {
+                    setFilterCategory(category)
+                    setSearchKeyword(keyword)
+                  }}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            {/* 更多篩選按鈕 */}
+            <div className="ml-auto">
+              <button
+                className={`border border-gray-800 rounded px-4 py-1 flex items-center gap-1 whitespace-nowrap neo-button ${
+                  filterCount > 0 ? "bg-[#5a9a8e] text-white" : "bg-white"
+                }`}
+                onClick={() => setIsFilterOpen(true)}
+              >
+                <Filter size={16} />
+                更多篩選
+                {filterCount > 0 && <span className="ml-1">({filterCount})</span>}
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-8 justify-center">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`border border-gray-800 rounded px-4 py-1 bg-white neo-button ${
-                filterCategory === category ? "bg-gray-200" : ""
-              }`}
-              onClick={() => {
-                setFilterCategory(category)
-                setSearchKeyword(keyword)  // 這樣能結合分類+搜尋
-              }}
-            >
-              {category}
-            </button>
-          ))}
-          <button
-            className={`border border-gray-800 rounded px-4 py-1 flex items-center gap-1 ml-auto neo-button ${
-              filterCount > 0 ? "bg-[#5a9a8e] text-white" : "bg-white"
-            }`}
-            onClick={() => setIsFilterOpen(true)}
-          >
-            <Filter size={16} />
-            更多篩選
-            {filterCount > 0 && <span className="ml-1">({filterCount})</span>}
-          </button>
-        </div>
 
         {/* 已應用的篩選條件標籤 */}
         {filterCount > 0 && (
@@ -273,7 +291,7 @@ export default function SearchPage() {
           recipes={recipes}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {paginatedRecipes.map((recipe) => (
             <RecipeCard
               key={recipe.id}
