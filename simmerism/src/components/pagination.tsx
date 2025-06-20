@@ -31,45 +31,70 @@ export default function CustomPagination({
   const pageList = showPages()
 
   return (
-    <div className="flex justify-center items-center flex-wrap gap-2 mt-8 px-4">
-      {/* 上一頁箭頭 */}
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="p-2 border-2 border-black bg-[#FB7659] text-white font-bold hover:bg-orange-600 disabled:opacity-50 flex items-center justify-center"
-        aria-label="上一頁"
-      >
-        <ChevronLeft size={18} />
-      </button>
+    <div className="flex justify-center items-center mt-8">
+      {/* 小尺寸簡約版：Simmerism 風格 */}
+      <div className="sm:hidden flex items-center justify-center gap-2 mt-8">
+        <button
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="w-9 h-9 flex items-center justify-center border-2 border-black text-black bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
+          aria-label="上一頁"
+        >
+          <ChevronLeft size={18} />
+        </button>
 
-      {/* 頁碼按鈕 */}
-      {pageList.map((p, i) =>
-        typeof p === "string" ? (
-          <span key={i} className="px-2 font-bold">...</span>
-        ) : (
-          <button
-            key={i}
-            onClick={() => onPageChange(p)}
-            className={`px-3 py-1 text-sm sm:text-base font-bold border-2 border-black ${
-              currentPage === p
-                ? "bg-[#519181] text-white"
-                : "bg-[#FB7659] text-white hover:bg-orange-600"
-            }`}
-          >
-            {p}
-          </button>
-        )
-      )}
+        <span className="text-sm font-bold border-2 border-black px-3 py-1 text-center bg-[#519181] text-white">
+          第 {currentPage} / {totalPages} 頁
+        </span>
 
-      {/* 下一頁箭頭 */}
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="p-2 border-2 border-black bg-[#FB7659] text-white font-bold hover:bg-orange-600 disabled:opacity-50 flex items-center justify-center"
-        aria-label="下一頁"
-      >
-        <ChevronRight size={18} />
-      </button>
+        <button
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="w-9 h-9 flex items-center justify-center border-2 border-black text-black bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
+          aria-label="下一頁"
+        >
+          <ChevronRight size={18} />
+        </button>
+      </div>
+
+      {/* 👉 中大尺寸：顯示完整頁碼 */}
+      <div className="hidden sm:flex flex-wrap justify-center gap-2 px-4">
+        <button
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="p-2 border-2 border-black bg-[#FB7659] text-white font-bold hover:bg-orange-600 disabled:opacity-50 flex items-center justify-center"
+          aria-label="上一頁"
+        >
+          <ChevronLeft size={18} />
+        </button>
+
+        {pageList.map((p, i) =>
+          typeof p === "string" ? (
+            <span key={i} className="px-2 font-bold">...</span>
+          ) : (
+            <button
+              key={i}
+              onClick={() => onPageChange(p)}
+              className={`px-3 py-1 text-sm font-bold border-2 border-black ${
+                currentPage === p
+                  ? "bg-[#519181] text-white"
+                  : "bg-[#FB7659] text-white hover:bg-orange-600"
+              }`}
+            >
+              {p}
+            </button>
+          )
+        )}
+
+        <button
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="p-2 border-2 border-black bg-[#FB7659] text-white font-bold hover:bg-orange-600 disabled:opacity-50 flex items-center justify-center"
+          aria-label="下一頁"
+        >
+          <ChevronRight size={18} />
+        </button>
+      </div>
     </div>
   )
 }
