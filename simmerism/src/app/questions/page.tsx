@@ -43,6 +43,14 @@ export default function QuestionsPage() {
     }
   }, [messages])
 
+  useEffect(() => {
+    const textarea = document.querySelector("textarea")
+    if (textarea) {
+      textarea.style.height = "auto" // 先重設，避免越調越高
+      textarea.style.height = `${textarea.scrollHeight}px` // 根據內容高度調整
+    }
+  }, [userInput])
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!userInput.trim() || !chefChatRef.current) return
@@ -196,14 +204,17 @@ export default function QuestionsPage() {
 
             {/* Input Area */}
             <div className="border-t-2 border-black p-4 bg-[#1E49CF]">
-              <form onSubmit={handleSubmit} className="flex gap-3">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col sm:flex-row gap-2 sm:gap-3"
+              >
                 <div className="flex-1 relative">
                   <div className="absolute top-1 left-1 w-full h-full bg-black rounded"></div>
                   <textarea
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     placeholder="請輸入你的料理問題，例如：『冰箱只剩蛋和豆腐，可以煮什麼？』"
-                    className="relative w-full p-3 border-2 border-black rounded focus:outline-none font-medium resize-none h-12 z-10"
+                    className="relative w-full p-3 border-2 border-black rounded focus:outline-none font-medium resize-none z-10 overflow-hidden"
                     disabled={isLoading}
                     rows={1}
                     onKeyDown={(e) => {
@@ -219,7 +230,7 @@ export default function QuestionsPage() {
                   <button
                     type="submit"
                     disabled={isLoading || !userInput.trim()}
-                    className={`relative px-6 py-3 border-2 border-black rounded font-bold transition-colors flex items-center gap-2 h-12 z-10 neo-button ${
+                    className={`relative w-full sm:w-auto px-6 py-3 border-2 border-black rounded font-bold transition-colors flex items-center justify-center sm:justify-start gap-2 h-12 z-10 neo-button ${
                       isLoading || !userInput.trim()
                         ? "bg-gray-400 text-gray-600 cursor-not-allowed"
                         : "bg-[#FB7659] text-white hover:bg-[#e55a40]"
