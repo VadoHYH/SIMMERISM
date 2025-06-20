@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#5a9a8e] py-16 text-white overflow-hidden">
       <div className="w-full">
         {/* 寬度超出畫面 + 微調右偏 */}
-        <div className="w-[110vw] mx-auto translate-x-[1vw]">
+        <div className="w-[110vw] mx-auto translate-x-[1vw] pb-0">
           <h1
             className="font-extrabold uppercase leading-none whitespace-nowrap text-white"
             style={{
@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
 
         {/* 版權文字置中 */}
-        <div className="mt-4 text-center">
+        <div className="mt-4 text-start p-5 py-0">
           <p className="text-sm">© 2025 Simmerism. All rights reserved.</p>
         </div>
       </div>
