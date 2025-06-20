@@ -37,7 +37,7 @@ export default function CustomPagination({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="w-9 h-9 flex items-center justify-center border-2 border-black text-black bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
+          className="w-9 h-9 flex items-center justify-center border-2 border-black text-white bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
           aria-label="上一頁"
         >
           <ChevronLeft size={18} />
@@ -50,7 +50,7 @@ export default function CustomPagination({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="w-9 h-9 flex items-center justify-center border-2 border-black text-black bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
+          className="w-9 h-9 flex items-center justify-center border-2 border-black text-white bg-[#FB7659] hover:bg-orange-600 disabled:opacity-40"
           aria-label="下一頁"
         >
           <ChevronRight size={18} />
