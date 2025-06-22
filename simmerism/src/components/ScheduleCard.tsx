@@ -61,8 +61,10 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
         </div>
 
         {/* 食譜資訊 */}
-        <div className="flex-1 text-sm sm:text-base lg:text-lg leading-snug">
-          <div className="font-semibold truncate">{schedule.recipe?.title?.zh || '未知食譜'}</div>
+        <div className="flex-1 text-sm sm:text-base lg:text-lg leading-snug min-w-0">
+          <div className="font-semibold truncate whitespace-nowrap overflow-hidden max-w-[140px] sm:max-w-none">
+            {schedule.recipe?.title?.zh || '未知食譜'}
+          </div>
           <div className="text-gray-500">
             {schedule.recipe?.readyInMinutes ? `${schedule.recipe.readyInMinutes} 分鐘` : '時間未知'}
           </div>
@@ -70,7 +72,7 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
 
         {/* 操作按鈕 */}
         <div
-          className="flex flex-col sm:flex-row gap-2 ml-2 sm:ml-4 w-10 sm:w-auto flex-shrink-0"
+          className="flex flex-col sm:flex-row gap-2 ml-2 sm:ml-4 sm:w-auto flex-shrink-0"
           onClick={(e) => e.stopPropagation()}
         >
           <button
