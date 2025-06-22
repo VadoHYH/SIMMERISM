@@ -2,6 +2,7 @@
 import type { ScheduleItem } from '@/hooks/useSchedule';
 import Image from "next/image"
 import { Trash2 } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 type ScheduleCardProps = {
     schedule: ScheduleItem;
@@ -23,6 +24,13 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
     //     </button>
     //   );
     // };
+    const router = useRouter()
+
+    const handleCardClick = () => {
+      if (schedule.recipeId) {
+        router.push(`/recipe/${schedule.recipeId}`)
+      }
+    }
     
     const getStatusButton = () => {
       return (
@@ -38,7 +46,10 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
     };
   
     return (
-      <div className="flex items-center border-b border-gray-200 py-3 sm:py-4 lg:py-6">
+      <div 
+        className="flex items-center border-b border-gray-200 py-3 sm:py-4 lg:py-6"
+        onClick={handleCardClick}
+      >
         {/* 食譜圖片 */}
         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-200 mr-3 sm:mr-4 aspect-square relative">
           <Image
