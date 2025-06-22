@@ -137,7 +137,11 @@ export const useShoppingList = ({
   
     return schedule.filter((item) => {
       const itemDate = dayjs(item.date)
-      return itemDate.isSameOrAfter(start) && itemDate.isSameOrBefore(end)
+      return (
+        itemDate.isSameOrAfter(start) &&
+        itemDate.isSameOrBefore(end)&&
+        !item.isDone
+      )
     })
   }, [schedule, startDate, endDate])
 
