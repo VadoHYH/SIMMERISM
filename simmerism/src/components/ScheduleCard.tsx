@@ -36,7 +36,7 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
       return (
         <button
           onClick={() => onClickStatus(schedule)}
-          className={`p-1 sm:p-2 lg:px-4 neo-button border border-black text-sm sm:text-base ${
+          className={`w-full sm:w-auto p-1 sm:p-2 lg:px-4 neo-button border border-black text-sm sm:text-base ${
             schedule.isDone ? 'bg-[#5a9a8e] text-white' : 'bg-[#ffc278] text-black'
           }`}
         >
@@ -47,7 +47,7 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
   
     return (
       <div 
-        className="flex items-center border-b border-gray-200 py-3 sm:py-4 lg:py-6"
+        className="flex items-center border-b border-gray-200 py-3 px-2 sm:py-4  lg:py-6 hover:bg-[#fff5e0] transition-colors"
         onClick={handleCardClick}
       >
         {/* 食譜圖片 */}
@@ -69,13 +69,13 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
         </div>
 
         {/* 操作按鈕 */}
-        <div 
-          className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4"
+        <div
+          className="flex flex-col sm:flex-row items-stretch gap-2 ml-2 sm:ml-4 w-24 sm:w-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <button
             onClick={() => onDelete?.(schedule)}
-            className="bg-[#ff6347] text-black p-1 sm:p-2 lg:px-3 neo-button border border-black"
+            className="bg-[#ff6347] text-black flex justify-center items-center p-1 sm:p-2 lg:px-3 neo-button border border-black w-full sm:w-auto"
           >
             <Trash2 size={20} />
           </button>
