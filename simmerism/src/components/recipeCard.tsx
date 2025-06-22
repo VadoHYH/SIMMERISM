@@ -39,7 +39,7 @@ export default function RecipeCard({
       const width = window.innerWidth
       if (width < 640) setMaxVisibleTags(1)
       else if (width < 1024) setMaxVisibleTags(3)
-      else setMaxVisibleTags(5)
+      else setMaxVisibleTags(4)
     }
 
     updateVisibleTags()
