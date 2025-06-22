@@ -10,7 +10,7 @@ export default function CollectionPage() {
   const user = useAuthStore(state => state.user)
   const loadingAuth = useAuthStore(state => state.loading)
   const router = useRouter()
-  const { favoriteDetails, toggleFavorite, loading } = useFavorite()
+  const { favoriteDetails, toggleFavorite, loading, favorites } = useFavorite()
 
   // 如果尚未取得 user 且 auth 正在 loading，先不動作
   useEffect(() => {
@@ -45,19 +45,18 @@ export default function CollectionPage() {
           </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-            {favoriteDetails.map(recipe => (
-              <Link href={`/recipe/${recipe.id}`} key={recipe.id}>
-                <RecipeCard
-                  id={recipe.id}
-                  title={recipe.title}
-                  image={recipe.image}
-                  liked={true} // 這邊你可以直接設定 true，因為都在收藏內
-                  readyInMinutes={recipe.readyInMinutes}
-                  dishTypes={recipe.dishTypes}
-                  diets={recipe.diets}
-                  onLike={() => toggleFavorite(recipe)}
-                />
-              </Link>
+            {favoriteDetails.map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                id={recipe.id}
+                title={recipe.title}
+                image={recipe.image}
+                liked={favorites.includes(recipe.id.toString())}
+                readyInMinutes={recipe.readyInMinutes}
+                dishTypes={recipe.dishTypes}
+                diets={recipe.diets}
+                onLike={() => toggleFavorite(recipe)}
+              />
             ))}
           </div>
         )}
