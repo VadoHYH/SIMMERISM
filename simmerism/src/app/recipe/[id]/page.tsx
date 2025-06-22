@@ -189,7 +189,6 @@ export default function RecipePage() {
             <div className="space-y-2">
               {recipe.ingredients.map((item, index) => (
                 <div key={index} className="flex items-center">
-                  <input type="checkbox" className="mr-2" />
                   <span className="flex-1">{item.name.zh}</span>
                   <span className="text-sm text-gray-600">{item.amount.zh}</span>
                 </div>
