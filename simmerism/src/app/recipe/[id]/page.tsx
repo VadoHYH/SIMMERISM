@@ -72,14 +72,16 @@ export default function RecipePage() {
     steps = [];
   }
 
-  const handleAddSchedule = ({ date, meal }: { date: Date; meal: string }) => {
-    const formattedDate = date.toISOString().split('T')[0] // "2025-05-29"
+  const handleAddSchedule = ({ date, meal }: ScheduleData) => {
+    const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000)
+    const formattedDate = localDate.toISOString().split("T")[0]
+
     addSchedule({
-      recipeId: recipeId, // 從頁面取得的 id
+      recipeId: recipeId,
       date: formattedDate,
       mealType: meal as 'breakfast' | 'lunch' | 'dinner',
     })
-  };
+  }
     
   return (
     <div className="bg-[#f9f5f1] min-h-screen min-w-1000 py-8">
