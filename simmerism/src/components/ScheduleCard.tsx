@@ -70,7 +70,7 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
 
         {/* 操作按鈕 */}
         <div
-          className="flex flex-col sm:flex-row items-stretch gap-2 ml-2 sm:ml-4 w-24 sm:w-auto"
+          className="flex flex-col sm:flex-row gap-2 ml-2 sm:ml-4 w-10 sm:w-auto flex-shrink-0"
           onClick={(e) => e.stopPropagation()}
         >
           <button
