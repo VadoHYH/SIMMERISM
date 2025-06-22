@@ -69,7 +69,10 @@ export default function ScheduleCard({ schedule, onClickStatus, onDelete }: Sche
         </div>
 
         {/* 操作按鈕 */}
-        <div className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4">
+        <div 
+          className="flex items-center gap-1 sm:gap-2 ml-2 sm:ml-4"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button
             onClick={() => onDelete?.(schedule)}
             className="bg-[#ff6347] text-black p-1 sm:p-2 lg:px-3 neo-button border border-black"
