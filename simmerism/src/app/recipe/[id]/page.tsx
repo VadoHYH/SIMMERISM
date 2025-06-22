@@ -46,7 +46,7 @@ export default function RecipePage() {
 
   // 載入中畫面
   if (loading) {
-    return <div className="p-4">🍳 載入食譜中...</div>
+    return <div className="min-h-screen flex items-center justify-center text-xl text-gray-600">🍳 載入食譜中...</div>
   }
 
   // 找不到對應食譜
