@@ -54,7 +54,7 @@ export default function Home() {
                   發現美味食譜<br />規劃完美餐點
                 </h1>
                 <p className="text-base md:text-xl">
-                  Simmerism 幫助您探索美味食譜、規劃餐點、準備食材，並記錄您的烹飪旅程。
+                  SIMMERISM 幫助您探索美味食譜、規劃餐點、準備食材，並記錄您的烹飪旅程。
                 </p>
               </div>
               <div className="flex justify-end mt-6">
