@@ -3,6 +3,12 @@
 
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
+import {
+  generateIngredientOptions,
+  generateToolOptions,
+  generateTagOptions,
+} from "@/utils/filterOptions"
+
 
 export interface FilterOptions {
   ingredients: string[]
@@ -57,70 +63,9 @@ export default function FilterModal({ isOpen, onClose, onApply, initialFilters, 
     { label: "6人以上", value: 6 },
   ]
 
-  // 動態生成食材選項
-  const generateIngredientOptions = () => {
-    const ingredientSet = new Set<string>(defaultIngredients) // 先加入預設選項
-    
-    recipes.forEach((recipe) => {
-      if (recipe.ingredients) {
-        recipe.ingredients.forEach((ingredient: any) => {
-          if (ingredient.name?.zh) {
-            ingredientSet.add(ingredient.name.zh)
-          }
-        })
-      }
-    })
-    
-    return Array.from(ingredientSet).sort()
-  }
-
-  // 動態生成器具選項
-  const generateToolOptions = () => {
-    const toolSet = new Set<string>(defaultTools) // 先加入預設選項
-    
-    recipes.forEach((recipe) => {
-      if (recipe.equipment) {
-        recipe.equipment.forEach((equipment: any) => {
-          if (equipment.zh) {
-            toolSet.add(equipment.zh)
-          }
-        })
-      }
-    })
-    
-    return Array.from(toolSet).sort()
-  }
-
-  // 動態生成標籤選項
-  const generateTagOptions = () => {
-    const tagSet = new Set<string>()
-    
-    recipes.forEach((recipe) => {
-      // 添加 dishTypes
-      if (recipe.dishTypes) {
-        recipe.dishTypes.forEach((type: any) => {
-          if (type.zh) {
-            tagSet.add(type.zh)
-          }
-        })
-      }
-      
-      // 添加 diets
-      if (recipe.diets) {
-        recipe.diets.forEach((diet: any) => {
-          if (diet.zh) {
-            tagSet.add(diet.zh)
-          }
-        })
-      }
-    })
-    
-    return Array.from(tagSet).sort()
-  }
-
-  const ingredientOptions = generateIngredientOptions()
-  const toolOptions = generateToolOptions()
-  const tagOptions = generateTagOptions()
+  const ingredientOptions = generateIngredientOptions(recipes, defaultIngredients)
+  const toolOptions = generateToolOptions(recipes, defaultTools)
+  const tagOptions = generateTagOptions(recipes)
 
   // 控制顯示的選項數量
   const displayedIngredients = showAllIngredients ? ingredientOptions : ingredientOptions.slice(0, 10)
