@@ -71,47 +71,61 @@ export default function CustomDatePicker({
   const months = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
   const weekDays = ["日", "一", "二", "三", "四", "五", "六"]
 
+  function getScrollableParent(node: HTMLElement | null): HTMLElement | Window {
+    if (!node) return window
+    let current: HTMLElement | null = node
+  
+    while (current && current !== document.body) {
+      const overflowY = window.getComputedStyle(current).overflowY
+      if (overflowY === "scroll" || overflowY === "auto") {
+        return current
+      }
+      current = current.parentElement
+    }
+    return window
+  }
+
   // 計算 modal 位置
   useEffect(() => {
     if (isOpen && containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect()
-      const scrollY = window.scrollY
-      const scrollX = window.scrollX
-      
+      const container = containerRef.current
+      const rect = container.getBoundingClientRect()
+  
+      // 若超出畫面底部，捲動進畫面
+      if (rect.bottom > window.innerHeight || rect.top < 0) {
+        container.scrollIntoView({ behavior: "smooth", block: "center" })
+      }
+  
+      const scrollParent = getScrollableParent(container)
+      const containerRect = container.getBoundingClientRect()
+      const scrollTop = scrollParent instanceof Window ? window.scrollY : (scrollParent as HTMLElement).scrollTop
+      const scrollLeft = scrollParent instanceof Window ? window.scrollX : (scrollParent as HTMLElement).scrollLeft
+  
       const modalWidth = 320
       const modalHeight = 400
-      const padding = 10 // 邊界 padding
-      
-      // 計算 modal 的理想位置
-      let top = rect.bottom + scrollY + 8 // 8px 間距
-      let left = rect.left + scrollX + rect.width / 2 - modalWidth / 2
-      
-      // 水平邊界檢查 - 確保不會超出視窗左右邊界
+      const padding = 10
+  
+      let top = containerRect.bottom + scrollTop + 8
+      let left = containerRect.left + scrollLeft + containerRect.width / 2 - modalWidth / 2
+  
       const maxLeft = window.innerWidth - modalWidth - padding
       const minLeft = padding
-      
-      if (left < minLeft) {
-        left = minLeft
-      } else if (left > maxLeft) {
-        left = maxLeft
-      }
-      
-      // 垂直邊界檢查 - 如果下方空間不足，顯示在上方
-      const spaceBelow = window.innerHeight - (rect.bottom - scrollY)
-      const spaceAbove = rect.top - scrollY
-      
+  
+      if (left < minLeft) left = minLeft
+      else if (left > maxLeft) left = maxLeft
+  
+      const spaceBelow = window.innerHeight - containerRect.bottom
+      const spaceAbove = containerRect.top
+  
       if (spaceBelow < modalHeight + padding && spaceAbove > modalHeight + padding) {
-        // 上方空間足够，顯示在上方
-        top = rect.top + scrollY - modalHeight - 8
+        top = containerRect.top + scrollTop - modalHeight - 8
       } else if (spaceBelow < modalHeight + padding) {
-        // 上下都空間不足，置中顯示
-        top = scrollY + (window.innerHeight - modalHeight) / 2
-        // 確保不會超出頂部
-        if (top < scrollY + padding) {
-          top = scrollY + padding
+        top = scrollTop + (window.innerHeight - modalHeight) / 2
+        if (top < scrollTop + padding) {
+          top = scrollTop + padding
         }
       }
-      
+  
       setPosition({ top, left })
     }
   }, [isOpen])
@@ -292,11 +306,11 @@ export default function CustomDatePicker({
   const CalendarModal = () => (
     <div 
       id="datepicker-portal"
-      className="fixed"
+      className="absolute z-50"
       style={{ 
-        top: position.top, 
-        left: position.left,
-        zIndex: 9999
+        top: '100%', // or 'calc(100% + 8px)' for spacing
+        left: '50%',
+        transform: 'translateX(-50%)'
       }}
     >
       <div className="relative">
@@ -422,10 +436,7 @@ export default function CustomDatePicker({
       </div>
 
       {/* Calendar Modal - 使用 Portal 渲染到 document.body */}
-      {isOpen && typeof window !== 'undefined' && createPortal(
-        <CalendarModal />,
-        document.body
-      )}
+      {isOpen && <CalendarModal />}
     </div>
   )
 }

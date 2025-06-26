@@ -131,7 +131,7 @@ export default function SchedulePage() {
             <span className="hidden sm:inline">前一天</span>
           </button>
 
-          <div className="bg-[#ffc278] border-2 border-black px-6 py-2 font-bold neo-button">
+          <div className="bg-[#ffc278] border-2 border-black px-6 py-2 font-bold neo-button z-50">
             <DatePicker
               selected={currentDate.toDate()}
               onChange={(date: Date | null) => {
@@ -155,7 +155,7 @@ export default function SchedulePage() {
         <div className="space-y-8">
           {/* 早餐 */}
           <div className="border-2 border-black rounded p-6 bg-white">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
+            <div className="relative z-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ export default function SchedulePage() {
                   fill="#519181"
                 />
               </svg>
-              <div className="absolute inset-0 flex items-center justify-center text-white font-bold">
+              <div className="absolute flex items-center justify-center text-white font-bold">
                 早
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function SchedulePage() {
 
           {/* 中餐 */}
           <div className="border-2 border-black rounded p-6 bg-white">
-          <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
+            <div className="relative z-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
                 xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ export default function SchedulePage() {
                   fill="#519181"
                 />
               </svg>
-              <div className="absolute inset-0 flex items-center justify-center text-white font-bold">
+              <div className="absolute flex items-center justify-center text-white font-bold">
                 午
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function SchedulePage() {
 
           {/* 晚餐 */}
           <div className="border-2 border-black rounded p-6 bg-white">
-          <div className="relative w-14 h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
+            <div className="relative z-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-bold mb-4">
               <svg
                 viewBox="0 0 218 217"
                 xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +271,7 @@ export default function SchedulePage() {
                   fill="#519181"
                 />
               </svg>
-              <div className="absolute inset-0 flex items-center justify-center text-white font-bold">
+              <div className="absolute flex items-center justify-center text-white font-bold">
                 晚
               </div>
             </div>

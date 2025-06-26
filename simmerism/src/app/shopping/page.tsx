@@ -63,7 +63,7 @@ export default function ShoppingPage() {
 
             {/* 日期選擇區塊 - 改善 RWD */}
             <div className="flex justify-center md:justify-start items-center mb-6 md:mb-8">
-              <div className="bg-[#ffc278] border-2 border-black px-3 md:px-6 py-2 font-bold neo-button w-full md:w-auto min-w-0">
+              <div className="bg-[#ffc278] border-2 border-black px-3 md:px-6 py-2 font-bold neo-button w-full md:w-auto min-w-0 z-50">
                 <DatePicker
                   selectsRange
                   startDate={startDate}
