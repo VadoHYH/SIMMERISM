@@ -27,6 +27,9 @@ export default function SchedulePage() {
   const lunchSchedules = filteredSchedules.filter(s => s.mealType === 'lunch');
   const dinnerSchedules = filteredSchedules.filter(s => s.mealType === 'dinner');
 
+  const [successMessage, setSuccessMessage] = useState("");
+  const [confirmDeleteItem, setConfirmDeleteItem] = useState<ScheduleItem | null>(null);
+
   useEffect(() => {
     if (!loadingAuth && !user) {
       router.push("/")
@@ -88,25 +91,33 @@ export default function SchedulePage() {
     }
   };
 
-  const handleDeleteSchedule = async (schedule: ScheduleItem) => {
-    if (!schedule.id) {
-      console.error('Schedule ID 為 undefined，無法刪除');
-      return;
-    }
-    
-    // 可以加入確認對話框
-    if (window.confirm(`確定要刪除「${schedule.recipe?.title?.zh || '未知食譜'}」的行程嗎？`)) {
-      try {
-        await deleteSchedule(schedule.id);
-        // 刪除成功後會自動重新載入資料（如果 useSchedule hook 有設定的話）
-      } catch (error) {
-        console.error('刪除行程失敗:', error);
-        alert('刪除行程失敗，請稍後再試');
-      }
+  const handleDeleteClick = (schedule: ScheduleItem) => {
+    setConfirmDeleteItem(schedule);
+  };
+  
+  const confirmDelete = async () => {
+    if (!confirmDeleteItem?.id) return;
+  
+    try {
+      await deleteSchedule(confirmDeleteItem.id);
+      setSuccessMessage("已成功刪除行程！");
+      setTimeout(() => setSuccessMessage(""), 3000);
+    } catch (error) {
+      console.error("刪除行程失敗:", error);
+      alert("刪除行程失敗，請稍後再試");
+    } finally {
+      setConfirmDeleteItem(null); // 關閉彈窗
     }
   };
 
   return (
+    <>
+    {successMessage && (
+      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-[#ffc278] text-black border-2 border-black px-6 py-2 rounded-lg shadow-md font-bold z-50 neo-button transition-all duration-300">
+        ✅ {successMessage}
+      </div>
+    )}
+
     <div className="min-h-screen bg-[#f9f5f1] py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8">本日菜單</h1>
@@ -176,11 +187,36 @@ export default function SchedulePage() {
                   key={schedule.id}
                   schedule={schedule}
                   onClickStatus={handleScheduleClick}
-                  onDelete={handleDeleteSchedule}
+                  onDelete={handleDeleteClick}
                 />
               ))
             )}
           </div>
+
+          {confirmDeleteItem && (
+            <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
+              <div className="bg-white border-2 border-black rounded-xl p-6 w-[90%] max-w-md space-y-4 neo-button shadow-lg">
+                <h2 className="text-xl font-bold">要刪除這個行程嗎？</h2>
+                <p className="text-gray-700 text-sm">
+                  「{confirmDeleteItem.recipe?.title?.zh || '未知食譜'}」將從行程中移除。
+                </p>
+                <div className="flex justify-end gap-3 pt-2">
+                  <button
+                    className="px-4 py-2 rounded-lg bg-white border-2 border-black hover:bg-gray-100 font-bold"
+                    onClick={() => setConfirmDeleteItem(null)}
+                  >
+                    取消
+                  </button>
+                  <button
+                    className="px-4 py-2 rounded-lg bg-[#ffc278] border-2 border-black hover:bg-[#ffb452] font-bold"
+                    onClick={confirmDelete}
+                  >
+                    確定刪除
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* 中餐 */}
           <div className="border-2 border-black rounded p-6 bg-white">
@@ -216,7 +252,7 @@ export default function SchedulePage() {
                   key={schedule.id}
                   schedule={schedule}
                   onClickStatus={handleScheduleClick}
-                  onDelete={handleDeleteSchedule}
+                  onDelete={handleDeleteClick}
                 />
               ))
             )}
@@ -256,7 +292,7 @@ export default function SchedulePage() {
                   key={schedule.id}
                   schedule={schedule}
                   onClickStatus={handleScheduleClick}
-                  onDelete={handleDeleteSchedule}
+                  onDelete={handleDeleteClick}
                 />
               ))
             )}
@@ -264,5 +300,6 @@ export default function SchedulePage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

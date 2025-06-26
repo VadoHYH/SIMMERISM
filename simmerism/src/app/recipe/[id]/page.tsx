@@ -28,6 +28,7 @@ export default function RecipePage() {
   const { favorites, toggleFavorite } = useFavorite()
   const [isModalOpen, setModalOpen] = useState(false);
   const { addSchedule } = useSchedule()
+  const [successMessage, setSuccessMessage] = useState("");
 
   const isFavorited = favorites.includes(recipeId.toString())
   
@@ -81,9 +82,23 @@ export default function RecipePage() {
       date: formattedDate,
       mealType: meal as 'breakfast' | 'lunch' | 'dinner',
     })
+
+    // ✅ 顯示成功訊息
+    setSuccessMessage("已成功加入行程！");
+    // 3 秒後自動清除提示
+    setTimeout(() => setSuccessMessage(""), 3000);
+    // 關閉 Modal
+    setModalOpen(false);
   }
     
   return (
+    <>
+    {successMessage && (
+      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-[#ffc278] text-black border-2 border-black px-6 py-2 rounded-lg shadow-md font-bold z-50 neo-button transition-all duration-300">
+        ✅ {successMessage}
+      </div>
+    )}
+
     <div className="bg-[#f9f5f1] min-h-screen min-w-1000 py-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-6">
@@ -294,7 +309,9 @@ export default function RecipePage() {
             </div>
           </div>
         </section> */}
+        
     </div>
+    </>
   )
 }
 
