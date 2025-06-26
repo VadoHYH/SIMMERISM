@@ -103,6 +103,17 @@ export default function LoginModal({
                 className="mr-2"
               />
               <label htmlFor="rememberMe" className="text-sm text-gray-700">記住我（保持登入）</label>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail("123@gmail.com");
+                  setPassword("123456");
+                }}
+                className="text-[#519181] hover:underline mt-2 sm:mt-0"
+              >
+                使用測試帳號
+              </button>
             </div>
 
             <button
