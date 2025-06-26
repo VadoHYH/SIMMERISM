@@ -87,6 +87,19 @@ export default function QuestionsPage() {
           </div>
         </div>
 
+        {/* New Conversation Button */}
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => {
+              chefChatRef.current?.resetConversation()
+              setUserInput("")
+            }}
+            className="bg-[#519181] text-white px-4 py-2 rounded border-2 border-black font-bold hover:bg-[#396358] transition-colors"
+          >
+            新對話
+          </button>
+        </div>
+
         {/* Chat Container */}
         <div className="relative">
           <div className="absolute top-2 left-2 w-full h-full bg-black rounded"></div>
@@ -117,7 +130,45 @@ export default function QuestionsPage() {
                         </div>
                       )}
 
-                      <p className="font-medium">{msg.content}</p>
+                      <div className="font-medium">
+                      <p>{msg.content}</p>
+                      </div>
+
+                      {/* Recipe Results - 保持現有的邏輯，但稍作調整 */}
+                      {msg.recipes && msg.recipes.length > 0 && (
+                        <div className="mt-4 space-y-3">
+                          {msg.recipes.map((recipe, index) => (
+                            <div
+                              key={recipe.id || index}
+                              className="flex items-start bg-white text-black p-3 rounded border border-black shadow-sm"
+                            >
+                              {/* 圖片在左側 */}
+                              {recipe.image && (
+                                <div className="relative w-20 h-20 flex-shrink-0 mr-4 border border-black rounded overflow-hidden">
+                                  <Image
+                                    src={recipe.image}
+                                    alt={recipe.title.zh}
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>
+                              )}
+
+                              {/* 文字內容 */}
+                              <div className="flex flex-col justify-between">
+                                <h4 className="font-bold text-sm text-[#1E49CF] mb-1">{recipe.title.zh}</h4>
+                                <p className="text-xs text-black/70 line-clamp-2 mb-2">{recipe.summary.zh}</p>
+                                <a
+                                  href={`/recipe/${recipe.id}`}
+                                  className="text-xs text-[#1E49CF] underline hover:text-blue-800"
+                                >
+                                  查看完整食譜 →
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Loading Animation */}
                       {msg.isLoading && (
@@ -157,28 +208,6 @@ export default function QuestionsPage() {
                           >
                             否
                           </button>
-                        </div>
-                      )}
-
-                      {/* Recipe Results */}
-                      {msg.recipes && msg.recipes.length > 0 && (
-                        <div className="mt-4 space-y-3">
-                          {msg.recipes.map((recipe, index) => (
-                            <div key={index} className="bg-white text-black p-3 rounded border border-black">
-                              <h4 className="font-bold text-sm mb-1">{recipe.title.zh}</h4>
-                              <p className="text-xs mb-2">{recipe.summary.zh}</p>
-                              {recipe.image && (
-                                <div className="relative w-full h-24">
-                                  <Image
-                                    src={recipe.image || "/placeholder.svg"}
-                                    alt={recipe.title.zh}
-                                    fill
-                                    className="object-cover rounded"
-                                  />
-                                </div>
-                              )}
-                            </div>
-                          ))}
                         </div>
                       )}
 

@@ -1,13 +1,14 @@
 "use client"
-import { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react"
-import { useRecipes } from "@/hooks/useRecipes"
 
-// 定義食譜類型
-export type Recipe = {
-  title: { zh: string; en: string }
-  summary: { zh: string; en: string }
-  image?: string
-}
+import {
+  useState,
+  useEffect,
+  useRef,
+  useImperativeHandle,
+  forwardRef,
+} from "react"
+import { useRecipes } from "@/hooks/useRecipes"
+import { Recipe } from "@/types/recipe"
 
 export interface Message {
   id: string
@@ -29,50 +30,55 @@ export interface ChefChatRef {
   handleAIRequest: (accept: boolean, messageId: string) => void
   loadingRecipes: boolean
   loadingAI: boolean
+  resetConversation: () => void
 }
 
 const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, ref) => {
-  const [messages, setMessages] = useState<Message[]>([
+  const initialMessage: Message = {
+    id: "1",
+    content: "你好！我是廚娘小助手，有什麼料理問題想問我嗎？",
+    isUser: false,
+    timestamp: new Date(),
+  }
+
+  const [messages, setMessages] = useState<Message[]>([initialMessage])
+  const [loadingAI, setLoadingAI] = useState(false)
+
+  const conversationHistoryRef = useRef<Array<{ role: string; content: string }>>([
     {
-      id: "1",
-      content: "你好！我是廚娘小助手，有什麼料理問題想問我嗎？",
-      isUser: false,
-      timestamp: new Date(),
+      role: "system",
+      content:
+        "你是一位專門回答料理問題的小廚娘 AI。你會記住之前的對話內容，能夠根據上下文進行連續對話。如果問題與料理無關請委婉拒絕，否則請推薦創意料理。請用親切可愛的語氣回答。",
     },
   ])
 
-  // ChefChat 的狀態
-  const [results, setResults] = useState<Recipe[]>([])
-  const [response, setResponse] = useState("")
-  const [loadingAI, setLoadingAI] = useState(false)
-  const [askAI, setAskAI] = useState(false)
-  const [noResult, setNoResult] = useState(false)
-  const [currentInput, setCurrentInput] = useState("")
   const abortControllerRef = useRef<AbortController | null>(null)
   const { recipes, loading: loadingRecipes } = useRecipes()
 
-  // 黑名單關鍵詞：可擴充
   const blockedKeywords = ["程式", "coding", "Python", "C++", "愛情", "投資", "股票", "歷史", "哲學", "寫詩"]
+  const containsBlockedKeyword = (input: string) => blockedKeywords.some((kw) => input.includes(kw))
 
-  const containsBlockedKeyword = (input: string) => {
-    return blockedKeywords.some((kw) => input.includes(kw))
-  }
-
-  // 當 messages 改變時通知父組件
   useEffect(() => {
     onMessagesChange(messages)
   }, [messages, onMessagesChange])
 
-  useEffect(() => {
-    if (askAI) handleGenerate()
-  }, [askAI])
+  const resetConversation = () => {
+    conversationHistoryRef.current = [
+      {
+        role: "system",
+        content:
+          "你是一位專門回答料理問題的小廚娘 AI。你會記住之前的對話內容，請務必根據前面的對話上下文理解使用者的問題，並維持同一主題。如果問題與料理無關請委婉拒絕，否則請推薦創意料理。請用親切可愛的語氣回答。",
+      },
+    ]
+    setMessages([initialMessage])
+  }
 
   const addMessage = (
     content: string,
     isUser: boolean,
     recipes?: Recipe[],
     isAIPrompt?: boolean,
-    isLoading?: boolean,
+    isLoading?: boolean
   ) => {
     const newMessage: Message = {
       id: Date.now().toString(),
@@ -95,66 +101,7 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
     setMessages((prev) => prev.filter((msg) => msg.id !== id))
   }
 
-  const handleSubmit = (userInput: string) => {
-    if (!userInput.trim()) return
-
-    // 保存當前輸入
-    setCurrentInput(userInput)
-
-    // 添加用戶訊息
-    addMessage(userInput, true)
-
-    // 重置狀態
-    setResponse("")
-    setResults([])
-    setNoResult(false)
-    setAskAI(false)
-
-    // 檢查黑名單關鍵詞
-    if (containsBlockedKeyword(userInput)) {
-      setTimeout(() => {
-        addMessage("小廚娘只會回答跟料理相關的問題唷～試著問問「冰箱只剩蛋和泡菜，能煮什麼？」看看 🍳", false)
-      }, 500)
-      return
-    }
-
-    // 搜尋食譜 - 只有在食譜載入完成時才搜尋
-    if (!loadingRecipes && recipes.length > 0) {
-      const input = userInput.toLowerCase()
-      const filtered = recipes.filter(
-        (recipe) => recipe.title.zh.toLowerCase().includes(input) || recipe.title.en.toLowerCase().includes(input),
-      )
-
-      if (filtered.length > 0) {
-        setResults(filtered)
-        setTimeout(() => {
-          addMessage("小廚娘找到這些食譜：", false, filtered)
-        }, 500)
-      } else {
-        setNoResult(true)
-        setTimeout(() => {
-          addMessage("找不到相關食譜，要請小廚娘發揮創意幫你想一份嗎？", false, undefined, true)
-        }, 500)
-      }
-    } else {
-      // 如果食譜還在載入中，直接提供 AI 協助
-      setTimeout(() => {
-        addMessage("小廚娘正在準備食譜資料，讓我直接幫你想想看！", false)
-        setAskAI(true)
-      }, 500)
-    }
-  }
-
-  const handleGenerate = async () => {
-    setLoadingAI(true)
-    setResponse("")
-
-    // 添加載入訊息
-    const loadingId = addMessage("小廚娘努力思考中...", false, undefined, false, true)
-
-    const controller = new AbortController()
-    abortControllerRef.current = controller
-
+  const extractKeywordsWithAI = async (input: string): Promise<string[]> => {
     try {
       const res = await fetch("https://api.chatanywhere.org/v1/chat/completions", {
         method: "POST",
@@ -167,34 +114,138 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
           messages: [
             {
               role: "system",
-              content: "你是一位專門回答料理問題的小廚娘 AI，如果問題與料理無關請委婉拒絕，否則請推薦創意料理。",
+              content: `請從使用者的句子中提取出與食材、料理方式、菜色名稱有關的中文關鍵詞。
+              例如輸入：「冰箱只剩蛋和泡菜，能煮什麼？」
+              回傳：蛋,泡菜
+              只回傳以逗號分隔的詞，不要多餘說明。`,
             },
-            {
-              role: "user",
-              content: currentInput,
-            },
+            { role: "user", content: input },
           ],
+          temperature: 0.3,
+          max_tokens: 100,
+        }),
+      })
+
+      if (!res.ok) {
+        return []
+      }
+
+      const data = await res.json()
+      const content = data?.choices?.[0]?.message?.content || ""
+      return content.split(",").map((kw: string) => kw.trim()).filter(Boolean)
+    } catch (error) {
+      return []
+    }
+  }
+
+  const handleSubmit = async (userInput: string) => {
+    if (!userInput.trim()) return
+  
+    addMessage(userInput, true)
+    conversationHistoryRef.current.push({ role: "user", content: userInput })
+  
+    if (containsBlockedKeyword(userInput)) {
+      const blockResponse = "小廚娘只會回答跟料理相關的問題唷～試著問問「冰箱只剩蛋和泡菜，能煮什麼？」看看 🍳"
+      setTimeout(() => {
+        addMessage(blockResponse, false)
+        conversationHistoryRef.current.push({ role: "assistant", content: blockResponse })
+      }, 500)
+      return
+    }
+  
+    // 新增：萃取關鍵字來判斷是否進行 recipe 搜尋
+    const keywords = await extractKeywordsWithAI(userInput)
+    const filteredKeywords = keywords.filter((k) => !["冰箱", "只剩", "能", "煮", "什麼"].includes(k))
+  
+    const shouldSearch = filteredKeywords.length > 0 && /[蛋肉菜飯麵醬湯燉炒烤煮]/.test(userInput)
+  
+    if (shouldSearch && recipes.length > 0) {
+      await handleRecipeSearch(userInput)
+    } else {
+      await handleAIResponse()
+    }
+  }
+
+  const handleRecipeSearch = async (userInput: string) => {
+    const keywords = await extractKeywordsWithAI(userInput)
+    const filteredKeywords = keywords.filter((k) => !["冰箱", "只剩", "能", "煮", "什麼"].includes(k))
+
+    if (filteredKeywords.length === 0) {
+      const noKeywordResponse = "讓小廚娘直接幫你想想創意料理！"
+      setTimeout(() => {
+        addMessage(noKeywordResponse, false)
+        conversationHistoryRef.current.push({ role: "assistant", content: noKeywordResponse })
+      }, 500)
+      await handleAIResponse()
+      return
+    }
+
+    const filtered = recipes.filter((recipe) => {
+      const ingredientsText = recipe.ingredients
+        .map((ing) => `${ing.name.zh} ${ing.name.en}`)
+        .join(" ")
+        .toLowerCase()
+      const fullText = `${ingredientsText} ${recipe.title.zh} ${recipe.title.en} ${recipe.summary.zh.join(" ")} ${recipe.summary.en.join(" ")}`.toLowerCase()
+
+      return filteredKeywords.every((kw) => fullText.includes(kw.toLowerCase()))
+    })
+
+    if (filtered.length > 0) {
+      const response = `小廚娘找到了包含所有食材（${filteredKeywords.join("、")}）的食譜：`
+      setTimeout(() => {
+        addMessage(response, false, filtered)
+        conversationHistoryRef.current.push({
+          role: "assistant",
+          content: response + "\n找到的食譜：" + filtered.map((r) => r.title.zh).join("、"),
+        })
+      }, 500)
+    } else {
+      const noMatch = `找不到同時包含所有食材（${filteredKeywords.join("、")}）的食譜，要請小廚娘發揮創意幫你想一份嗎？`
+      setTimeout(() => {
+        addMessage(noMatch, false, undefined, true)
+      }, 500)
+    }
+  }
+
+  const handleAIResponse = async () => {
+    setLoadingAI(true)
+    const loadingId = addMessage("小廚娘努力思考中...", false, undefined, false, true)
+    const controller = new AbortController()
+    abortControllerRef.current = controller
+
+    try {
+      const res = await fetch("https://api.chatanywhere.org/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_GPT_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: conversationHistoryRef.current,
+          temperature: 0.7,
+          max_tokens: 500,
         }),
         signal: controller.signal,
       })
 
+      if (!res.ok) throw new Error(`API error: ${res.status}`)
+
       const data = await res.json()
       const aiResponse = data?.choices?.[0]?.message?.content || "小廚娘暫時想不出來耶 😅"
-
-      // 移除載入訊息並添加 AI 回應
       removeMessage(loadingId)
       addMessage(aiResponse, false)
+      conversationHistoryRef.current.push({ role: "assistant", content: aiResponse })
     } catch (error: any) {
       removeMessage(loadingId)
-      if (error.name === "AbortError") {
-        addMessage("中止思考啦～等你再來找小廚娘唷 🫣", false)
-      } else {
-        console.error("GPT 回應失敗:", error)
-        addMessage("喔不～小廚娘暫時沒靈感，請再試一次！", false)
-      }
+      const errorMessage =
+        error.name === "AbortError"
+          ? "中止思考啦～等你再來找小廚娘唷 🫣"
+          : "喔不～小廚娘暫時沒靈感，請再試一次！"
+      addMessage(errorMessage, false)
+      conversationHistoryRef.current.push({ role: "assistant", content: errorMessage })
     } finally {
       setLoadingAI(false)
-      setAskAI(false)
       abortControllerRef.current = null
     }
   }
@@ -204,28 +255,30 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
   }
 
   const handleAIRequest = (accept: boolean, messageId: string) => {
-    // 移除 AI 提示訊息
     removeMessage(messageId)
-
     if (accept) {
-      setAskAI(true)
+      const response = "好的，讓小廚娘發揮創意！"
+      addMessage(response, false)
+      conversationHistoryRef.current.push({ role: "assistant", content: response })
+      handleAIResponse()
     } else {
-      addMessage("好的，有其他問題隨時問我唷！", false)
+      const decline = "好的，有其他問題隨時問我唷！"
+      addMessage(decline, false)
+      conversationHistoryRef.current.push({ role: "assistant", content: decline })
     }
   }
 
-  // 使用 useImperativeHandle 暴露方法給父組件
   useImperativeHandle(ref, () => ({
     handleSubmit,
     handleAbort,
     handleAIRequest,
     loadingRecipes,
     loadingAI,
+    resetConversation,
   }))
 
-  return null // 這個組件不渲染任何UI，只處理邏輯
+  return null
 })
 
 ChefChat.displayName = "ChefChat"
-
 export default ChefChat
