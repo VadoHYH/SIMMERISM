@@ -3,7 +3,7 @@
 import RecipeCard from "@/components/RecipeCard"
 import SearchBar from "@/components/SearchBar"
 import FilterModal, { type FilterOptions } from "@/components/FilterModal"
-import Pagination from "@/components/pagination"
+import Pagination from "@/components/Pagination"
 import Link from "next/link"
 import {  Filter, X } from "lucide-react"
 import { useState } from "react"

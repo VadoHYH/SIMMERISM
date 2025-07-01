@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { Send, ChevronDown } from "lucide-react"
-import ChefChat, { type Message, type ChefChatRef } from "@/components/Chefchat"
+import ChefChat, { type Message, type ChefChatRef } from "@/components/ChefChat"
 import Image from "next/image"
 
 export default function QuestionsPage() {
