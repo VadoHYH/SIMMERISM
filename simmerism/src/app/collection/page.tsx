@@ -38,7 +38,7 @@ export default function CollectionPage() {
             <p className="text-gray-600">可以先到搜尋頁找找看有沒有喜歡的料理喔！</p>
             <button
               className="bg-[#ffc278] border-2 border-black px-4 py-2 font-bold rounded-lg hover:bg-[#ffb452] neo-button"
-              onClick={() => location.href = '/search'}
+              onClick={() => router.push('/search')}
             >
               去探索食譜
             </button>
