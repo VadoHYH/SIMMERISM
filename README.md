@@ -87,7 +87,7 @@
 
 ## Architecture 
 
-![SIMMERSIM System Architecture](https://github.com/您的GitHub帳號/simmerism/blob/main/images/HighLevelArchitecture.png)
+![SIMMERISM High-Level Architecture](https://github.com/VadoHYH/simmerism/blob/main/images/HighLevelArchitecture.png)
 
 
 ---
