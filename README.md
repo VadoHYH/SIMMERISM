@@ -7,11 +7,13 @@
 
 ---
 
-## 🌍 Main Features
+## Main Features
 
 ### 📊 **Personalized Dashboard Overview** 
 * **Instant Meal Glance:** Provides a quick overview on the homepage, showing the number of meals you have scheduled for breakfast, lunch, and dinner.
 * **Weekly Shopping List Summary:** Offers an at-a-glance summary of your consolidated shopping list for the week, enabling efficient planning and preparation.
+
+![](https://github.com/VadoHYH/SIMMERISM/blob/main/images/HomePage.png)
 
 ### 🔍 Search Recipes
 
@@ -56,7 +58,9 @@
 
 ---
 
-## 🤝 Technologies Used
+## Technologies Used
+
+![](https://github.com/VadoHYH/SIMMERISM/blob/main/images/TechnologiesUsed.png)
 
 ### 🌐 Frontend
 * **React** / **Next.js**: Modern JavaScript library and framework for building performant user interfaces.
@@ -81,15 +85,14 @@
 
 ---
 
-## 🏗️ Architecture (或 System Design)
-**【在這裡放置您的架構圖。請確保圖清晰可讀，並可以在圖下方提供簡要說明。】**
+## Architecture 
 
-![SIMMERSIM System Architecture](https://github.com/您的GitHub帳號/simmerism/blob/main/images/system_architecture.png?raw=true)
-*A high-level overview illustrating the interaction between the frontend application, Firebase services, and external APIs for recipe data, AI processing, and translation.*
+![SIMMERSIM System Architecture](https://github.com/您的GitHub帳號/simmerism/blob/main/images/HighLevelArchitecture.png)
+
 
 ---
 
-## 🔄 Folder Structure
+## Folder Structure
 
 ```
 simmerism
@@ -140,7 +143,7 @@ simmerism
 
 ---
 
-## 🎨 User Experience
+## User Experience
 
 * **Optimized State Management:** Zustand-based global state management effectively handles complex states (favorites, filters, scheduling) across components, ensuring data persistence (e.g., via localStorage) and minimizing unnecessary re-renders for a fluid experience.
 * **Robust Feedback Mechanisms:** Comprehensive error handling, intuitive loading skeletons, and clear empty state UIs ensure users are always informed and guided, even during data fetching or unexpected scenarios.
@@ -148,8 +151,9 @@ simmerism
 
 ---
 
-## 📢 Contact
+## Contact
 
 **謝曜徽 Vado Hsieh**
-Frontend Developer (Taiwan)
-Email: [vado.hyh@gmail.com](mailto:vado.hyh@gmail.com)
+* Frontend Developer (Taiwan)
+* Email: [vado.hyh@gmail.com](mailto:vado.hyh@gmail.com)
+
