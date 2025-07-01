@@ -48,7 +48,7 @@
 * **Consolidated Ingredients:** Automatically aggregates all ingredients from your planned recipes into a single, comprehensive shopping list.
 * **Dynamic Updates:** The shopping list instantly updates as scheduled meals are added, removed, or changed.
 
-![](https://github.com/VadoHYH/SIMMERISM/blob/main/images/SoppingListFeture.gif)
+![](https://github.com/VadoHYH/SIMMERISM/blob/main/images/ShoppingListFeture.gif)
 
 ### 🤖 AI Chef Assistant ("問問厨娘")
 
