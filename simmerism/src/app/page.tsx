@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation";
-import RecipeCard from "@/components/recipeCard"
+import RecipeCard from "@/components/RecipeCard"
 import { ArrowRight, Edit } from "lucide-react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"

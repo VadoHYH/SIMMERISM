@@ -1,7 +1,7 @@
 //src/app/search/page.tsx
 "use client"
-import RecipeCard from "@/components/recipeCard"
-import SearchBar from "@/components/searchBar"
+import RecipeCard from "@/components/RecipeCard"
+import SearchBar from "@/components/SearchBar"
 import FilterModal, { type FilterOptions } from "@/components/FilterModal"
 import Pagination from "@/components/pagination"
 import Link from "next/link"
