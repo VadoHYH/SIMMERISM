@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/tailwind.config.js", "src/tailwind.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/tailwind.config.js", "src/tailwind.config.js", "src/context/AuthContext.txs"],
   "exclude": ["node_modules"]
 }
