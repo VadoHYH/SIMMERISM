@@ -63,25 +63,25 @@
 ![](https://github.com/VadoHYH/SIMMERISM/blob/main/images/TechnologiesUsed.png)
 
 ### Frontend
-* **React** / **Next.js**: Modern JavaScript library and framework for building performant user interfaces.
-* **TypeScript**: Ensures type safety and improves code maintainability.
-* **Tailwind CSS**: Utility-first CSS framework for rapid and consistent styling.
-* **Zustand**: Lightweight global state management for efficient data flow across components.
-* **Axios**: Promise-based HTTP client for making API requests.
+* **React** / **Next.js**
+* **TypeScript**
+* **Tailwind CSS**
+* **Zustand**
+* **Axios**
 * **Day.js**: Lightweight JavaScript date library for date manipulation (e.g., in meal scheduling).
 
 ### Backend & Data
-* **Firebase Firestore**: NoSQL cloud database for real-time data storage and synchronization (recipes, user data, schedules, favorites).
-* **Firebase Authentication**: Secure user authentication and authorization (email/password, Google Sign-In).
+* **Firebase Firestore**
+* **Firebase Authentication**
 * **Spoonacular API**: External API for comprehensive recipe data (ingredients, instructions, nutrition).
 * **OpenAI GPT-3.5 API**: Powers the AI Chef Assistant for intelligent recommendations and responses.
 * **Google Translate API**: Used for real-time translation of recipe content to support bilingual features.
 
 ### UI/UX & Development Tools
-* **Headless UI**: Provides unstyled, accessible UI components for custom styling with Tailwind CSS.
-* **Lucide Icons**: High-quality, customizable open-source icons.
-* **Git & GitHub**: For version control, collaborative development, and project management (feature branches, pull requests).
-* **Vercel**: For seamless and efficient deployment of the Next.js application.
+* **Headless UI**
+* **Lucide Icons**
+* **Git & GitHub**
+* **Vercel**
 
 ---
 
