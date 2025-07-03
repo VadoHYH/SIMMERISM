@@ -47,7 +47,7 @@ export default function Home() {
       <section className="bg-[#FB7659] py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 lg:grid-rows-7 gap-4 grid-cols-1">
-            {/* div1：介紹區 */}
+            {/*介紹區 */}
             <div className="lg:col-span-3 lg:row-span-5 bg-white p-8 rounded border-2 border-black flex flex-col justify-between order-1">
               <div>
                 <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4">
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* div5：採購清單 */}
+            {/* 採購清單 */}
             <div className="lg:col-start-4 lg:col-span-2 lg:row-start-1 lg:row-span-7 bg-white p-4 rounded border-2 border-black order-2">
               <h2 className="font-bold mb-4">本周需採購清單</h2>
               <div className="space-y-2 h-[350px] overflow-y-auto">
@@ -119,7 +119,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* div2~4：早中晚 */}
+            {/* 早中晚 */}
             <div className="flex flex-row justify-between gap-2 lg:gap-4 order-3 lg:col-span-3 lg:col-start-1 lg:row-start-6 lg:row-span-2">
               {[{ label: "早", count: todayScheduleCounts.breakfast },
                 { label: "午", count: todayScheduleCounts.lunch },
