@@ -6,7 +6,7 @@ import { useState } from "react"
 import { auth } from "@/lib/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { updateProfile } from "firebase/auth"
-
+import { FirebaseError } from "firebase/app" 
 
 export default function RegisterModal({
   isOpen,
@@ -21,33 +21,46 @@ export default function RegisterModal({
   const [password, setPassword] = useState("")
   const [name, setName] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
+  const [registerError, setRegisterError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (password !== confirmPassword) {
-      alert("密碼不一致")
+      setRegisterError("密碼與確認密碼不一致，請重新輸入。"); 
       return
     }
-
-    console.log("Register with:", { email, password })
+    
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
       await updateProfile(userCredential.user, {
         displayName: name,
       })
-      console.log("註冊成功 ✅", userCredential.user)
+      console.warn("註冊成功", userCredential.user.email); 
       onClose()
-    } catch (error: any) {
-      console.error("註冊失敗 ❌", error.message)
-      alert("註冊失敗，請檢查信箱是否已被使用！")
-      if (error.code === "auth/email-already-in-use") {
-        alert("此電子信箱已被註冊，請改用其他信箱！")
-      } else if (error.code === "auth/weak-password") {
-        alert("密碼太簡單，請至少輸入六個字元！")
-      } else if (error.code === "auth/invalid-email") {
-        alert("電子信箱格式錯誤！")
+    } catch (err: unknown) { 
+      if (err instanceof FirebaseError) {
+        console.error("註冊失敗", err.code, err.message) 
+
+        switch (err.code) {
+          case "auth/email-already-in-use":
+            setRegisterError("此電子信箱已被註冊，請改用其他信箱！")
+            break;
+          case "auth/weak-password":
+            setRegisterError("密碼太簡單，請至少輸入六個字元！")
+            break;
+          case "auth/invalid-email":
+            setRegisterError("電子信箱格式錯誤！")
+            break;
+          default:
+            setRegisterError("註冊失敗，請稍後再試。")
+            break;
+        }
+      } else if (err instanceof Error) {
+        console.error("註冊失敗", err.message) 
+        setRegisterError("發生未知錯誤，請稍後再試。")
       } else {
-        alert("註冊失敗，請稍後再試。")
+        console.error("註冊失敗", err) 
+        setRegisterError("發生未知錯誤，請稍後再試。")
       }
     }
   }
@@ -117,6 +130,10 @@ export default function RegisterModal({
                 required
             />
             </div>
+
+            {registerError && (
+              <p className="text-red-500 text-sm mb-4 text-center">{registerError}</p>
+            )}
 
             <button
             type="submit"

@@ -93,10 +93,6 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
     return newMessage.id
   }
 
-  const updateMessage = (id: string, updates: Partial<Message>) => {
-    setMessages((prev) => prev.map((msg) => (msg.id === id ? { ...msg, ...updates } : msg)))
-  }
-
   const removeMessage = (id: string) => {
     setMessages((prev) => prev.filter((msg) => msg.id !== id))
   }
@@ -133,7 +129,8 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
       const data = await res.json()
       const content = data?.choices?.[0]?.message?.content || ""
       return content.split(",").map((kw: string) => kw.trim()).filter(Boolean)
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("提取關鍵字失敗：", error);
       return []
     }
   }
@@ -185,7 +182,10 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
         .map((ing) => `${ing.name.zh} ${ing.name.en}`)
         .join(" ")
         .toLowerCase()
-      const fullText = `${ingredientsText} ${recipe.title.zh} ${recipe.title.en} ${recipe.summary.zh.join(" ")} ${recipe.summary.en.join(" ")}`.toLowerCase()
+        const summaryZhText = recipe.summary?.zh || "";
+        const summaryEnText = recipe.summary?.en || "";
+    
+        const fullText = `${ingredientsText} ${recipe.title.zh} ${recipe.title.en} ${summaryZhText} ${summaryEnText}`.toLowerCase()
 
       return filteredKeywords.every((kw) => fullText.includes(kw.toLowerCase()))
     })
@@ -236,10 +236,10 @@ const ChefChat = forwardRef<ChefChatRef, ChefChatProps>(({ onMessagesChange }, r
       removeMessage(loadingId)
       addMessage(aiResponse, false)
       conversationHistoryRef.current.push({ role: "assistant", content: aiResponse })
-    } catch (error: any) {
+    } catch (error: unknown) {
       removeMessage(loadingId)
       const errorMessage =
-        error.name === "AbortError"
+        (error instanceof Error && error.name === "AbortError")
           ? "中止思考啦～等你再來找小廚娘唷 🫣"
           : "喔不～小廚娘暫時沒靈感，請再試一次！"
       addMessage(errorMessage, false)

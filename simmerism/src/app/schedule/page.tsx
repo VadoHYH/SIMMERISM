@@ -16,7 +16,6 @@ export default function SchedulePage() {
   const user = useAuthStore((state) => state.user)
   const loadingAuth = useAuthStore(state => state.loading)
   
-  const formatDate = (date: dayjs.Dayjs) => date.format('YYYY年M月D日');
   const [currentDate, setCurrentDate] = useState(dayjs());
   
   const filteredSchedules = schedule.filter(

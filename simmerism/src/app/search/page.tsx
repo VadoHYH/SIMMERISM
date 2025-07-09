@@ -4,11 +4,11 @@ import RecipeCard from "@/components/RecipeCard"
 import SearchBar from "@/components/SearchBar"
 import FilterModal, { type FilterOptions } from "@/components/FilterModal"
 import Pagination from "@/components/Pagination"
-import Link from "next/link"
 import {  Filter, X } from "lucide-react"
 import { useState } from "react"
 import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
+import { Recipe, Ingredient, LocalizedString } from "@/types/recipe"
 
 export default function SearchPage() {
   const [keyword, setKeyword] = useState("")
@@ -47,12 +47,6 @@ export default function SearchPage() {
     setCurrentPage(1)
   }
 
-  const setFilterCategoryAndSearch = (category: string) => {
-    setFilterCategory(category)
-    setSearchKeyword(keyword)
-    setCurrentPage(1)
-  }
-
   const removeFilter = (type: keyof FilterOptions, value: string | number | null) => {
     setSelectedFilters((prev) => {
       if (type === "time" || type === "servings") {
@@ -85,16 +79,24 @@ export default function SearchPage() {
     小菜: "小菜",
   }
 
-  const filteredRecipes = recipes.filter((recipe: any) => {
+  const filteredRecipes = recipes.filter((recipe: Recipe) => { // <-- 將 'any' 變更為 'Recipe'
     const lowerSearch = searchKeyword.toLowerCase()
   
-    const safeIncludes = (val: any) =>
-      typeof val === "string" && val.toLowerCase().includes(lowerSearch)
+    // 定義 safeIncludes 以處理字串或 LocalizedString
+    const safeIncludes = (val: string | LocalizedString | undefined | null): boolean => {
+      if (typeof val === "string") {
+          return val.toLowerCase().includes(lowerSearch);
+      } else if (val && typeof val === 'object' && 'zh' in val && typeof val.zh === "string") {
+          return val.zh.toLowerCase().includes(lowerSearch);
+      }
+      return false;
+    };
   
-    const allDishTypesZh = recipe.dishTypes?.map((type: { zh: string }) => type.zh).join(" ") || ""
-    const allDietsZh = recipe.diets?.map((diet: { zh: string }) => diet.zh).join(" ") || ""
-    const allEquipmentsZh = recipe.equipment?.map((e: { zh: string }) => e.zh).join(" ") || ""
-    const allIngredientsZh = recipe.ingredients?.map((i: { name: { zh: string } }) => i.name.zh).join(" ") || ""
+    // 這些變數現在正確地從 'Recipe' 介面派生其類型
+    const allDishTypesZh = recipe.dishTypes?.map((type: LocalizedString) => type.zh).join(" ") || ""
+    const allDietsZh = recipe.diets?.map((diet: LocalizedString) => diet.zh).join(" ") || ""
+    const allEquipmentsZh = recipe.equipment?.map((e: LocalizedString) => e.zh).join(" ") || ""
+    const allIngredientsZh = recipe.ingredients?.map((i: Ingredient) => i.name.zh).join(" ") || ""
   
     const timeStr = recipe.readyInMinutes?.toString() || ""
     const servingsStr = recipe.servings?.toString() || ""
@@ -112,12 +114,12 @@ export default function SearchPage() {
     const categoryKey = categoryMap[filterCategory]
     const categoryMatch =
       filterCategory === "全部" ||
-      (recipe.dishTypes || []).some((type: { zh: string }) => type.zh.includes(categoryKey))
+      (recipe.dishTypes || []).some((type: LocalizedString) => type.zh.includes(categoryKey))
   
     const ingredientMatch =
       selectedFilters.ingredients.length === 0 ||
       selectedFilters.ingredients.every((ing) =>
-        recipe.ingredients?.some((rIng: { name: { zh: string } }) =>
+        recipe.ingredients?.some((rIng: Ingredient) => // rIng 現在是正確的 Ingredient 類型
           rIng.name.zh.includes(ing)
         )
       )
@@ -125,7 +127,7 @@ export default function SearchPage() {
     const toolMatch =
       selectedFilters.tools.length === 0 ||
       selectedFilters.tools.every((tool) =>
-        recipe.equipment?.some((e: { zh: string }) =>
+        recipe.equipment?.some((e: LocalizedString) => // e 現在是正確的 LocalizedString 類型
           e.zh.includes(tool)
         )
       )

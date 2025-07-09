@@ -9,13 +9,13 @@ import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
 import { useShoppingList } from "@/hooks/useShoppingList"
 import { useSchedule } from "@/hooks/useSchedule"
-import { useState, useEffect, useMemo } from "react"
+import { useMemo } from "react"
 import { useRequireLogin } from "@/hooks/useRequireLogin"
 import { format, addDays } from 'date-fns'
 import dayjs from 'dayjs'
 
 export default function Home() {
-  const { recipes, loading } = useRecipes()
+  const { recipes } = useRecipes()
   const { favorites, toggleFavorite } = useFavorite()
   const { schedule } = useSchedule()
   const requireLogin = useRequireLogin()
