@@ -85,6 +85,13 @@
 
 ---
 
+## Continuous Integration & Deployment (CI/CD)
+
+* **Automated Code Quality Checks**: Implemented ESLint with custom rules to enforce code style consistency and detect potential issues, including a specific rule to prevent `console.log` statements in production builds.
+* **GitHub Actions for CI/CD**: Configured automated workflows using GitHub Actions to streamline the integration and deployment process. This ensures code quality checks are run on every push and the application is seamlessly deployed to Vercel upon successful build.
+
+---
+
 ## Architecture 
 
 ![SIMMERISM High-Level Architecture](https://github.com/VadoHYH/simmerism/blob/main/images/HighLevelArchitecture.png)
