@@ -1,12 +1,7 @@
-// import type { NextConfig } from "next";
+// next.config.ts
+import type { NextConfig } from "next";
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-// };
-
-// export default nextConfig;
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -17,6 +12,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  // 新增的 compiler 配置
+  compiler: {
+    // 這會在生產環境建置時自動移除所有 console.* 語句。
+    // 開發環境 (npm run dev) 會保留，方便除錯。
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+};
 
-module.exports = nextConfig
+export default nextConfig;
