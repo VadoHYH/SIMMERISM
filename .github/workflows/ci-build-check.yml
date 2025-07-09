@@ -5,11 +5,11 @@ on:
   pull_request:
     branches:
       - develop
-      - main # 當有 Pull Request 目標 main 分支時觸發
+      - main 
   push:
     branches:
       - develop
-      - main # 當有新的程式碼推送到 main 分支時觸發
+      - main 
 
 jobs:
   build_check:
@@ -22,32 +22,26 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # <-- 重要：請確認你的 Next.js 專案使用的 Node.js 版本
-                             #      你的 package.json 並未明確指定 engines 欄位，
-                             #      Node.js 20 是相對較新的穩定版本，通常適用。
-                             #      如果本地開發環境使用其他版本，請在此處修改。
-          cache: 'npm'       # 啟用 npm 依賴快取，加速安裝過程
-
+          node-version: '20'
+          cache: 'npm'       
+          
       - name: 📦 Install dependencies
-        run: npm install # 執行 npm install 安裝 package.json 中定義的所有依賴
+        run: npm install 
         working-directory: ./simmerism/
 
       - name: Run ESLint Checks (包含 console 規範)
-        # 執行你專案的 ESLint 命令，通常是 `next lint`。
-        # 如果程式碼中包含不允許的 console.log，此步驟會失敗。
         run: npm run lint
         working-directory: ./simmerism/
 
+      - name: Run TypeScript Type Check 
+        run: npm run typecheck 
+        working-directory: ./simmerism/
+
       - name: Build Next.js for Production (實際移除 console 並驗證建置)
-        # 這個步驟會執行 Next.js 的生產環境建置。
-        # 因為 next.config.ts 中的 `removeConsole` 配置 (基於 NODE_ENV === 'production')，
-        # 所有的 console.log、console.info 等將會被移除。
-        # 同時也驗證整個專案在生產環境下是否能成功打包。
         run: npm run build
         working-directory: ./simmerism/
 
       - name: Run Unit Tests 
-        # 根據你的 package.json，此處執行 `npm run test` 會觸發 Jest
         run: npm run test
         working-directory: ./simmerism/
 

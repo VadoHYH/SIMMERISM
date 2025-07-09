@@ -24,12 +24,12 @@ export default function FogotPasswordModal({
     e.preventDefault()
     try {
       await sendPasswordResetEmail(auth, email)
-      console.warn("重設密碼信已發送 ✅", email)
+      console.warn("重設密碼信已發送", email)
       setIsSubmitted(true)
       setTimeout(() => onClose(), 3000)
     } catch (err: unknown) {
       if (err instanceof FirebaseError) {
-        console.error("發送重設密碼郵件失敗 ❌", err.code, err.message) // 使用 console.error
+        console.error("發送重設密碼郵件失敗", err.code, err.message) 
         // 根據 Firebase 錯誤碼給出更友好的提示
         switch (err.code) {
           case "auth/user-not-found":
@@ -46,10 +46,10 @@ export default function FogotPasswordModal({
             break;
         }
       } else if (err instanceof Error) {
-        console.error("發送重設密碼郵件失敗 ❌", err.message) // 使用 console.error
+        console.error("發送重設密碼郵件失敗", err.message) 
         setError("發生未知錯誤，請稍後再試。")
       } else {
-        console.error("發送重設密碼郵件失敗 ❌", err) // 使用 console.error
+        console.error("發送重設密碼郵件失敗", err) 
         setError("發生未知錯誤，請稍後再試。")
       }
     }
