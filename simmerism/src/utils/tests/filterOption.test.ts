@@ -10,7 +10,7 @@ import {
     {
       id: "1",
       title: { zh: "香煎雞肉", en: "Pan-fried Chicken" },
-      summary: { zh: ["簡單又美味"], en: ["Simple and delicious"] },
+      summary: { zh: "簡單又美味", en: "Simple and delicious"},
       image: "https://example.com/chicken.jpg",
       ingredients: [
         {
@@ -38,7 +38,7 @@ import {
     {
       id: "2",
       title: { zh: "氣炸蝦", en: "Air Fried Shrimp" },
-      summary: { zh: ["快速料理"], en: ["Quick meal"] },
+      summary: { zh: "快速料理", en: "Quick meal" },
       image: "https://example.com/shrimp.jpg",
       ingredients: [
         {
