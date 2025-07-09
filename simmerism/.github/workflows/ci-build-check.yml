@@ -4,9 +4,11 @@ name: Next.js CI Build & Console & Test Check
 on:
   pull_request:
     branches:
+      - develop
       - main # 當有 Pull Request 目標 main 分支時觸發
   push:
     branches:
+      - develop
       - main # 當有新的程式碼推送到 main 分支時觸發
 
 jobs:
@@ -41,7 +43,7 @@ jobs:
         # 同時也驗證整個專案在生產環境下是否能成功打包。
         run: npm run build
 
-      - name: Run Unit Tests # <--- 新增的步驟：執行你的單元測試
+      - name: Run Unit Tests 
         # 根據你的 package.json，此處執行 `npm run test` 會觸發 Jest
         run: npm run test
 
