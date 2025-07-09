@@ -8,7 +8,7 @@ import {
   generateToolOptions,
   generateTagOptions,
 } from "@/utils/filterOptions"
-
+import { Recipe } from "@/types/recipe"
 
 export interface FilterOptions {
   ingredients: string[]
@@ -23,7 +23,7 @@ interface FilterModalProps {
   onClose: () => void
   onApply: (filters: FilterOptions) => void
   initialFilters?: FilterOptions
-  recipes?: any[] // 新增 recipes prop 用於動態生成標籤
+  recipes?: Recipe[] // 新增 recipes prop 用於動態生成標籤
 }
 
 const defaultFilters: FilterOptions = {

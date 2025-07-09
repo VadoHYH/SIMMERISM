@@ -1,17 +1,14 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 
 export default function ChatButton() {
-  const [isHovered, setIsHovered] = useState(false)
+
 
   return (
     <Link
       href="/questions"
       className="fixed bottom-8 right-8 z-50"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="w-20 h-20 relative flex items-center justify-center hover:scale-110 transition-transform duration-300">
         {/* 17 角星背景 */}

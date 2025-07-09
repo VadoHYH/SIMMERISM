@@ -1,7 +1,7 @@
 // src/app/AuthProvider.tsx
 'use client'
 
-import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '@/lib/firebase'
 import { useEffect } from 'react'
 import { useAuthStore } from '@/stores/useAuthStore'

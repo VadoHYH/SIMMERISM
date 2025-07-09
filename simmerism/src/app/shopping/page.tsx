@@ -31,7 +31,6 @@ export default function ShoppingPage() {
     isChecked,
     completeAll,
     removeAll,
-    removeItem,
     completionRate,
   } = useShoppingList({
     schedule,

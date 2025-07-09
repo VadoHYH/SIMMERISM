@@ -1,20 +1,25 @@
+export interface LocalizedString { 
+    en: string;
+    zh: string;
+}
+
 export interface Ingredient {
-    name: { en: string; zh: string }
-    amount: { en: string; zh: string }
+    name: LocalizedString;
+    amount: LocalizedString;
 }
   
 export interface Recipe {
     id: string
-    title: { zh: string; en: string }
-    summary: { en: string[]; zh: string[] }
+    title: LocalizedString;
+    summary: LocalizedString;
     image: string
-    ingredients: Ingredient[]
-    instructions: { en: string; zh: string }
-    equipment: { en: string; zh: string }[]
+    ingredients: Ingredient[];
+    instructions: LocalizedString;
+    equipment: LocalizedString[];
     liked?: boolean
     readyInMinutes?: string
     servings?: string
-    dishTypes?: { zh: string; en: string }[]
-    diets?: { zh: string; en: string }[]
+    dishTypes?: LocalizedString[];
+    diets?: LocalizedString[];
 }
   

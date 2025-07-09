@@ -2,46 +2,16 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Send, ChevronDown } from "lucide-react"
+import { Send } from "lucide-react"
 import ChefChat, { type Message, type ChefChatRef } from "@/components/ChefChat"
 import Image from "next/image"
 
 export default function QuestionsPage() {
   const [userInput, setUserInput] = useState("")
   const [messages, setMessages] = useState<Message[]>([])
-  const [showScrollButton, setShowScrollButton] = useState(false)
   const chefChatRef = useRef<ChefChatRef>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const messagesContainerRef = useRef<HTMLDivElement>(null)
-  const previousMessagesLength = useRef(0)
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
-
-  const checkScrollPosition = () => {
-    if (messagesContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current
-      const isNearBottom = scrollHeight - scrollTop - clientHeight < 100
-      setShowScrollButton(!isNearBottom)
-    }
-  }
-
-  // 只在新增訊息時自動滾動，且用戶在底部附近時才滾動
-  useEffect(() => {
-    const isNewMessage = messages.length > previousMessagesLength.current
-    previousMessagesLength.current = messages.length
-
-    if (isNewMessage && messagesContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current
-      const isNearBottom = scrollHeight - scrollTop - clientHeight < 150
-
-      // 只有在用戶接近底部時才自動滾動
-      // if (isNearBottom) {
-      //   setTimeout(scrollToBottom, 100)
-      // }
-    }
-  }, [messages])
 
   useEffect(() => {
     const textarea = document.querySelector("textarea")
@@ -60,8 +30,6 @@ export default function QuestionsPage() {
     // 清空輸入框
     setUserInput("")
 
-    // 移除強制滾動，讓 useEffect 處理
-    // setTimeout(scrollToBottom, 100)
   }
 
   const handleMessagesChange = (newMessages: Message[]) => {
@@ -108,7 +76,6 @@ export default function QuestionsPage() {
             <div
               ref={messagesContainerRef}
               className="h-[500px] overflow-y-auto p-6 space-y-4"
-              // onScroll={checkScrollPosition}
             >
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex ${msg.isUser ? "justify-end" : "justify-start"}`}>
@@ -220,17 +187,6 @@ export default function QuestionsPage() {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Scroll to bottom button */}
-            {/* {showScrollButton && (
-              <button
-                onClick={scrollToBottom}
-                className="absolute bottom-20 right-4 bg-[#5a9a8e] text-white p-2 rounded-full border-2 border-black shadow-lg hover:bg-[#4a8a7e] transition-colors z-10"
-                title="滾動到底部"
-              >
-                <ChevronDown size={20} />
-              </button>
-            )} */}
-
             {/* Input Area */}
             <div className="border-t-2 border-black p-4 bg-[#1E49CF]">
               <form
@@ -249,7 +205,6 @@ export default function QuestionsPage() {
                     onKeyDown={(e) => {
                       if (e.key === "Enter" && !e.shiftKey) {
                         e.preventDefault()
-                        handleSubmit(e as any)
                       }
                     }}
                   />

@@ -3,7 +3,6 @@
 
 import { useState, useRef, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Calendar, X } from "lucide-react"
-import { createPortal } from "react-dom"
 
 interface CustomDatePickerProps {
   // 單日選擇模式
@@ -66,79 +65,14 @@ export default function CustomDatePicker({
   
   // 用於定位的參考元素
   const containerRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState({ top: 0, left: 0 })
 
   const months = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
   const weekDays = ["日", "一", "二", "三", "四", "五", "六"]
-
-  function getScrollableParent(node: HTMLElement | null): HTMLElement | Window {
-    if (!node) return window
-    let current: HTMLElement | null = node
-  
-    while (current && current !== document.body) {
-      const overflowY = window.getComputedStyle(current).overflowY
-      if (overflowY === "scroll" || overflowY === "auto") {
-        return current
-      }
-      current = current.parentElement
-    }
-    return window
-  }
-
-  // 計算 modal 位置
-  useEffect(() => {
-    if (isOpen && containerRef.current) {
-      const container = containerRef.current
-      const rect = container.getBoundingClientRect()
-  
-      // 若超出畫面底部，捲動進畫面
-      if (rect.bottom > window.innerHeight || rect.top < 0) {
-        container.scrollIntoView({ behavior: "smooth", block: "center" })
-      }
-  
-      const scrollParent = getScrollableParent(container)
-      const containerRect = container.getBoundingClientRect()
-      const scrollTop = scrollParent instanceof Window ? window.scrollY : (scrollParent as HTMLElement).scrollTop
-      const scrollLeft = scrollParent instanceof Window ? window.scrollX : (scrollParent as HTMLElement).scrollLeft
-  
-      const modalWidth = 320
-      const modalHeight = 400
-      const padding = 10
-  
-      let top = containerRect.bottom + scrollTop + 8
-      let left = containerRect.left + scrollLeft + containerRect.width / 2 - modalWidth / 2
-  
-      const maxLeft = window.innerWidth - modalWidth - padding
-      const minLeft = padding
-  
-      if (left < minLeft) left = minLeft
-      else if (left > maxLeft) left = maxLeft
-  
-      const spaceBelow = window.innerHeight - containerRect.bottom
-      const spaceAbove = containerRect.top
-  
-      if (spaceBelow < modalHeight + padding && spaceAbove > modalHeight + padding) {
-        top = containerRect.top + scrollTop - modalHeight - 8
-      } else if (spaceBelow < modalHeight + padding) {
-        top = scrollTop + (window.innerHeight - modalHeight) / 2
-        if (top < scrollTop + padding) {
-          top = scrollTop + padding
-        }
-      }
-  
-      setPosition({ top, left })
-    }
-  }, [isOpen])
 
   // Close calendar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        // 檢查點擊的是否是 portal 內的元素
-        const portalElement = document.getElementById('datepicker-portal')
-        if (portalElement && portalElement.contains(event.target as Node)) {
-          return // 點擊在 portal 內，不關閉
-        }
         setIsOpen(false)
         setTempStartDate(null)
       }
