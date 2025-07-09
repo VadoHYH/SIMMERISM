@@ -11,6 +11,13 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // 確保沒有 console.log 或 console.info
+      // 允許 console.warn 和 console.error
+      "no-console": ["error", { "allow": ["warn", "error"] }],
+    }
+  }
 ];
 
 export default eslintConfig;

@@ -55,11 +55,6 @@ export default function RecipePage() {
     return <div className="p-4 text-red-500">❌ 找不到這道食譜！<Link href="/" className="text-blue-500 underline">回首頁</Link></div>
   }
 
-  const handleCategoryClick = (keyword:string) => {
-    console.log("你點選的是：", keyword);
-    // TODO: 根據 keyword 篩選資料或導向搜尋頁面
-  };
-
   // 正則表達式：抓出「步驟1：...」「步驟2：...」的每個區段
   let steps: string[] = [];
   if (typeof recipe.instructions.zh === "string") {
@@ -153,7 +148,6 @@ export default function RecipePage() {
               {uniquetags.map((item, index) => (
                 <button
                   key={index}
-                  onClick={() => handleCategoryClick(item.en)}
                   className="px-4 py-1 rounded-full bg-slate-200 hover:bg-slate-300 neo-button"
                 >
                   {item.zh}
