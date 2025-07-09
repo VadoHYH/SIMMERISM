@@ -12,7 +12,7 @@ if (!process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
 console.log("✅ Firebase API Key:", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
 console.log("✅ Firebase PROJECT ID:", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
 
-import { translateAndWriteRecipes } from '../src/lib/translateAndWrite';
+import { translateAndWriteRecipes } from './translateAndWrite';
 
 const run = async () => {
   try {

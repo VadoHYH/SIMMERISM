@@ -21,18 +21,32 @@ export function useFilterLogic(initialFilters?: FilterOptions) {
     }
   }, [initialFilters])
 
-  const toggle = (key: keyof FilterOptions, value: string | number | null) => {
-    setFilters((prev) => ({
-      ...prev,
-      [key]: prev[key] instanceof Array
-        ? (prev[key] as any[]).includes(value)
-          ? (prev[key] as any[]).filter((v) => v !== value)
-          : [...(prev[key] as any[]), value]
-        : prev[key] === value
-        ? null
-        : value,
-    }))
-  }
+  const toggle = <K extends keyof FilterOptions>(key: K, value: FilterOptions[K] extends (infer U)[] ? U | null : FilterOptions[K] | null) => {
+    setFilters((prev) => {
+      const prevValue = prev[key];
+
+      // 判斷 prevValue 是否為陣列
+      if (Array.isArray(prevValue)) {
+        const currentArray = prevValue as (string | number)[]; 
+        if (currentArray.includes(value as string | number)) { 
+          return {
+            ...prev,
+            [key]: currentArray.filter((v) => v !== value),
+          };
+        } else {
+          return {
+            ...prev,
+            [key]: [...currentArray, value as string | number], 
+          };
+        }
+      } else {
+        return {
+          ...prev,
+          [key]: prevValue === value ? null : value,
+        };
+      }
+    });
+  };
 
   const reset = () => {
     setFilters(defaultFilters)

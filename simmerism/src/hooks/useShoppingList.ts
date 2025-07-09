@@ -1,5 +1,5 @@
 // hooks/useShoppingList.ts
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, useCallback } from 'react'
 import { ScheduleItem } from './useSchedule'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
@@ -32,8 +32,8 @@ export type ShoppingItem = {
 const SHOPPING_LIST_STORAGE_KEY = 'simmerism_shopping_list_status'
 
 // 全域狀態管理 - 用於在不同頁面間共享狀態
-let globalCheckedItems: Record<string, boolean> = {}
-let listeners: Set<(items: Record<string, boolean>) => void> = new Set()
+const globalCheckedItems: Record<string, boolean> = {}
+const listeners: Set<(items: Record<string, boolean>) => void> = new Set()
 let isGlobalInitialized = false // 確保全域狀態只初始化一次
 
 // 初始化載入 localStorage 資料
@@ -65,17 +65,17 @@ const saveToStorage = (items: Record<string, boolean>) => {
 // 初始化全域狀態（只執行一次）
 const initializeGlobalState = () => {
   if (!isGlobalInitialized && typeof window !== 'undefined') {
-    globalCheckedItems = loadFromStorage()
+    Object.assign(globalCheckedItems, loadFromStorage());
     isGlobalInitialized = true
-    console.log('🚀 全域狀態初始化完成:', globalCheckedItems)
   }
 }
 
 // 更新全域狀態並通知所有監聽器
 const updateGlobalState = (items: Record<string, boolean>) => {
-  globalCheckedItems = { ...items } // 創建新的物件引用
+  Object.keys(globalCheckedItems).forEach(key => delete globalCheckedItems[key]); // 清空現有屬性
+  Object.assign(globalCheckedItems, items);
+
   saveToStorage(globalCheckedItems)
-  console.log('📝 更新全域狀態:', globalCheckedItems)
   
   // 通知所有監聽器
   listeners.forEach(listener => {
@@ -107,13 +107,11 @@ export const useShoppingList = ({
   useEffect(() => {
     initializeGlobalState()
     setCheckedItems({ ...globalCheckedItems })
-    console.log('🔄 組件初始化，同步全域狀態:', globalCheckedItems)
   }, [])
 
   // 監聽全域狀態變化
   useEffect(() => {
     const listener = (items: Record<string, boolean>) => {
-      console.log('🔔 收到全域狀態更新通知:', items)
       setCheckedItems({ ...items })
     }
     
@@ -121,7 +119,6 @@ export const useShoppingList = ({
     
     return () => {
       listeners.delete(listener)
-      console.log('🗑️ 移除狀態監聽器')
     }
   }, [])
 
@@ -152,13 +149,6 @@ export const useShoppingList = ({
     // console.log('🟡 filteredSchedule:', filteredSchedule)
 
     for (const item of filteredSchedule) {
-      console.log(`🔍 檢查行程項目:`, {
-          id: item.id,
-          recipeId: item.recipeId,
-          date: item.date,
-          hasRecipe: !!item.recipe,
-          recipeTitle: item.recipe?.title?.zh
-        })
       // 直接使用 ScheduleItem 中的 recipe 資料
       if (!item.recipe) {
           console.warn(`⚠️ 行程中沒有食譜資料：scheduleId=${item.id}, recipeId=${item.recipeId}`)
@@ -212,7 +202,6 @@ export const useShoppingList = ({
   }
 
     const finalList = Array.from(map.values())
-    // console.log('✅ 最終 shoppingList:', finalList)
     return finalList
   }, [filteredSchedule])
 
@@ -226,7 +215,7 @@ export const useShoppingList = ({
   }
   
   // 檢查項目是否被勾選
-  const isChecked = (key: string) => !!checkedItems[key]
+  const isChecked = useCallback((key: string) => !!checkedItems[key], [checkedItems]);
   
   // 全部完成
   const completeAll = () => {
@@ -257,26 +246,7 @@ export const useShoppingList = ({
     if (total === 0) return 0
     const done = shoppingList.filter((item) => isChecked(item.key)).length
     return Math.round((done / total) * 100)
-  }, [shoppingList, checkedItems])
-
-  // //清除不存在的勾選狀態
-  // useEffect(() => {
-  //   const validKeys = new Set(shoppingList.map((item) => item.key))
-  //   const currentKeys = Object.keys(checkedItems)
-  //   const hasInvalidKeys = currentKeys.some(key => !validKeys.has(key))
-    
-  //   if (hasInvalidKeys) {
-  //     const cleaned: Record<string, boolean> = {}
-  //     for (const key of currentKeys) {
-  //       if (validKeys.has(key)) {
-  //         cleaned[key] = checkedItems[key]
-  //       }
-  //     }
-  //     console.log('🧹 清理無效的勾選狀態')
-  //     setCheckedItems(cleaned)
-  //     updateGlobalState(cleaned)
-  //   }
-  // }, [shoppingList, checkedItems])
+  }, [shoppingList, isChecked])
 
   return {
     shoppingList,
@@ -295,7 +265,7 @@ export const clearShoppingListStorage = () => {
   if (typeof window !== 'undefined') {
     localStorage.removeItem(SHOPPING_LIST_STORAGE_KEY)
   }
-  globalCheckedItems = {}
+  Object.keys(globalCheckedItems).forEach(key => delete globalCheckedItems[key]);
   updateGlobalState({})
 }
 
