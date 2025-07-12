@@ -10,6 +10,7 @@ import { useRecipes } from "@/hooks/useRecipes"
 import { useFavorite } from "@/hooks/useFavorite"
 import { useSchedule } from "@/hooks/useSchedule"
 import { useParams } from "next/navigation"
+import { useRequireLogin } from "@/hooks/useRequireLogin"
 
 type ScheduleData = {
   date: Date;
@@ -29,6 +30,7 @@ export default function RecipePage() {
   const [isModalOpen, setModalOpen] = useState(false);
   const { addSchedule } = useSchedule()
   const [successMessage, setSuccessMessage] = useState("");
+  const requireLogin = useRequireLogin()
 
   const isFavorited = favorites.includes(recipeId.toString())
   
@@ -142,14 +144,14 @@ export default function RecipePage() {
             <div className="flex gap-4">
               <button
                 className={`flex items-center gap-2 px-4 py-2 border  ${liked ? "bg-[#5a9a8e]  border-black text-black " : "bg-[#5a9a8e]  border-black text-white neo-button"}`}
-                onClick={() => toggleFavorite(recipe)}
+                onClick={() =>requireLogin(() => toggleFavorite(recipe))}
               >
                 <Heart className={isFavorited ? "fill-black" : ""} size={20} />
                 {liked ? "已收藏" : "收藏"}
               </button>
               <button
                 className="flex items-center gap-2 px-4 py-2 bg-[#ffc278] border border-black neo-button"
-                onClick={() => setModalOpen(true)}  // ⭐ 關鍵在這裡
+                onClick={() =>requireLogin(() => setModalOpen(true))}  
               >
                 加入行程
               </button>
