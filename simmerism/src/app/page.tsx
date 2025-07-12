@@ -169,7 +169,7 @@ export default function Home() {
                 readyInMinutes={recipe.readyInMinutes}
                 dishTypes={recipe.dishTypes}
                 diets={recipe.diets}
-                onLike={() => toggleFavorite(recipe)}
+                onLike={() =>requireLogin(() => toggleFavorite(recipe))}
               />
             ))}
           </div>
